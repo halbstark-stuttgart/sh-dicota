@@ -95,6 +95,16 @@
     }
   },
   "products": {
+    "wishlist_title": "इच्छा-सूची",
+    "wishlist_empty": "आपकी इच्छा-सूची अभी खाली है।",
+    "wishlist_remove": "इच्छा-सूची से हटाएँ",
+    "compare_add": "तुलना करें",
+    "compare_open": "अभी तुलना करें",
+    "compare_clear": "साफ़ करें",
+    "compare_max": "अधिकतम 3 उत्पादों की तुलना – पहले एक हटाएँ।",
+    "compare_empty": "आपने तुलना के लिए अभी कोई उत्पाद नहीं चुना है।",
+    "compare_diff_only": "केवल अंतर दिखाएँ",
+    "compare_print": "प्रिंट करें",
     "pdf_est": "1992 में जर्मनी में स्थापित",
     "pdf_characteristics": "विशेषताएँ",
     "pdf_specifications": "तकनीकी विवरण",

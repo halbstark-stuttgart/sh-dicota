@@ -95,6 +95,16 @@
     }
   },
   "products": {
+    "wishlist_title": "Seznam přání",
+    "wishlist_empty": "Váš seznam přání je zatím prázdný.",
+    "wishlist_remove": "Odebrat ze seznamu přání",
+    "compare_add": "Porovnat",
+    "compare_open": "Porovnat nyní",
+    "compare_clear": "Vymazat",
+    "compare_max": "Porovnat lze nejvýše 3 produkty – nejprve jeden odeberte.",
+    "compare_empty": "Zatím jste nevybrali žádné produkty k porovnání.",
+    "compare_diff_only": "Zobrazit jen rozdíly",
+    "compare_print": "Tisk",
     "pdf_est": "Založeno v Německu v roce 1992",
     "pdf_characteristics": "Vlastnosti",
     "pdf_specifications": "Technické údaje",

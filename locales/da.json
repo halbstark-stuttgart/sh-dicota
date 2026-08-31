@@ -95,6 +95,16 @@
     }
   },
   "products": {
+    "wishlist_title": "Ønskeliste",
+    "wishlist_empty": "Din ønskeliste er stadig tom.",
+    "wishlist_remove": "Fjern fra ønskelisten",
+    "compare_add": "Sammenlign",
+    "compare_open": "Sammenlign nu",
+    "compare_clear": "Ryd",
+    "compare_max": "Du kan sammenligne op til 3 produkter – fjern et først.",
+    "compare_empty": "Du har endnu ikke valgt produkter at sammenligne.",
+    "compare_diff_only": "Vis kun forskelle",
+    "compare_print": "Udskriv",
     "pdf_est": "Grundlagt i Tyskland i 1992",
     "pdf_characteristics": "Egenskaber",
     "pdf_specifications": "Tekniske data",

@@ -4604,6 +4604,16 @@
     "free_shipping_text": "تحصل على شحن مجاني لهذا الطلب."
   },
   "products": {
+    "wishlist_title": "قائمة الرغبات",
+    "wishlist_empty": "قائمة رغباتك فارغة حتى الآن.",
+    "wishlist_remove": "إزالة من قائمة الرغبات",
+    "compare_add": "قارن",
+    "compare_open": "قارن الآن",
+    "compare_clear": "مسح",
+    "compare_max": "يمكنك مقارنة 3 منتجات كحد أقصى – أزل واحدًا أولاً.",
+    "compare_empty": "لم تحدد أي منتجات للمقارنة بعد.",
+    "compare_diff_only": "إظهار الاختلافات فقط",
+    "compare_print": "طباعة",
     "pdf_est": "تأسست في ألمانيا عام 1992",
     "pdf_characteristics": "الخصائص",
     "pdf_specifications": "المواصفات التقنية",

@@ -95,6 +95,16 @@
     }
   },
   "products": {
+    "wishlist_title": "Liste d’envies",
+    "wishlist_empty": "Votre liste d’envies est encore vide.",
+    "wishlist_remove": "Retirer de la liste d’envies",
+    "compare_add": "Comparer",
+    "compare_open": "Comparer maintenant",
+    "compare_clear": "Vider",
+    "compare_max": "3 produits maximum – retirez-en un d’abord.",
+    "compare_empty": "Vous n’avez encore sélectionné aucun produit à comparer.",
+    "compare_diff_only": "Afficher uniquement les différences",
+    "compare_print": "Imprimer",
     "pdf_est": "Fondée en Allemagne en 1992",
     "pdf_characteristics": "Caractéristiques",
     "pdf_specifications": "Caractéristiques techniques",

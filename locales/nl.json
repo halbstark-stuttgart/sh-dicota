@@ -95,6 +95,16 @@
     }
   },
   "products": {
+    "wishlist_title": "Verlanglijst",
+    "wishlist_empty": "Je verlanglijst is nog leeg.",
+    "wishlist_remove": "Verwijderen van verlanglijst",
+    "compare_add": "Vergelijken",
+    "compare_open": "Nu vergelijken",
+    "compare_clear": "Wissen",
+    "compare_max": "Maximaal 3 producten – verwijder er eerst een.",
+    "compare_empty": "Je hebt nog geen producten geselecteerd om te vergelijken.",
+    "compare_diff_only": "Alleen verschillen tonen",
+    "compare_print": "Afdrukken",
     "pdf_est": "Opgericht in Duitsland in 1992",
     "pdf_characteristics": "Kenmerken",
     "pdf_specifications": "Technische gegevens",

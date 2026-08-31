@@ -95,6 +95,16 @@
     }
   },
   "products": {
+    "wishlist_title": "Lista życzeń",
+    "wishlist_empty": "Twoja lista życzeń jest jeszcze pusta.",
+    "wishlist_remove": "Usuń z listy życzeń",
+    "compare_add": "Porównaj",
+    "compare_open": "Porównaj teraz",
+    "compare_clear": "Wyczyść",
+    "compare_max": "Możesz porównać maksymalnie 3 produkty – usuń najpierw jeden.",
+    "compare_empty": "Nie wybrano jeszcze produktów do porównania.",
+    "compare_diff_only": "Pokaż tylko różnice",
+    "compare_print": "Drukuj",
     "pdf_est": "Założona w Niemczech w 1992",
     "pdf_characteristics": "Cechy",
     "pdf_specifications": "Dane techniczne",

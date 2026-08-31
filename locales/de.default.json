@@ -95,6 +95,16 @@
     }
   },
   "products": {
+    "wishlist_title": "Merkliste",
+    "wishlist_empty": "Deine Merkliste ist noch leer.",
+    "wishlist_remove": "Von der Merkliste entfernen",
+    "compare_add": "Vergleichen",
+    "compare_open": "Jetzt vergleichen",
+    "compare_clear": "Leeren",
+    "compare_max": "Maximal 3 Produkte vergleichbar – entferne zuerst eines.",
+    "compare_empty": "Du hast noch keine Produkte zum Vergleich ausgewählt.",
+    "compare_diff_only": "Nur Unterschiede zeigen",
+    "compare_print": "Drucken",
     "pdf_est": "Gegründet in Deutschland 1992",
     "pdf_characteristics": "Eigenschaften",
     "pdf_specifications": "Technische Daten",
