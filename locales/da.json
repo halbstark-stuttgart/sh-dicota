@@ -23,21 +23,21 @@
     "search": "Søg",
     "sort_by": "Sorter efter",
     "submit": "Indsend",
-    "trending": "Trending"
+    "trending": "Populært"
   },
   "cart": {
-    "heading": "Vogn",
+    "heading": "Kurv",
     "empty": "Din indkøbskurv er tom",
-    "get_free_shipping": "Lås op for gratis forsendelse",
+    "get_free_shipping": "Få gratis fragt",
     "still": "Kun",
     "to_free_shipping": "væk fra gratis forsendelse",
-    "free_shipping_heading": "Gratis forsendelse ulåst",
+    "free_shipping_heading": "Du har opnået gratis fragt",
     "free_shipping_text": "Du er kvalificeret til gratis forsendelse på denne ordre.",
     "total_price": "Subtotal",
     "shipping_fee": "Forsendelse",
     "free": "Gratis",
-    "go_to_checkout": "Sikkert til kassen",
-    "note": "Bemærk",
+    "go_to_checkout": "Gå sikkert til kassen",
+    "note": "Bemærkning",
     "progress_prefix": "Du er",
     "progress_suffix": "fra gratis fragt",
     "grand_total": "I alt",
@@ -83,19 +83,19 @@
       "benefit_cashback": "Cashback fra 10.000 point",
       "benefit_early": "Tidlig adgang til nye produkter",
       "benefit_earn": "Optjen point ved hvert køb",
-      "benefit_rewards": "Eksklusive belønninger og bundter",
+      "benefit_rewards": "Eksklusive belønninger og produktpakker",
       "benefit_support": "Personlig klubstøtte"
     },
     "reward": "Belønning"
   },
   "marketing": {
-    "press": "Tryk på",
+    "press": "Presse",
     "product_imgs": {
       "meta_line": "Varenr. · Forgængermodel · EAN-kode · Tilgængelighed · Konstruktionstype · Farve"
     }
   },
   "products": {
-    "pdf_est": "Grundlagt i Tyskland i 1992",
+    "pdf_est": "Est. in Germany 1992",
     "pdf_characteristics": "Egenskaber",
     "pdf_specifications": "Tekniske data",
     "pdf_nutshell": "Produktfamilien i overblik",
@@ -119,9 +119,30 @@
   "reviews": {
     "count_label": "anmeldelser",
     "body": "Din anmeldelse",
-    "email": "E-mail"
+    "email": "E-mail",
+    "empty": "Ingen anmeldelser endnu. Vær den første til at skrive en.",
+    "load_more": "Indlæs flere anmeldelser",
+    "name": "Navn",
+    "submit": "Send anmeldelse",
+    "title": "Overskrift",
+    "write": "Skriv en anmeldelse",
+    "your_rating": "Din bedømmelse"
   },
   "search": {
-    "articles": "Blogindlæg"
+    "articles": "Blogindlæg",
+    "heading": "Søg efter produkter",
+    "no_results": "Ingen resultater fundet.",
+    "no_results_hint": "Der er ingen resultater med disse kriterier. Prøv at ændre din søgning.",
+    "no_suggestions": "Ingen forslag",
+    "popular": "Populære søgninger",
+    "recently_viewed": "Senest sete",
+    "searching": "Søger …",
+    "suggestions": "Forslag",
+    "view_all": "Se alle produkter"
+  },
+  "sales": {
+    "product_list": {
+      "meta_line": "Varenr. · Forgængermodel · EAN-kode · Tilgængelighed · Prisniveauer · Konstruktionstype · Farve"
+    }
   }
 }
