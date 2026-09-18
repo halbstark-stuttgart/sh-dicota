@@ -23,7 +23,9 @@
     "search": "Cerca",
     "sort_by": "Ordina per",
     "submit": "Invia",
-    "trending": "Tendenza"
+    "trending": "Tendenza",
+    "close": "Chiudi",
+    "no_results": "Nessun risultato"
   },
   "cart": {
     "heading": "Carrello",
@@ -101,7 +103,7 @@
     "compare_add": "Confronta",
     "compare_open": "Confronta ora",
     "compare_clear": "Svuota",
-    "compare_max": "Puoi confrontare al massimo 3 prodotti – rimuovine uno prima.",
+    "compare_max": "Puoi confrontare al massimo 5 prodotti – rimuovine uno prima.",
     "compare_empty": "Non hai ancora selezionato prodotti da confrontare.",
     "compare_diff_only": "Mostra solo le differenze",
     "compare_print": "Stampa",
@@ -116,7 +118,19 @@
     "fits_devices": "Adatto a dispositivi da {{ from }} – {{ to }} pollici",
     "fits_short": "{{ from }}–{{ to }}\"",
     "discontinued": "Fuori produzione",
-    "out_of_stock": "Non disponibile"
+    "out_of_stock": "Non disponibile",
+    "compare_title": "Confronto",
+    "compare_remove": "Rimuovi",
+    "compare_reco_title": "Dalla stessa categoria",
+    "compare_features": "Caratteristiche",
+    "compare_mail": "Via e-mail",
+    "compare_mail_subject": "Confronto prodotti DICOTA",
+    "compare_mail_body": "Ciao,\n\necco il mio confronto prodotti DICOTA:",
+    "compare_copy": "Copia link",
+    "compare_copied": "Link copiato",
+    "learn_more": "Scopri di più",
+    "wishlist_add_all": "Aggiungi tutto al carrello",
+    "wishlist_added": "Aggiunto"
   },
   "reseller": {
     "form": {

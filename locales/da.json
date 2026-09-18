@@ -23,7 +23,9 @@
     "search": "Søg",
     "sort_by": "Sorter efter",
     "submit": "Indsend",
-    "trending": "Populært"
+    "trending": "Populært",
+    "close": "Luk",
+    "no_results": "Ingen resultater"
   },
   "cart": {
     "heading": "Kurv",
@@ -101,7 +103,7 @@
     "compare_add": "Sammenlign",
     "compare_open": "Sammenlign nu",
     "compare_clear": "Ryd",
-    "compare_max": "Du kan sammenligne op til 3 produkter – fjern et først.",
+    "compare_max": "Du kan sammenligne op til 5 produkter – fjern et først.",
     "compare_empty": "Du har endnu ikke valgt produkter at sammenligne.",
     "compare_diff_only": "Vis kun forskelle",
     "compare_print": "Udskriv",
@@ -116,7 +118,19 @@
     "fits_devices": "Passer til {{ from }} – {{ to }} tommer enheder",
     "fits_short": "{{ from }}–{{ to }}\"",
     "discontinued": "Udgået",
-    "out_of_stock": "Ikke på lager"
+    "out_of_stock": "Ikke på lager",
+    "compare_title": "Sammenligning",
+    "compare_remove": "Fjern",
+    "compare_reco_title": "Fra samme kategori",
+    "compare_features": "Funktioner",
+    "compare_mail": "Via e-mail",
+    "compare_mail_subject": "Produktsammenligning hos DICOTA",
+    "compare_mail_body": "Hej,\n\nher er min produktsammenligning hos DICOTA:",
+    "compare_copy": "Kopiér link",
+    "compare_copied": "Link kopieret",
+    "learn_more": "Læs mere",
+    "wishlist_add_all": "Tilføj alle til kurv",
+    "wishlist_added": "Tilføjet"
   },
   "reseller": {
     "form": {

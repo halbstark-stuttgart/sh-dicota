@@ -61,7 +61,9 @@
     "search": "Suchen",
     "sort_by": "Sortieren nach",
     "submit": "Absenden",
-    "trending": "Im Trend"
+    "trending": "Im Trend",
+    "close": "Schließen",
+    "no_results": "Keine Ergebnisse"
   },
   "jobs": {
     "about_role": "Über die Rolle",
@@ -101,7 +103,7 @@
     "compare_add": "Vergleichen",
     "compare_open": "Jetzt vergleichen",
     "compare_clear": "Leeren",
-    "compare_max": "Maximal 3 Produkte vergleichbar – entferne zuerst eines.",
+    "compare_max": "Maximal 5 Produkte vergleichbar – entferne zuerst eines.",
     "compare_empty": "Du hast noch keine Produkte zum Vergleich ausgewählt.",
     "compare_diff_only": "Nur Unterschiede zeigen",
     "compare_print": "Drucken",
@@ -116,7 +118,19 @@
     "fits_devices": "Passend für {{ from }} – {{ to }} Zoll Geräte",
     "fits_short": "{{ from }}–{{ to }}\"",
     "discontinued": "Auslaufmodell",
-    "out_of_stock": "Nicht lieferbar"
+    "out_of_stock": "Nicht lieferbar",
+    "compare_title": "Vergleich",
+    "compare_remove": "Entfernen",
+    "compare_reco_title": "Aus derselben Kategorie",
+    "compare_features": "Features",
+    "compare_mail": "Per E-Mail",
+    "compare_mail_subject": "Produktvergleich bei DICOTA",
+    "compare_mail_body": "Hallo,\n\nhier ist mein Produktvergleich bei DICOTA:",
+    "compare_copy": "Link kopieren",
+    "compare_copied": "Link kopiert",
+    "learn_more": "Mehr erfahren",
+    "wishlist_add_all": "Alle in den Warenkorb",
+    "wishlist_added": "Hinzugefügt"
   },
   "reseller": {
     "form": {

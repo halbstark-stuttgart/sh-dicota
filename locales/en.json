@@ -61,7 +61,9 @@
     "search": "Search",
     "sort_by": "Sort by",
     "submit": "Submit",
-    "trending": "Trending"
+    "trending": "Trending",
+    "close": "Close",
+    "no_results": "No results"
   },
   "jobs": {
     "about_role": "About the role",
@@ -101,7 +103,7 @@
     "compare_add": "Compare",
     "compare_open": "Compare now",
     "compare_clear": "Clear",
-    "compare_max": "You can compare up to 3 products – remove one first.",
+    "compare_max": "You can compare up to 5 products – remove one first.",
     "compare_empty": "You haven't selected any products to compare yet.",
     "compare_diff_only": "Show differences only",
     "compare_print": "Print",
@@ -116,7 +118,19 @@
     "fits_devices": "Fits {{ from }} - {{ to }} inch devices",
     "fits_short": "{{ from }}–{{ to }}\"",
     "discontinued": "Discontinued",
-    "out_of_stock": "Out of Stock"
+    "out_of_stock": "Out of Stock",
+    "compare_title": "Compare",
+    "compare_remove": "Remove",
+    "compare_reco_title": "From the same category",
+    "compare_features": "Features",
+    "compare_mail": "By email",
+    "compare_mail_subject": "Product comparison at DICOTA",
+    "compare_mail_body": "Hello,\n\nhere is my product comparison at DICOTA:",
+    "compare_copy": "Copy link",
+    "compare_copied": "Link copied",
+    "learn_more": "Learn more",
+    "wishlist_add_all": "Add all to cart",
+    "wishlist_added": "Added"
   },
   "reseller": {
     "form": {

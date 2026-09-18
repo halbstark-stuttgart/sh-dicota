@@ -2,8 +2,9 @@
  * DICOTA - Produktvergleich
  * ---------------------------------------------------------------------------
  * Zwei Rollen in einer Datei:
- *   1. Auf der Produktseite: Toggle-Button + Sammelleiste (max. 3 Produkte)
- *   2. Auf /pages/vergleich: die Vergleichstabelle
+ *   1. Drawer im Header (aufgebaut wie der Mini-Cart): gewaehlte Produkte,
+ *      Empfehlungen aus derselben Kategorie, Button auf die Vergleichsseite
+ *   2. /pages/vergleich: die eigentliche Vergleichstabelle
  *
  * Speicher   localStorage["compareHandles"] = ["handle-a", "handle-b"]
  *            Handles statt Varianten-IDs, weil sie in der teilbaren URL lesbar
@@ -12,18 +13,26 @@
  * Teilbarkeit  /pages/vergleich?p=handle-a,handle-b,handle-c
  *              Die URL hat beim Laden Vorrang und ueberschreibt den Speicher.
  *
- * Datenquellen - es wird KEINE neue Liquid-Logik gebraucht:
- *   /products/<handle>.js                    Titel, Bild, Preis, Varianten-ID
- *   /products/<handle> -> #pdf-datasheet-data  specifications[{label,value}]
+ * Datenquellen - es wird KEINE neue Liquid-Logik fuer die Specs gebraucht:
+ *   /products/<handle>.js                      Titel, Bild, Preis, Varianten-ID
+ *   /products/<handle> -> #pdf-datasheet-data    specifications[{label,value}]
  * Der zweite Block liegt bereits auf jeder Produktseite (Quelle des Datenblatt-PDF).
+ *
+ * Empfehlungen  /recommendations/products?product_id=..&intent=related&section_id=compare_reco
+ *               Dieselbe Mechanik wie die Mini-Cart-Empfehlungen. "related" ist
+ *               kollektionsbasiert und entspricht damit praktisch der Kategorie;
+ *               strikt auf sl_ART.extra_CATEGORY zu filtern hiesse, ganze
+ *               Kollektionen in Liquid zu durchlaufen.
  */
 (function () {
   "use strict";
 
   var KEY = "compareHandles";
-  var MAX = 3;
+  var MAX = 5;
+  var RECO_SECTION = "compare_reco";
   var root = (window.Shopify && window.Shopify.routes && window.Shopify.routes.root) || "/";
   var cache = {};
+  var recoFor = null;
 
   /* ----- Speicher ----------------------------------------------------- */
 
@@ -77,23 +86,48 @@
       .then(function (r) { return r.ok ? r.json() : null; })
       .catch(function () { return null; });
 
-    var specs = fetch(base, { headers: { Accept: "text/html" } })
+    /* Die Produktseite liefert in einem Zug: den Datenblatt-Payload (Specs,
+       Tagline, Features), den Lieferstatus aus .ph_delivery - inklusive des
+       Sonderfertigungs-Zustands - und die Bewertung aus .ph_rating. Damit
+       braucht der Vergleich keinen zusaetzlichen Datenweg. */
+    var page = fetch(base, { headers: { Accept: "text/html" } })
       .then(function (r) { return r.ok ? r.text() : ""; })
       .then(function (html) {
         if (!html) return null;
         var doc = new DOMParser().parseFromString(html, "text/html");
+        var out = { payload: null, delivery: null, rating: null };
+
         var el = doc.getElementById("pdf-datasheet-data");
-        if (!el) return null;
-        try { return JSON.parse(el.textContent); } catch (e) { return null; }
+        if (el) { try { out.payload = JSON.parse(el.textContent); } catch (e) {} }
+
+        var del = doc.querySelector(".ph_delivery");
+        if (del) {
+          var mod = "";
+          ["is-ondemand", "is-low", "is-unavailable"].forEach(function (c) {
+            if (del.classList.contains(c)) mod = c;
+          });
+          out.delivery = { state: mod || "is-high", text: del.textContent.trim() };
+        }
+
+        var rt = doc.querySelector(".ph_rating");
+        if (rt) {
+          var starEl = rt.querySelector("[style*='--rating']") || rt;
+          var sm = /--rating:\s*([\d.]+)/.exec(starEl.getAttribute("style") || "");
+          var cm = /\((\d+)\)/.exec(rt.textContent || "");
+          if (sm) out.rating = { value: parseFloat(sm[1]), count: cm ? parseInt(cm[1], 10) : null };
+        }
+        return out;
       })
       .catch(function () { return null; });
 
-    return Promise.all([commercial, specs]).then(function (r) {
-      var p = r[0], d = r[1];
+    return Promise.all([commercial, page]).then(function (r) {
+      var p = r[0], pg = r[1] || {};
+      var d = pg.payload;
       if (!p) return null;
       var v = (p.variants || []).filter(function (x) { return x.available; })[0] || (p.variants || [])[0];
       var data = {
         handle: handle,
+        id: p.id,
         title: p.title,
         url: root + "products/" + handle,
         image: p.featured_image || (p.images && p.images[0]) || "",
@@ -101,14 +135,60 @@
         available: !!p.available,
         variantId: v ? v.id : null,
         specs: (d && d.specifications) || [],
-        subtitle: (d && typeof d.subtitle === "string") ? d.subtitle : ""
+        tagline: (d && typeof d.subtitle === "string") ? d.subtitle : "",
+        features: (d && d.highlights) || [],
+        delivery: pg.delivery || null,
+        rating: pg.rating || null
       };
       cache[handle] = data;
       return data;
     });
   }
 
+  /* Preisformat aus einem von Liquid gerenderten Muster ableiten:
+     data-money-sample="{{ 123456 | money }}" liefert z.B. "€1.234,56",
+     "$1,234.56" oder "CHF 1'234.56". Daraus lesen wir Symbolposition,
+     Tausender- und Dezimaltrenner ab. Das trifft die serverseitige
+     Ausgabe exakt - auch im CHF-Markt, wo ein fest verdrahtetes
+     Euro-Format falsch waere.
+     LiquifyHelper.moneyFormat taugt dafuer nicht: es setzt immer einen
+     Punkt als Dezimaltrenner, das Theme rendert aber Komma. */
+  var fmtMoney = null;
+
+  function initMoney() {
+    var el = document.querySelector("[data-money-sample]");
+    var sample = el && el.getAttribute("data-money-sample");
+    if (!sample) return;
+    var m = /[\d.,']+/.exec(sample);
+    if (!m) return;
+    var core = m[0];
+    var prefix = sample.slice(0, m.index);
+    var suffix = sample.slice(m.index + core.length);
+    var decSep = "", thouSep = "";
+    var tail = /[.,](\d{2})$/.exec(core);
+    if (tail) {
+      decSep = tail[0].charAt(0);
+      var other = core.slice(0, core.length - 3).replace(/\d/g, "");
+      thouSep = other ? other.charAt(0) : "";
+    } else {
+      var only = core.replace(/\d/g, "");
+      thouSep = only ? only.charAt(0) : "";
+    }
+    fmtMoney = function (cents) {
+      var neg = cents < 0;
+      cents = Math.abs(cents);
+      var val = decSep ? (cents / 100).toFixed(2) : String(Math.round(cents / 100));
+      var parts = val.split(".");
+      var whole = parts[0];
+      if (thouSep) whole = whole.replace(/\B(?=(\d{3})+(?!\d))/g, thouSep);
+      return (neg ? "-" : "") + prefix + whole
+             + (decSep && parts[1] ? decSep + parts[1] : "") + suffix;
+    };
+  }
+
   function money(cents) {
+    if (!fmtMoney) initMoney();
+    if (fmtMoney) return fmtMoney(cents);
     if (window.LiquifyHelper && typeof window.LiquifyHelper.moneyFormat === "function") {
       try { return window.LiquifyHelper.moneyFormat(cents); } catch (e) {}
     }
@@ -117,8 +197,7 @@
 
   function esc(s) {
     return String(s == null ? "" : s)
-      .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
-      .replace(/"/g, "&quot;");
+      .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
   }
 
   function thumb(url, w) {
@@ -126,7 +205,7 @@
     return url.indexOf("?") === -1 ? url + "?width=" + w : url + "&width=" + w;
   }
 
-  /* ----- Produktseite: Button + Sammelleiste --------------------------- */
+  /* ----- Drawer --------------------------------------------------------- */
 
   function syncToggles() {
     var list = read();
@@ -140,40 +219,135 @@
     }
   }
 
-  function renderBar() {
-    var bar = document.querySelector("[data-compare-bar]");
-    if (!bar) return;
+  function renderDrawer() {
+    var listEl = document.querySelector("[data-compare-list]");
+    var nav = document.querySelector("[data-compare-nav]");
+    if (!listEl) return;
+    var empty = document.querySelector("[data-compare-empty]");
+    var footer = document.querySelector("[data-compare-footer]");
+    var counts = document.querySelectorAll("[data-compare-count]");
     var list = read();
-    bar.classList.toggle("is-visible", list.length > 0);
 
-    var count = bar.querySelector("[data-compare-count]");
-    if (count) count.textContent = list.length + " / " + MAX;
+    // Das Kopf-Icon erscheint erst, wenn etwas gewaehlt ist - sonst ist es Beiwerk.
+    if (nav) nav.hidden = list.length === 0;
+    for (var c = 0; c < counts.length; c++) {
+      counts[c].textContent = list.length ? "(" + list.length + " / " + MAX + ")" : "";
+    }
 
-    var slot = bar.querySelector("[data-compare-items]");
-    if (!slot) return;
+    if (!list.length) {
+      listEl.innerHTML = "";
+      if (empty) empty.hidden = false;
+      if (footer) footer.hidden = true;
+      var slot0 = document.querySelector("[data-compare-reco]");
+      if (slot0) { slot0.innerHTML = ""; recoFor = null; }
+      return;
+    }
+    if (empty) empty.hidden = true;
+    if (footer) footer.hidden = list.length < 2;
 
-    Promise.all(list.map(getProduct)).then(function (items) {
+    Promise.all(list.map(getProduct)).then(function (raw) {
+      var items = raw.filter(Boolean);
       var html = "";
       for (var i = 0; i < items.length; i++) {
         var p = items[i];
-        if (!p) continue;
-        html += '<div class="compare-bar_item">'
-              +   '<img src="' + esc(thumb(p.image, 120)) + '" alt="' + esc(p.title) + '" loading="lazy">'
-              +   '<span class="compare-bar_item-title">' + esc(p.title) + "<\/span>"
-              +   '<button type="button" class="compare-bar_item-remove" data-compare-remove="'
-              +     esc(p.handle) + '" aria-label="' + esc(p.title) + '">&times;<\/button>'
-              + "<\/div>";
+        html += '<div class="li-drawer_item">'
+              +   '<div class="li-drawer_item-media">'
+              +     '<a href="' + esc(p.url) + '"><img src="' + esc(thumb(p.image, 160))
+              +       '" alt="' + esc(p.title) + '" loading="lazy"><\/a><\/div>'
+              +   '<div class="li-drawer_item-info">'
+              +     '<a class="li-drawer_item-title" href="' + esc(p.url) + '">' + esc(p.title) + "<\/a>"
+              +     '<span class="li-drawer_item-price">' + esc(money(p.price)) + "<\/span>"
+              +     '<div class="li-drawer_item-actions">'
+              +       '<button type="button" class="li-drawer_item-remove" data-compare-remove="'
+              +         esc(p.handle) + '">'
+              +         esc(listEl.getAttribute("data-label-remove") || "Entfernen") + "<\/button>"
+              +     "<\/div><\/div><\/div>";
       }
-      slot.innerHTML = html;
+      listEl.innerHTML = html;
+      if (items.length) loadReco(items[items.length - 1]);
     });
   }
 
+  /* Empfehlungen zum zuletzt gewaehlten Produkt, wie im Mini-Cart. */
+  function loadReco(anchor) {
+    var slot = document.querySelector("[data-compare-reco]");
+    if (!slot || !anchor || !anchor.id) return;
+    if (recoFor === anchor.id) return;
+    recoFor = anchor.id;
+
+    fetch(root + "recommendations/products?product_id=" + anchor.id
+          + "&intent=related&section_id=" + RECO_SECTION)
+      .then(function (r) { return r.ok ? r.text() : ""; })
+      .then(function (html) {
+        if (!html) { slot.innerHTML = ""; return; }
+        var doc = new DOMParser().parseFromString(html, "text/html");
+        var block = doc.querySelector(".cmp-reco");
+        if (!block) { slot.innerHTML = ""; return; }
+
+        // Schon gewaehlte Produkte aus den Empfehlungen entfernen. Der Handle
+        // kommt aus der Produkt-URL, weil li-attribute neben li-for verworfen wird.
+        var chosen = read();
+        var tiles = block.querySelectorAll(".cmp-reco_item");
+        for (var t = tiles.length - 1; t >= 0; t--) {
+          var link = tiles[t].querySelector('a[href*="/products/"]');
+          var h = link ? link.getAttribute("href").split("/products/")[1].split(/[?#]/)[0] : "";
+          if (h && chosen.indexOf(h) !== -1) tiles[t].remove();
+        }
+        if (!block.querySelector(".cmp-reco_item")) { slot.innerHTML = ""; return; }
+        slot.innerHTML = "";
+        slot.appendChild(block);
+      })
+      .catch(function () { slot.innerHTML = ""; recoFor = null; });
+  }
+
+  function openDrawer() {
+    window.dispatchEvent(new CustomEvent("liquiflow-compare-open"));
+  }
+
+  /* Teilen auf zwei Wegen. Die URL traegt die Auswahl bereits als ?p=... -
+     renderTable schreibt sie per replaceState mit, sobald die Tabelle steht. */
+
+  /* Mail-Entwurf im Standard-Programm. Die verglichenen Produkte kommen als
+     Liste mit in den Text, sonst steht dort nur ein nackter Link. */
+  function shareByMail(btn) {
+    var subject = btn.getAttribute("data-subject") || document.title;
+    var intro = btn.getAttribute("data-body") || "";
+    var titles = [];
+    var nodes = document.querySelectorAll(".compare_title");
+    for (var i = 0; i < nodes.length; i++) titles.push("- " + nodes[i].textContent.trim());
+
+    var body = intro + "\n\n" + titles.join("\n") + "\n\n" + location.href;
+    window.location.href = "mailto:?subject=" + encodeURIComponent(subject)
+                         + "&body=" + encodeURIComponent(body);
+  }
+
+  function copyLink(btn) {
+    var url = location.href;
+    var label = btn.querySelector("span");
+    var done = btn.getAttribute("data-label-copied") || "Link kopiert";
+    var orig = label ? label.textContent : "";
+
+    function feedback() {
+      if (!label) return;
+      label.textContent = done;
+      clearTimeout(copyLink._t);
+      copyLink._t = setTimeout(function () { label.textContent = orig; }, 2500);
+    }
+
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(url).then(feedback).catch(function () { window.prompt(done, url); });
+      return;
+    }
+    window.prompt(done, url);
+  }
+
   function flashHint() {
+    openDrawer();
     var hint = document.querySelector("[data-compare-hint]");
     if (!hint) return;
     hint.classList.add("is-visible");
     clearTimeout(flashHint._t);
-    flashHint._t = setTimeout(function () { hint.classList.remove("is-visible"); }, 3500);
+    flashHint._t = setTimeout(function () { hint.classList.remove("is-visible"); }, 4000);
   }
 
   /* ----- Vergleichsseite ------------------------------------------------ */
@@ -196,16 +370,32 @@
     return null;
   }
 
+  /* Platzhalter, solange die Produktdaten laden. Je Produkt sind es zwei
+     Fetches (.js und die Produktseite fuer die Specs) - ohne Skeleton bliebe
+     die Seite dabei sichtbar leer. */
+  function renderSkeleton(grid, n) {
+    var cols = "";
+    for (var i = 0; i < n; i++) {
+      cols += '<div class="compare_skeleton-col">'
+           +    '<div class="compare_skeleton-box is-image"><\/div>'
+           +    '<div class="compare_skeleton-box is-line"><\/div>'
+           +    '<div class="compare_skeleton-box is-line is-short"><\/div>'
+           +    '<div class="compare_skeleton-box is-button"><\/div>'
+           + "<\/div>";
+    }
+    var rows = "";
+    for (var r = 0; r < 8; r++) rows += '<div class="compare_skeleton-box is-line"><\/div>';
+    grid.innerHTML = '<div class="compare_skeleton">' + cols + "<\/div>"
+                   + '<div class="compare_skeleton-rows">' + rows + "<\/div>";
+  }
+
   function renderTable() {
     var rootEl = document.querySelector("[data-compare-root]");
     if (!rootEl) return;
 
-    var params = new URLSearchParams(location.search);
-    var fromUrl = (params.get("p") || "").split(",").map(function (s) { return s.trim(); }).filter(Boolean);
-    if (fromUrl.length) write(fromUrl.slice(0, MAX));
-
     var list = read();
     var grid = rootEl.querySelector("[data-compare-grid]");
+    if (!grid) return;
     var empty = rootEl.querySelector("[data-compare-empty]");
 
     if (!list.length) {
@@ -214,12 +404,12 @@
       return;
     }
     if (empty) empty.hidden = true;
+    renderSkeleton(grid, list.length);
 
     Promise.all(list.map(getProduct)).then(function (raw) {
       var items = raw.filter(Boolean);
-      if (!items.length) { if (empty) empty.hidden = false; return; }
+      if (!items.length) { if (empty) empty.hidden = false; grid.innerHTML = ""; return; }
 
-      // URL spiegelt die Auswahl, damit der Link teilbar bleibt
       var u = new URL(location.href);
       u.searchParams.set("p", items.map(function (i) { return i.handle; }).join(","));
       history.replaceState({}, "", u.toString());
@@ -231,11 +421,23 @@
       var html = '<table class="compare_table"><thead><tr><th class="compare_axis"><\/th>';
       for (var i = 0; i < items.length; i++) {
         var p = items[i];
+        // Reihenfolge nach Kundenvorgabe: Bild, Titel, Tagline, Bewertung,
+        // Preis, Lieferstatus, Kauf-Button.
         html += '<th class="compare_col">'
              +    '<button type="button" class="compare_remove" data-compare-remove="' + esc(p.handle) + '">&times;<\/button>'
              +    '<a href="' + esc(p.url) + '"><img src="' + esc(thumb(p.image, 400)) + '" alt="' + esc(p.title) + '" loading="lazy"><\/a>'
              +    '<a class="compare_title" href="' + esc(p.url) + '">' + esc(p.title) + "<\/a>"
+             +    (p.rating
+                    ? '<div class="compare_rating">'
+                      + '<span class="product-card_stars" style="--rating: ' + p.rating.value + '"><\/span>'
+                      + '<span class="compare_rating-value">' + p.rating.value.toFixed(1)
+                      + (p.rating.count ? " (" + p.rating.count + ")" : "") + "<\/span><\/div>"
+                    : "")
              +    '<div class="compare_price">' + esc(money(p.price)) + "<\/div>"
+             +    (p.delivery
+                    ? '<div class="compare_delivery ' + esc(p.delivery.state) + '">'
+                      + '<span class="ph_delivery-dot"><\/span>' + esc(p.delivery.text) + "<\/div>"
+                    : "")
              +    (p.available && p.variantId
                     ? '<button type="button" class="button compare_atc" data-compare-add="' + p.variantId + '">'
                       + esc(rootEl.getAttribute("data-label-atc") || "In den Warenkorb") + "<\/button>"
@@ -245,6 +447,18 @@
       }
       html += "<\/tr><\/thead><tbody>";
 
+      // Features als kommagetrennte Zeile, wie vom Kunden gewuenscht
+      var hasFeatures = items.some(function (it) { return (it.features || []).length; });
+      if (hasFeatures) {
+        html += '<tr><th class="compare_axis">'
+             +    esc(rootEl.getAttribute("data-label-features") || "Features") + "<\/th>";
+        for (var fi = 0; fi < items.length; fi++) {
+          var fl = (items[fi].features || []).join(", ");
+          html += "<td>" + (fl ? esc(fl) : "&ndash;") + "<\/td>";
+        }
+        html += "<\/tr>";
+      }
+
       for (var r = 0; r < labels.length; r++) {
         var label = labels[r];
         var vals = items.map(function (it) { return valueFor(it, label); });
@@ -252,12 +466,33 @@
         var same = norm.every(function (v) { return v === norm[0]; });
         if (only && same) continue;
         html += '<tr' + (same ? "" : ' class="is-diff"') + '><th class="compare_axis">' + esc(label) + "<\/th>";
-        for (var c = 0; c < vals.length; c++) {
-          html += '<td>' + (vals[c] == null || vals[c] === "" ? "&ndash;" : esc(vals[c])) + "<\/td>";
+        for (var c2 = 0; c2 < vals.length; c2++) {
+          html += "<td>" + (vals[c2] == null || vals[c2] === "" ? "&ndash;" : esc(vals[c2])) + "<\/td>";
         }
         html += "<\/tr>";
       }
-      html += "<\/tbody><\/table>";
+      html += "<\/tbody><tfoot><tr><th class=\"compare_axis\"><\/th>";
+      for (var f = 0; f < items.length; f++) {
+        var q = items[f];
+        var atcLabel = rootEl.getAttribute("data-label-atc") || "In den Warenkorb";
+        html += '<td><div class="compare_foot-cell">'
+             +    '<div class="compare_foot-text">'
+             +      '<a class="compare_foot-title" href="' + esc(q.url) + '">' + esc(q.title) + "<\/a>"
+             +      '<span class="compare_foot-price">' + esc(money(q.price)) + "<\/span>"
+             +    "<\/div>"
+             +    (q.available && q.variantId
+                    /* Kompakt: nur das Warenkorb-Icon. Produktname und Preis stehen
+                       direkt daneben, ein ausgeschriebenes Label waere Wiederholung. */
+                    ? '<button type="button" class="button compare_atc is-compact" data-compare-add="'
+                      + q.variantId + '" aria-label="' + esc(atcLabel) + '" title="' + esc(atcLabel) + '">'
+                      + '<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">'
+                      + '<path d="M6 22C5.45 22 4.97917 21.8042 4.5875 21.4125C4.19583 21.0208 4 20.55 4 20V8C4 7.45 4.19583 6.97917 4.5875 6.5875C4.97917 6.19583 5.45 6 6 6H8C8 4.9 8.39167 3.95833 9.175 3.175C9.95833 2.39167 10.9 2 12 2C13.1 2 14.0417 2.39167 14.825 3.175C15.6083 3.95833 16 4.9 16 6H18C18.55 6 19.0208 6.19583 19.4125 6.5875C19.8042 6.97917 20 7.45 20 8V20C20 20.55 19.8042 21.0208 19.4125 21.4125C19.0208 21.8042 18.55 22 18 22H6Z"><\/path>'
+                      + "<\/svg><\/button>"
+                    : '<span class="compare_unavailable">'
+                      + esc(rootEl.getAttribute("data-label-unavailable") || "Nicht verfuegbar") + "<\/span>")
+             + "<\/div><\/td>";
+      }
+      html += "<\/tr><\/tfoot><\/table>";
       grid.innerHTML = html;
     });
   }
@@ -271,7 +506,21 @@
     if (t) {
       e.preventDefault();
       var res = toggle(t.getAttribute("data-compare-handle"));
+      // Hinzufuegen oeffnet den Drawer - wie der Mini-Cart beim Warenkorb.
+      // Beim Entfernen bleibt er zu, sonst springt er beim Abwaehlen auf.
       if (res === "full") flashHint();
+      else if (res === "added") openDrawer();
+      return;
+    }
+
+    // "Vergleichen" auf einer Empfehlungs-Kachel: Handle aus der Produkt-URL
+    var tile = e.target.closest("[data-compare-add-tile]");
+    if (tile) {
+      e.preventDefault();
+      var item = tile.closest(".cmp-reco_item");
+      var link = item && item.querySelector('a[href*="/products/"]');
+      var h = link ? link.getAttribute("href").split("/products/")[1].split(/[?#]/)[0] : "";
+      if (h && toggle(h) === "full") flashHint();
       return;
     }
 
@@ -297,6 +546,12 @@
       return;
     }
 
+    var ml = e.target.closest("[data-compare-mail]");
+    if (ml) { e.preventDefault(); shareByMail(ml); return; }
+
+    var cp = e.target.closest("[data-compare-copy]");
+    if (cp) { e.preventDefault(); copyLink(cp); return; }
+
     var pr = e.target.closest("[data-compare-print]");
     if (pr) { e.preventDefault(); window.print(); }
   });
@@ -307,13 +562,27 @@
 
   document.addEventListener("liquiflow:compare-updated", function () {
     syncToggles();
-    renderBar();
+    renderDrawer();
     if (document.querySelector("[data-compare-root]")) renderTable();
   });
 
+  /* Ein geteilter Link bringt die Auswahl als ?p=handle-a,handle-b mit.
+     Das wird GENAU EINMAL beim Laden ausgewertet - nicht in renderTable:
+     write() feuert das Update-Event, dessen Listener wieder renderTable
+     aufruft, und der laese die URL erneut. Das war eine Endlosrekursion,
+     die den geteilten Link komplett unbrauchbar gemacht hat. */
+  function applyUrlSelection() {
+    if (!document.querySelector("[data-compare-root]")) return;
+    var params = new URLSearchParams(location.search);
+    var fromUrl = (params.get("p") || "").split(",")
+                    .map(function (s) { return s.trim(); }).filter(Boolean);
+    if (fromUrl.length) write(fromUrl.slice(0, MAX));
+  }
+
   function boot() {
+    applyUrlSelection();
     syncToggles();
-    renderBar();
+    renderDrawer();
     renderTable();
   }
 

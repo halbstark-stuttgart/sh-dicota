@@ -23,7 +23,9 @@
     "search": "Rechercher",
     "sort_by": "Trier par",
     "submit": "Soumettre",
-    "trending": "Tendance"
+    "trending": "Tendance",
+    "close": "Fermer",
+    "no_results": "Aucun résultat"
   },
   "cart": {
     "heading": "Panier",
@@ -101,7 +103,7 @@
     "compare_add": "Comparer",
     "compare_open": "Comparer maintenant",
     "compare_clear": "Vider",
-    "compare_max": "3 produits maximum – retirez-en un d’abord.",
+    "compare_max": "5 produits maximum – retirez-en un d’abord.",
     "compare_empty": "Vous n’avez encore sélectionné aucun produit à comparer.",
     "compare_diff_only": "Afficher uniquement les différences",
     "compare_print": "Imprimer",
@@ -116,7 +118,19 @@
     "fits_devices": "Compatible avec les appareils de {{ from }} – {{ to }} pouces",
     "fits_short": "{{ from }}–{{ to }}\"",
     "discontinued": "Fin de série",
-    "out_of_stock": "Rupture de stock"
+    "out_of_stock": "Rupture de stock",
+    "compare_title": "Comparaison",
+    "compare_remove": "Retirer",
+    "compare_reco_title": "De la même catégorie",
+    "compare_features": "Caractéristiques",
+    "compare_mail": "Par e-mail",
+    "compare_mail_subject": "Comparatif de produits DICOTA",
+    "compare_mail_body": "Bonjour,\n\nvoici mon comparatif de produits DICOTA :",
+    "compare_copy": "Copier le lien",
+    "compare_copied": "Lien copié",
+    "learn_more": "En savoir plus",
+    "wishlist_add_all": "Tout ajouter au panier",
+    "wishlist_added": "Ajouté"
   },
   "reseller": {
     "form": {

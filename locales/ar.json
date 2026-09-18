@@ -23,7 +23,9 @@
     "search": "بحث",
     "sort_by": "الترتيب حسب",
     "submit": "إرسال",
-    "trending": "تتجه"
+    "trending": "تتجه",
+    "close": "إغلاق",
+    "no_results": "لا توجد نتائج"
   },
   "shopify": {
     "sentence": {
@@ -4610,7 +4612,7 @@
     "compare_add": "قارن",
     "compare_open": "قارن الآن",
     "compare_clear": "مسح",
-    "compare_max": "يمكنك مقارنة 3 منتجات كحد أقصى – أزل واحدًا أولاً.",
+    "compare_max": "يمكنك مقارنة 5 منتجات كحد أقصى – أزل واحدًا أولاً.",
     "compare_empty": "لم تحدد أي منتجات للمقارنة بعد.",
     "compare_diff_only": "إظهار الاختلافات فقط",
     "compare_print": "طباعة",
@@ -4623,6 +4625,45 @@
     "fits_devices": "مناسب للأجهزة من {{ from }} إلى {{ to }} بوصة",
     "fits_short": "{{ from }}–{{ to }}\"",
     "discontinued": "موقوف",
-    "out_of_stock": "غير متوفر"
+    "out_of_stock": "غير متوفر",
+    "compare_title": "المقارنة",
+    "compare_remove": "إزالة",
+    "compare_reco_title": "من الفئة نفسها",
+    "compare_features": "الميزات",
+    "compare_mail": "عبر البريد",
+    "compare_mail_subject": "مقارنة المنتجات لدى DICOTA",
+    "compare_mail_body": "مرحباً،\n\nهذه مقارنة المنتجات الخاصة بي لدى DICOTA:",
+    "compare_copy": "نسخ الرابط",
+    "compare_copied": "تم نسخ الرابط",
+    "learn_more": "اعرف المزيد",
+    "wishlist_add_all": "أضف الكل إلى السلة",
+    "wishlist_added": "تمت الإضافة",
+    "add_to_cart": "أضف إلى السلة",
+    "on_sale": "تخفيض"
+  },
+  "blog": {
+    "no_posts": "لم يتم العثور على مقالات."
+  },
+  "collection": {
+    "no_items": "لم يتم العثور على عناصر.",
+    "no_matches": "لا توجد منتجات مطابقة لهذه الفلاتر.",
+    "no_products": "لم يتم العثور على منتجات.",
+    "show_results": "عرض النتائج"
+  },
+  "loyalty": {
+    "cashback": {
+      "account_holder": "صاحب الحساب",
+      "bank": "البنك",
+      "iban": "رقم الحساب / IBAN",
+      "points_label": "النقاط المراد صرفها (10,000 كحد أدنى)"
+    }
+  },
+  "reseller": {
+    "form": {
+      "contact_person": "الشخص المسؤول*",
+      "email": "عنوان البريد الإلكتروني*",
+      "heading": "إدخال بيانات الموزع",
+      "phone": "الهاتف"
+    }
   }
 }

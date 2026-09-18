@@ -23,7 +23,9 @@
     "search": "खोजें",
     "sort_by": "क्रमबद्ध करें",
     "submit": "सबमिट करें",
-    "trending": "ट्रेंडिंग"
+    "trending": "ट्रेंडिंग",
+    "close": "बंद करें",
+    "no_results": "कोई परिणाम नहीं"
   },
   "cart": {
     "heading": "गाड़ी",
@@ -101,7 +103,7 @@
     "compare_add": "तुलना करें",
     "compare_open": "अभी तुलना करें",
     "compare_clear": "साफ़ करें",
-    "compare_max": "अधिकतम 3 उत्पादों की तुलना – पहले एक हटाएँ।",
+    "compare_max": "अधिकतम 5 उत्पादों की तुलना – पहले एक हटाएँ।",
     "compare_empty": "आपने तुलना के लिए अभी कोई उत्पाद नहीं चुना है।",
     "compare_diff_only": "केवल अंतर दिखाएँ",
     "compare_print": "प्रिंट करें",
@@ -116,7 +118,19 @@
     "fits_devices": "{{ from }} – {{ to }} इंच डिवाइस के लिए उपयुक्त",
     "fits_short": "{{ from }}–{{ to }}\"",
     "discontinued": "बंद किया गया",
-    "out_of_stock": "स्टॉक में नहीं"
+    "out_of_stock": "स्टॉक में नहीं",
+    "compare_title": "तुलना",
+    "compare_remove": "हटाएँ",
+    "compare_reco_title": "इसी श्रेणी से",
+    "compare_features": "विशेषताएँ",
+    "compare_mail": "ईमेल से",
+    "compare_mail_subject": "DICOTA पर उत्पाद तुलना",
+    "compare_mail_body": "नमस्ते,\n\nयह DICOTA पर मेरी उत्पाद तुलना है:",
+    "compare_copy": "लिंक कॉपी करें",
+    "compare_copied": "लिंक कॉपी हो गया",
+    "learn_more": "और जानें",
+    "wishlist_add_all": "सभी कार्ट में जोड़ें",
+    "wishlist_added": "जोड़ा गया"
   },
   "reseller": {
     "form": {

@@ -23,7 +23,9 @@
     "search": "Hledat",
     "sort_by": "Seřadit podle",
     "submit": "Odeslat",
-    "trending": "Trendy"
+    "trending": "Trendy",
+    "close": "Zavřít",
+    "no_results": "Žádné výsledky"
   },
   "cart": {
     "heading": "Nákupní košík",
@@ -101,7 +103,7 @@
     "compare_add": "Porovnat",
     "compare_open": "Porovnat nyní",
     "compare_clear": "Vymazat",
-    "compare_max": "Porovnat lze nejvýše 3 produkty – nejprve jeden odeberte.",
+    "compare_max": "Porovnat lze nejvýše 5 produktů – nejprve jeden odeberte.",
     "compare_empty": "Zatím jste nevybrali žádné produkty k porovnání.",
     "compare_diff_only": "Zobrazit jen rozdíly",
     "compare_print": "Tisk",
@@ -116,7 +118,19 @@
     "fits_devices": "Vhodné pro zařízení {{ from }} – {{ to }} palců",
     "fits_short": "{{ from }}–{{ to }}\"",
     "discontinued": "Doprodej",
-    "out_of_stock": "Není skladem"
+    "out_of_stock": "Není skladem",
+    "compare_title": "Porovnání",
+    "compare_remove": "Odebrat",
+    "compare_reco_title": "Ze stejné kategorie",
+    "compare_features": "Funkce",
+    "compare_mail": "E-mailem",
+    "compare_mail_subject": "Porovnání produktů DICOTA",
+    "compare_mail_body": "Dobrý den,\n\nzde je mé porovnání produktů DICOTA:",
+    "compare_copy": "Kopírovat odkaz",
+    "compare_copied": "Odkaz zkopírován",
+    "learn_more": "Zjistit více",
+    "wishlist_add_all": "Přidat vše do košíku",
+    "wishlist_added": "Přidáno"
   },
   "reseller": {
     "form": {
@@ -148,6 +162,11 @@
     "no_results": "Nebyly nalezeny žádné výsledky.",
     "no_results_hint": "Podle těchto kritérií nebyly nalezeny žádné výsledky. Zkuste změnit vyhledávací dotaz.",
     "no_suggestions": "Žádné návrhy",
-    "articles": "Články z blogu"
+    "articles": "Články z blogu",
+    "popular": "Oblíbené dotazy",
+    "recently_viewed": "Naposledy zobrazené",
+    "searching": "Hledání…",
+    "suggestions": "Návrhy",
+    "view_all": "Zobrazit všechny produkty"
   }
 }
