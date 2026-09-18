@@ -96,6 +96,12 @@
     }
   },
   "products": {
+    "compare_mail": "ईमेल से",
+    "compare_copy": "लिंक कॉपी करें",
+    "compare_mail_subject": "DICOTA पर उत्पाद तुलना",
+    "compare_mail_body": "नमस्ते,\n\nयह DICOTA पर मेरी उत्पाद तुलना है:",
+    "compare_share": "साझा करें",
+    "compare_copied": "लिंक कॉपी हो गया",
     "compare_features": "विशेषताएँ",
     "learn_more": "और जानें",
     "compare_title": "तुलना",

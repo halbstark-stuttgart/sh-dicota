@@ -96,6 +96,12 @@
     }
   },
   "products": {
+    "compare_mail": "E-mailem",
+    "compare_copy": "Kopiuj link",
+    "compare_mail_subject": "Porównanie produktów DICOTA",
+    "compare_mail_body": "Cześć,\n\noto moje porównanie produktów DICOTA:",
+    "compare_share": "Udostępnij",
+    "compare_copied": "Skopiowano link",
     "compare_features": "Funkcje",
     "learn_more": "Dowiedz się więcej",
     "compare_title": "Porównanie",

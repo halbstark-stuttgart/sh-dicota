@@ -4605,6 +4605,12 @@
     "free_shipping_text": "تحصل على شحن مجاني لهذا الطلب."
   },
   "products": {
+    "compare_mail": "عبر البريد",
+    "compare_copy": "نسخ الرابط",
+    "compare_mail_subject": "مقارنة المنتجات لدى DICOTA",
+    "compare_mail_body": "مرحباً،\n\nهذه مقارنة المنتجات الخاصة بي لدى DICOTA:",
+    "compare_share": "مشاركة",
+    "compare_copied": "تم نسخ الرابط",
     "compare_features": "الميزات",
     "learn_more": "اعرف المزيد",
     "compare_title": "المقارنة",

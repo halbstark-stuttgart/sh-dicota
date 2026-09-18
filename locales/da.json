@@ -96,6 +96,12 @@
     }
   },
   "products": {
+    "compare_mail": "Via e-mail",
+    "compare_copy": "Kopiér link",
+    "compare_mail_subject": "Produktsammenligning hos DICOTA",
+    "compare_mail_body": "Hej,\n\nher er min produktsammenligning hos DICOTA:",
+    "compare_share": "Del",
+    "compare_copied": "Link kopieret",
     "compare_features": "Funktioner",
     "learn_more": "Læs mere",
     "compare_title": "Sammenligning",

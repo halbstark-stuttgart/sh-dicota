@@ -304,6 +304,43 @@
     window.dispatchEvent(new CustomEvent("liquiflow-compare-open"));
   }
 
+  /* Teilen auf zwei Wegen. Die URL traegt die Auswahl bereits als ?p=... -
+     renderTable schreibt sie per replaceState mit, sobald die Tabelle steht. */
+
+  /* Mail-Entwurf im Standard-Programm. Die verglichenen Produkte kommen als
+     Liste mit in den Text, sonst steht dort nur ein nackter Link. */
+  function shareByMail(btn) {
+    var subject = btn.getAttribute("data-subject") || document.title;
+    var intro = btn.getAttribute("data-body") || "";
+    var titles = [];
+    var nodes = document.querySelectorAll(".compare_title");
+    for (var i = 0; i < nodes.length; i++) titles.push("- " + nodes[i].textContent.trim());
+
+    var body = intro + "\n\n" + titles.join("\n") + "\n\n" + location.href;
+    window.location.href = "mailto:?subject=" + encodeURIComponent(subject)
+                         + "&body=" + encodeURIComponent(body);
+  }
+
+  function copyLink(btn) {
+    var url = location.href;
+    var label = btn.querySelector("span");
+    var done = btn.getAttribute("data-label-copied") || "Link kopiert";
+    var orig = label ? label.textContent : "";
+
+    function feedback() {
+      if (!label) return;
+      label.textContent = done;
+      clearTimeout(copyLink._t);
+      copyLink._t = setTimeout(function () { label.textContent = orig; }, 2500);
+    }
+
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(url).then(feedback).catch(function () { window.prompt(done, url); });
+      return;
+    }
+    window.prompt(done, url);
+  }
+
   function flashHint() {
     openDrawer();
     var hint = document.querySelector("[data-compare-hint]");
@@ -356,12 +393,9 @@
     var rootEl = document.querySelector("[data-compare-root]");
     if (!rootEl) return;
 
-    var params = new URLSearchParams(location.search);
-    var fromUrl = (params.get("p") || "").split(",").map(function (s) { return s.trim(); }).filter(Boolean);
-    if (fromUrl.length) write(fromUrl.slice(0, MAX));
-
     var list = read();
     var grid = rootEl.querySelector("[data-compare-grid]");
+    if (!grid) return;
     var empty = rootEl.querySelector("[data-compare-empty]");
 
     if (!list.length) {
@@ -393,7 +427,6 @@
              +    '<button type="button" class="compare_remove" data-compare-remove="' + esc(p.handle) + '">&times;<\/button>'
              +    '<a href="' + esc(p.url) + '"><img src="' + esc(thumb(p.image, 400)) + '" alt="' + esc(p.title) + '" loading="lazy"><\/a>'
              +    '<a class="compare_title" href="' + esc(p.url) + '">' + esc(p.title) + "<\/a>"
-             +    (p.tagline ? '<div class="compare_tagline">' + esc(p.tagline) + "<\/div>" : "")
              +    (p.rating
                     ? '<div class="compare_rating">'
                       + '<span class="product-card_stars" style="--rating: ' + p.rating.value + '"><\/span>'
@@ -441,15 +474,23 @@
       html += "<\/tbody><tfoot><tr><th class=\"compare_axis\"><\/th>";
       for (var f = 0; f < items.length; f++) {
         var q = items[f];
-        html += '<td>'
-             +    '<a class="compare_foot-title" href="' + esc(q.url) + '">' + esc(q.title) + "<\/a>"
-             +    '<span class="compare_foot-price">' + esc(money(q.price)) + "<\/span>"
+        var atcLabel = rootEl.getAttribute("data-label-atc") || "In den Warenkorb";
+        html += '<td><div class="compare_foot-cell">'
+             +    '<div class="compare_foot-text">'
+             +      '<a class="compare_foot-title" href="' + esc(q.url) + '">' + esc(q.title) + "<\/a>"
+             +      '<span class="compare_foot-price">' + esc(money(q.price)) + "<\/span>"
+             +    "<\/div>"
              +    (q.available && q.variantId
-                    ? '<button type="button" class="button compare_atc" data-compare-add="' + q.variantId + '">'
-                      + esc(rootEl.getAttribute("data-label-atc") || "In den Warenkorb") + "<\/button>"
+                    /* Kompakt: nur das Warenkorb-Icon. Produktname und Preis stehen
+                       direkt daneben, ein ausgeschriebenes Label waere Wiederholung. */
+                    ? '<button type="button" class="button compare_atc is-compact" data-compare-add="'
+                      + q.variantId + '" aria-label="' + esc(atcLabel) + '" title="' + esc(atcLabel) + '">'
+                      + '<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">'
+                      + '<path d="M6 22C5.45 22 4.97917 21.8042 4.5875 21.4125C4.19583 21.0208 4 20.55 4 20V8C4 7.45 4.19583 6.97917 4.5875 6.5875C4.97917 6.19583 5.45 6 6 6H8C8 4.9 8.39167 3.95833 9.175 3.175C9.95833 2.39167 10.9 2 12 2C13.1 2 14.0417 2.39167 14.825 3.175C15.6083 3.95833 16 4.9 16 6H18C18.55 6 19.0208 6.19583 19.4125 6.5875C19.8042 6.97917 20 7.45 20 8V20C20 20.55 19.8042 21.0208 19.4125 21.4125C19.0208 21.8042 18.55 22 18 22H6Z"><\/path>'
+                      + "<\/svg><\/button>"
                     : '<span class="compare_unavailable">'
                       + esc(rootEl.getAttribute("data-label-unavailable") || "Nicht verfuegbar") + "<\/span>")
-             + "<\/td>";
+             + "<\/div><\/td>";
       }
       html += "<\/tr><\/tfoot><\/table>";
       grid.innerHTML = html;
@@ -505,6 +546,12 @@
       return;
     }
 
+    var ml = e.target.closest("[data-compare-mail]");
+    if (ml) { e.preventDefault(); shareByMail(ml); return; }
+
+    var cp = e.target.closest("[data-compare-copy]");
+    if (cp) { e.preventDefault(); copyLink(cp); return; }
+
     var pr = e.target.closest("[data-compare-print]");
     if (pr) { e.preventDefault(); window.print(); }
   });
@@ -519,7 +566,21 @@
     if (document.querySelector("[data-compare-root]")) renderTable();
   });
 
+  /* Ein geteilter Link bringt die Auswahl als ?p=handle-a,handle-b mit.
+     Das wird GENAU EINMAL beim Laden ausgewertet - nicht in renderTable:
+     write() feuert das Update-Event, dessen Listener wieder renderTable
+     aufruft, und der laese die URL erneut. Das war eine Endlosrekursion,
+     die den geteilten Link komplett unbrauchbar gemacht hat. */
+  function applyUrlSelection() {
+    if (!document.querySelector("[data-compare-root]")) return;
+    var params = new URLSearchParams(location.search);
+    var fromUrl = (params.get("p") || "").split(",")
+                    .map(function (s) { return s.trim(); }).filter(Boolean);
+    if (fromUrl.length) write(fromUrl.slice(0, MAX));
+  }
+
   function boot() {
+    applyUrlSelection();
     syncToggles();
     renderDrawer();
     renderTable();

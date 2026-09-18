@@ -96,6 +96,12 @@
     }
   },
   "products": {
+    "compare_mail": "E-mailem",
+    "compare_copy": "Kopírovat odkaz",
+    "compare_mail_subject": "Porovnání produktů DICOTA",
+    "compare_mail_body": "Dobrý den,\n\nzde je mé porovnání produktů DICOTA:",
+    "compare_share": "Sdílet",
+    "compare_copied": "Odkaz zkopírován",
     "compare_features": "Funkce",
     "learn_more": "Zjistit více",
     "compare_title": "Porovnání",
