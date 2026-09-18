@@ -476,6 +476,10 @@
         var q = items[f];
         var atcLabel = rootEl.getAttribute("data-label-atc") || "In den Warenkorb";
         html += '<td><div class="compare_foot-cell">'
+             +    (q.image
+                    ? '<img class="compare_foot-image" src="' + esc(thumb(q.image, 120))
+                      + '" alt="" loading="lazy">'
+                    : "")
              +    '<div class="compare_foot-text">'
              +      '<a class="compare_foot-title" href="' + esc(q.url) + '">' + esc(q.title) + "<\/a>"
              +      '<span class="compare_foot-price">' + esc(money(q.price)) + "<\/span>"
@@ -485,8 +489,10 @@
                        direkt daneben, ein ausgeschriebenes Label waere Wiederholung. */
                     ? '<button type="button" class="button compare_atc is-compact" data-compare-add="'
                       + q.variantId + '" aria-label="' + esc(atcLabel) + '" title="' + esc(atcLabel) + '">'
-                      + '<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">'
-                      + '<path d="M6 22C5.45 22 4.97917 21.8042 4.5875 21.4125C4.19583 21.0208 4 20.55 4 20V8C4 7.45 4.19583 6.97917 4.5875 6.5875C4.97917 6.19583 5.45 6 6 6H8C8 4.9 8.39167 3.95833 9.175 3.175C9.95833 2.39167 10.9 2 12 2C13.1 2 14.0417 2.39167 14.825 3.175C15.6083 3.95833 16 4.9 16 6H18C18.55 6 19.0208 6.19583 19.4125 6.5875C19.8042 6.97917 20 7.45 20 8V20C20 20.55 19.8042 21.0208 19.4125 21.4125C19.0208 21.8042 18.55 22 18 22H6Z"><\/path>'
+                      + '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"'
+                      + ' stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'
+                      + '<path d="M5.6 7.6h12.8l-1 12.1a1.6 1.6 0 0 1-1.6 1.5H8.2a1.6 1.6 0 0 1-1.6-1.5L5.6 7.6Z"><\/path>'
+                      + '<path d="M9 7.6V6a3 3 0 0 1 6 0v1.6"><\/path>'
                       + "<\/svg><\/button>"
                     : '<span class="compare_unavailable">'
                       + esc(rootEl.getAttribute("data-label-unavailable") || "Nicht verfuegbar") + "<\/span>")
