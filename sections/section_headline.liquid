@@ -4,7 +4,13 @@
 </p>    </div>
 {% endif %}<h2 class="section-headline_title heading-style-h1">
 {{ section.settings.text_uberschrift }}
-</h2></div><p class="section-headline_subtext text-size-regular"> {{ section.settings.textarea_beschreibung }} </p></div></div></div> {% schema %} {
+</h2></div><p class="section-headline_subtext text-size-regular"> {{ section.settings.textarea_beschreibung }} </p>{% if section.settings.image_bild != blank %}    <span class="li-guard" li-if="section.settings.image_bild != blank">
+    {% if section.settings.image_bild %}
+{{ section.settings.image_bild | image_url: width: 1600 | image_tag: loading: 'lazy', class: 'section-headline_image' }}
+{% else %}
+<img src="{{ 'platzhalter.svg' | asset_url }}" loading="lazy" alt="" class="section-headline_image">
+{% endif %}    </span>
+{% endif %}</div></div></div> {% schema %} {
     "tag": "section",
     "name": "Section Headline",
     "class": "section_section-headline",
@@ -26,6 +32,11 @@
             "type": "textarea",
             "label": "Beschreibung",
             "default": "Bags are everywhere. Bags with a laptop compartment too. But true Computer Bags? Those you'll only find at Dicota."
+        },
+        {
+            "id": "image_bild",
+            "type": "image_picker",
+            "label": "Bild"
         },
         {
             "type": "header",
