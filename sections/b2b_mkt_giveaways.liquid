@@ -1,6 +1,6 @@
 <div class="padding-global padding-section-small" style="padding-top: {{ section.settings.padding_top }}rem; padding-bottom: {{ section.settings.padding_bottom }}rem"><div class="container-large"><div class="acc-default_wrapper"><div class="acc-default_flex-small"><div class="default-flex-tiny"><h1 class="heading-style-h2">
 {{ section.settings.text_heading }}
-</h1><div class="text-size-medium max-width-large"> {{ section.settings.textarea_subheading }} </div></div>{% form 'contact', class: 'mkt-order_form' %}
+</h1><div class="text-size-medium max-width-large"> {{ section.settings.textarea_subheading }} </div></div><form id="mkt-order-form-{{ section.id }}" action="{{ section.settings.text_form_endpoint | default: 'https://usebasin.com/f/581efd46a1b2' }}" method="POST" class="mkt-order_form"><input type="hidden" name="Formular" value="Marketing Giveaways"><input type="hidden" name="Account ID" value="{{ customer.id }}"><input type="hidden" name="Sales Team" value="{{ customer.metafields.custom.sales_team | escape }}">
 <div class="mkt-order_card mkt-order_table-card"><div role="row" class="mkt-order_thead"><div role="columnheader" class="mkt-order_th mkt-order_th-img"><span class="text-style-subline">
 {{ section.settings.text_spalte_article }}
 </span></div><div role="columnheader" class="mkt-order_th mkt-order_th-desc"><span class="text-style-subline">
@@ -29,9 +29,15 @@
 {{ section.settings.text_city_label }}
 </label><input type="text" id="mkt-order-city" name="contact[Stadt]" required="" class="mkt-order_input" value="{{ customer.default_address.city | escape }}"></div></div></div><div class="mkt-order_card"><div class="mkt-order_field"><label for="mkt-order-country" class="mkt-order_label">
 {{ section.settings.text_country_label }}
-</label><input type="text" id="mkt-order-country" name="contact[Land]" required="" class="mkt-order_input" value="{{ customer.default_address.country | escape }}"></div></div><div class="mkt-order_card"><div class="mkt-order_field"><label for="mkt-order-date" class="mkt-order_label">{{ section.settings.field_date_label | default: 'Preferred delivery date:' }}<span class="mkt-order_required" aria-hidden="true">*</span></label><p class="mkt-order_help"> {{ section.settings.textarea_datum_hinweistext }} </p><input type="date" id="mkt-order-date" name="contact[Lieferdatum]" required="" class="mkt-order_input"></div></div><div class="mkt-order_card"><div class="mkt-order_field"><label for="mkt-order-event" class="mkt-order_label">{{ section.settings.field_event_label | default: 'Event/Activity:' }}<span class="mkt-order_required" aria-hidden="true">*</span></label><p class="mkt-order_help"> {{ section.settings.textarea_event_hinweistext }} </p><textarea id="mkt-order-event" name="contact[Event/Aktivität]" placeholder="Write to us…" rows="4" required="" class="mkt-order_textarea"></textarea></div></div><div class="mkt-order_submit-row"><button type="submit" class="button mkt-order_submit w-button"><span>
+</label><input type="text" id="mkt-order-country" name="contact[Land]" required="" class="mkt-order_input" value="{{ customer.default_address.country | escape }}"></div></div><div class="mkt-order_card"><div class="mkt-order_field"><label for="mkt-order-date" class="mkt-order_label">{{ section.settings.field_date_label | default: 'Preferred delivery date:' }}<span class="mkt-order_required" aria-hidden="true">*</span></label><p class="mkt-order_help"> {{ section.settings.textarea_datum_hinweistext }} </p><input type="date" id="mkt-order-date" name="contact[Lieferdatum]" required="" class="mkt-order_input"></div></div><div class="mkt-order_card"><div class="mkt-order_field"><label for="mkt-order-event" class="mkt-order_label">{{ section.settings.field_event_label | default: 'Event/Activity:' }}<span class="mkt-order_required" aria-hidden="true">*</span></label><p class="mkt-order_help"> {{ section.settings.textarea_event_hinweistext }} </p><textarea id="mkt-order-event" name="contact[Event/Aktivität]" placeholder="Write to us…" rows="4" required="" class="mkt-order_textarea"></textarea></div></div><div class="mkt-order_submit-row"><button type="submit" class="button mkt-order_submit w-button"><span class="mkt-order_submit-label">
 {{ section.settings.text_submit_button }}
-</span></button></div>{% endform %}</div></div></div></div> {% schema %} {
+</span><span class="mkt-order_submit-loading" hidden>
+{{ section.settings.text_submitting_text }}
+</span></button></div></form><div class="multi-form_success" id="mkt-order-success-{{ section.id }}" hidden><div class="multi-form_success-icon w-embed"><svg width="40" height="40" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="11" stroke="currentColor" stroke-width="1.5"></circle><path d="M7.5 12.5L10.5 15.5L16.5 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></div><h2 class="heading-style-h4">
+{{ section.settings.text_success_heading }}
+</h2><div class="text-size-medium max-width-medium"> {{ section.settings.textarea_success_text }} </div><button type="button" class="button w-button" data-mkt-order-restart>
+{{ section.settings.text_restart_button }}
+</button></div></div></div></div></div><script>(function(){var form=document.getElementById("mkt-order-form-{{ section.id }}");var success=document.getElementById("mkt-order-success-{{ section.id }}");if(!form||!success)return;var btn=form.querySelector(".mkt-order_submit");var lbl=form.querySelector(".mkt-order_submit-label");var ld=form.querySelector(".mkt-order_submit-loading");function busy(on){if(btn)btn.disabled=on;if(lbl)lbl.hidden=on;if(ld)ld.hidden=!on;}form.addEventListener("submit",function(e){e.preventDefault();busy(true);fetch(form.action,{method:"POST",body:new FormData(form),headers:{Accept:"application/json"}}).then(function(r){if(!r.ok)throw new Error("bad response");form.hidden=true;success.hidden=false;success.scrollIntoView({behavior:"smooth",block:"center"});}).catch(function(err){console.error("Giveaway order submit error:",err);HTMLFormElement.prototype.submit.call(form);}).then(function(){busy(false);});});var restart=success.querySelector("[data-mkt-order-restart]");if(restart)restart.addEventListener("click",function(){form.reset();success.hidden=true;form.hidden=false;form.scrollIntoView({behavior:"smooth",block:"start"});});})();</script> {% schema %} {
     "tag": "section",
     "name": "B2B Mkt Giveaways",
     "class": "section_acc-default section_mkt-order",
@@ -153,6 +159,30 @@
             "default": "Submit now"
         },
         {
+            "id": "text_submitting_text",
+            "type": "text",
+            "label": "Submitting Text",
+            "default": "Submitting\u2026"
+        },
+        {
+            "id": "text_success_heading",
+            "type": "text",
+            "label": "Success Heading",
+            "default": "Your order has been sent"
+        },
+        {
+            "id": "textarea_success_text",
+            "type": "textarea",
+            "label": "Success Text",
+            "default": "Thank you. Our marketing team will process your order and get back to you shortly."
+        },
+        {
+            "id": "text_restart_button",
+            "type": "text",
+            "label": "Restart Button",
+            "default": "Place another order"
+        },
+        {
             "type": "header",
             "content": "Formular-Labels"
         },
@@ -169,8 +199,18 @@
             "default": "Event\/Aktivit\u00e4t:"
         },
         {
+            "type": "header",
+            "content": "Bestellung"
+        },
+        {
+            "type": "text",
+            "id": "text_form_endpoint",
+            "label": "Formular-Endpoint (Basin)",
+            "default": "https://usebasin.com/f/581efd46a1b2"
+        },
+        {
             "type": "paragraph",
-            "content": "Bei jedem Bestell-Artikel-Block werden die eingegebenen Mengen, Bezeichnung und Art.-Nr. als Felder ans Shopify-Contact-Formular gesendet. Du erh\u00e4ltst die Bestellung an die Shop-Kontakt-E-Mail."
+            "content": "Bei jedem Bestell-Artikel-Block werden die eingegebenen Mengen, Bezeichnung und Art.-Nr. als Felder an Basin gesendet. Die Benachrichtigungs-Empf\u00e4nger stellst du in Basin ein."
         },
         {
             "type": "header",
