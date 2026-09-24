@@ -2,7 +2,7 @@
 {{ section.settings.text_heading }}
 </h1>{% if section.settings.textarea_subheading != blank %}    <div class="li-guard" li-if="section.settings.textarea_subheading != blank">
     <div class="text-size-medium max-width-large"> {{ section.settings.textarea_subheading }} </div>    </div>
-{% endif %}</div><div class="multi-form_component" x-data="{ submitted:false, loading:false, products:[], pq:'', pr:[], pl:false, async search(){ var q=this.pq.trim(); if(q.length<2){ this.pr=[]; return } this.pl=true; try{ var r=await fetch('/search/suggest.json?q='+encodeURIComponent(q)+'&resources[type]=product&resources[limit]=6',{headers:{Accept:'application/json'}}); var d=await r.json(); this.pr=(((d.resources||{}).results)||{}).products||[] }catch(e){} this.pl=false }, add(p){ this.products.push({ title:p.title, sku:(p.sku||''), qty:1 }); this.pq=''; this.pr=[] }, rm(i){ this.products.splice(i,1) }, async submit(){ this.loading=true; var f=this.$root.querySelector('form'); var fd=new FormData(f); var data={}; fd.forEach(function(v,k){ data[k]=v }); data.products=this.products; data.account_email=this.$root.dataset.accountEmail; data.account_name=this.$root.dataset.accountName; data.account_id=this.$root.dataset.accountId; data.sales_team=this.$root.dataset.salesTeam; var hook=this.$root.dataset.hook; try{ if(hook){ var resp=await fetch(hook,{ method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(data) }); if(!resp.ok) throw new Error('bad response') } this.submitted=true }catch(e){ console.error('Sample order submit error:', e) } this.loading=false }, reset(){ this.submitted=false; this.products=[]; this.pq=''; this.pr=[] } }" x-init="$watch('pr', v => window.__b2bRenderResults($el, v, p => add(p))); $watch('products', v => window.__b2bRenderProducts($el, v, i => rm(i)))" data-hook="{{ section.settings.url_sample_hook }}" data-account-email="{{ customer.email }}" data-account-name="{{ customer.name | escape }}" data-account-id="{{ customer.id }}" data-sales-team="{{ customer.metafields.custom.sales_team }}"><div class="multi-form_block w-form"><form name="sample-order" data-name="Sample Order" method="post" class="multi-form_form" x-on:submit.prevent="submit()" x-show="!submitted"><div class="multi-form_step"><div class="multi-form_heading"><h2 class="heading-style-h4">
+{% endif %}</div><div class="multi-form_component" x-data="{ submitted:false, loading:false, products:[], pq:'', pr:[], pl:false, async search(){ var q=this.pq.trim(); if(q.length<2){ this.pr=[]; return } this.pl=true; try{ var r=await fetch('/search/suggest.json?q='+encodeURIComponent(q)+'&resources[type]=product&resources[limit]=6',{headers:{Accept:'application/json'}}); var d=await r.json(); this.pr=(((d.resources||{}).results)||{}).products||[] }catch(e){} this.pl=false }, add(p){ this.products.push({ title:p.title, sku:(p.sku||''), qty:1 }); this.pq=''; this.pr=[] }, rm(i){ this.products.splice(i,1) }, async submit(){ this.loading=true; var f=this.$root.querySelector('form'); var fd=new FormData(f); var data={}; fd.forEach(function(v,k){ data[k]=v }); data.products=this.products; data.products_summary=this.products.map(function(p){ return p.qty+'x '+p.title+(p.sku?' ('+p.sku+')':'') }).join('\n'); data.account_email=this.$root.dataset.accountEmail; data.account_name=this.$root.dataset.accountName; data.account_id=this.$root.dataset.accountId; data.sales_team=this.$root.dataset.salesTeam; var hook=this.$root.dataset.hook; try{ if(hook){ var resp=await fetch(hook,{ method:'POST', headers:{'Content-Type':'application/json','Accept':'application/json'}, body:JSON.stringify(data) }); if(!resp.ok) throw new Error('bad response') } this.submitted=true }catch(e){ console.error('Sample order submit error:', e) } this.loading=false }, reset(){ this.submitted=false; this.products=[]; this.pq=''; this.pr=[] } }" x-init="$watch('pr', v => window.__b2bRenderResults($el, v, p => add(p))); $watch('products', v => window.__b2bRenderProducts($el, v, i => rm(i)))" data-hook="{{ section.settings.text_form_endpoint | default: 'https://usebasin.com/f/5984d6622e4b' }}" data-account-email="{{ customer.email }}" data-account-name="{{ customer.name | escape }}" data-account-id="{{ customer.id }}" data-sales-team="{{ customer.metafields.custom.sales_team }}"><div class="multi-form_block w-form"><form name="sample-order" data-name="Sample Order" method="post" class="multi-form_form" x-on:submit.prevent="submit()" x-show="!submitted"><div class="multi-form_step"><div class="multi-form_heading"><h2 class="heading-style-h4">
 {{ section.settings.text_form_heading }}
 </h2></div><div class="multi-form_form-content"><div class="text-size-medium text-weight-medium">
 {{ section.settings.text_products_label }}
@@ -210,9 +210,10 @@
             "content": "Sample-Bestellung"
         },
         {
-            "type": "url",
-            "id": "url_sample_hook",
-            "label": "Sample-Order Webhook (Make)"
+            "type": "text",
+            "id": "text_form_endpoint",
+            "label": "Formular-Endpoint (Basin)",
+            "default": "https://usebasin.com/f/5984d6622e4b"
         },
         {
             "type": "header",
@@ -238,7 +239,8 @@
             "label": "Abstand unten",
             "default": 4
         }
-    ],
+    ]
+,
     "presets": [
         {
             "name": "B2B Order Samples",
