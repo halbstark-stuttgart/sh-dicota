@@ -253,8 +253,13 @@
           "disabled": false,
           "settings": {
             "url_datei_link": "",
-            "text_titel": "Thumbnails",
-            "text_datei_info": "ZIP · 25 MB"
+            "text_titel": "Key Visual (high resolution)",
+            "text_datei_info": "JPG · 7.2 MB"
+          }
+        },
+        "b2b_mkt_dokument_ApQcqA": {
+          "settings": {
+            "text_titel": "Key Visual (low resolution)"
           }
         },
         "b2b_mkt_dokument_DfU3a": {
@@ -275,11 +280,6 @@
             "url_datei_link": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/SEVEN_Product_Lifestyle_Images.zip?v=1783605473",
             "text_titel": "Product Lifestyle Images",
             "text_datei_info": "ZIP · 15.5 MB"
-          }
-        },
-        "b2b_mkt_dokument_ApQcqA": {
-          "settings": {
-            "text_titel": "Key Visual (low resolution)"
           }
         }
       },
