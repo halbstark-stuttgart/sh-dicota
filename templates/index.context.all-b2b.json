@@ -106,12 +106,12 @@
         },
         "reseller_kategorie_gnqma": {
           "type": "reseller-kategorie",
-          "name": "Reseller Kategorie",
+          "name": "Connectivity",
           "disabled": false,
           "settings": {
-            "url_link": "",
+            "url_link": "shopify://collections/b2b-accessories-connectivity",
             "image_bild": null,
-            "text_titel": "Backpacks"
+            "text_titel": "Connectivity"
           }
         },
         "reseller_kategorie_GUhUy": {
