@@ -116,12 +116,12 @@
         },
         "reseller_kategorie_GUhUy": {
           "type": "reseller-kategorie",
-          "name": "Reseller Kategorie",
+          "name": "Power & Charging",
           "disabled": false,
           "settings": {
             "url_link": "",
             "image_bild": null,
-            "text_titel": "Backpacks"
+            "text_titel": "Power & Charging"
           }
         },
         "reseller_kategorie_K9nJj": {
