@@ -70,7 +70,7 @@
           "disabled": false,
           "settings": {
             "url_link": "",
-            "image_bild": null,
+            "image_bild": "shopify://shop_images/Icon_Sleeve.png",
             "text_titel": "Sleeves"
           }
         },
