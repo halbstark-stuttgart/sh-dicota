@@ -49,7 +49,7 @@
           "name": "Backpacks",
           "disabled": false,
           "settings": {
-            "url_link": "",
+            "url_link": "shopify://collections/b2b-backpacks-all",
             "image_bild": "shopify://shop_images/Icon_Backpack.png",
             "text_titel": "Backpacks"
           }
@@ -59,7 +59,7 @@
           "name": "Laptop Bags",
           "disabled": false,
           "settings": {
-            "url_link": "",
+            "url_link": "shopify://collections/b2b-laptop-bags-all",
             "image_bild": "shopify://shop_images/Icon_LaptopBag.png",
             "text_titel": "Laptop Bags"
           }
