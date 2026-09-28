@@ -40,7 +40,7 @@
       "disabled": false,
       "settings": {
         "text_subline": "Marketing Support",
-        "text_heading_1": "Marketing & Product Campaigns",
+        "text_heading_1": "Marketing & Product Materials",
         "textarea_subheading_1": "Discover ready-to-use marketing and product materials designed to support your communication and sales activities. Access campaign imagery, pre-written content, product highlights, translation sheets and additional marketing assets for fast, consistent and effective implementation across all channels.",
         "url_hero_button_link": "",
         "text_hero_button_text": "",
@@ -50,7 +50,7 @@
       },
       "blocks": {},
       "block_order": [],
-      "name": "B2B Solution Header"
+      "name": "Marketing & Product Materials"
     },
     "b2b_mkt_presentation_ptYHt": {
       "type": "b2b_mkt_presentation",
