@@ -76,12 +76,12 @@
         },
         "reseller_kategorie_3JAcd": {
           "type": "reseller-kategorie",
-          "name": "Reseller Kategorie",
+          "name": "Trolleys",
           "disabled": false,
           "settings": {
             "url_link": "",
             "image_bild": null,
-            "text_titel": "Backpacks"
+            "text_titel": "Trolleys"
           }
         },
         "reseller_kategorie_CXfJi": {
