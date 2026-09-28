@@ -247,6 +247,16 @@
         "text_uberschrift": "SEVEN family Marketing Assets"
       },
       "blocks": {
+        "b2b_mkt_dokument_CyQUV": {
+          "type": "b2b-mkt-dokument",
+          "name": "Bento Graphic (vertical, in grey)",
+          "disabled": false,
+          "settings": {
+            "url_datei_link": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/BENTO_SEVEN_FINAL_vertical_greyBoxes_2026.png?v=1790603480",
+            "text_titel": "Bento Graphic (vertical, in grey)",
+            "text_datei_info": "PNG · 1.6 MB"
+          }
+        },
         "b2b_mkt_dokument_aCAn9": {
           "type": "b2b-mkt-dokument",
           "name": "Key Visual (high resolution)",
@@ -307,6 +317,7 @@
         "b2b_mkt_dokument_ApQcqA",
         "b2b_mkt_dokument_VqpRee",
         "b2b_mkt_dokument_MTXwX",
+        "b2b_mkt_dokument_CyQUV",
         "b2b_mkt_dokument_DfU3a",
         "b2b_mkt_dokument_4T9m6"
       ]
