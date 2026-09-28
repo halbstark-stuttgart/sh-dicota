@@ -62,8 +62,10 @@
       ],
       "name": "B2B Mkt Campaigns",
       "settings": {
-        "text_uberschrift": "Product Campaigns",
-        "textarea_einleitung": "Download our product presentations as PDF or PPT — available in German, English and French."
+        "text_uberschrift": "Marketing Material",
+        "textarea_einleitung": "Download our product marketing materials based on product family or category  — presentations are available in German, English and French.",
+        "padding_top": 4,
+        "padding_bottom": 4
       }
     },
     "b2b_mkt_documents": {
@@ -96,7 +98,9 @@
       ],
       "name": "SEVEN family",
       "settings": {
-        "text_uberschrift": "SEVEN family Key Visual & Bento Graphic"
+        "text_uberschrift": "SEVEN family Key Visual & Bento Graphic",
+        "padding_top": 4,
+        "padding_bottom": 4
       }
     }
   },
