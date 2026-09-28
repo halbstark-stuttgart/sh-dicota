@@ -69,7 +69,7 @@
           "name": "Sleeves",
           "disabled": false,
           "settings": {
-            "url_link": "",
+            "url_link": "shopify://collections/b2b-sleeves-all",
             "image_bild": "shopify://shop_images/Icon_Sleeve.png",
             "text_titel": "Sleeves"
           }
