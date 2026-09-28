@@ -249,7 +249,7 @@
       "blocks": {
         "b2b_mkt_dokument_aCAn9": {
           "type": "b2b-mkt-dokument",
-          "name": "B2B Mkt Dokument",
+          "name": "Key Visual (high resolution)",
           "disabled": false,
           "settings": {
             "url_datei_link": "https://files.dicota.cloud/s/JyGByAWTeSBgd6D",
@@ -258,6 +258,7 @@
           }
         },
         "b2b_mkt_dokument_ApQcqA": {
+          "name": "Key Visual (low resolution)",
           "settings": {
             "text_titel": "Key Visual (low resolution)"
           }
