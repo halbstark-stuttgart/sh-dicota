@@ -80,7 +80,7 @@
           "disabled": false,
           "settings": {
             "url_link": "",
-            "image_bild": null,
+            "image_bild": "shopify://shop_images/Icon_Trolley.png",
             "text_titel": "Trolleys"
           }
         },
