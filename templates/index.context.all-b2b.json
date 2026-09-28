@@ -50,18 +50,18 @@
           "disabled": false,
           "settings": {
             "url_link": "",
-            "image_bild": null,
+            "image_bild": "shopify://shop_images/Icon_Backpack.png",
             "text_titel": "Backpacks"
           }
         },
         "reseller_kategorie_76xPU": {
           "type": "reseller-kategorie",
-          "name": "Reseller Kategorie",
+          "name": "Laptop Bag",
           "disabled": false,
           "settings": {
             "url_link": "",
-            "image_bild": null,
-            "text_titel": "Backpacks"
+            "image_bild": "shopify://shop_images/Icon_LaptopBag.png",
+            "text_titel": "Laptop Bag"
           }
         },
         "reseller_kategorie_kjpbw": {
