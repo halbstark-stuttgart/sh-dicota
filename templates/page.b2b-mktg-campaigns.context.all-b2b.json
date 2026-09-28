@@ -57,7 +57,7 @@
       "disabled": false,
       "settings": {
         "text_uberschrift": "TWO Family",
-        "textarea_einleitung": "",
+        "textarea_einleitung": "Download our latest product and marketing materials as PDF, JPG or PNG and use them in your own marketing.",
         "header-cf9541f50211352ca393043b6db9bcb6": null,
         "paragraph-a91f6789531ea5a57f8eb4a3784f6095": null,
         "header-044939e1dfb17180ced7e8db65393ddf": null,
@@ -106,7 +106,7 @@
       "block_order": [
         "produkt_kategorie_bwJKj"
       ],
-      "name": "B2B Mkt Presentation"
+      "name": "TWO Transition Sheets"
     },
     "b2b_mkt_documents_Hibiy": {
       "type": "b2b_mkt_documents",
