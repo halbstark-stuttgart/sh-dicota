@@ -44,6 +44,16 @@
         "padding_bottom": 4
       },
       "blocks": {
+        "reseller_kategorie_pzxqw": {
+          "type": "reseller-kategorie",
+          "name": "Charging Cabinets",
+          "disabled": false,
+          "settings": {
+            "url_link": "",
+            "image_bild": null,
+            "text_titel": "Charging Cabinets"
+          }
+        },
         "reseller_kategorie_JiGXp": {
           "type": "reseller-kategorie",
           "name": "Backpacks",
@@ -156,6 +166,7 @@
         }
       },
       "block_order": [
+        "reseller_kategorie_pzxqw",
         "reseller_kategorie_JiGXp",
         "reseller_kategorie_76xPU",
         "reseller_kategorie_kjpbw",
