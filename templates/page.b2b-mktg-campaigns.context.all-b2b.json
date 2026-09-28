@@ -22,12 +22,12 @@
         "text_suche_label": "Search",
         "text_warenkorb_label": "Cart",
         "text_404_label": "Page not found",
-        "header-df93ab45a8ffbfa54893afc913d57c7b": null,
-        "paragraph-5e6a4243e2d8b89512aeca758292d372": null,
-        "header-2d0cca51e4305ac28b56571cf70af388": null,
+        "header-a91476200b9351c4c5ae5e47c923d629": null,
+        "paragraph-d82cb51eda0f0317da9cee62351b9af0": null,
+        "header-a5b2f18848877663c63097bbe1930738": null,
         "padding_top": 0.5,
         "padding_bottom": 0.5,
-        "header-e6d2a6e686220ec1bdf708864beb1d4d": null,
+        "header-89a4919a9113d20fb42b406342989c85": null,
         "bg_color": "#ffffff",
         "text_color": "#0f0f0f"
       },
@@ -41,10 +41,10 @@
       "settings": {
         "text_subline": "Marketing Support",
         "text_heading_1": "Marketing & Product Campaigns",
-        "textarea_subheading_1": "Discover ready-to-use marketing and product campaigns designed to support your communication and sales activities. Access campaign imagery, pre-written content, product highlights, translation sheets and additional marketing assets for fast, consistent and effective implementation across all channels.",
+        "textarea_subheading_1": "Discover ready-to-use marketing and product materials designed to support your communication and sales activities. Access campaign imagery, pre-written content, product highlights, translation sheets and additional marketing assets for fast, consistent and effective implementation across all channels.",
         "url_hero_button_link": "",
         "text_hero_button_text": "",
-        "header-5e18e1ddc8cb136e5151fc00e6540c65": null,
+        "header-157661523c1098c3ea803c4fad300df2": null,
         "padding_top": 4,
         "padding_bottom": 2
       },
@@ -58,9 +58,9 @@
       "settings": {
         "text_uberschrift": "TWO Family",
         "textarea_einleitung": "",
-        "header-c9b16d6c6c08fb6cdd49494a9d54ada8": null,
-        "paragraph-40acf3f5986597eba4bbdfe744d40801": null,
-        "header-c6346367f6f5ef5b99a5822ecd6a877b": null,
+        "header-cf9541f50211352ca393043b6db9bcb6": null,
+        "paragraph-a91f6789531ea5a57f8eb4a3784f6095": null,
+        "header-044939e1dfb17180ced7e8db65393ddf": null,
         "padding_top": 4,
         "padding_bottom": 4
       },
@@ -113,8 +113,8 @@
       "disabled": false,
       "settings": {
         "text_uberschrift": "TWO family Marketing Assets",
-        "paragraph-7ec0ad06a20adcb8e1247341457edaca": null,
-        "header-33756db97a84b91ee085be7b1d5ba5f1": null,
+        "paragraph-fabf3b04f5ae59de32ae8a7f7b332546": null,
+        "header-c6c313472209efd45ec9f8dc721593b3": null,
         "padding_top": 4,
         "padding_bottom": 4
       },
@@ -155,6 +155,60 @@
         "b2b_mkt_dokument_qCPYC"
       ],
       "name": "B2B Mkt Documents"
+    },
+    "b2b_hub_quicklinks_jAdMA": {
+      "type": "b2b_hub_quicklinks",
+      "disabled": false,
+      "settings": {
+        "text_heading": "Other Marketing assets",
+        "textarea_subheading": "Please don't oversee our other marketing assets ready to use.",
+        "header-662153f27f2722ff9168f706c64d7c94": null,
+        "padding_top": 2,
+        "padding_bottom": 4
+      },
+      "blocks": {
+        "b2b_quicklink_WMN7m": {
+          "type": "b2b-quicklink",
+          "disabled": false,
+          "settings": {
+            "image_icon": null,
+            "text_heading": "DICOTA Product Presentations",
+            "richtext_text": "",
+            "url_button_link": "shopify://pages/b2b-product-presentations",
+            "text_button_text": "more"
+          }
+        },
+        "b2b_quicklink_mTJPQ": {
+          "type": "b2b-quicklink",
+          "name": "B2B Quicklink",
+          "disabled": false,
+          "settings": {
+            "image_icon": null,
+            "text_heading": "Product Images & Contents",
+            "richtext_text": "",
+            "url_button_link": "shopify://pages/b2b-product-images-contents",
+            "text_button_text": "more"
+          }
+        },
+        "b2b_quicklink_CNYQ3": {
+          "type": "b2b-quicklink",
+          "name": "B2B Quicklink",
+          "disabled": false,
+          "settings": {
+            "image_icon": null,
+            "text_heading": "DCT Academy",
+            "richtext_text": "",
+            "url_button_link": "shopify://pages/b2b-dicota-academy",
+            "text_button_text": "more"
+          }
+        }
+      },
+      "block_order": [
+        "b2b_quicklink_WMN7m",
+        "b2b_quicklink_mTJPQ",
+        "b2b_quicklink_CNYQ3"
+      ],
+      "name": "B2B Hub Quicklinks"
     },
     "b2b_mkt_presentation_HzWpea": {
       "settings": {
@@ -220,60 +274,6 @@
         "b2b_mkt_dokument_DfU3a",
         "b2b_mkt_dokument_4T9m6"
       ]
-    },
-    "b2b_hub_quicklinks_jAdMA": {
-      "type": "b2b_hub_quicklinks",
-      "disabled": false,
-      "settings": {
-        "text_heading": "Other Marketing assets",
-        "textarea_subheading": "Please don't oversee our other marketing assets ready to use.",
-        "header-3a65064534bb6ecf2087a8944689545c": null,
-        "padding_top": 2,
-        "padding_bottom": 4
-      },
-      "blocks": {
-        "b2b_quicklink_WMN7m": {
-          "type": "b2b-quicklink",
-          "disabled": false,
-          "settings": {
-            "image_icon": null,
-            "text_heading": "DICOTA Product Presentations",
-            "richtext_text": "",
-            "url_button_link": "shopify://pages/b2b-product-presentations",
-            "text_button_text": "more"
-          }
-        },
-        "b2b_quicklink_mTJPQ": {
-          "type": "b2b-quicklink",
-          "name": "B2B Quicklink",
-          "disabled": false,
-          "settings": {
-            "image_icon": null,
-            "text_heading": "Product Images & Contents",
-            "richtext_text": "",
-            "url_button_link": "shopify://pages/b2b-product-images-contents",
-            "text_button_text": "more"
-          }
-        },
-        "b2b_quicklink_CNYQ3": {
-          "type": "b2b-quicklink",
-          "name": "B2B Quicklink",
-          "disabled": false,
-          "settings": {
-            "image_icon": null,
-            "text_heading": "DCT Academy",
-            "richtext_text": "",
-            "url_button_link": "shopify://pages/b2b-dicota-academy",
-            "text_button_text": "more"
-          }
-        }
-      },
-      "block_order": [
-        "b2b_quicklink_WMN7m",
-        "b2b_quicklink_mTJPQ",
-        "b2b_quicklink_CNYQ3"
-      ],
-      "name": "B2B Hub Quicklinks"
     }
   },
   "order": [
