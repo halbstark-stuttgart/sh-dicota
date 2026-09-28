@@ -24,9 +24,9 @@
         "show_categories": false,
         "text_kategorie_label": "Categories",
         "text_search_button": "Search",
-        "header-ee85a588d560f4c3a98cdd05a9f727dd": null,
+        "header-718e15b1cf4d55c16915f59df0aed1ea": null,
         "min_height": 78,
-        "header-3d7e07c3303a1373e741ca605eed5908": null,
+        "header-f31977127867cc05f164eaca53573330": null,
         "text_color": "#ffffff",
         "button_bg": "#111111",
         "button_color": "#ffffff"
@@ -39,21 +39,11 @@
       "type": "reseller_category_ro",
       "disabled": false,
       "settings": {
-        "header-3b81a3fa4814e01a40238cf09ccf89b9": null,
+        "header-2d0beaf3f3bad226996eda7e02fd4275": null,
         "padding_top": 4,
         "padding_bottom": 4
       },
       "blocks": {
-        "reseller_kategorie_pzxqw": {
-          "type": "reseller-kategorie",
-          "name": "Charging Cabinets",
-          "disabled": false,
-          "settings": {
-            "url_link": "",
-            "image_bild": null,
-            "text_titel": "Charging Cabinets"
-          }
-        },
         "reseller_kategorie_JiGXp": {
           "type": "reseller-kategorie",
           "name": "Backpacks",
@@ -134,6 +124,16 @@
             "text_titel": "Power & Charging"
           }
         },
+        "reseller_kategorie_pzxqw": {
+          "type": "reseller-kategorie",
+          "name": "Charging Cabinets",
+          "disabled": false,
+          "settings": {
+            "url_link": "",
+            "image_bild": "shopify://shop_images/Icon_ChargingCabinet.png",
+            "text_titel": "Charging Cabinets"
+          }
+        },
         "reseller_kategorie_K9nJj": {
           "type": "reseller-kategorie",
           "name": "Audio & Video",
@@ -166,7 +166,6 @@
         }
       },
       "block_order": [
-        "reseller_kategorie_pzxqw",
         "reseller_kategorie_JiGXp",
         "reseller_kategorie_76xPU",
         "reseller_kategorie_kjpbw",
@@ -175,6 +174,7 @@
         "reseller_kategorie_P7RYj",
         "reseller_kategorie_gnqma",
         "reseller_kategorie_GUhUy",
+        "reseller_kategorie_pzxqw",
         "reseller_kategorie_K9nJj",
         "reseller_kategorie_k6HVD",
         "reseller_kategorie_wA44E"
@@ -190,10 +190,10 @@
         "text_button_1_text": "",
         "url_button_2_link": "",
         "text_button_2_text": "",
-        "header-8cc5978c5cf32726baff21e920ae1c65": null,
+        "header-a78fc0d96ec754b0c063fa6ba2693bac": null,
         "padding_top": 5,
         "padding_bottom": 5,
-        "header-bf47a76fa32c0afa01fb603485194f64": null,
+        "header-a84110b01ceedf8b303f5154d7dfca81": null,
         "bg_color": "#f4f4f4"
       },
       "blocks": {
@@ -308,10 +308,10 @@
         "textarea_text": "(Platzhalter) Seit 1992 wurden mehr als 12 Millionen PET-Flaschen verarbeitet, um Abfall zu minimieren - DCT (DICOTA Cushion Technology) ist ein strukturiertes Dämpfungssystem, das Stösse, Schläge und Druck aus verschiedenen Winkeln absorbieren kann.",
         "url_button_link": "",
         "text_button_text": "Learn more",
-        "header-faa0ee4cf858b6ba11083fc42cc8301e": null,
+        "header-4990a662c62ef207cc4a6fa5dd595a27": null,
         "padding_top": 2.5,
         "padding_bottom": 4,
-        "header-f94b7dc487d192e7443cc28d84fe7be4": null,
+        "header-9d89f5cd4c174e24276ae1d17e541ced": null,
         "bg_color": "#f6f6f6"
       },
       "blocks": {},
@@ -324,10 +324,10 @@
       "settings": {
         "text_titel_fett": "Not enough yet?",
         "text_titel_normal": "More news hot off the press",
-        "header-5df116f2421c26779af5379b728bf0bf": null,
+        "header-1e5609335dfc09b11113bbf4cbb75a12": null,
         "padding_top": 4,
         "padding_bottom": 4,
-        "header-5fd49e76aca48e107a8a9e08c94fca64": null,
+        "header-b32dfa6f3571d5de7fef1ba4cd21ac95": null,
         "bg_color": "#f6f6f6"
       },
       "blocks": {
