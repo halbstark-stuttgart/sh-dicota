@@ -119,8 +119,8 @@
           "name": "Power & Charging",
           "disabled": false,
           "settings": {
-            "url_link": "",
-            "image_bild": null,
+            "url_link": "shopify://collections/b2b-accessories-power-charging",
+            "image_bild": "shopify://shop_images/Icon_Charger.png",
             "text_titel": "Power & Charging"
           }
         },
