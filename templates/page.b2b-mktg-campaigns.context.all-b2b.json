@@ -247,6 +247,16 @@
         "text_uberschrift": "SEVEN family Marketing Assets"
       },
       "blocks": {
+        "b2b_mkt_dokument_aCAn9": {
+          "type": "b2b-mkt-dokument",
+          "name": "B2B Mkt Dokument",
+          "disabled": false,
+          "settings": {
+            "url_datei_link": "",
+            "text_titel": "Thumbnails",
+            "text_datei_info": "ZIP · 25 MB"
+          }
+        },
         "b2b_mkt_dokument_DfU3a": {
           "type": "b2b-mkt-dokument",
           "name": "Product Images",
@@ -266,9 +276,15 @@
             "text_titel": "Product Lifestyle Images",
             "text_datei_info": "ZIP · 15.5 MB"
           }
+        },
+        "b2b_mkt_dokument_ApQcqA": {
+          "settings": {
+            "text_titel": "Key Visual (low resolution)"
+          }
         }
       },
       "block_order": [
+        "b2b_mkt_dokument_aCAn9",
         "b2b_mkt_dokument_ApQcqA",
         "b2b_mkt_dokument_VqpRee",
         "b2b_mkt_dokument_DfU3a",
