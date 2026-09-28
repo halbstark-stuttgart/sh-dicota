@@ -21,11 +21,15 @@
         "text_headline_eingeloggt": "Welcome back",
         "text_headline": "Welcome to the DICOTA Reseller Portal",
         "textarea_subtext": "Benefit from attractive reseller pricing, exclusive offers and dedicated services and tools to help you provide the best solutions for your customers.",
+        "show_categories": false,
         "text_kategorie_label": "Categories",
-        "header-eb4bec0b6a3adc2e6afe3a5602897963": null,
+        "text_search_button": "Search",
+        "header-ee85a588d560f4c3a98cdd05a9f727dd": null,
         "min_height": 78,
-        "header-fe4e9b2e1c98c000f715ac81eb3e56cb": null,
-        "text_color": "#ffffff"
+        "header-3d7e07c3303a1373e741ca605eed5908": null,
+        "text_color": "#ffffff",
+        "button_bg": "#111111",
+        "button_color": "#ffffff"
       },
       "blocks": {},
       "block_order": [],
@@ -35,11 +39,111 @@
       "type": "reseller_category_ro",
       "disabled": false,
       "settings": {
-        "header-81783632c3e88d684c1e0ad811311b18": null,
+        "header-3b81a3fa4814e01a40238cf09ccf89b9": null,
         "padding_top": 4,
         "padding_bottom": 4
       },
       "blocks": {
+        "reseller_kategorie_JiGXp": {
+          "type": "reseller-kategorie",
+          "name": "Backpacks",
+          "disabled": false,
+          "settings": {
+            "url_link": "",
+            "image_bild": null,
+            "text_titel": "Backpacks"
+          }
+        },
+        "reseller_kategorie_76xPU": {
+          "type": "reseller-kategorie",
+          "name": "Reseller Kategorie",
+          "disabled": false,
+          "settings": {
+            "url_link": "",
+            "image_bild": null,
+            "text_titel": "Backpacks"
+          }
+        },
+        "reseller_kategorie_kjpbw": {
+          "type": "reseller-kategorie",
+          "name": "Reseller Kategorie",
+          "disabled": false,
+          "settings": {
+            "url_link": "",
+            "image_bild": null,
+            "text_titel": "Backpacks"
+          }
+        },
+        "reseller_kategorie_3JAcd": {
+          "type": "reseller-kategorie",
+          "name": "Reseller Kategorie",
+          "disabled": false,
+          "settings": {
+            "url_link": "",
+            "image_bild": null,
+            "text_titel": "Backpacks"
+          }
+        },
+        "reseller_kategorie_CXfJi": {
+          "type": "reseller-kategorie",
+          "name": "Reseller Kategorie",
+          "disabled": false,
+          "settings": {
+            "url_link": "",
+            "image_bild": null,
+            "text_titel": "Backpacks"
+          }
+        },
+        "reseller_kategorie_P7RYj": {
+          "type": "reseller-kategorie",
+          "name": "Reseller Kategorie",
+          "disabled": false,
+          "settings": {
+            "url_link": "",
+            "image_bild": null,
+            "text_titel": "Backpacks"
+          }
+        },
+        "reseller_kategorie_gnqma": {
+          "type": "reseller-kategorie",
+          "name": "Reseller Kategorie",
+          "disabled": false,
+          "settings": {
+            "url_link": "",
+            "image_bild": null,
+            "text_titel": "Backpacks"
+          }
+        },
+        "reseller_kategorie_GUhUy": {
+          "type": "reseller-kategorie",
+          "name": "Reseller Kategorie",
+          "disabled": false,
+          "settings": {
+            "url_link": "",
+            "image_bild": null,
+            "text_titel": "Backpacks"
+          }
+        },
+        "reseller_kategorie_K9nJj": {
+          "type": "reseller-kategorie",
+          "name": "Reseller Kategorie",
+          "disabled": false,
+          "settings": {
+            "url_link": "",
+            "image_bild": null,
+            "text_titel": "Backpacks"
+          }
+        },
+        "reseller_kategorie_k6HVD": {
+          "type": "reseller-kategorie",
+          "name": "Reseller Kategorie",
+          "disabled": false,
+          "settings": {
+            "url_link": "",
+            "image_bild": null,
+            "text_titel": "Backpacks"
+          }
+        },
         "reseller_kategorie_wA44E": {
           "type": "reseller-kategorie",
           "name": "Reseller Kategorie",
@@ -52,6 +156,16 @@
         }
       },
       "block_order": [
+        "reseller_kategorie_JiGXp",
+        "reseller_kategorie_76xPU",
+        "reseller_kategorie_kjpbw",
+        "reseller_kategorie_3JAcd",
+        "reseller_kategorie_CXfJi",
+        "reseller_kategorie_P7RYj",
+        "reseller_kategorie_gnqma",
+        "reseller_kategorie_GUhUy",
+        "reseller_kategorie_K9nJj",
+        "reseller_kategorie_k6HVD",
         "reseller_kategorie_wA44E"
       ],
       "name": "Reseller Category Ro"
@@ -65,10 +179,10 @@
         "text_button_1_text": "",
         "url_button_2_link": "",
         "text_button_2_text": "",
-        "header-61ed531b26d68090cf7e650dd723b902": null,
+        "header-8cc5978c5cf32726baff21e920ae1c65": null,
         "padding_top": 5,
         "padding_bottom": 5,
-        "header-584ec1150ce093c65fb88f175025eab7": null,
+        "header-bf47a76fa32c0afa01fb603485194f64": null,
         "bg_color": "#f4f4f4"
       },
       "blocks": {
@@ -183,10 +297,10 @@
         "textarea_text": "(Platzhalter) Seit 1992 wurden mehr als 12 Millionen PET-Flaschen verarbeitet, um Abfall zu minimieren - DCT (DICOTA Cushion Technology) ist ein strukturiertes Dämpfungssystem, das Stösse, Schläge und Druck aus verschiedenen Winkeln absorbieren kann.",
         "url_button_link": "",
         "text_button_text": "Learn more",
-        "header-905e44ab48831ae4452a007eee06fb46": null,
+        "header-faa0ee4cf858b6ba11083fc42cc8301e": null,
         "padding_top": 2.5,
         "padding_bottom": 4,
-        "header-a861670a5c534fdc4c4871d85800bcba": null,
+        "header-f94b7dc487d192e7443cc28d84fe7be4": null,
         "bg_color": "#f6f6f6"
       },
       "blocks": {},
@@ -199,10 +313,10 @@
       "settings": {
         "text_titel_fett": "Not enough yet?",
         "text_titel_normal": "More news hot off the press",
-        "header-ceee53a82424ef89d590ad4377f8aa23": null,
+        "header-5df116f2421c26779af5379b728bf0bf": null,
         "padding_top": 4,
         "padding_bottom": 4,
-        "header-12d3785aea845f2a64c5196aa1b4914a": null,
+        "header-5fd49e76aca48e107a8a9e08c94fca64": null,
         "bg_color": "#f6f6f6"
       },
       "blocks": {
