@@ -110,7 +110,7 @@
           "disabled": false,
           "settings": {
             "url_link": "shopify://collections/b2b-accessories-connectivity",
-            "image_bild": null,
+            "image_bild": "shopify://shop_images/Icon_Connectivity.png",
             "text_titel": "Connectivity"
           }
         },
