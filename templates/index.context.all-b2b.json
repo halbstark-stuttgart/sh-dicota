@@ -24,9 +24,9 @@
         "show_categories": false,
         "text_kategorie_label": "Categories",
         "text_search_button": "Search",
-        "header-718e15b1cf4d55c16915f59df0aed1ea": null,
+        "header-2f9a05a504670159257e02bdab4dc117": null,
         "min_height": 78,
-        "header-f31977127867cc05f164eaca53573330": null,
+        "header-a0b95a8c65e5f7bde1fba1b0dc0e8e29": null,
         "text_color": "#ffffff",
         "button_bg": "#111111",
         "button_color": "#ffffff"
@@ -39,7 +39,7 @@
       "type": "reseller_category_ro",
       "disabled": false,
       "settings": {
-        "header-2d0beaf3f3bad226996eda7e02fd4275": null,
+        "header-83a5d72dc861602ce039a59125ba04ef": null,
         "padding_top": 4,
         "padding_bottom": 4
       },
@@ -129,7 +129,7 @@
           "name": "Charging Cabinets",
           "disabled": false,
           "settings": {
-            "url_link": "",
+            "url_link": "shopify://collections/charging-cabinets",
             "image_bild": "shopify://shop_images/Icon_ChargingCabinet.png",
             "text_titel": "Charging Cabinets"
           }
@@ -190,10 +190,10 @@
         "text_button_1_text": "",
         "url_button_2_link": "",
         "text_button_2_text": "",
-        "header-a78fc0d96ec754b0c063fa6ba2693bac": null,
+        "header-dd3af94d8d18f97fd9d616276525d9ed": null,
         "padding_top": 5,
         "padding_bottom": 5,
-        "header-a84110b01ceedf8b303f5154d7dfca81": null,
+        "header-b575cb3d4ecebb0d2f3b640fee73644d": null,
         "bg_color": "#f4f4f4"
       },
       "blocks": {
@@ -308,10 +308,10 @@
         "textarea_text": "(Platzhalter) Seit 1992 wurden mehr als 12 Millionen PET-Flaschen verarbeitet, um Abfall zu minimieren - DCT (DICOTA Cushion Technology) ist ein strukturiertes Dämpfungssystem, das Stösse, Schläge und Druck aus verschiedenen Winkeln absorbieren kann.",
         "url_button_link": "",
         "text_button_text": "Learn more",
-        "header-4990a662c62ef207cc4a6fa5dd595a27": null,
+        "header-bb393d8c2821bb663ec601dfd38e3ae2": null,
         "padding_top": 2.5,
         "padding_bottom": 4,
-        "header-9d89f5cd4c174e24276ae1d17e541ced": null,
+        "header-8e63d7a7479b1b150cbfa5ca2897db9e": null,
         "bg_color": "#f6f6f6"
       },
       "blocks": {},
@@ -324,10 +324,10 @@
       "settings": {
         "text_titel_fett": "Not enough yet?",
         "text_titel_normal": "More news hot off the press",
-        "header-1e5609335dfc09b11113bbf4cbb75a12": null,
+        "header-4dba67b9dcd4c3e443247ceee5ccf9c5": null,
         "padding_top": 4,
         "padding_bottom": 4,
-        "header-b32dfa6f3571d5de7fef1ba4cd21ac95": null,
+        "header-66bf7da59a93ff949e6c24a717609e79": null,
         "bg_color": "#f6f6f6"
       },
       "blocks": {
