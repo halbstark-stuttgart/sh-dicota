@@ -86,12 +86,12 @@
         },
         "reseller_kategorie_CXfJi": {
           "type": "reseller-kategorie",
-          "name": "Reseller Kategorie",
+          "name": "Safety at Work",
           "disabled": false,
           "settings": {
             "url_link": "",
             "image_bild": null,
-            "text_titel": "Backpacks"
+            "text_titel": "Safety at Work"
           }
         },
         "reseller_kategorie_P7RYj": {
