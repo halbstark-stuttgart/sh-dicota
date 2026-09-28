@@ -56,22 +56,22 @@
         },
         "reseller_kategorie_76xPU": {
           "type": "reseller-kategorie",
-          "name": "Laptop Bag",
+          "name": "Laptop Bags",
           "disabled": false,
           "settings": {
             "url_link": "",
             "image_bild": "shopify://shop_images/Icon_LaptopBag.png",
-            "text_titel": "Laptop Bag"
+            "text_titel": "Laptop Bags"
           }
         },
         "reseller_kategorie_kjpbw": {
           "type": "reseller-kategorie",
-          "name": "Reseller Kategorie",
+          "name": "Sleeves",
           "disabled": false,
           "settings": {
             "url_link": "",
             "image_bild": null,
-            "text_titel": "Backpacks"
+            "text_titel": "Sleeves"
           }
         },
         "reseller_kategorie_3JAcd": {
