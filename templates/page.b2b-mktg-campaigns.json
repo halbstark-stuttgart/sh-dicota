@@ -22,6 +22,7 @@
       "blocks": {
         "produkt_kategorie_94R3xy": {
           "type": "produkt-kategorie",
+          "disabled": true,
           "settings": {
             "text_kategorie_name": "SEVEN family"
           },
@@ -68,6 +69,21 @@
         "padding_bottom": 4
       }
     },
+    "b2b_no_access_rKqVaf": {
+      "type": "b2b_no_access",
+      "name": "B2B No Access",
+      "settings": {
+        "text_subline": "B2B Area",
+        "text_uberschrift": "Restricted access",
+        "textarea_text": "This page is reserved for registered DICOTA B2B partners. Please log in with your partner account to continue.",
+        "url_login_link": "",
+        "text_login_text": "Log in",
+        "url_sekundar_link": "",
+        "text_sekundar_text": "Become a partner",
+        "padding_top": 4,
+        "padding_bottom": 4
+      }
+    },
     "b2b_mkt_documents": {
       "type": "b2b_mkt_documents",
       "blocks": {
@@ -96,6 +112,7 @@
         "b2b_mkt_dokument_ApQcqA",
         "b2b_mkt_dokument_VqpRee"
       ],
+      "disabled": true,
       "name": "SEVEN family",
       "settings": {
         "text_uberschrift": "SEVEN family Key Visual & Bento Graphic",
@@ -109,6 +126,7 @@
   "order": [
     "b2b_subnav",
     "b2b_mkt_presentation_HzWpea",
+    "b2b_no_access_rKqVaf",
     "b2b_mkt_documents"
   ]
 }
