@@ -156,12 +156,12 @@
         },
         "reseller_kategorie_wA44E": {
           "type": "reseller-kategorie",
-          "name": "Reseller Kategorie",
+          "name": "Locks",
           "disabled": false,
           "settings": {
-            "url_link": "shopify://collections/b2b-backpacks-all",
-            "image_bild": "shopify://shop_images/5_SCT1c_BP_EntryLevel.jpg",
-            "text_titel": "Backpacks"
+            "url_link": "shopify://collections/b2b-accessories-locks",
+            "image_bild": "shopify://shop_images/Icon_Lock.png",
+            "text_titel": "Locks"
           }
         }
       },
