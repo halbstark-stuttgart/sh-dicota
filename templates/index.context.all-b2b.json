@@ -126,22 +126,22 @@
         },
         "reseller_kategorie_K9nJj": {
           "type": "reseller-kategorie",
-          "name": "Reseller Kategorie",
+          "name": "Audio & Video",
           "disabled": false,
           "settings": {
-            "url_link": "",
-            "image_bild": null,
-            "text_titel": "Backpacks"
+            "url_link": "shopify://collections/b2b-accessories-audio-video",
+            "image_bild": "shopify://shop_images/Icon_WebCam.png",
+            "text_titel": "Audio & Video"
           }
         },
         "reseller_kategorie_k6HVD": {
           "type": "reseller-kategorie",
-          "name": "Reseller Kategorie",
+          "name": "Input Devices",
           "disabled": false,
           "settings": {
-            "url_link": "",
-            "image_bild": null,
-            "text_titel": "Backpacks"
+            "url_link": "shopify://collections/b2b-accessories-input-devices-copy",
+            "image_bild": "shopify://shop_images/Icon_Mouse.png",
+            "text_titel": "Input Devices"
           }
         },
         "reseller_kategorie_wA44E": {
