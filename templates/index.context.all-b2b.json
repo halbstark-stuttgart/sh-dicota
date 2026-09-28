@@ -90,7 +90,7 @@
           "disabled": false,
           "settings": {
             "url_link": "",
-            "image_bild": null,
+            "image_bild": "shopify://shop_images/Icon_HiVis.png",
             "text_titel": "Safety at Work"
           }
         },
