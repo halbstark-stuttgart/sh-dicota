@@ -96,12 +96,12 @@
         },
         "reseller_kategorie_P7RYj": {
           "type": "reseller-kategorie",
-          "name": "Reseller Kategorie",
+          "name": "Screen Filters",
           "disabled": false,
           "settings": {
             "url_link": "",
-            "image_bild": null,
-            "text_titel": "Backpacks"
+            "image_bild": "shopify://shop_images/Icon_ScreenFilter.png",
+            "text_titel": "Screen Filters"
           }
         },
         "reseller_kategorie_gnqma": {
