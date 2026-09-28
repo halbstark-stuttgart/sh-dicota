@@ -263,6 +263,24 @@
             "text_titel": "Key Visual (low resolution)"
           }
         },
+        "b2b_mkt_dokument_VqpRee": {
+          "name": "Bento Graphic (for PPT, in grey)",
+          "settings": {
+            "url_datei_link": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/BENTO_SEVEN_FINAL_forPPT_greyBoxes_2026.png?v=1790603480",
+            "text_titel": "Bento Graphic (for PPT, in grey)",
+            "text_datei_info": "PNG · 2.3 MB"
+          }
+        },
+        "b2b_mkt_dokument_MTXwX": {
+          "type": "b2b-mkt-dokument",
+          "name": "Bento Graphic (for Web, in white)",
+          "disabled": false,
+          "settings": {
+            "url_datei_link": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/BENTO_SEVEN_FINAL_forWebsite_whiteBoxes_2026.png?v=1790603480",
+            "text_titel": "Bento Graphic (for Web, in white)",
+            "text_datei_info": "PNG · 2.3 MB"
+          }
+        },
         "b2b_mkt_dokument_DfU3a": {
           "type": "b2b-mkt-dokument",
           "name": "Product Images",
@@ -288,6 +306,7 @@
         "b2b_mkt_dokument_aCAn9",
         "b2b_mkt_dokument_ApQcqA",
         "b2b_mkt_dokument_VqpRee",
+        "b2b_mkt_dokument_MTXwX",
         "b2b_mkt_dokument_DfU3a",
         "b2b_mkt_dokument_4T9m6"
       ]
