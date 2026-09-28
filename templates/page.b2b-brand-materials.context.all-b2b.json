@@ -22,13 +22,28 @@
         "textarea_subheading_1": "Access all essential DICOTA brand materials and marketing assets in one place. Download the latest company presentations, LinkedIn headers, Microsoft Teams backgrounds, brand imagery and other ready-to-use resources to ensure a consistent and professional DICOTA brand presence across all channels.",
         "url_hero_button_link": "",
         "text_hero_button_text": "",
-        "header-7031ee5c7dfab1062747e3acaf1fd4cd": null,
+        "header-1b2cde079a08ac2980e3469941805749": null,
         "padding_top": 4,
         "padding_bottom": 2
       },
       "blocks": {},
       "block_order": [],
       "name": "B2B Solution Header"
+    },
+    "b2b_mkt_presentation_fFaWf4": {
+      "disabled": false,
+      "settings": {},
+      "blocks": {}
+    },
+    "b2b_tpl_banner_1x_J9FinR": {
+      "disabled": false,
+      "settings": {},
+      "blocks": {}
+    },
+    "b2b_mkt_presentation_bPPeAP": {
+      "disabled": false,
+      "settings": {},
+      "blocks": {}
     }
   },
   "order": [
