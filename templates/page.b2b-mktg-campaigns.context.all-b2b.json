@@ -57,7 +57,7 @@
       "disabled": false,
       "settings": {
         "text_uberschrift": "TWO Family",
-        "textarea_einleitung": "Download our latest product and marketing materials as PDF, JPG or PNG and use them in your own marketing.",
+        "textarea_einleitung": "Download our latest product and marketing materials as PDF, JPG or PNG<br> and use them in your own marketing.",
         "header-cf9541f50211352ca393043b6db9bcb6": null,
         "paragraph-a91f6789531ea5a57f8eb4a3784f6095": null,
         "header-044939e1dfb17180ced7e8db65393ddf": null,
@@ -213,7 +213,7 @@
     "b2b_mkt_presentation_HzWpea": {
       "settings": {
         "text_uberschrift": "SEVEN FAMILY",
-        "textarea_einleitung": "Download our latest product and marketing materials as PDF, JPG or PNG and use them in your own marketing."
+        "textarea_einleitung": "Download our latest product and marketing materials as PDF, JPG or PNG<br> and use them in your own marketing."
       },
       "blocks": {
         "produkt_kategorie_94R3xy": {
