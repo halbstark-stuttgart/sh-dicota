@@ -242,6 +242,7 @@
         "produkt_kategorie_UNMhrH",
         "produkt_kategorie_QHniBr"
       ],
+      "disabled": true,
       "name": "Company Presentation",
       "settings": {
         "text_uberschrift": "DICOTA Company Presentation",
@@ -252,6 +253,7 @@
     },
     "b2b_tpl_banner_1x_J9FinR": {
       "type": "b2b_tpl_banner_1x",
+      "disabled": true,
       "name": "B2B Tpl Banner 1x",
       "settings": {
         "image_banner_bild": "shopify://shop_images/LinkedIn_image.png",
@@ -308,6 +310,7 @@
       "block_order": [
         "produkt_kategorie_aYYxnt"
       ],
+      "disabled": true,
       "name": "Advertorials",
       "settings": {
         "text_uberschrift": "DICOTA Advertorials",
@@ -318,6 +321,7 @@
     },
     "b2b_tpl_banner_1x_6GCTj8": {
       "type": "b2b_tpl_banner_1x",
+      "disabled": true,
       "name": "Brand Page",
       "settings": {
         "image_banner_bild": "shopify://shop_images/DICOTA_Brandpage_Scroll_Animation.gif",
@@ -391,6 +395,7 @@
         "b2b_mkt_dokument_eUHVCd",
         "b2b_mkt_dokument_MpXrbg"
       ],
+      "disabled": true,
       "name": "DICOTA CI",
       "settings": {
         "text_uberschrift": "DICOTA Corporate design",
@@ -400,6 +405,7 @@
     },
     "b2b_tpl_banner_1x_XVeFWX": {
       "type": "b2b_tpl_banner_1x",
+      "disabled": true,
       "name": "PPT Master",
       "settings": {
         "image_banner_bild": "shopify://shop_images/DICOTA_Master_Template.gif",
@@ -414,6 +420,7 @@
     },
     "b2b_tpl_banner_1x_WLyWz7": {
       "type": "b2b_tpl_banner_1x",
+      "disabled": true,
       "name": "TEAMS Background",
       "settings": {
         "image_banner_bild": "shopify://shop_images/Background_Teams_2026.jpg",
@@ -422,6 +429,21 @@
         "textarea_text": "Download our new standardized DICOTA brand background for Microsoft Teams and use it for all external meetings.",
         "url_button_link": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/Background_Teams_2026.jpg?v=1783272705",
         "text_button_text": "Download",
+        "padding_top": 4,
+        "padding_bottom": 4
+      }
+    },
+    "b2b_no_access_pxTFDp": {
+      "type": "b2b_no_access",
+      "name": "B2B No Access",
+      "settings": {
+        "text_subline": "B2B Area",
+        "text_uberschrift": "Restricted access",
+        "textarea_text": "This page is reserved for registered DICOTA B2B partners. Please log in with your partner account to continue.",
+        "url_login_link": "",
+        "text_login_text": "Log in",
+        "url_sekundar_link": "",
+        "text_sekundar_text": "Become a partner",
         "padding_top": 4,
         "padding_bottom": 4
       }
@@ -439,6 +461,7 @@
     "b2b_tpl_banner_1x_6GCTj8",
     "b2b_mkt_documents",
     "b2b_tpl_banner_1x_XVeFWX",
-    "b2b_tpl_banner_1x_WLyWz7"
+    "b2b_tpl_banner_1x_WLyWz7",
+    "b2b_no_access_pxTFDp"
   ]
 }

@@ -84,7 +84,14 @@
           "settings": {
             "url_link": "",
             "text_text": "Backpacks"
-          }
+          },
+          "blocks": {}
+        },
+        "search-suggestions": {
+          "type": "search-suggestions",
+          "static": true,
+          "settings": {},
+          "blocks": {}
         }
       },
       "block_order": [
@@ -98,12 +105,18 @@
         "textarea_promo_text": "Refined design. Recycled materials.",
         "text_suche_placeholder": "Search for bags, size...",
         "text_such_tipp": "Tip: Search by products, categories or use case",
-        "collection_search_recent": "",
-        "collection_search_recent_limit": 6,
-        "url_wishlist_link": "",
+        "text_search_recent": "",
+        "search_recent_limit": 6,
+        "text_social_proof_leicht": "Gute Wahl!",
+        "text_social_proof_fett": "Über 350.180 Menschen nutzen DICOTA Produkte",
+        "text_trust_links": "30 Tage Geld-Zurück Garantie",
+        "text_trust_rechts": "Über 350.000 happy Kunden",
         "menu": "main-menu-b2b-public",
         "transparent_over_first": false,
-        "free_shipping_threshold": 50
+        "free_shipping_threshold": 50,
+        "shipping_cost": 5,
+        "show_socialproof": true,
+        "text_sucheingabe_placeholder": "What are you looking for?"
       }
     }
   },
