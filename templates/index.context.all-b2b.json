@@ -99,7 +99,7 @@
           "name": "Screen Filters",
           "disabled": false,
           "settings": {
-            "url_link": "",
+            "url_link": "shopify://collections/b2b-screen-filters-all",
             "image_bild": "shopify://shop_images/Icon_ScreenFilter.png",
             "text_titel": "Screen Filters"
           }
