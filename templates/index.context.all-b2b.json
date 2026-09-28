@@ -79,7 +79,7 @@
           "name": "Trolleys",
           "disabled": false,
           "settings": {
-            "url_link": "",
+            "url_link": "shopify://collections/b2b-trolleys",
             "image_bild": "shopify://shop_images/Icon_Trolley.png",
             "text_titel": "Trolleys"
           }
