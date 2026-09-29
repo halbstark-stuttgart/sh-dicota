@@ -33,9 +33,9 @@
               "settings": {
                 "text_titel": "Transition Sheet for Print",
                 "text_datei_info": "PDF · 4 MB",
-                "url_de_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/SEVEN_transition_sheet_DE_print.pdf?v=1783090517",
-                "url_en_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/SEVEN_transition_sheet_EN_print.pdf?v=1783090515",
-                "url_fr_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/SEVEN_transition_sheet_FR_print.pdf?v=1783090515"
+                "url_de_datei": "https://www.dicota.com/cdn/shop/files/SEVEN_transition_sheet_DE_print.pdf?v=1783090517",
+                "url_en_datei": "https://www.dicota.com/cdn/shop/files/SEVEN_transition_sheet_EN_print.pdf?v=1783090515",
+                "url_fr_datei": "https://www.dicota.com/cdn/shop/files/SEVEN_transition_sheet_FR_print.pdf?v=1783090515"
               },
               "blocks": {}
             },
@@ -45,9 +45,9 @@
               "settings": {
                 "text_titel": "Transition Sheet for Online",
                 "text_datei_info": "PDF · 245 KB",
-                "url_de_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/SEVEN_transition_sheet_DE.pdf?v=1783090498",
-                "url_en_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/SEVEN_transition_sheet_EN.pdf?v=1783090493",
-                "url_fr_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/SEVEN_transition_sheet_FR.pdf?v=1783090492"
+                "url_de_datei": "https://www.dicota.com/cdn/shop/files/SEVEN_transition_sheet_DE.pdf?v=1783090498",
+                "url_en_datei": "https://www.dicota.com/cdn/shop/files/SEVEN_transition_sheet_EN.pdf?v=1783090493",
+                "url_fr_datei": "https://www.dicota.com/cdn/shop/files/SEVEN_transition_sheet_FR.pdf?v=1783090492"
               },
               "blocks": {}
             }
@@ -91,7 +91,7 @@
           "type": "b2b-mkt-dokument",
           "name": "Key Visual",
           "settings": {
-            "url_datei_link": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/SEVEN_key_visual_scaled.jpg?v=1783090492",
+            "url_datei_link": "https://www.dicota.com/cdn/shop/files/SEVEN_key_visual_scaled.jpg?v=1783090492",
             "text_titel": "Key Visual",
             "text_datei_info": "JPG · 193 KB"
           },
@@ -101,7 +101,7 @@
           "type": "b2b-mkt-dokument",
           "name": "Bento Graphic",
           "settings": {
-            "url_datei_link": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/SEVEN_Bento_scaled.png?v=1783090494",
+            "url_datei_link": "https://www.dicota.com/cdn/shop/files/SEVEN_Bento_scaled.png?v=1783090494",
             "text_titel": "Bento Graphic",
             "text_datei_info": "PNG · 710 KB"
           },
