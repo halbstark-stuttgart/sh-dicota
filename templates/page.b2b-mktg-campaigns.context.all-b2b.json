@@ -245,9 +245,9 @@
           "name": "B2B Mkt Dokument",
           "disabled": false,
           "settings": {
-            "url_datei_link": "",
-            "text_titel": "Thumbnails",
-            "text_datei_info": "ZIP · 25 MB"
+            "url_datei_link": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/BENTO_FIVE_FINAL_vertical_greyBoxes_2026.png?v=1790713073",
+            "text_titel": "Bento Graphic (vertical, in grey)",
+            "text_datei_info": "PNG · 1.6 MB"
           }
         }
       },
