@@ -77,7 +77,7 @@
                 "text_titel": "FIVE Product Presentation",
                 "text_datei_info": "PDF · 4.7 MB",
                 "url_de_datei": "",
-                "url_en_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/FIVE_Product_Presentation_EN.pptx?v=1787986402",
+                "url_en_datei": "https://www.dicota.com/cdn/shop/files/FIVE_Product_Presentation_EN.pptx?v=1787986402",
                 "url_fr_datei": ""
               }
             },
@@ -88,9 +88,9 @@
               "settings": {
                 "text_titel": "FIVE Product Catalog",
                 "text_datei_info": "PDF · 2.7 MB",
-                "url_de_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/PRODUCT_CATALOG_4.0_FIVE_DE.pdf?v=1787983438",
-                "url_en_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/PRODUCT_CATALOG_4.0_FIVE_EN.pdf?v=1787983438",
-                "url_fr_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/PRODUCT_CATALOG_4.0_FIVE_FR.pdf?v=1787983438"
+                "url_de_datei": "https://www.dicota.com/cdn/shop/files/PRODUCT_CATALOG_4.0_FIVE_DE.pdf?v=1787983438",
+                "url_en_datei": "https://www.dicota.com/cdn/shop/files/PRODUCT_CATALOG_4.0_FIVE_EN.pdf?v=1787983438",
+                "url_fr_datei": "https://www.dicota.com/cdn/shop/files/PRODUCT_CATALOG_4.0_FIVE_FR.pdf?v=1787983438"
               }
             }
           },
@@ -124,7 +124,7 @@
           "name": "Bento Graphic (for PPT, in grey)",
           "disabled": false,
           "settings": {
-            "url_datei_link": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/BENTO_FIVE_FINAL_forPPT_greyBoxes_2026.png?v=1790713075",
+            "url_datei_link": "https://www.dicota.com/cdn/shop/files/BENTO_FIVE_FINAL_forPPT_greyBoxes_2026.png?v=1790713075",
             "text_titel": "Bento Graphic (for PPT, in grey)",
             "text_datei_info": "PNG · 1.8 MB"
           }
@@ -134,7 +134,7 @@
           "name": "Bento Graphic (for Web, in white)",
           "disabled": false,
           "settings": {
-            "url_datei_link": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/BENTO_FIVE_FINAL_forWebsite_whiteBoxes_2026.png?v=1790713075",
+            "url_datei_link": "https://www.dicota.com/cdn/shop/files/BENTO_FIVE_FINAL_forWebsite_whiteBoxes_2026.png?v=1790713075",
             "text_titel": "Bento Graphic (for Web, in white)",
             "text_datei_info": "PNG · 1.8 MB"
           }
@@ -144,7 +144,7 @@
           "name": "Bento Graphic (vertical, in grey)",
           "disabled": false,
           "settings": {
-            "url_datei_link": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/BENTO_FIVE_FINAL_vertical_greyBoxes_2026.png?v=1790713073",
+            "url_datei_link": "https://www.dicota.com/cdn/shop/files/BENTO_FIVE_FINAL_vertical_greyBoxes_2026.png?v=1790713073",
             "text_titel": "Bento Graphic (vertical, in grey)",
             "text_datei_info": "PNG · 1.6 MB"
           }
@@ -192,9 +192,9 @@
               "settings": {
                 "text_titel": "Transition Sheet for Print",
                 "text_datei_info": "PDF · 3.9 MB",
-                "url_de_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/TWO_transition_sheet_DE_print.pdf?v=1783606016",
-                "url_en_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/TWO_key_visual_scaled.jpg?v=1783606049",
-                "url_fr_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/TWO_transition_sheet_FR_print.pdf?v=1783606016"
+                "url_de_datei": "https://www.dicota.com/cdn/shop/files/TWO_transition_sheet_DE_print.pdf?v=1783606016",
+                "url_en_datei": "https://www.dicota.com/cdn/shop/files/TWO_key_visual_scaled.jpg?v=1783606049",
+                "url_fr_datei": "https://www.dicota.com/cdn/shop/files/TWO_transition_sheet_FR_print.pdf?v=1783606016"
               }
             },
             "prasentation_Rqw76": {
@@ -204,9 +204,9 @@
               "settings": {
                 "text_titel": "Transition Sheet for Online",
                 "text_datei_info": "PDF · 814 KB",
-                "url_de_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/TWO_transition_sheet_DE_online.pdf?v=1783606012",
-                "url_en_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/TWO_transition_sheet_EN_online.pdf?v=1783606012",
-                "url_fr_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/TWO_transition_sheet_FR_online.pdf?v=1783606012"
+                "url_de_datei": "https://www.dicota.com/cdn/shop/files/TWO_transition_sheet_DE_online.pdf?v=1783606012",
+                "url_en_datei": "https://www.dicota.com/cdn/shop/files/TWO_transition_sheet_EN_online.pdf?v=1783606012",
+                "url_fr_datei": "https://www.dicota.com/cdn/shop/files/TWO_transition_sheet_FR_online.pdf?v=1783606012"
               }
             }
           },
@@ -239,7 +239,7 @@
           "type": "b2b-mkt-dokument",
           "disabled": false,
           "settings": {
-            "url_datei_link": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/TWO_key_visual_scaled.jpg?v=1783606049",
+            "url_datei_link": "https://www.dicota.com/cdn/shop/files/TWO_key_visual_scaled.jpg?v=1783606049",
             "text_titel": "Key Visual",
             "text_datei_info": "JPG · 188 KB"
           }
@@ -249,7 +249,7 @@
           "name": "B2B Mkt Dokument",
           "disabled": false,
           "settings": {
-            "url_datei_link": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/TWO_product_brief.pdf?v=1783606011",
+            "url_datei_link": "https://www.dicota.com/cdn/shop/files/TWO_product_brief.pdf?v=1783606011",
             "text_titel": "Product Brief",
             "text_datei_info": "PDF · 313 KB"
           }
@@ -259,7 +259,7 @@
           "name": "B2B Mkt Dokument",
           "disabled": false,
           "settings": {
-            "url_datei_link": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/TWO_product_shots.zip?v=1783607886",
+            "url_datei_link": "https://www.dicota.com/cdn/shop/files/TWO_product_shots.zip?v=1783607886",
             "text_titel": "Product Images",
             "text_datei_info": "ZIP · 18.3 MB"
           }
@@ -297,8 +297,8 @@
                 "text_titel": "ONE Product Presentation",
                 "text_datei_info": "PDF · 1.7 MB",
                 "url_de_datei": "https://www.dicota.com/cdn/shop/files/ONE_Product_Presentation_EN.pdf",
-                "url_en_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/ONE_Product_Presentation_EN.pdf?v=1787986457",
-                "url_fr_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/ONE_Product_Presentation_FR.pdf?v=1790714580"
+                "url_en_datei": "https://www.dicota.com/cdn/shop/files/ONE_Product_Presentation_EN.pdf?v=1787986457",
+                "url_fr_datei": "https://www.dicota.com/cdn/shop/files/ONE_Product_Presentation_FR.pdf?v=1790714580"
               }
             },
             "prasentation_ONEcat": {
@@ -308,9 +308,9 @@
               "settings": {
                 "text_titel": "ONE Product Catalog",
                 "text_datei_info": "PDF · 2.0 MB",
-                "url_de_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/PRODUCT_CATALOG_4.0_ONE_DE.pdf?v=1787987857",
-                "url_en_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/PRODUCT_CATALOG_4.0_ONE_EN.pdf?v=1787987857",
-                "url_fr_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/PRODUCT_CATALOG_4.0_ONE_FR.pdf?v=1787987857"
+                "url_de_datei": "https://www.dicota.com/cdn/shop/files/PRODUCT_CATALOG_4.0_ONE_DE.pdf?v=1787987857",
+                "url_en_datei": "https://www.dicota.com/cdn/shop/files/PRODUCT_CATALOG_4.0_ONE_EN.pdf?v=1787987857",
+                "url_fr_datei": "https://www.dicota.com/cdn/shop/files/PRODUCT_CATALOG_4.0_ONE_FR.pdf?v=1787987857"
               }
             }
           },
@@ -343,27 +343,27 @@
           "type": "b2b-mkt-dokument",
           "disabled": false,
           "settings": {
-            "url_datei_link": "",
+            "url_datei_link": "https://www.dicota.com/cdn/shop/files/BENTO_ONE_FINAL_forPPT_greyBoxes_2026.png?v=1790716131",
             "text_titel": "Bento Graphic (for PPT, in grey)",
-            "text_datei_info": "PNG"
+            "text_datei_info": "PNG · 2.5 MB"
           }
         },
         "b2b_mkt_dokument_ONEweb": {
           "type": "b2b-mkt-dokument",
           "disabled": false,
           "settings": {
-            "url_datei_link": "",
+            "url_datei_link": "https://www.dicota.com/cdn/shop/files/BENTO_ONE_FINAL_forWebsite_whiteBoxes_2026.png?v=1790716130",
             "text_titel": "Bento Graphic (for Web, in white)",
-            "text_datei_info": "PNG"
+            "text_datei_info": "PNG · 2.5 MB"
           }
         },
         "b2b_mkt_dokument_ONEvert": {
           "type": "b2b-mkt-dokument",
           "disabled": false,
           "settings": {
-            "url_datei_link": "",
+            "url_datei_link": "https://www.dicota.com/cdn/shop/files/BENTO_ONE_FINAL_vertical_greyBoxes_2026.png?v=1790716129",
             "text_titel": "Bento Graphic (vertical, in grey)",
-            "text_datei_info": "PNG"
+            "text_datei_info": "PNG · 2.3 MB"
           }
         },
         "b2b_mkt_dokument_ONElife": {
@@ -485,7 +485,7 @@
                 "text_titel": "SEVEN Product Presentation",
                 "text_datei_info": "PDF · 1.7 MB",
                 "url_de_datei": "",
-                "url_en_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/SEVEN_Product_Presentation_EN.pdf?v=1787986476",
+                "url_en_datei": "https://www.dicota.com/cdn/shop/files/SEVEN_Product_Presentation_EN.pdf?v=1787986476",
                 "url_fr_datei": ""
               }
             },
@@ -537,7 +537,7 @@
         "b2b_mkt_dokument_VqpRee": {
           "name": "Bento Graphic (for PPT, in grey)",
           "settings": {
-            "url_datei_link": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/BENTO_SEVEN_FINAL_forPPT_greyBoxes_2026.png?v=1790603480",
+            "url_datei_link": "https://www.dicota.com/cdn/shop/files/BENTO_SEVEN_FINAL_forPPT_greyBoxes_2026.png?v=1790603480",
             "text_titel": "Bento Graphic (for PPT, in grey)",
             "text_datei_info": "PNG · 2.3 MB"
           }
@@ -547,7 +547,7 @@
           "name": "Bento Graphic (for Web, in white)",
           "disabled": false,
           "settings": {
-            "url_datei_link": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/BENTO_SEVEN_FINAL_forWebsite_whiteBoxes_2026.png?v=1790603480",
+            "url_datei_link": "https://www.dicota.com/cdn/shop/files/BENTO_SEVEN_FINAL_forWebsite_whiteBoxes_2026.png?v=1790603480",
             "text_titel": "Bento Graphic (for Web, in white)",
             "text_datei_info": "PNG · 2.3 MB"
           }
@@ -557,7 +557,7 @@
           "name": "Bento Graphic (vertical, in grey)",
           "disabled": false,
           "settings": {
-            "url_datei_link": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/BENTO_SEVEN_FINAL_vertical_greyBoxes_2026.png?v=1790603480",
+            "url_datei_link": "https://www.dicota.com/cdn/shop/files/BENTO_SEVEN_FINAL_vertical_greyBoxes_2026.png?v=1790603480",
             "text_titel": "Bento Graphic (vertical, in grey)",
             "text_datei_info": "PNG · 1.6 MB"
           }
@@ -577,7 +577,7 @@
           "name": "Product Lifestyle Images",
           "disabled": false,
           "settings": {
-            "url_datei_link": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/SEVEN_Product_Lifestyle_Images.zip?v=1783605473",
+            "url_datei_link": "https://www.dicota.com/cdn/shop/files/SEVEN_Product_Lifestyle_Images.zip?v=1783605473",
             "text_titel": "Product Lifestyle Images",
             "text_datei_info": "ZIP · 15.5 MB"
           }
