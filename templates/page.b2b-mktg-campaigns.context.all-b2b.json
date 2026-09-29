@@ -225,8 +225,8 @@
           "type": "b2b-mkt-dokument",
           "disabled": false,
           "settings": {
-            "url_datei_link": "",
-            "text_titel": "Thumbnails",
+            "url_datei_link": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/BENTO_FIVE_FINAL_forPPT_greyBoxes_2026.png?v=1790713075",
+            "text_titel": "",
             "text_datei_info": "ZIP · 25 MB"
           }
         }
