@@ -22,12 +22,12 @@
         "text_suche_label": "Search",
         "text_warenkorb_label": "Cart",
         "text_404_label": "Page not found",
-        "header-7565c38b5aadbf9266a745ab81330752": null,
-        "paragraph-b5205154e22063e66c6d41ee2ee3eb61": null,
-        "header-42928414af9a09d91179bb36165952ef": null,
+        "header-b4f3287c544f9e7d3c8328f4462820fa": null,
+        "paragraph-0a0cb8ba9a25e5006f1c7b0c3291e8dc": null,
+        "header-362b742671188a073b0c83dfc4cfc90e": null,
         "padding_top": 0.5,
         "padding_bottom": 0.5,
-        "header-bfe45608323fd0bded729fed1842f7f8": null,
+        "header-54c508eaae884a941c2a2cb3119ce3ee": null,
         "bg_color": "#ffffff",
         "text_color": "#0f0f0f"
       },
@@ -44,7 +44,7 @@
         "textarea_subheading_1": "Discover ready-to-use marketing and product materials designed to support your communication and sales activities. Access campaign imagery, pre-written content, product highlights, translation sheets and additional marketing assets for fast, consistent and effective implementation across all channels.",
         "url_hero_button_link": "",
         "text_hero_button_text": "",
-        "header-75c65f28909ea1ce36e8431b9ab47ae8": null,
+        "header-83f07568fc8672a787b7ca0414fcfa47": null,
         "padding_top": 4,
         "padding_bottom": 2
       },
@@ -58,9 +58,9 @@
       "settings": {
         "text_uberschrift": "FIVE Family",
         "textarea_einleitung": "Download our latest product and marketing materials as PDF, JPG or PNG<br> and use them in your own marketing.",
-        "header-bed1e852558995c2c06e2dda87baf322": null,
-        "paragraph-6c0582fa946671d940c3b2f16c0cbdf9": null,
-        "header-b3c662d57be2eb82cd10b5cb8afb5655": null,
+        "header-6d10329beab744a23ad3089f49000fb0": null,
+        "paragraph-66b8d9752bd3aca545a8dd6b1e584bef": null,
+        "header-b78f12407d7d4e619cfe6331218e658f": null,
         "padding_top": 4,
         "padding_bottom": 4
       },
@@ -113,22 +113,12 @@
       "disabled": false,
       "settings": {
         "text_uberschrift": "FIVE family Marketing Assets",
-        "paragraph-f7d20292fbcd9a961376912320c45bae": null,
-        "header-005e84b1a7431b43f433ad50780a317c": null,
+        "paragraph-440db37126d3c1e9ed79b392e8e8d17c": null,
+        "header-98452b936444105cdc958d899c724531": null,
         "padding_top": 4,
         "padding_bottom": 4
       },
       "blocks": {
-        "b2b_mkt_dokument_xMQfK": {
-          "type": "b2b-mkt-dokument",
-          "name": "Product Lifestyle Images",
-          "disabled": false,
-          "settings": {
-            "url_datei_link": "https://files.dicota.cloud/s/BQ9EqeANtY3F3gS",
-            "text_titel": "Product Lifestyle Images",
-            "text_datei_info": "ZIP · 142.7 MB"
-          }
-        },
         "b2b_mkt_dokument_a6rfV": {
           "type": "b2b-mkt-dokument",
           "name": "Bento Graphic (for PPT, in grey)",
@@ -158,13 +148,23 @@
             "text_titel": "Bento Graphic (vertical, in grey)",
             "text_datei_info": "PNG · 1.6 MB"
           }
+        },
+        "b2b_mkt_dokument_xMQfK": {
+          "type": "b2b-mkt-dokument",
+          "name": "Product Lifestyle Images",
+          "disabled": false,
+          "settings": {
+            "url_datei_link": "https://files.dicota.cloud/s/BQ9EqeANtY3F3gS",
+            "text_titel": "Product Lifestyle Images",
+            "text_datei_info": "ZIP · 142.7 MB"
+          }
         }
       },
       "block_order": [
-        "b2b_mkt_dokument_xMQfK",
         "b2b_mkt_dokument_a6rfV",
         "b2b_mkt_dokument_9iY47",
-        "b2b_mkt_dokument_DCLXi"
+        "b2b_mkt_dokument_DCLXi",
+        "b2b_mkt_dokument_xMQfK"
       ],
       "name": "FIVE family Marketing Assets"
     },
@@ -174,9 +174,9 @@
       "settings": {
         "text_uberschrift": "TWO Family",
         "textarea_einleitung": "Download our latest product and marketing materials as PDF, JPG or PNG<br> and use them in your own marketing.",
-        "header-4b867224b0552da1be75d83dd26e8ecd": null,
-        "paragraph-7b5ac187261f3cce57a3270fd2c87ccc": null,
-        "header-861ef49ce8c7a4f50af4f9b2429063a5": null,
+        "header-3764d2f5d67aa657383507b7cb073275": null,
+        "paragraph-bdda4e948e5ea5e00bc9b3db6b4c545f": null,
+        "header-b06fc2f3d48ce36a8dad904f8d49f54b": null,
         "padding_top": 4,
         "padding_bottom": 4
       },
@@ -229,8 +229,8 @@
       "disabled": false,
       "settings": {
         "text_uberschrift": "TWO family Marketing Assets",
-        "paragraph-ce6121feb008420193d78e219168ff6a": null,
-        "header-ae41d1bfefd09a46623d7ae394a4f28f": null,
+        "paragraph-aefea0dc51d68c6918d4451d69381184": null,
+        "header-7d861f7dc30fa0bb6442dd8f289eafc6": null,
         "padding_top": 4,
         "padding_bottom": 4
       },
@@ -272,13 +272,125 @@
       ],
       "name": "B2B Mkt Documents"
     },
+    "b2b_mkt_presentation_ONEfam": {
+      "type": "b2b_mkt_presentation",
+      "disabled": false,
+      "settings": {
+        "text_uberschrift": "ONE Family",
+        "textarea_einleitung": "Download our latest product and marketing materials as PDF, JPG or PNG<br> and use them in your own marketing.",
+        "header-de9c922acb5bb2de73bfa3b0e2a338ea": null,
+        "paragraph-dad21c135756f74f1d87d0c117e8b37c": null,
+        "header-53b64d8f4b20d111520b73d4fa14cab1": null,
+        "padding_top": 4,
+        "padding_bottom": 4
+      },
+      "blocks": {
+        "produkt_kategorie_ONEfam": {
+          "type": "produkt-kategorie",
+          "disabled": false,
+          "blocks": {
+            "prasentation_ONEpres": {
+              "type": "prasentation",
+              "name": "ONE Product Presentation",
+              "disabled": false,
+              "settings": {
+                "text_titel": "ONE Product Presentation",
+                "text_datei_info": "PDF · 1.7 MB",
+                "url_de_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/ONE_Product_Presentation_DE.pdf?v=1787986457",
+                "url_en_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/ONE_Product_Presentation_EN.pdf?v=1787986457",
+                "url_fr_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/ONE_Product_Presentation_FR.pdf?v=1790714580"
+              }
+            },
+            "prasentation_ONEcat": {
+              "type": "prasentation",
+              "name": "ONE Product Catalog",
+              "disabled": false,
+              "settings": {
+                "text_titel": "ONE Product Catalog",
+                "text_datei_info": "PDF · 2.0 MB",
+                "url_de_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/PRODUCT_CATALOG_4.0_ONE_DE.pdf?v=1787987857",
+                "url_en_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/PRODUCT_CATALOG_4.0_ONE_EN.pdf?v=1787987857",
+                "url_fr_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/PRODUCT_CATALOG_4.0_ONE_FR.pdf?v=1787987857"
+              }
+            }
+          },
+          "block_order": [
+            "prasentation_ONEpres",
+            "prasentation_ONEcat"
+          ],
+          "settings": {
+            "text_kategorie_name": "PRODUCT PRESENTATIONS"
+          }
+        }
+      },
+      "block_order": [
+        "produkt_kategorie_ONEfam"
+      ],
+      "name": "ONE Family"
+    },
+    "b2b_mkt_documents_ONEfam": {
+      "type": "b2b_mkt_documents",
+      "disabled": true,
+      "settings": {
+        "text_uberschrift": "ONE family Marketing Assets",
+        "paragraph-341f2d77f2f826ce2d64e17a2f4c7293": null,
+        "header-5efed13052f6e9dc10f2cac0cd3d5604": null,
+        "padding_top": 4,
+        "padding_bottom": 4
+      },
+      "blocks": {
+        "b2b_mkt_dokument_ONElife": {
+          "type": "b2b-mkt-dokument",
+          "disabled": false,
+          "settings": {
+            "url_datei_link": "",
+            "text_titel": "Product Lifestyle Images",
+            "text_datei_info": "ZIP"
+          }
+        },
+        "b2b_mkt_dokument_ONEppt": {
+          "type": "b2b-mkt-dokument",
+          "disabled": false,
+          "settings": {
+            "url_datei_link": "",
+            "text_titel": "Bento Graphic (for PPT, in grey)",
+            "text_datei_info": "PNG"
+          }
+        },
+        "b2b_mkt_dokument_ONEweb": {
+          "type": "b2b-mkt-dokument",
+          "disabled": false,
+          "settings": {
+            "url_datei_link": "",
+            "text_titel": "Bento Graphic (for Web, in white)",
+            "text_datei_info": "PNG"
+          }
+        },
+        "b2b_mkt_dokument_ONEvert": {
+          "type": "b2b-mkt-dokument",
+          "disabled": false,
+          "settings": {
+            "url_datei_link": "",
+            "text_titel": "Bento Graphic (vertical, in grey)",
+            "text_datei_info": "PNG"
+          }
+        }
+      },
+      "block_order": [
+        "b2b_mkt_dokument_ONElife",
+        "b2b_mkt_dokument_ONEppt",
+        "b2b_mkt_dokument_ONEweb",
+        "b2b_mkt_dokument_ONEvert"
+      ],
+      "name": "ONE Marketing Assets"
+    },
     "b2b_hub_quicklinks_jAdMA": {
       "type": "b2b_hub_quicklinks",
       "disabled": false,
       "settings": {
         "text_heading": "Other Marketing assets",
         "textarea_subheading": "Please don't oversee our other marketing assets ready to use.",
-        "header-c08b58c02bbe0965dd43ebb80ac80709": null,
+        "header-15f97b432ac06f06f699c54f25391d0c": null,
         "padding_top": 2,
         "padding_bottom": 4
       },
@@ -332,7 +444,7 @@
       "settings": {
         "text_heading": "Campaigns",
         "textarea_subheading": "Current and past marketing campaigns with all assets and copy.",
-        "header-a75bc33bc9b870a58ca4a1ae3612f83a": null,
+        "header-0e435e1489ae58595b6f796201c7cf5e": null,
         "padding_top": 4,
         "padding_bottom": 4
       },
@@ -480,118 +592,6 @@
         "b2b_mkt_dokument_4T9m6"
       ],
       "name": "SEVEN Marketing Assets"
-    },
-    "b2b_mkt_presentation_ONEfam": {
-      "type": "b2b_mkt_presentation",
-      "disabled": false,
-      "settings": {
-        "text_uberschrift": "ONE Family",
-        "textarea_einleitung": "Download our latest product and marketing materials as PDF, JPG or PNG<br> and use them in your own marketing.",
-        "header-388cf4f7c8e01fe280c38a1e0cf0b7d3": null,
-        "paragraph-8b741a2682f3a4a636777e0ac961aa82": null,
-        "header-4e81d3584bdd3da00739051ff41966b7": null,
-        "padding_top": 4,
-        "padding_bottom": 4
-      },
-      "blocks": {
-        "produkt_kategorie_ONEfam": {
-          "type": "produkt-kategorie",
-          "disabled": false,
-          "blocks": {
-            "prasentation_ONEpres": {
-              "type": "prasentation",
-              "name": "ONE Product Presentation",
-              "disabled": false,
-              "settings": {
-                "text_titel": "ONE Product Presentation",
-                "text_datei_info": "PDF · 1.7 MB",
-                "url_de_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/ONE_Product_Presentation_DE.pdf?v=1787986457",
-                "url_en_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/ONE_Product_Presentation_EN.pdf?v=1787986457",
-                "url_fr_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/ONE_Product_Presentation_FR.pdf?v=1790714580"
-              }
-            },
-            "prasentation_ONEcat": {
-              "type": "prasentation",
-              "name": "ONE Product Catalog",
-              "disabled": false,
-              "settings": {
-                "text_titel": "ONE Product Catalog",
-                "text_datei_info": "PDF · 2.0 MB",
-                "url_de_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/PRODUCT_CATALOG_4.0_ONE_DE.pdf?v=1787987857",
-                "url_en_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/PRODUCT_CATALOG_4.0_ONE_EN.pdf?v=1787987857",
-                "url_fr_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/PRODUCT_CATALOG_4.0_ONE_FR.pdf?v=1787987857"
-              }
-            }
-          },
-          "block_order": [
-            "prasentation_ONEpres",
-            "prasentation_ONEcat"
-          ],
-          "settings": {
-            "text_kategorie_name": "PRODUCT PRESENTATIONS"
-          }
-        }
-      },
-      "block_order": [
-        "produkt_kategorie_ONEfam"
-      ],
-      "name": "ONE Family"
-    },
-    "b2b_mkt_documents_ONEfam": {
-      "type": "b2b_mkt_documents",
-      "disabled": true,
-      "settings": {
-        "text_uberschrift": "ONE family Marketing Assets",
-        "paragraph-de28b07e29c310c3ee923d039bdd3303": null,
-        "header-b5ac0afe3517d64f7f33d2d113770486": null,
-        "padding_top": 4,
-        "padding_bottom": 4
-      },
-      "blocks": {
-        "b2b_mkt_dokument_ONElife": {
-          "type": "b2b-mkt-dokument",
-          "disabled": false,
-          "settings": {
-            "url_datei_link": "",
-            "text_titel": "Product Lifestyle Images",
-            "text_datei_info": "ZIP"
-          }
-        },
-        "b2b_mkt_dokument_ONEppt": {
-          "type": "b2b-mkt-dokument",
-          "disabled": false,
-          "settings": {
-            "url_datei_link": "",
-            "text_titel": "Bento Graphic (for PPT, in grey)",
-            "text_datei_info": "PNG"
-          }
-        },
-        "b2b_mkt_dokument_ONEweb": {
-          "type": "b2b-mkt-dokument",
-          "disabled": false,
-          "settings": {
-            "url_datei_link": "",
-            "text_titel": "Bento Graphic (for Web, in white)",
-            "text_datei_info": "PNG"
-          }
-        },
-        "b2b_mkt_dokument_ONEvert": {
-          "type": "b2b-mkt-dokument",
-          "disabled": false,
-          "settings": {
-            "url_datei_link": "",
-            "text_titel": "Bento Graphic (vertical, in grey)",
-            "text_datei_info": "PNG"
-          }
-        }
-      },
-      "block_order": [
-        "b2b_mkt_dokument_ONElife",
-        "b2b_mkt_dokument_ONEppt",
-        "b2b_mkt_dokument_ONEweb",
-        "b2b_mkt_dokument_ONEvert"
-      ],
-      "name": "ONE Marketing Assets"
     }
   },
   "order": [
