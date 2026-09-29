@@ -229,10 +229,32 @@
             "text_titel": "Bento Graphic (for PPT, in grey)",
             "text_datei_info": "PNG · 1.8 MB"
           }
+        },
+        "b2b_mkt_dokument_9iY47": {
+          "type": "b2b-mkt-dokument",
+          "name": "B2B Mkt Dokument",
+          "disabled": false,
+          "settings": {
+            "url_datei_link": "",
+            "text_titel": "Thumbnails",
+            "text_datei_info": "ZIP · 25 MB"
+          }
+        },
+        "b2b_mkt_dokument_DCLXi": {
+          "type": "b2b-mkt-dokument",
+          "name": "B2B Mkt Dokument",
+          "disabled": false,
+          "settings": {
+            "url_datei_link": "",
+            "text_titel": "Thumbnails",
+            "text_datei_info": "ZIP · 25 MB"
+          }
         }
       },
       "block_order": [
-        "b2b_mkt_dokument_a6rfV"
+        "b2b_mkt_dokument_a6rfV",
+        "b2b_mkt_dokument_9iY47",
+        "b2b_mkt_dokument_DCLXi"
       ],
       "name": "B2B Mkt Documents"
     },
