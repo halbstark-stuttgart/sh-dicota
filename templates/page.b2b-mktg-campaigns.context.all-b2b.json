@@ -498,10 +498,10 @@
           "blocks": {
             "prasentation_ONEpres": {
               "type": "prasentation",
-              "name": "Präsentation",
+              "name": "ONE Product Presentation",
               "disabled": false,
               "settings": {
-                "text_titel": "ONE Product Presentation PDF",
+                "text_titel": "ONE Product Presentation",
                 "text_datei_info": "PDF · 1.7 MB",
                 "url_de_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/ONE_Product_Presentation_DE.pdf?v=1787986457",
                 "url_en_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/ONE_Product_Presentation_EN.pdf?v=1787986457",
@@ -510,10 +510,10 @@
             },
             "prasentation_ONEcat": {
               "type": "prasentation",
-              "name": "ONE Product Catalog PDF",
+              "name": "ONE Product Catalog",
               "disabled": false,
               "settings": {
-                "text_titel": "ONE Product Catalog PDF",
+                "text_titel": "ONE Product Catalog",
                 "text_datei_info": "PDF · 2.0 MB",
                 "url_de_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/PRODUCT_CATALOG_4.0_ONE_DE.pdf?v=1787987857",
                 "url_en_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/PRODUCT_CATALOG_4.0_ONE_EN.pdf?v=1787987857",
