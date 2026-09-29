@@ -510,6 +510,7 @@
             },
             "prasentation_ONEcat": {
               "type": "prasentation",
+              "name": "ONE Product Catalog PDF",
               "disabled": false,
               "settings": {
                 "text_titel": "ONE Product Catalog PDF",
