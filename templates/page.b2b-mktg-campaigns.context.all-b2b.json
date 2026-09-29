@@ -22,12 +22,12 @@
         "text_suche_label": "Search",
         "text_warenkorb_label": "Cart",
         "text_404_label": "Page not found",
-        "header-a91476200b9351c4c5ae5e47c923d629": null,
-        "paragraph-d82cb51eda0f0317da9cee62351b9af0": null,
-        "header-a5b2f18848877663c63097bbe1930738": null,
+        "header-8fc06b9a3fb39f85673e496bc5e91254": null,
+        "paragraph-12780fbf639f5e81461d908cd3bb160d": null,
+        "header-51be1f81d7dd0b4d01cdfd502757004f": null,
         "padding_top": 0.5,
         "padding_bottom": 0.5,
-        "header-89a4919a9113d20fb42b406342989c85": null,
+        "header-8909035d4565d02fe212f4fe26147262": null,
         "bg_color": "#ffffff",
         "text_color": "#0f0f0f"
       },
@@ -44,7 +44,7 @@
         "textarea_subheading_1": "Discover ready-to-use marketing and product materials designed to support your communication and sales activities. Access campaign imagery, pre-written content, product highlights, translation sheets and additional marketing assets for fast, consistent and effective implementation across all channels.",
         "url_hero_button_link": "",
         "text_hero_button_text": "",
-        "header-157661523c1098c3ea803c4fad300df2": null,
+        "header-4bc5519afd4b729cbd8e4bdff346cdb6": null,
         "padding_top": 4,
         "padding_bottom": 2
       },
@@ -58,9 +58,9 @@
       "settings": {
         "text_uberschrift": "TWO Family",
         "textarea_einleitung": "Download our latest product and marketing materials as PDF, JPG or PNG<br> and use them in your own marketing.",
-        "header-cf9541f50211352ca393043b6db9bcb6": null,
-        "paragraph-a91f6789531ea5a57f8eb4a3784f6095": null,
-        "header-044939e1dfb17180ced7e8db65393ddf": null,
+        "header-2704f908fb4a201ea95d99939d3c1f45": null,
+        "paragraph-6cf1904c95b51f653c0c93a51ec35127": null,
+        "header-91510f377e5ab329907b8d686b154a6c": null,
         "padding_top": 4,
         "padding_bottom": 4
       },
@@ -113,8 +113,8 @@
       "disabled": false,
       "settings": {
         "text_uberschrift": "TWO family Marketing Assets",
-        "paragraph-fabf3b04f5ae59de32ae8a7f7b332546": null,
-        "header-c6c313472209efd45ec9f8dc721593b3": null,
+        "paragraph-fbb32ab650b312104e60be3e48387ba9": null,
+        "header-57ea712f83068c05b7e8fc45c86b820e": null,
         "padding_top": 4,
         "padding_bottom": 4
       },
@@ -162,7 +162,7 @@
       "settings": {
         "text_heading": "Other Marketing assets",
         "textarea_subheading": "Please don't oversee our other marketing assets ready to use.",
-        "header-662153f27f2722ff9168f706c64d7c94": null,
+        "header-55530a7baccda88eb6067b3700b24bb5": null,
         "padding_top": 2,
         "padding_bottom": 4
       },
@@ -210,6 +210,116 @@
       ],
       "name": "B2B Hub Quicklinks"
     },
+    "b2b_mkt_documents_VgqyK": {
+      "type": "b2b_mkt_documents",
+      "disabled": false,
+      "settings": {
+        "text_uberschrift": "Documents",
+        "paragraph-411aa2df584d849b26e7dd3cb341f016": null,
+        "header-2df3b631774fcf62e4fba82cc8a9f3ed": null,
+        "padding_top": 4,
+        "padding_bottom": 4
+      },
+      "blocks": {
+        "b2b_mkt_dokument_a6rfV": {
+          "type": "b2b-mkt-dokument",
+          "disabled": false,
+          "settings": {
+            "url_datei_link": "",
+            "text_titel": "Thumbnails",
+            "text_datei_info": "ZIP · 25 MB"
+          }
+        }
+      },
+      "block_order": [
+        "b2b_mkt_dokument_a6rfV"
+      ],
+      "name": "B2B Mkt Documents"
+    },
+    "b2b_mkt_presentation_ANqqA": {
+      "type": "b2b_mkt_presentation",
+      "disabled": false,
+      "settings": {
+        "text_uberschrift": "FIVE Family",
+        "textarea_einleitung": "Download our product presentations as PDF or PPT — available in German, English and French.",
+        "header-73b92c19ae8eaa8096956d698518efba": null,
+        "paragraph-7ee85f7e69e7c99253f3d52e0f223911": null,
+        "header-c2285a38171fc1436b879775dc1dc67f": null,
+        "padding_top": 4,
+        "padding_bottom": 4
+      },
+      "blocks": {
+        "produkt_kategorie_n3Rge": {
+          "type": "produkt-kategorie",
+          "disabled": false,
+          "blocks": {
+            "prasentation_xxFap": {
+              "type": "prasentation",
+              "name": "Präsentation",
+              "disabled": false,
+              "settings": {
+                "text_titel": "Product Presentation PDF",
+                "text_datei_info": "PDF · 25 MB",
+                "url_de_datei": "",
+                "url_en_datei": "",
+                "url_fr_datei": ""
+              }
+            },
+            "prasentation_RQwGF": {
+              "type": "prasentation",
+              "disabled": false,
+              "settings": {
+                "text_titel": "Product Presentation PDF",
+                "text_datei_info": "PDF · 25 MB",
+                "url_de_datei": "",
+                "url_en_datei": "",
+                "url_fr_datei": ""
+              }
+            }
+          },
+          "block_order": [
+            "prasentation_xxFap",
+            "prasentation_RQwGF"
+          ],
+          "settings": {
+            "text_kategorie_name": "Category"
+          }
+        }
+      },
+      "block_order": [
+        "produkt_kategorie_n3Rge"
+      ],
+      "name": "FIVE Family"
+    },
+    "b2b_mkt_campaigns_kiKnV": {
+      "type": "b2b_mkt_campaigns",
+      "disabled": false,
+      "settings": {
+        "text_heading": "Campaigns",
+        "textarea_subheading": "Current and past marketing campaigns with all assets and copy.",
+        "header-b5906dc07f1ba2ec020a4c5fd802248e": null,
+        "padding_top": 4,
+        "padding_bottom": 4
+      },
+      "blocks": {
+        "b2b_kampagne_CQpcR": {
+          "type": "b2b-kampagne",
+          "disabled": false,
+          "settings": {
+            "image_bild": null,
+            "text_status": "Live",
+            "text_heading": "Campaign title",
+            "textarea_text": "Short description of the campaign and target audience.",
+            "url_button_link": "",
+            "text_button_text": "View assets"
+          }
+        }
+      },
+      "block_order": [
+        "b2b_kampagne_CQpcR"
+      ],
+      "name": "B2B Mkt Campaigns"
+    },
     "b2b_mkt_presentation_HzWpea": {
       "settings": {
         "text_uberschrift": "SEVEN FAMILY",
@@ -217,11 +327,12 @@
       },
       "blocks": {
         "produkt_kategorie_94R3xy": {
+          "disabled": false,
           "blocks": {
             "prasentation_QhV4U": {
               "type": "prasentation",
-              "disabled": true,
               "name": "Präsentation",
+              "disabled": false,
               "settings": {
                 "text_titel": "Product Presentation PDF",
                 "text_datei_info": "PDF · 25 MB",
@@ -323,103 +434,6 @@
         "b2b_mkt_dokument_4T9m6"
       ],
       "name": "SEVEN Marketing Assets"
-    },
-    "b2b_mkt_documents_VgqyK": {
-      "type": "b2b_mkt_documents",
-      "disabled": false,
-      "settings": {
-        "text_uberschrift": "Documents",
-        "paragraph-e563a6fa0343cbd893fa191c2ae52790": null,
-        "header-d1b07459a91c632cdfeafdd1341efcad": null,
-        "padding_top": 4,
-        "padding_bottom": 4
-      },
-      "blocks": {
-        "b2b_mkt_dokument_a6rfV": {
-          "type": "b2b-mkt-dokument",
-          "disabled": false,
-          "settings": {
-            "url_datei_link": "",
-            "text_titel": "Thumbnails",
-            "text_datei_info": "ZIP · 25 MB"
-          }
-        }
-      },
-      "block_order": [
-        "b2b_mkt_dokument_a6rfV"
-      ],
-      "name": "B2B Mkt Documents"
-    },
-    "b2b_mkt_presentation_ANqqA": {
-      "type": "b2b_mkt_presentation",
-      "disabled": false,
-      "settings": {
-        "text_uberschrift": "Product Presentations",
-        "textarea_einleitung": "Download our product presentations as PDF or PPT — available in German, English and French.",
-        "header-8aa3a7964a2f9c9a289b6133982bf72f": null,
-        "paragraph-6951093cab974cd5c8c46b386e327746": null,
-        "header-fd87d9bb88b0a90d778a7001e92ffbdc": null,
-        "padding_top": 4,
-        "padding_bottom": 4
-      },
-      "blocks": {
-        "produkt_kategorie_n3Rge": {
-          "type": "produkt-kategorie",
-          "disabled": false,
-          "blocks": {
-            "prasentation_RQwGF": {
-              "type": "prasentation",
-              "disabled": false,
-              "settings": {
-                "text_titel": "Product Presentation PDF",
-                "text_datei_info": "PDF · 25 MB",
-                "url_de_datei": "",
-                "url_en_datei": "",
-                "url_fr_datei": ""
-              }
-            }
-          },
-          "block_order": [
-            "prasentation_RQwGF"
-          ],
-          "settings": {
-            "text_kategorie_name": "Category"
-          }
-        }
-      },
-      "block_order": [
-        "produkt_kategorie_n3Rge"
-      ],
-      "name": "B2B Mkt Presentation"
-    },
-    "b2b_mkt_campaigns_kiKnV": {
-      "type": "b2b_mkt_campaigns",
-      "disabled": false,
-      "settings": {
-        "text_heading": "Campaigns",
-        "textarea_subheading": "Current and past marketing campaigns with all assets and copy.",
-        "header-a5f307d0405f5f2a465e3f12f8998d15": null,
-        "padding_top": 4,
-        "padding_bottom": 4
-      },
-      "blocks": {
-        "b2b_kampagne_CQpcR": {
-          "type": "b2b-kampagne",
-          "disabled": false,
-          "settings": {
-            "image_bild": null,
-            "text_status": "Live",
-            "text_heading": "Campaign title",
-            "textarea_text": "Short description of the campaign and target audience.",
-            "url_button_link": "",
-            "text_button_text": "View assets"
-          }
-        }
-      },
-      "block_order": [
-        "b2b_kampagne_CQpcR"
-      ],
-      "name": "B2B Mkt Campaigns"
     }
   },
   "order": [
@@ -428,11 +442,11 @@
     "b2b_solution_header_tnCbq",
     "b2b_mkt_presentation_HzWpea",
     "b2b_mkt_documents",
+    "b2b_mkt_presentation_ANqqA",
     "b2b_mkt_presentation_ptYHt",
     "b2b_mkt_documents_Hibiy",
     "b2b_hub_quicklinks_jAdMA",
     "b2b_mkt_documents_VgqyK",
-    "b2b_mkt_presentation_ANqqA",
     "b2b_mkt_campaigns_kiKnV"
   ]
 }
