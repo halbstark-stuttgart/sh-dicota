@@ -120,6 +120,7 @@
       "blocks": {
         "b2b_mkt_dokument_a6rfV": {
           "type": "b2b-mkt-dokument",
+          "name": "Bento Graphic (for PPT, in grey)",
           "disabled": false,
           "settings": {
             "url_datei_link": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/BENTO_FIVE_FINAL_forPPT_greyBoxes_2026.png?v=1790713075",
