@@ -13,112 +13,6 @@
   },
   "parent": "page.b2b-mktg-campaigns.json",
   "sections": {
-    "b2b_mkt_presentation_ONEfam": {
-      "type": "b2b_mkt_presentation",
-      "disabled": false,
-      "settings": {
-        "text_uberschrift": "ONE Family",
-        "textarea_einleitung": "Download our latest product and marketing materials as PDF, JPG or PNG<br> and use them in your own marketing.",
-        "padding_top": 4,
-        "padding_bottom": 4
-      },
-      "blocks": {
-        "produkt_kategorie_ONEfam": {
-          "type": "produkt-kategorie",
-          "disabled": false,
-          "blocks": {
-            "prasentation_ONEpres": {
-              "type": "prasentation",
-              "name": "Präsentation",
-              "disabled": false,
-              "settings": {
-                "text_titel": "ONE Product Presentation PDF",
-                "text_datei_info": "PDF · 1.7 MB",
-                "url_de_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/ONE_Product_Presentation_DE.pdf?v=1787986457",
-                "url_en_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/ONE_Product_Presentation_EN.pdf?v=1787986457",
-                "url_fr_datei": ""
-              }
-            },
-            "prasentation_ONEcat": {
-              "type": "prasentation",
-              "disabled": false,
-              "settings": {
-                "text_titel": "ONE Product Catalog PDF",
-                "text_datei_info": "PDF · 2.0 MB",
-                "url_de_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/PRODUCT_CATALOG_4.0_ONE_DE.pdf?v=1787987857",
-                "url_en_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/PRODUCT_CATALOG_4.0_ONE_EN.pdf?v=1787987857",
-                "url_fr_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/PRODUCT_CATALOG_4.0_ONE_FR.pdf?v=1787987857"
-              }
-            }
-          },
-          "block_order": [
-            "prasentation_ONEpres",
-            "prasentation_ONEcat"
-          ],
-          "settings": {
-            "text_kategorie_name": "PRODUCT PRESENTATIONS"
-          }
-        }
-      },
-      "block_order": [
-        "produkt_kategorie_ONEfam"
-      ],
-      "name": "ONE Family"
-    },
-    "b2b_mkt_documents_ONEfam": {
-      "type": "b2b_mkt_documents",
-      "disabled": true,
-      "settings": {
-        "text_uberschrift": "ONE family Marketing Assets",
-        "padding_top": 4,
-        "padding_bottom": 4
-      },
-      "blocks": {
-        "b2b_mkt_dokument_ONElife": {
-          "type": "b2b-mkt-dokument",
-          "disabled": false,
-          "settings": {
-            "url_datei_link": "",
-            "text_titel": "Product Lifestyle Images",
-            "text_datei_info": "ZIP"
-          }
-        },
-        "b2b_mkt_dokument_ONEppt": {
-          "type": "b2b-mkt-dokument",
-          "disabled": false,
-          "settings": {
-            "url_datei_link": "",
-            "text_titel": "Bento Graphic (for PPT, in grey)",
-            "text_datei_info": "PNG"
-          }
-        },
-        "b2b_mkt_dokument_ONEweb": {
-          "type": "b2b-mkt-dokument",
-          "disabled": false,
-          "settings": {
-            "url_datei_link": "",
-            "text_titel": "Bento Graphic (for Web, in white)",
-            "text_datei_info": "PNG"
-          }
-        },
-        "b2b_mkt_dokument_ONEvert": {
-          "type": "b2b-mkt-dokument",
-          "disabled": false,
-          "settings": {
-            "url_datei_link": "",
-            "text_titel": "Bento Graphic (vertical, in grey)",
-            "text_datei_info": "PNG"
-          }
-        }
-      },
-      "block_order": [
-        "b2b_mkt_dokument_ONElife",
-        "b2b_mkt_dokument_ONEppt",
-        "b2b_mkt_dokument_ONEweb",
-        "b2b_mkt_dokument_ONEvert"
-      ],
-      "name": "ONE Marketing Assets"
-    },
     "product_breadcrumb_VCMwB": {
       "type": "product_breadcrumb",
       "disabled": false,
@@ -128,12 +22,12 @@
         "text_suche_label": "Search",
         "text_warenkorb_label": "Cart",
         "text_404_label": "Page not found",
-        "header-8fc06b9a3fb39f85673e496bc5e91254": null,
-        "paragraph-12780fbf639f5e81461d908cd3bb160d": null,
-        "header-51be1f81d7dd0b4d01cdfd502757004f": null,
+        "header-7565c38b5aadbf9266a745ab81330752": null,
+        "paragraph-b5205154e22063e66c6d41ee2ee3eb61": null,
+        "header-42928414af9a09d91179bb36165952ef": null,
         "padding_top": 0.5,
         "padding_bottom": 0.5,
-        "header-8909035d4565d02fe212f4fe26147262": null,
+        "header-bfe45608323fd0bded729fed1842f7f8": null,
         "bg_color": "#ffffff",
         "text_color": "#0f0f0f"
       },
@@ -150,7 +44,7 @@
         "textarea_subheading_1": "Discover ready-to-use marketing and product materials designed to support your communication and sales activities. Access campaign imagery, pre-written content, product highlights, translation sheets and additional marketing assets for fast, consistent and effective implementation across all channels.",
         "url_hero_button_link": "",
         "text_hero_button_text": "",
-        "header-4bc5519afd4b729cbd8e4bdff346cdb6": null,
+        "header-75c65f28909ea1ce36e8431b9ab47ae8": null,
         "padding_top": 4,
         "padding_bottom": 2
       },
@@ -158,171 +52,68 @@
       "block_order": [],
       "name": "Marketing & Product Materials"
     },
-    "b2b_mkt_presentation_ptYHt": {
+    "b2b_mkt_presentation_ANqqA": {
       "type": "b2b_mkt_presentation",
       "disabled": false,
       "settings": {
-        "text_uberschrift": "TWO Family",
+        "text_uberschrift": "FIVE Family",
         "textarea_einleitung": "Download our latest product and marketing materials as PDF, JPG or PNG<br> and use them in your own marketing.",
-        "header-2704f908fb4a201ea95d99939d3c1f45": null,
-        "paragraph-6cf1904c95b51f653c0c93a51ec35127": null,
-        "header-91510f377e5ab329907b8d686b154a6c": null,
+        "header-bed1e852558995c2c06e2dda87baf322": null,
+        "paragraph-6c0582fa946671d940c3b2f16c0cbdf9": null,
+        "header-b3c662d57be2eb82cd10b5cb8afb5655": null,
         "padding_top": 4,
         "padding_bottom": 4
       },
       "blocks": {
-        "produkt_kategorie_bwJKj": {
+        "produkt_kategorie_n3Rge": {
           "type": "produkt-kategorie",
           "disabled": false,
           "blocks": {
-            "prasentation_NrNLG": {
+            "prasentation_xxFap": {
               "type": "prasentation",
-              "name": "Print",
+              "name": "Präsentation",
               "disabled": false,
               "settings": {
-                "text_titel": "Transition Sheet for Print",
-                "text_datei_info": "PDF · 3.9 MB",
-                "url_de_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/TWO_transition_sheet_DE_print.pdf?v=1783606016",
-                "url_en_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/TWO_key_visual_scaled.jpg?v=1783606049",
-                "url_fr_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/TWO_transition_sheet_FR_print.pdf?v=1783606016"
+                "text_titel": "FIVE Product Presentation PDF",
+                "text_datei_info": "PDF · 4.7 MB",
+                "url_de_datei": "",
+                "url_en_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/FIVE_Product_Presentation_EN.pptx?v=1787986402",
+                "url_fr_datei": ""
               }
             },
-            "prasentation_Rqw76": {
+            "prasentation_RQwGF": {
               "type": "prasentation",
-              "name": "Online",
               "disabled": false,
               "settings": {
-                "text_titel": "Transition Sheet for Online",
-                "text_datei_info": "PDF · 814 KB",
-                "url_de_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/TWO_transition_sheet_DE_online.pdf?v=1783606012",
-                "url_en_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/TWO_transition_sheet_EN_online.pdf?v=1783606012",
-                "url_fr_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/TWO_transition_sheet_FR_online.pdf?v=1783606012"
+                "text_titel": "FIVE Product Catalog PDF",
+                "text_datei_info": "PDF · 2.7 MB",
+                "url_de_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/PRODUCT_CATALOG_4.0_FIVE_DE.pdf?v=1787983438",
+                "url_en_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/PRODUCT_CATALOG_4.0_FIVE_EN.pdf?v=1787983438",
+                "url_fr_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/PRODUCT_CATALOG_4.0_FIVE_FR.pdf?v=1787983438"
               }
             }
           },
           "block_order": [
-            "prasentation_NrNLG",
-            "prasentation_Rqw76"
+            "prasentation_xxFap",
+            "prasentation_RQwGF"
           ],
           "settings": {
-            "text_kategorie_name": "TRANSITION SHEETS"
+            "text_kategorie_name": "PRODUCT PRESENTATIONS"
           }
         }
       },
       "block_order": [
-        "produkt_kategorie_bwJKj"
+        "produkt_kategorie_n3Rge"
       ],
-      "name": "TWO Transition Sheets"
-    },
-    "b2b_mkt_documents_Hibiy": {
-      "type": "b2b_mkt_documents",
-      "disabled": false,
-      "settings": {
-        "text_uberschrift": "TWO family Marketing Assets",
-        "paragraph-fbb32ab650b312104e60be3e48387ba9": null,
-        "header-57ea712f83068c05b7e8fc45c86b820e": null,
-        "padding_top": 4,
-        "padding_bottom": 4
-      },
-      "blocks": {
-        "b2b_mkt_dokument_qEQ8t": {
-          "type": "b2b-mkt-dokument",
-          "disabled": false,
-          "settings": {
-            "url_datei_link": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/TWO_key_visual_scaled.jpg?v=1783606049",
-            "text_titel": "Key Visual",
-            "text_datei_info": "JPG · 188 KB"
-          }
-        },
-        "b2b_mkt_dokument_6aXWa": {
-          "type": "b2b-mkt-dokument",
-          "name": "B2B Mkt Dokument",
-          "disabled": false,
-          "settings": {
-            "url_datei_link": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/TWO_product_brief.pdf?v=1783606011",
-            "text_titel": "Product Brief",
-            "text_datei_info": "PDF · 313 KB"
-          }
-        },
-        "b2b_mkt_dokument_qCPYC": {
-          "type": "b2b-mkt-dokument",
-          "name": "B2B Mkt Dokument",
-          "disabled": false,
-          "settings": {
-            "url_datei_link": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/TWO_product_shots.zip?v=1783607886",
-            "text_titel": "Product Images",
-            "text_datei_info": "ZIP · 18.3 MB"
-          }
-        }
-      },
-      "block_order": [
-        "b2b_mkt_dokument_qEQ8t",
-        "b2b_mkt_dokument_6aXWa",
-        "b2b_mkt_dokument_qCPYC"
-      ],
-      "name": "B2B Mkt Documents"
-    },
-    "b2b_hub_quicklinks_jAdMA": {
-      "type": "b2b_hub_quicklinks",
-      "disabled": false,
-      "settings": {
-        "text_heading": "Other Marketing assets",
-        "textarea_subheading": "Please don't oversee our other marketing assets ready to use.",
-        "header-55530a7baccda88eb6067b3700b24bb5": null,
-        "padding_top": 2,
-        "padding_bottom": 4
-      },
-      "blocks": {
-        "b2b_quicklink_WMN7m": {
-          "type": "b2b-quicklink",
-          "disabled": false,
-          "settings": {
-            "image_icon": null,
-            "text_heading": "DICOTA Product Presentations",
-            "richtext_text": "",
-            "url_button_link": "shopify://pages/b2b-product-presentations",
-            "text_button_text": "more"
-          }
-        },
-        "b2b_quicklink_mTJPQ": {
-          "type": "b2b-quicklink",
-          "name": "B2B Quicklink",
-          "disabled": false,
-          "settings": {
-            "image_icon": null,
-            "text_heading": "Product Images & Contents",
-            "richtext_text": "",
-            "url_button_link": "shopify://pages/b2b-product-images-contents",
-            "text_button_text": "more"
-          }
-        },
-        "b2b_quicklink_CNYQ3": {
-          "type": "b2b-quicklink",
-          "name": "B2B Quicklink",
-          "disabled": false,
-          "settings": {
-            "image_icon": null,
-            "text_heading": "DCT Academy",
-            "richtext_text": "",
-            "url_button_link": "shopify://pages/b2b-dicota-academy",
-            "text_button_text": "more"
-          }
-        }
-      },
-      "block_order": [
-        "b2b_quicklink_WMN7m",
-        "b2b_quicklink_mTJPQ",
-        "b2b_quicklink_CNYQ3"
-      ],
-      "name": "B2B Hub Quicklinks"
+      "name": "FIVE Family"
     },
     "b2b_mkt_documents_VgqyK": {
       "type": "b2b_mkt_documents",
       "disabled": false,
       "settings": {
         "text_uberschrift": "FIVE family Marketing Assets",
-        "paragraph-411aa2df584d849b26e7dd3cb341f016": null,
-        "header-2df3b631774fcf62e4fba82cc8a9f3ed": null,
+        "paragraph-f7d20292fbcd9a961376912320c45bae": null,
+        "header-005e84b1a7431b43f433ad50780a317c": null,
         "padding_top": 4,
         "padding_bottom": 4
       },
@@ -375,60 +166,163 @@
       ],
       "name": "B2B Mkt Documents"
     },
-    "b2b_mkt_presentation_ANqqA": {
+    "b2b_mkt_presentation_ptYHt": {
       "type": "b2b_mkt_presentation",
       "disabled": false,
       "settings": {
-        "text_uberschrift": "FIVE Family",
+        "text_uberschrift": "TWO Family",
         "textarea_einleitung": "Download our latest product and marketing materials as PDF, JPG or PNG<br> and use them in your own marketing.",
-        "header-73b92c19ae8eaa8096956d698518efba": null,
-        "paragraph-7ee85f7e69e7c99253f3d52e0f223911": null,
-        "header-c2285a38171fc1436b879775dc1dc67f": null,
+        "header-4b867224b0552da1be75d83dd26e8ecd": null,
+        "paragraph-7b5ac187261f3cce57a3270fd2c87ccc": null,
+        "header-861ef49ce8c7a4f50af4f9b2429063a5": null,
         "padding_top": 4,
         "padding_bottom": 4
       },
       "blocks": {
-        "produkt_kategorie_n3Rge": {
+        "produkt_kategorie_bwJKj": {
           "type": "produkt-kategorie",
           "disabled": false,
           "blocks": {
-            "prasentation_xxFap": {
+            "prasentation_NrNLG": {
               "type": "prasentation",
-              "name": "Präsentation",
+              "name": "Print",
               "disabled": false,
               "settings": {
-                "text_titel": "FIVE Product Presentation PDF",
-                "text_datei_info": "PDF · 4.7 MB",
-                "url_de_datei": "",
-                "url_en_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/FIVE_Product_Presentation_EN.pptx?v=1787986402",
-                "url_fr_datei": ""
+                "text_titel": "Transition Sheet for Print",
+                "text_datei_info": "PDF · 3.9 MB",
+                "url_de_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/TWO_transition_sheet_DE_print.pdf?v=1783606016",
+                "url_en_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/TWO_key_visual_scaled.jpg?v=1783606049",
+                "url_fr_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/TWO_transition_sheet_FR_print.pdf?v=1783606016"
               }
             },
-            "prasentation_RQwGF": {
+            "prasentation_Rqw76": {
               "type": "prasentation",
+              "name": "Online",
               "disabled": false,
               "settings": {
-                "text_titel": "FIVE Product Catalog PDF",
-                "text_datei_info": "PDF · 2.7 MB",
-                "url_de_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/PRODUCT_CATALOG_4.0_FIVE_DE.pdf?v=1787983438",
-                "url_en_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/PRODUCT_CATALOG_4.0_FIVE_EN.pdf?v=1787983438",
-                "url_fr_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/PRODUCT_CATALOG_4.0_FIVE_FR.pdf?v=1787983438"
+                "text_titel": "Transition Sheet for Online",
+                "text_datei_info": "PDF · 814 KB",
+                "url_de_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/TWO_transition_sheet_DE_online.pdf?v=1783606012",
+                "url_en_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/TWO_transition_sheet_EN_online.pdf?v=1783606012",
+                "url_fr_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/TWO_transition_sheet_FR_online.pdf?v=1783606012"
               }
             }
           },
           "block_order": [
-            "prasentation_xxFap",
-            "prasentation_RQwGF"
+            "prasentation_NrNLG",
+            "prasentation_Rqw76"
           ],
           "settings": {
-            "text_kategorie_name": "PRODUCT PRESENTATIONS"
+            "text_kategorie_name": "TRANSITION SHEETS"
           }
         }
       },
       "block_order": [
-        "produkt_kategorie_n3Rge"
+        "produkt_kategorie_bwJKj"
       ],
-      "name": "FIVE Family"
+      "name": "TWO Transition Sheets"
+    },
+    "b2b_mkt_documents_Hibiy": {
+      "type": "b2b_mkt_documents",
+      "disabled": false,
+      "settings": {
+        "text_uberschrift": "TWO family Marketing Assets",
+        "paragraph-ce6121feb008420193d78e219168ff6a": null,
+        "header-ae41d1bfefd09a46623d7ae394a4f28f": null,
+        "padding_top": 4,
+        "padding_bottom": 4
+      },
+      "blocks": {
+        "b2b_mkt_dokument_qEQ8t": {
+          "type": "b2b-mkt-dokument",
+          "disabled": false,
+          "settings": {
+            "url_datei_link": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/TWO_key_visual_scaled.jpg?v=1783606049",
+            "text_titel": "Key Visual",
+            "text_datei_info": "JPG · 188 KB"
+          }
+        },
+        "b2b_mkt_dokument_6aXWa": {
+          "type": "b2b-mkt-dokument",
+          "name": "B2B Mkt Dokument",
+          "disabled": false,
+          "settings": {
+            "url_datei_link": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/TWO_product_brief.pdf?v=1783606011",
+            "text_titel": "Product Brief",
+            "text_datei_info": "PDF · 313 KB"
+          }
+        },
+        "b2b_mkt_dokument_qCPYC": {
+          "type": "b2b-mkt-dokument",
+          "name": "B2B Mkt Dokument",
+          "disabled": false,
+          "settings": {
+            "url_datei_link": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/TWO_product_shots.zip?v=1783607886",
+            "text_titel": "Product Images",
+            "text_datei_info": "ZIP · 18.3 MB"
+          }
+        }
+      },
+      "block_order": [
+        "b2b_mkt_dokument_qEQ8t",
+        "b2b_mkt_dokument_6aXWa",
+        "b2b_mkt_dokument_qCPYC"
+      ],
+      "name": "B2B Mkt Documents"
+    },
+    "b2b_hub_quicklinks_jAdMA": {
+      "type": "b2b_hub_quicklinks",
+      "disabled": false,
+      "settings": {
+        "text_heading": "Other Marketing assets",
+        "textarea_subheading": "Please don't oversee our other marketing assets ready to use.",
+        "header-c08b58c02bbe0965dd43ebb80ac80709": null,
+        "padding_top": 2,
+        "padding_bottom": 4
+      },
+      "blocks": {
+        "b2b_quicklink_WMN7m": {
+          "type": "b2b-quicklink",
+          "disabled": false,
+          "settings": {
+            "image_icon": null,
+            "text_heading": "DICOTA Product Presentations",
+            "richtext_text": "",
+            "url_button_link": "shopify://pages/b2b-product-presentations",
+            "text_button_text": "more"
+          }
+        },
+        "b2b_quicklink_mTJPQ": {
+          "type": "b2b-quicklink",
+          "name": "B2B Quicklink",
+          "disabled": false,
+          "settings": {
+            "image_icon": null,
+            "text_heading": "Product Images & Contents",
+            "richtext_text": "",
+            "url_button_link": "shopify://pages/b2b-product-images-contents",
+            "text_button_text": "more"
+          }
+        },
+        "b2b_quicklink_CNYQ3": {
+          "type": "b2b-quicklink",
+          "name": "B2B Quicklink",
+          "disabled": false,
+          "settings": {
+            "image_icon": null,
+            "text_heading": "DCT Academy",
+            "richtext_text": "",
+            "url_button_link": "shopify://pages/b2b-dicota-academy",
+            "text_button_text": "more"
+          }
+        }
+      },
+      "block_order": [
+        "b2b_quicklink_WMN7m",
+        "b2b_quicklink_mTJPQ",
+        "b2b_quicklink_CNYQ3"
+      ],
+      "name": "B2B Hub Quicklinks"
     },
     "b2b_mkt_campaigns_kiKnV": {
       "type": "b2b_mkt_campaigns",
@@ -436,7 +330,7 @@
       "settings": {
         "text_heading": "Campaigns",
         "textarea_subheading": "Current and past marketing campaigns with all assets and copy.",
-        "header-b5906dc07f1ba2ec020a4c5fd802248e": null,
+        "header-a75bc33bc9b870a58ca4a1ae3612f83a": null,
         "padding_top": 4,
         "padding_bottom": 4
       },
@@ -584,6 +478,117 @@
         "b2b_mkt_dokument_4T9m6"
       ],
       "name": "SEVEN Marketing Assets"
+    },
+    "b2b_mkt_presentation_ONEfam": {
+      "type": "b2b_mkt_presentation",
+      "disabled": false,
+      "settings": {
+        "text_uberschrift": "ONE Family",
+        "textarea_einleitung": "Download our latest product and marketing materials as PDF, JPG or PNG<br> and use them in your own marketing.",
+        "header-388cf4f7c8e01fe280c38a1e0cf0b7d3": null,
+        "paragraph-8b741a2682f3a4a636777e0ac961aa82": null,
+        "header-4e81d3584bdd3da00739051ff41966b7": null,
+        "padding_top": 4,
+        "padding_bottom": 4
+      },
+      "blocks": {
+        "produkt_kategorie_ONEfam": {
+          "type": "produkt-kategorie",
+          "disabled": false,
+          "blocks": {
+            "prasentation_ONEpres": {
+              "type": "prasentation",
+              "name": "Präsentation",
+              "disabled": false,
+              "settings": {
+                "text_titel": "ONE Product Presentation PDF",
+                "text_datei_info": "PDF · 1.7 MB",
+                "url_de_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/ONE_Product_Presentation_DE.pdf?v=1787986457",
+                "url_en_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/ONE_Product_Presentation_EN.pdf?v=1787986457",
+                "url_fr_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/ONE_Product_Presentation_FR.pdf?v=1790714580"
+              }
+            },
+            "prasentation_ONEcat": {
+              "type": "prasentation",
+              "disabled": false,
+              "settings": {
+                "text_titel": "ONE Product Catalog PDF",
+                "text_datei_info": "PDF · 2.0 MB",
+                "url_de_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/PRODUCT_CATALOG_4.0_ONE_DE.pdf?v=1787987857",
+                "url_en_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/PRODUCT_CATALOG_4.0_ONE_EN.pdf?v=1787987857",
+                "url_fr_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/PRODUCT_CATALOG_4.0_ONE_FR.pdf?v=1787987857"
+              }
+            }
+          },
+          "block_order": [
+            "prasentation_ONEpres",
+            "prasentation_ONEcat"
+          ],
+          "settings": {
+            "text_kategorie_name": "PRODUCT PRESENTATIONS"
+          }
+        }
+      },
+      "block_order": [
+        "produkt_kategorie_ONEfam"
+      ],
+      "name": "ONE Family"
+    },
+    "b2b_mkt_documents_ONEfam": {
+      "type": "b2b_mkt_documents",
+      "disabled": true,
+      "settings": {
+        "text_uberschrift": "ONE family Marketing Assets",
+        "paragraph-de28b07e29c310c3ee923d039bdd3303": null,
+        "header-b5ac0afe3517d64f7f33d2d113770486": null,
+        "padding_top": 4,
+        "padding_bottom": 4
+      },
+      "blocks": {
+        "b2b_mkt_dokument_ONElife": {
+          "type": "b2b-mkt-dokument",
+          "disabled": false,
+          "settings": {
+            "url_datei_link": "",
+            "text_titel": "Product Lifestyle Images",
+            "text_datei_info": "ZIP"
+          }
+        },
+        "b2b_mkt_dokument_ONEppt": {
+          "type": "b2b-mkt-dokument",
+          "disabled": false,
+          "settings": {
+            "url_datei_link": "",
+            "text_titel": "Bento Graphic (for PPT, in grey)",
+            "text_datei_info": "PNG"
+          }
+        },
+        "b2b_mkt_dokument_ONEweb": {
+          "type": "b2b-mkt-dokument",
+          "disabled": false,
+          "settings": {
+            "url_datei_link": "",
+            "text_titel": "Bento Graphic (for Web, in white)",
+            "text_datei_info": "PNG"
+          }
+        },
+        "b2b_mkt_dokument_ONEvert": {
+          "type": "b2b-mkt-dokument",
+          "disabled": false,
+          "settings": {
+            "url_datei_link": "",
+            "text_titel": "Bento Graphic (vertical, in grey)",
+            "text_datei_info": "PNG"
+          }
+        }
+      },
+      "block_order": [
+        "b2b_mkt_dokument_ONElife",
+        "b2b_mkt_dokument_ONEppt",
+        "b2b_mkt_dokument_ONEweb",
+        "b2b_mkt_dokument_ONEvert"
+      ],
+      "name": "ONE Marketing Assets"
     }
   },
   "order": [
