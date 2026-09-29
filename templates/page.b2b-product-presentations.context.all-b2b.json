@@ -12,5 +12,26 @@
     "market": "all-b2b"
   },
   "parent": "page.b2b-product-presentations.json",
-  "sections": {}
+  "sections": {
+    "b2b_mkt_presentation": {
+      "settings": {},
+      "blocks": {
+        "produkt_kategorie_zxBK8j": {
+          "blocks": {
+            "prasentation_i8WEVt": {
+              "settings": {
+                "url_fr_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/ONE_Product_Presentation_FR.pdf?v=1790714580"
+              }
+            },
+            "prasentation_9ijMtj": {
+              "settings": {
+                "url_fr_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/ONE_Product_Presentation_FR.pptx?v=1790714580"
+              }
+            }
+          },
+          "settings": {}
+        }
+      }
+    }
+  }
 }

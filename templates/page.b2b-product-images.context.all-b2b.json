@@ -14,7 +14,12 @@
   "parent": "page.b2b-product-images.json",
   "sections": {
     "b2b_mkt_product_imgs": {
-      "settings": {},
+      "settings": {
+        "text_liste_heading": "",
+        "text_liste_subheading": "",
+        "text_info_heading": "",
+        "richtext_info_text": ""
+      },
       "blocks": {
         "b2b_mkt_download_1": {
           "settings": {
