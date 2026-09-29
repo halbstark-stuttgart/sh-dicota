@@ -121,7 +121,7 @@
       "blocks": {
         "b2b_mkt_dokument_xMQfK": {
           "type": "b2b-mkt-dokument",
-          "name": "B2B Mkt Dokument",
+          "name": "Product Lifestyle Images",
           "disabled": false,
           "settings": {
             "url_datei_link": "https://files.dicota.cloud/s/BQ9EqeANtY3F3gS",
@@ -165,7 +165,7 @@
         "b2b_mkt_dokument_9iY47",
         "b2b_mkt_dokument_DCLXi"
       ],
-      "name": "B2B Mkt Documents"
+      "name": "FIVE family Marketing Assets"
     },
     "b2b_mkt_presentation_ptYHt": {
       "type": "b2b_mkt_presentation",
