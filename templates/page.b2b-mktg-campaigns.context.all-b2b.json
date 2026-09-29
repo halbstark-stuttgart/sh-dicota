@@ -258,7 +258,7 @@
               "name": "Präsentation",
               "disabled": false,
               "settings": {
-                "text_titel": "Product Presentation PDF",
+                "text_titel": "FIVE Product Presentation PDF",
                 "text_datei_info": "PDF · 4.7 MB",
                 "url_de_datei": "",
                 "url_en_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/FIVE_Product_Presentation_EN.pptx?v=1787986402",
@@ -282,7 +282,7 @@
             "prasentation_RQwGF"
           ],
           "settings": {
-            "text_kategorie_name": "Category"
+            "text_kategorie_name": "PRODUCT PRESENTATIONS"
           }
         }
       },
