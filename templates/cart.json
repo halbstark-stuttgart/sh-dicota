@@ -11,7 +11,19 @@
   "sections": {
     "cart": {
       "type": "cart",
-      "settings": {}
+      "settings": {
+        "text_heading": "Your Shopping Cart",
+        "text_continue_shopping": "Continue shopping",
+        "text_product": "Product",
+        "text_quantity": "Quantity",
+        "text_price": "Price",
+        "text_remove": "Remove",
+        "text_summary": "Summary",
+        "text_sum_inkl_vat": "Sum (inkl. Vat.)",
+        "text_discount": "Discount",
+        "text_comment": "Comment",
+        "text_cart_empty": "No Products yet."
+      }
     }
   },
   "layout": "theme",
