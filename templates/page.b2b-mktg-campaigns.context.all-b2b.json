@@ -18,16 +18,16 @@
       "disabled": false,
       "settings": {
         "text_home_label": "Home",
-        "text_kollektionen_label": "Collections",
+        "text_kollektionen_label": "Product Marketing Material",
         "text_suche_label": "Search",
         "text_warenkorb_label": "Cart",
         "text_404_label": "Page not found",
-        "header-70e0d4ca3fcbab1be1bcdd748cb6bf12": null,
-        "paragraph-537652e98e81085ac34b7b0eb06112d1": null,
-        "header-339457b4831298543815847c62a237cd": null,
+        "header-8fc06b9a3fb39f85673e496bc5e91254": null,
+        "paragraph-12780fbf639f5e81461d908cd3bb160d": null,
+        "header-51be1f81d7dd0b4d01cdfd502757004f": null,
         "padding_top": 0.5,
         "padding_bottom": 0.5,
-        "header-e9366813fd0e8338ce32fc08afd1be0b": null,
+        "header-8909035d4565d02fe212f4fe26147262": null,
         "bg_color": "#ffffff",
         "text_color": "#0f0f0f"
       },
@@ -44,7 +44,7 @@
         "textarea_subheading_1": "Discover ready-to-use marketing and product materials designed to support your communication and sales activities. Access campaign imagery, pre-written content, product highlights, translation sheets and additional marketing assets for fast, consistent and effective implementation across all channels.",
         "url_hero_button_link": "",
         "text_hero_button_text": "",
-        "header-815bf1d1d43574bb2dc446afdb985d97": null,
+        "header-4bc5519afd4b729cbd8e4bdff346cdb6": null,
         "padding_top": 4,
         "padding_bottom": 2
       },
@@ -52,130 +52,15 @@
       "block_order": [],
       "name": "Marketing & Product Materials"
     },
-    "b2b_mkt_presentation_ANqqA": {
-      "type": "b2b_mkt_presentation",
-      "disabled": false,
-      "settings": {
-        "text_uberschrift": "FIVE Family",
-        "textarea_einleitung": "Download our latest product and marketing materials as PDF, JPG or PNG<br> and use them in your own marketing.",
-        "header-a64a616b218571356e2679a3c9d2f527": null,
-        "paragraph-1b80cee94cd6a4a118e217c6eff2b6bd": null,
-        "header-f34e07f092c248f321f858b76c8fe56a": null,
-        "padding_top": 4,
-        "padding_bottom": 4
-      },
-      "blocks": {
-        "produkt_kategorie_n3Rge": {
-          "type": "produkt-kategorie",
-          "disabled": false,
-          "blocks": {
-            "prasentation_xxFap": {
-              "type": "prasentation",
-              "name": "Präsentation",
-              "disabled": false,
-              "settings": {
-                "text_titel": "FIVE Product Presentation PDF",
-                "text_datei_info": "PDF · 4.7 MB",
-                "url_de_datei": "",
-                "url_en_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/FIVE_Product_Presentation_EN.pptx?v=1787986402",
-                "url_fr_datei": ""
-              }
-            },
-            "prasentation_RQwGF": {
-              "type": "prasentation",
-              "disabled": false,
-              "settings": {
-                "text_titel": "FIVE Product Catalog PDF",
-                "text_datei_info": "PDF · 2.7 MB",
-                "url_de_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/PRODUCT_CATALOG_4.0_FIVE_DE.pdf?v=1787983438",
-                "url_en_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/PRODUCT_CATALOG_4.0_FIVE_EN.pdf?v=1787983438",
-                "url_fr_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/PRODUCT_CATALOG_4.0_FIVE_FR.pdf?v=1787983438"
-              }
-            }
-          },
-          "block_order": [
-            "prasentation_xxFap",
-            "prasentation_RQwGF"
-          ],
-          "settings": {
-            "text_kategorie_name": "PRODUCT PRESENTATIONS"
-          }
-        }
-      },
-      "block_order": [
-        "produkt_kategorie_n3Rge"
-      ],
-      "name": "FIVE Family"
-    },
-    "b2b_mkt_documents_VgqyK": {
-      "type": "b2b_mkt_documents",
-      "disabled": false,
-      "settings": {
-        "text_uberschrift": "FIVE family Marketing Assets",
-        "paragraph-8952e9c2b16f4b4dd422af88533a4cd9": null,
-        "header-8302ed2825073a33147deccf6467786c": null,
-        "padding_top": 4,
-        "padding_bottom": 4
-      },
-      "blocks": {
-        "b2b_mkt_dokument_a6rfV": {
-          "type": "b2b-mkt-dokument",
-          "name": "Bento Graphic (for PPT, in grey)",
-          "disabled": false,
-          "settings": {
-            "url_datei_link": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/BENTO_FIVE_FINAL_forPPT_greyBoxes_2026.png?v=1790713075",
-            "text_titel": "Bento Graphic (for PPT, in grey)",
-            "text_datei_info": "PNG · 1.8 MB"
-          }
-        },
-        "b2b_mkt_dokument_9iY47": {
-          "type": "b2b-mkt-dokument",
-          "name": "Bento Graphic (for Web, in white)",
-          "disabled": false,
-          "settings": {
-            "url_datei_link": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/BENTO_FIVE_FINAL_forWebsite_whiteBoxes_2026.png?v=1790713075",
-            "text_titel": "Bento Graphic (for Web, in white)",
-            "text_datei_info": "PNG · 1.8 MB"
-          }
-        },
-        "b2b_mkt_dokument_DCLXi": {
-          "type": "b2b-mkt-dokument",
-          "name": "B2B Mkt Dokument",
-          "disabled": false,
-          "settings": {
-            "url_datei_link": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/BENTO_FIVE_FINAL_vertical_greyBoxes_2026.png?v=1790713073",
-            "text_titel": "Bento Graphic (vertical, in grey)",
-            "text_datei_info": "PNG · 1.6 MB"
-          }
-        },
-        "b2b_mkt_dokument_xMQfK": {
-          "type": "b2b-mkt-dokument",
-          "name": "Product Lifestyle Images",
-          "disabled": false,
-          "settings": {
-            "url_datei_link": "https://files.dicota.cloud/s/BQ9EqeANtY3F3gS",
-            "text_titel": "Product Lifestyle Images",
-            "text_datei_info": "ZIP · 142.7 MB"
-          }
-        }
-      },
-      "block_order": [
-        "b2b_mkt_dokument_a6rfV",
-        "b2b_mkt_dokument_9iY47",
-        "b2b_mkt_dokument_DCLXi",
-        "b2b_mkt_dokument_xMQfK"
-      ],
-      "name": "B2B Mkt Documents"
-    },
     "b2b_mkt_presentation_ptYHt": {
       "type": "b2b_mkt_presentation",
       "disabled": false,
       "settings": {
         "text_uberschrift": "TWO Family",
         "textarea_einleitung": "Download our latest product and marketing materials as PDF, JPG or PNG<br> and use them in your own marketing.",
-        "header-21b85909502843ac40a20a6cea62c774": null,
-        "paragraph-9e38e2064fefa2c51d4f854c4a91d27c": null,
-        "header-21fff1af989f543b0ca477eb239860ce": null,
+        "header-2704f908fb4a201ea95d99939d3c1f45": null,
+        "paragraph-6cf1904c95b51f653c0c93a51ec35127": null,
+        "header-91510f377e5ab329907b8d686b154a6c": null,
         "padding_top": 4,
         "padding_bottom": 4
       },
@@ -228,8 +113,8 @@
       "disabled": false,
       "settings": {
         "text_uberschrift": "TWO family Marketing Assets",
-        "paragraph-a91aa6fbbb712a1aae05fa5cb64aba27": null,
-        "header-6773857ff683ddd3bf5f6a51dd12c630": null,
+        "paragraph-fbb32ab650b312104e60be3e48387ba9": null,
+        "header-57ea712f83068c05b7e8fc45c86b820e": null,
         "padding_top": 4,
         "padding_bottom": 4
       },
@@ -277,7 +162,7 @@
       "settings": {
         "text_heading": "Other Marketing assets",
         "textarea_subheading": "Please don't oversee our other marketing assets ready to use.",
-        "header-6255918a81b8dbeaf7cee61f2876ebf1": null,
+        "header-55530a7baccda88eb6067b3700b24bb5": null,
         "padding_top": 2,
         "padding_bottom": 4
       },
@@ -325,13 +210,127 @@
       ],
       "name": "B2B Hub Quicklinks"
     },
+    "b2b_mkt_documents_VgqyK": {
+      "type": "b2b_mkt_documents",
+      "disabled": false,
+      "settings": {
+        "text_uberschrift": "FIVE family Marketing Assets",
+        "paragraph-411aa2df584d849b26e7dd3cb341f016": null,
+        "header-2df3b631774fcf62e4fba82cc8a9f3ed": null,
+        "padding_top": 4,
+        "padding_bottom": 4
+      },
+      "blocks": {
+        "b2b_mkt_dokument_xMQfK": {
+          "type": "b2b-mkt-dokument",
+          "name": "B2B Mkt Dokument",
+          "disabled": false,
+          "settings": {
+            "url_datei_link": "https://files.dicota.cloud/s/BQ9EqeANtY3F3gS",
+            "text_titel": "Product Lifestyle Images",
+            "text_datei_info": "ZIP · 142.7 MB"
+          }
+        },
+        "b2b_mkt_dokument_a6rfV": {
+          "type": "b2b-mkt-dokument",
+          "disabled": false,
+          "settings": {
+            "url_datei_link": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/BENTO_FIVE_FINAL_forPPT_greyBoxes_2026.png?v=1790713075",
+            "text_titel": "Bento Graphic (for PPT, in grey)",
+            "text_datei_info": "PNG · 1.8 MB"
+          }
+        },
+        "b2b_mkt_dokument_9iY47": {
+          "type": "b2b-mkt-dokument",
+          "name": "B2B Mkt Dokument",
+          "disabled": false,
+          "settings": {
+            "url_datei_link": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/BENTO_FIVE_FINAL_forWebsite_whiteBoxes_2026.png?v=1790713075",
+            "text_titel": "Bento Graphic (for Web, in white)",
+            "text_datei_info": "PNG · 1.8 MB"
+          }
+        },
+        "b2b_mkt_dokument_DCLXi": {
+          "type": "b2b-mkt-dokument",
+          "name": "B2B Mkt Dokument",
+          "disabled": false,
+          "settings": {
+            "url_datei_link": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/BENTO_FIVE_FINAL_vertical_greyBoxes_2026.png?v=1790713073",
+            "text_titel": "Bento Graphic (vertical, in grey)",
+            "text_datei_info": "PNG · 1.6 MB"
+          }
+        }
+      },
+      "block_order": [
+        "b2b_mkt_dokument_xMQfK",
+        "b2b_mkt_dokument_a6rfV",
+        "b2b_mkt_dokument_9iY47",
+        "b2b_mkt_dokument_DCLXi"
+      ],
+      "name": "B2B Mkt Documents"
+    },
+    "b2b_mkt_presentation_ANqqA": {
+      "type": "b2b_mkt_presentation",
+      "disabled": false,
+      "settings": {
+        "text_uberschrift": "FIVE Family",
+        "textarea_einleitung": "Download our latest product and marketing materials as PDF, JPG or PNG<br> and use them in your own marketing.",
+        "header-73b92c19ae8eaa8096956d698518efba": null,
+        "paragraph-7ee85f7e69e7c99253f3d52e0f223911": null,
+        "header-c2285a38171fc1436b879775dc1dc67f": null,
+        "padding_top": 4,
+        "padding_bottom": 4
+      },
+      "blocks": {
+        "produkt_kategorie_n3Rge": {
+          "type": "produkt-kategorie",
+          "disabled": false,
+          "blocks": {
+            "prasentation_xxFap": {
+              "type": "prasentation",
+              "name": "Präsentation",
+              "disabled": false,
+              "settings": {
+                "text_titel": "FIVE Product Presentation PDF",
+                "text_datei_info": "PDF · 4.7 MB",
+                "url_de_datei": "",
+                "url_en_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/FIVE_Product_Presentation_EN.pptx?v=1787986402",
+                "url_fr_datei": ""
+              }
+            },
+            "prasentation_RQwGF": {
+              "type": "prasentation",
+              "disabled": false,
+              "settings": {
+                "text_titel": "FIVE Product Catalog PDF",
+                "text_datei_info": "PDF · 2.7 MB",
+                "url_de_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/PRODUCT_CATALOG_4.0_FIVE_DE.pdf?v=1787983438",
+                "url_en_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/PRODUCT_CATALOG_4.0_FIVE_EN.pdf?v=1787983438",
+                "url_fr_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/PRODUCT_CATALOG_4.0_FIVE_FR.pdf?v=1787983438"
+              }
+            }
+          },
+          "block_order": [
+            "prasentation_xxFap",
+            "prasentation_RQwGF"
+          ],
+          "settings": {
+            "text_kategorie_name": "PRODUCT PRESENTATIONS"
+          }
+        }
+      },
+      "block_order": [
+        "produkt_kategorie_n3Rge"
+      ],
+      "name": "FIVE Family"
+    },
     "b2b_mkt_campaigns_kiKnV": {
       "type": "b2b_mkt_campaigns",
       "disabled": false,
       "settings": {
         "text_heading": "Campaigns",
         "textarea_subheading": "Current and past marketing campaigns with all assets and copy.",
-        "header-3ac28484a4c8f03ac78ca6d83d77b472": null,
+        "header-b5906dc07f1ba2ec020a4c5fd802248e": null,
         "padding_top": 4,
         "padding_bottom": 4
       },
