@@ -365,6 +365,7 @@
       "name": "SEVEN Transition Sheets"
     },
     "b2b_mkt_documents": {
+      "disabled": false,
       "settings": {
         "text_uberschrift": "SEVEN family Marketing Assets"
       },
