@@ -263,9 +263,42 @@
             "text_titel": "Product Images",
             "text_datei_info": "ZIP · 18.3 MB"
           }
+        },
+        "b2b_mkt_dokument_TWOppt": {
+          "type": "b2b-mkt-dokument",
+          "name": "Bento Graphic (for PPT, in grey)",
+          "disabled": false,
+          "settings": {
+            "url_datei_link": "https://www.dicota.com/cdn/shop/files/BENTO_TWO_FINAL_forPPT_greyBoxes_2026.png?v=1790717843",
+            "text_titel": "Bento Graphic (for PPT, in grey)",
+            "text_datei_info": "PNG · 3.0 MB"
+          }
+        },
+        "b2b_mkt_dokument_TWOweb": {
+          "type": "b2b-mkt-dokument",
+          "name": "Bento Graphic (for Web, in white)",
+          "disabled": false,
+          "settings": {
+            "url_datei_link": "https://www.dicota.com/cdn/shop/files/BENTO_TWO_FINAL_forWebsite_whiteBoxes_2026.png?v=1790717842",
+            "text_titel": "Bento Graphic (for Web, in white)",
+            "text_datei_info": "PNG · 2.9 MB"
+          }
+        },
+        "b2b_mkt_dokument_TWOvert": {
+          "type": "b2b-mkt-dokument",
+          "name": "Bento Graphic (vertical, in grey)",
+          "disabled": false,
+          "settings": {
+            "url_datei_link": "https://www.dicota.com/cdn/shop/files/BENTO_TWO_FINAL_vertical_greyBoxes_2026.png?v=1790717841",
+            "text_titel": "Bento Graphic (vertical, in grey)",
+            "text_datei_info": "PNG · 2.5 MB"
+          }
         }
       },
       "block_order": [
+        "b2b_mkt_dokument_TWOppt",
+        "b2b_mkt_dokument_TWOweb",
+        "b2b_mkt_dokument_TWOvert",
         "b2b_mkt_dokument_qEQ8t",
         "b2b_mkt_dokument_6aXWa",
         "b2b_mkt_dokument_qCPYC"
