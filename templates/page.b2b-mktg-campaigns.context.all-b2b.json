@@ -330,7 +330,7 @@
     },
     "b2b_mkt_documents_ONEfam": {
       "type": "b2b_mkt_documents",
-      "disabled": true,
+      "disabled": false,
       "settings": {
         "text_uberschrift": "ONE family Marketing Assets",
         "paragraph-341f2d77f2f826ce2d64e17a2f4c7293": null,
@@ -339,15 +339,6 @@
         "padding_bottom": 4
       },
       "blocks": {
-        "b2b_mkt_dokument_ONElife": {
-          "type": "b2b-mkt-dokument",
-          "disabled": false,
-          "settings": {
-            "url_datei_link": "",
-            "text_titel": "Product Lifestyle Images",
-            "text_datei_info": "ZIP"
-          }
-        },
         "b2b_mkt_dokument_ONEppt": {
           "type": "b2b-mkt-dokument",
           "disabled": false,
@@ -374,13 +365,23 @@
             "text_titel": "Bento Graphic (vertical, in grey)",
             "text_datei_info": "PNG"
           }
+        },
+        "b2b_mkt_dokument_ONElife": {
+          "type": "b2b-mkt-dokument",
+          "name": "Product Lifestyle Images",
+          "disabled": false,
+          "settings": {
+            "url_datei_link": "",
+            "text_titel": "Product Lifestyle Images",
+            "text_datei_info": "ZIP"
+          }
         }
       },
       "block_order": [
-        "b2b_mkt_dokument_ONElife",
         "b2b_mkt_dokument_ONEppt",
         "b2b_mkt_dokument_ONEweb",
-        "b2b_mkt_dokument_ONEvert"
+        "b2b_mkt_dokument_ONEvert",
+        "b2b_mkt_dokument_ONElife"
       ],
       "name": "ONE Marketing Assets"
     },
