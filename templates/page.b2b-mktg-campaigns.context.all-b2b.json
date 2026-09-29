@@ -221,6 +221,16 @@
         "padding_bottom": 4
       },
       "blocks": {
+        "b2b_mkt_dokument_xMQfK": {
+          "type": "b2b-mkt-dokument",
+          "name": "B2B Mkt Dokument",
+          "disabled": false,
+          "settings": {
+            "url_datei_link": "https://files.dicota.cloud/s/BQ9EqeANtY3F3gS",
+            "text_titel": "Product Lifestyle Images",
+            "text_datei_info": "ZIP · 142.7 MB"
+          }
+        },
         "b2b_mkt_dokument_a6rfV": {
           "type": "b2b-mkt-dokument",
           "disabled": false,
@@ -252,6 +262,7 @@
         }
       },
       "block_order": [
+        "b2b_mkt_dokument_xMQfK",
         "b2b_mkt_dokument_a6rfV",
         "b2b_mkt_dokument_9iY47",
         "b2b_mkt_dokument_DCLXi"
