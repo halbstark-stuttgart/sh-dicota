@@ -22,7 +22,7 @@
     "go_to_checkout": "Sicher zur Kasse",
     "note": "Anmerkung",
     "progress_prefix": "Du bist",
-    "progress_suffix": "entfernt für Free Shipping",
+    "progress_suffix": "vom Gratis-Versand entfernt",
     "grand_total": "Gesamt",
     "shipping_date": "Standardversand",
     "date_format": "%d.%m.%y",
@@ -136,7 +136,7 @@
     "form": {
       "contact_person": "Ansprechpartner*",
       "email": "E-Mail-Adresse*",
-      "heading": "Händlerdaten eingeben",
+      "heading": "Reseller-Daten eingeben",
       "phone": "Telefon"
     }
   },
