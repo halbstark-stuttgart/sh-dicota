@@ -334,11 +334,21 @@
               "name": "Präsentation",
               "disabled": false,
               "settings": {
-                "text_titel": "Product Presentation PDF",
+                "text_titel": "SEVEN Product Presentation PDF",
                 "text_datei_info": "PDF · 25 MB",
                 "url_de_datei": "",
                 "url_en_datei": "",
                 "url_fr_datei": ""
+              }
+            },
+            "prasentation_BH4WbR": {
+              "settings": {
+                "text_titel": "SEVEN Transition Sheet for Print"
+              }
+            },
+            "prasentation_LAPDG9": {
+              "settings": {
+                "text_titel": "SEVEN Transition Sheet for Online"
               }
             }
           },
