@@ -37,7 +37,7 @@
     },
     "announcement_bar_YPJcxP": {
       "settings": {
-        "url_reseller_button_link": "shopify://pages/career"
+        "url_reseller_button_link": ""
       },
       "blocks": {
         "usp_UjjLKy": {
@@ -54,6 +54,15 @@
           "settings": {
             "image_icon": "shopify://shop_images/Icon_warranty.png"
           }
+        },
+        "rechte-seite": {
+          "blocks": {
+            "link_bmpV8z": {
+              "disabled": true,
+              "settings": {}
+            }
+          },
+          "settings": {}
         }
       }
     },
