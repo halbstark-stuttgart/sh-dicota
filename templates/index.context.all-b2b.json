@@ -21,67 +21,25 @@
         "text_headline_eingeloggt": "Welcome back",
         "text_headline": "Welcome to the DICOTA Reseller Portal",
         "textarea_subtext": "Benefit from attractive reseller pricing, exclusive offers and dedicated services and tools to help you provide the best solutions for your customers.",
-        "show_categories": true,
+        "show_categories": false,
         "text_kategorie_label": "Categories",
         "text_search_button": "Search",
-        "header-2f9a05a504670159257e02bdab4dc117": null,
+        "header-a680ee5ec8fc7eb42cc382647e4ea9fa": null,
         "min_height": 78,
-        "header-a0b95a8c65e5f7bde1fba1b0dc0e8e29": null,
+        "header-da59e3a5a43873b1242e4de79ab4e2a5": null,
         "text_color": "#ffffff",
         "button_bg": "#111111",
         "button_color": "#ffffff"
       },
-      "blocks": {
-        "tt_new": {
-          "type": "trend-tag",
-          "settings": {
-            "text_text": "New Releases",
-            "url_link": "shopify://collections/d2c-new-releases"
-          }
-        },
-        "tt_best": {
-          "type": "trend-tag",
-          "settings": {
-            "text_text": "Bestsellers",
-            "url_link": "shopify://collections/b2b-our-bestsellers"
-          }
-        },
-        "tt_quote": {
-          "type": "trend-tag",
-          "settings": {
-            "text_text": "Get a Quote",
-            "url_link": "shopify://pages/b2b-project-request"
-          }
-        },
-        "tt_mkt": {
-          "type": "trend-tag",
-          "settings": {
-            "text_text": "Marketing Support",
-            "url_link": "shopify://pages/b2b-marketing-support"
-          }
-        },
-        "tt_samples": {
-          "type": "trend-tag",
-          "settings": {
-            "text_text": "Order Samples",
-            "url_link": "shopify://pages/b2b-order-product-samples"
-          }
-        }
-      },
-      "block_order": [
-        "tt_new",
-        "tt_best",
-        "tt_quote",
-        "tt_mkt",
-        "tt_samples"
-      ],
+      "blocks": {},
+      "block_order": [],
       "name": "Reseller Hero"
     },
     "reseller_category_ro_WCArV": {
       "type": "reseller_category_ro",
       "disabled": false,
       "settings": {
-        "header-83a5d72dc861602ce039a59125ba04ef": null,
+        "header-e9390ce1cbddb00a095236beb9ed87f3": null,
         "padding_top": 4,
         "padding_bottom": 4
       },
@@ -227,25 +185,45 @@
       "type": "the_dicota_differenc",
       "disabled": false,
       "settings": {
-        "text_heading": "The DICOTA Difference. Even more reasons for our partnership.",
+        "text_heading": "The Dicota Difference. Even more reasons to become a reseller.",
         "url_button_1_link": "",
         "text_button_1_text": "",
         "url_button_2_link": "",
         "text_button_2_text": "",
-        "header-dd3af94d8d18f97fd9d616276525d9ed": null,
+        "header-8d2bd0b862b7c14de3fe26f3d50e835a": null,
         "padding_top": 5,
         "padding_bottom": 5,
-        "header-b575cb3d4ecebb0d2f3b640fee73644d": null,
+        "header-ffe9c7777e60add11e94f98b149d0354": null,
         "bg_color": "#f4f4f4"
       },
       "blocks": {
+        "vorteil_zgd3A": {
+          "type": "vorteil",
+          "name": "Vorteil",
+          "disabled": false,
+          "settings": {
+            "image_icon": null,
+            "text_titel": "Suplier of the top 100:",
+            "textarea_text": "(Placeholder) trade in your current device. Get credit toward a new one."
+          }
+        },
+        "vorteil_i44N9": {
+          "type": "vorteil",
+          "name": "Vorteil",
+          "disabled": false,
+          "settings": {
+            "image_icon": null,
+            "text_titel": "Suplier of the top 100:",
+            "textarea_text": "(Placeholder) trade in your current device. Get credit toward a new one."
+          }
+        },
         "vorteil_CTFWp": {
           "type": "vorteil",
           "name": "Vorteil",
           "disabled": false,
           "settings": {
-            "image_icon": "shopify://shop_images/Icon_Benefit_trusted.svg",
-            "text_titel": "TRUSTED SINCE 1992",
+            "image_icon": "shopify://shop_images/dicota_p-icon_3_1.png",
+            "text_titel": "Trusted since 1992",
             "textarea_text": "DICOTA combines decades of experience with reliable quality, innovative solutions and a deep understanding of professional IT accessory needs."
           }
         },
@@ -254,17 +232,16 @@
           "name": "Vorteil",
           "disabled": false,
           "settings": {
-            "image_icon": "shopify://shop_images/Icon_Benefit_skus.svg",
-            "text_titel": "MORE THAN 1200 SKUs",
-            "textarea_text": "A comprehensive portfolio of laptop bags, backpacks, sleeves, trolleys, screen filters, docking, chargers, locks, webcams and more IT accessories."
+            "image_icon": "shopify://shop_images/Icon_Products_png_black.png",
+            "text_titel": "More than 1200 SKUs",
+            "textarea_text": "Across a comprehensive portfolio of laptop bags, backpacks, sleeves, screen filters, screen filters, docking, chargers, locks, webcams and many more IT accessories."
           }
         },
         "vorteil_UGKnf": {
           "type": "vorteil",
-          "name": "Vorteil",
           "disabled": false,
           "settings": {
-            "image_icon": "shopify://shop_images/Icon_Benefit_salesteam.svg",
+            "image_icon": "shopify://shop_images/delivery_truck_speed.png",
             "text_titel": "PERSONAL SALES TEAM",
             "textarea_text": "Benefit from a dedicated sales team that understands your business and supports you with expert advice, tailored solutions and fast, reliable service."
           }
@@ -274,126 +251,29 @@
           "name": "Vorteil",
           "disabled": false,
           "settings": {
-            "image_icon": "shopify://shop_images/Icon_Benefit_top100.svg",
+            "image_icon": "shopify://shop_images/dicota_p-icon_1_1.png",
             "text_titel": "SUPPLIER OF THE TOP 100",
-            "textarea_text": "Trusted by the world’s top 100 companies, DICOTA is a reliable partner for premium IT accessories with proven quality and professional support."
-          }
-        },
-        "vorteil_LfWty": {
-          "type": "vorteil",
-          "name": "Vorteil",
-          "disabled": false,
-          "settings": {
-            "image_icon": "shopify://shop_images/Icon_Benefit_lifetime.svg",
-            "text_titel": "LIFETIME WARRANTY",
-            "textarea_text": "Premium quality you can sell with confidence. Our lifetime warranty gives your customers complete peace of mind with every DICOTA bag and backpack."
-          }
-        },
-        "vorteil_SusPi": {
-          "type": "vorteil",
-          "name": "Vorteil",
-          "disabled": false,
-          "settings": {
-            "image_icon": "shopify://shop_images/Icon_Benefit_sustain.svg",
-            "text_titel": "SUSTAINABILITY PIONEER",
-            "textarea_text": "Recycled materials and sustainable, space-saving packaging. More than 12 million PET bottles recycled since 1992 help you meet green requirements."
-          }
-        },
-        "vorteil_MktSp": {
-          "type": "vorteil",
-          "name": "Vorteil",
-          "disabled": false,
-          "settings": {
-            "image_icon": "shopify://shop_images/Icon_Benefit_marketing.svg",
-            "text_titel": "MARKETING SUPPORT",
-            "textarea_text": "Joint campaigns, seasonal promotions and product bundles that increase basket sizes. We work with you to maximise visibility and drive shared success."
-          }
-        },
-        "vorteil_OemWl": {
-          "type": "vorteil",
-          "name": "Vorteil",
-          "disabled": false,
-          "settings": {
-            "image_icon": "shopify://shop_images/Icon_Benefit_oem.svg",
-            "text_titel": "WHITE-LABEL OEM",
-            "textarea_text": "Expand your portfolio under your own brand. Our OEM solutions offer customised branding options with proven DICOTA quality behind every product."
-          }
-        },
-        "vorteil_TndSp": {
-          "type": "vorteil",
-          "name": "Vorteil",
-          "disabled": false,
-          "settings": {
-            "image_icon": "shopify://shop_images/Icon_Benefit_tender.svg",
-            "text_titel": "PUBLIC TENDER SUPPORT",
-            "textarea_text": "Tailored assistance for public tenders to maximise your success rate, plus quick project offers, fast sample requests and logistics for large rollouts."
-          }
-        },
-        "vorteil_TrnEn": {
-          "type": "vorteil",
-          "name": "Vorteil",
-          "disabled": false,
-          "settings": {
-            "image_icon": "shopify://shop_images/Icon_Benefit_training.svg",
-            "text_titel": "TRAINING & ENABLEMENT",
-            "textarea_text": "Comprehensive training and ongoing support for your sales and e-commerce teams, so you can advise your customers with expert product knowledge."
-          }
-        },
-        "vorteil_WrtHf": {
-          "type": "vorteil",
-          "name": "Vorteil",
-          "disabled": false,
-          "settings": {
-            "image_icon": "shopify://shop_images/Icon_Benefit_warrantyhandling.svg",
-            "text_titel": "EASY WARRANTY CLAIMS",
-            "textarea_text": "We handle warranty cases directly with end users. That saves your team valuable time and gives your customers a fast and seamless service experience."
-          }
-        },
-        "vorteil_BstSl": {
-          "type": "vorteil",
-          "name": "Vorteil",
-          "disabled": false,
-          "settings": {
-            "image_icon": "shopify://shop_images/Icon_Benefit_bestseller.svg",
-            "text_titel": "PROVEN BEST-SELLERS",
-            "textarea_text": "Best-selling products backed by thousands of positive customer reviews that build trust, boost conversions and sell reliably online and in store."
-          }
-        },
-        "vorteil_EntPr": {
-          "type": "vorteil",
-          "name": "Vorteil",
-          "disabled": false,
-          "settings": {
-            "image_icon": "shopify://shop_images/Icon_Benefit_range.svg",
-            "text_titel": "ENTRY-LEVEL TO PREMIUM",
-            "textarea_text": "Solutions for every need and budget, so you can serve everyone from small business buyers to large enterprise projects with one reliable partner."
+            "textarea_text": "Trusted by the world’s top 100 companies, DICOTA is a reliable partner for premium IT accessories, delivering proven quality, innovative solutions and professional support."
           }
         }
       },
       "block_order": [
+        "vorteil_zgd3A",
+        "vorteil_i44N9",
         "vorteil_CTFWp",
         "vorteil_mV9DA",
         "vorteil_UGKnf",
-        "vorteil_rae8i",
-        "vorteil_LfWty",
-        "vorteil_SusPi",
-        "vorteil_MktSp",
-        "vorteil_OemWl",
-        "vorteil_TndSp",
-        "vorteil_TrnEn",
-        "vorteil_WrtHf",
-        "vorteil_BstSl",
-        "vorteil_EntPr"
+        "vorteil_rae8i"
       ],
       "name": "The Dicota Differenc"
     },
     "reseller_hub_EwB6Y": {
       "type": "reseller_hub",
-      "disabled": true,
+      "disabled": false,
       "settings": {
         "image_bild": null,
         "text_heading": "DICOTA Reseller Hub. Enjoy exclusive benefits, added convenience and everything you need in one place.",
-        "url_button_1_link": "",
+        "url_button_1_link": "https://account.dicota.com",
         "text_button_1_text": "Login",
         "url_button_2_link": "",
         "text_button_2_text": "Register"
@@ -430,52 +310,30 @@
             "url_button_link": "shopify://products/multi-one-14-16",
             "text_button_text": "explore"
           }
-        },
-        "promo_two": {
-          "type": "reseller-promo-banner",
-          "settings": {
-            "image_bild": "shopify://shop_images/5_SCT1c_BP_EntryLevel.jpg",
-            "text_titel": "TWO",
-            "textarea_text": "Smart everyday companions with a clean design – the reliable choice for business and campus.",
-            "url_button_link": "shopify://collections/two",
-            "text_button_text": "explore"
-          }
-        },
-        "promo_hivis": {
-          "type": "reseller-promo-banner",
-          "settings": {
-            "image_bild": "shopify://shop_images/2023_HiVis.jpg",
-            "text_titel": "Safety at Work",
-            "textarea_text": "High-visibility backpacks and rain covers for logistics, construction and everyone on the move.",
-            "url_button_link": "shopify://collections/hi-vis",
-            "text_button_text": "explore"
-          }
         }
       },
       "block_order": [
         "reseller_promo_banner_iCb9i",
-        "reseller_promo_banner_mU9PB",
-        "promo_two",
-        "promo_hivis"
+        "reseller_promo_banner_mU9PB"
       ],
       "name": "Reseller Promo Grid"
     },
     "b2b_news_highlight_LhrNM": {
       "type": "b2b_news_highlight",
-      "disabled": false,
+      "disabled": true,
       "settings": {
-        "image_bild": "shopify://shop_images/Blog_Image_Business_travel_in_2026_essentials_for_mobile_professionals.jpg",
+        "image_bild": null,
         "text_badge": "NEW",
-        "text_kategorie": "Portal News",
-        "text_datum": "30 September 2026",
-        "text_uberschrift": "myDICOTA, the Partner Portal, just got bigger",
-        "textarea_text": "Solutions, project requests, marketing support and services – now bundled on clear overview pages. Find sales arguments, ready-to-use content and the right contact faster than ever.",
-        "url_button_link": "shopify://pages/b2b-solutions-1",
-        "text_button_text": "Explore solutions",
-        "header-bb393d8c2821bb663ec601dfd38e3ae2": null,
-        "padding_top": 4,
-        "padding_bottom": 2,
-        "header-8e63d7a7479b1b150cbfa5ca2897db9e": null,
+        "text_kategorie": "Company News",
+        "text_datum": "5. Mai 2026",
+        "text_uberschrift": "Dicota is opening another Office-Complex in Dubai",
+        "textarea_text": "(Platzhalter) Seit 1992 wurden mehr als 12 Millionen PET-Flaschen verarbeitet, um Abfall zu minimieren - DCT (DICOTA Cushion Technology) ist ein strukturiertes Dämpfungssystem, das Stösse, Schläge und Druck aus verschiedenen Winkeln absorbieren kann.",
+        "url_button_link": "",
+        "text_button_text": "Learn more",
+        "header-c435413034120fa1c0b8c8eaaf62860d": null,
+        "padding_top": 2.5,
+        "padding_bottom": 4,
+        "header-3e4d7dd78dace4820bb7127ae12b8211": null,
         "bg_color": "#f6f6f6"
       },
       "blocks": {},
@@ -488,231 +346,86 @@
       "settings": {
         "text_titel_fett": "Not enough yet?",
         "text_titel_normal": "More news hot off the press",
-        "header-4dba67b9dcd4c3e443247ceee5ccf9c5": null,
-        "padding_top": 2,
+        "header-168d403fe1bd4218671a06e8140ec545": null,
+        "padding_top": 4,
         "padding_bottom": 4,
-        "header-66bf7da59a93ff949e6c24a717609e79": null,
+        "header-9d4be178edac54432d41cfa3a1401926": null,
         "bg_color": "#f6f6f6"
       },
       "blocks": {
-        "updates": {
+        "updates_card_f8C4F": {
           "type": "updates-card",
-          "settings": {
-            "text_titel": "Latest Updates",
-            "url_button_link": "shopify://blogs/news",
-            "text_button_text": "All news"
-          },
+          "disabled": false,
           "blocks": {
-            "u1": {
+            "update_ahzej": {
               "type": "update",
+              "disabled": false,
               "settings": {
-                "text_titel": "Volume pricing for the ONE series",
-                "text_untertitel": "Better prices from 5 units",
-                "url_link": "shopify://pages/b2b-project-request"
+                "url_link": "",
+                "text_titel": "New price list",
+                "text_untertitel": "Everyting you need to advertise"
               }
             },
-            "u2": {
+            "update_33c4G": {
               "type": "update",
+              "name": "Update",
+              "disabled": false,
               "settings": {
-                "text_titel": "New Bento graphics 2026",
-                "text_untertitel": "SEVEN, FIVE, ONE & TWO for your webshop",
-                "url_link": "shopify://pages/b2b-marketing-campaigns"
-              }
-            },
-            "u3": {
-              "type": "update",
-              "settings": {
-                "text_titel": "DICOTA Magazine 4.0",
-                "text_untertitel": "Our complete range to browse and share",
-                "url_link": "shopify://pages/b2b-dicota-magazine"
-              }
-            },
-            "u4": {
-              "type": "update",
-              "settings": {
-                "text_titel": "Why DICOTA",
-                "text_untertitel": "Facts & arguments for your next pitch",
-                "url_link": "shopify://pages/b2b-project-request-why-dicota"
-              }
-            },
-            "u5": {
-              "type": "update",
-              "settings": {
-                "text_titel": "DICOTA Academy",
-                "text_untertitel": "Key product features explained for your team",
-                "url_link": "shopify://pages/b2b-dicota-academy"
+                "url_link": "",
+                "text_titel": "New price list",
+                "text_untertitel": "Everyting you need to advertise"
               }
             }
           },
           "block_order": [
-            "u1",
-            "u2",
-            "u3",
-            "u4",
-            "u5"
-          ]
-        },
-        "n_seven": {
-          "type": "news-card",
+            "update_ahzej",
+            "update_33c4G"
+          ],
           "settings": {
-            "image_bild": "shopify://shop_images/8_GB2c_ProductPromotion_TopTravSeven_01.jpg",
-            "url_link": "shopify://collections/seven",
-            "text_badge": "NEW",
-            "text_titel": "SEVEN",
-            "textarea_text": "Our premium collection for demanding business professionals – sophisticated design, premium protection and smart functionality."
+            "text_titel": "Latest Updates",
+            "url_button_link": "shopify://blogs/news",
+            "text_button_text": "more News in our DICOTA Blog"
           }
         },
-        "n_work": {
+        "news_card_UW49c": {
           "type": "news-card",
+          "disabled": false,
           "settings": {
-            "image_bild": "shopify://shop_images/Blog_Image_Docking_Station.jpg",
-            "url_link": "shopify://pages/b2b-solutions-workplace-homeoffice-setup",
+            "image_bild": null,
+            "url_link": "",
             "text_badge": "NEW",
-            "text_titel": "Workplace & Homeoffice",
-            "textarea_text": "Docking stations, stands and accessories – everything for a productive desk in the office and at home."
+            "text_titel": "Seven",
+            "textarea_text": "(Placeholder) Since 1992, more than 12 million PET bottles have been processed to minimize waste -"
           }
         },
-        "n_filter": {
+        "news_card_Lg46R": {
           "type": "news-card",
+          "name": "News Card",
+          "disabled": false,
           "settings": {
-            "image_bild": "shopify://shop_images/CT1c_Filter.jpg",
-            "url_link": "shopify://collections/b2b-screen-filters-all",
+            "image_bild": null,
+            "url_link": "",
             "text_badge": "NEW",
-            "text_titel": "Magnetic Privacy Filters",
-            "textarea_text": "Protect sensitive data in the office, on the train or in the home office – attached in seconds."
+            "text_titel": "Seven",
+            "textarea_text": "(Placeholder) Since 1992, more than 12 million PET bottles have been processed to minimize waste -"
           }
         }
       },
       "block_order": [
-        "updates",
-        "n_seven",
-        "n_work",
-        "n_filter"
+        "updates_card_f8C4F",
+        "news_card_UW49c",
+        "news_card_Lg46R"
       ],
       "name": "B2B News Updates"
-    },
-    "home_quick": {
-      "type": "b2b_hub_quicklinks",
-      "name": "Quicklinks",
-      "settings": {
-        "text_heading": "In a hurry? Quicklinks",
-        "textarea_subheading": "The most important tools for your daily business.",
-        "padding_top": 4,
-        "padding_bottom": 4
-      },
-      "blocks": {
-        "q_samples": {
-          "type": "b2b-quicklink",
-          "settings": {
-            "text_heading": "Order product samples",
-            "richtext_text": "<p>Samples for your next pitch – ordered in a few clicks.</p>",
-            "url_button_link": "shopify://pages/b2b-order-product-samples",
-            "image_icon": "shopify://shop_images/Icon_Benefit_bestseller.svg",
-            "text_button_text": "Order samples"
-          }
-        },
-        "q_quote": {
-          "type": "b2b-quicklink",
-          "settings": {
-            "text_heading": "Request a quote",
-            "richtext_text": "<p>Volume pricing for tenders and projects in four steps.</p>",
-            "url_button_link": "shopify://pages/b2b-project-request",
-            "image_icon": "shopify://shop_images/Icon_Benefit_tender.svg",
-            "text_button_text": "Get a quote"
-          }
-        },
-        "q_warranty": {
-          "type": "b2b-quicklink",
-          "settings": {
-            "text_heading": "Submit a warranty claim",
-            "richtext_text": "<p>Report a case online – we handle it quickly.</p>",
-            "url_button_link": "shopify://pages/b2b-services-warranty-claims",
-            "image_icon": "shopify://shop_images/Icon_Benefit_warrantyhandling.svg",
-            "text_button_text": "Submit a claim"
-          }
-        }
-      },
-      "block_order": [
-        "q_samples",
-        "q_quote",
-        "q_warranty"
-      ]
-    },
-    "home_new": {
-      "type": "featured_products",
-      "name": "New Releases",
-      "settings": {
-        "text_uberschrift": "New Releases",
-        "url_button_link": "shopify://collections/d2c-new-releases",
-        "text_button_text": "All new releases",
-        "collection_kollektion": "d2c-new-releases",
-        "collection_kollektion_limit": 12,
-        "show_view_all": true,
-        "padding_top": 2.5,
-        "padding_bottom": 5,
-        "bg_color": "#ffffff",
-        "text_color": "#0f0f0f"
-      }
-    },
-    "home_best": {
-      "type": "featured_products",
-      "name": "Bestsellers",
-      "settings": {
-        "text_uberschrift": "Our Bestsellers",
-        "url_button_link": "shopify://collections/b2b-our-bestsellers",
-        "text_button_text": "All bestsellers",
-        "collection_kollektion": "b2b-our-bestsellers",
-        "collection_kollektion_limit": 12,
-        "show_view_all": true,
-        "padding_top": 4,
-        "padding_bottom": 5,
-        "bg_color": "#f6f6f6",
-        "text_color": "#0f0f0f"
-      }
-    },
-    "home_wecare": {
-      "type": "we_care_banner",
-      "name": "We Care",
-      "settings": {
-        "image_hintergrundbild": "shopify://shop_images/Sustainable_Materials.png",
-        "text_headline": "Bottles processed",
-        "textarea_beschreibung": "Since 1992, more than 12 million PET bottles have been processed to minimize waste and advance sustainability",
-        "url_cta_link": "shopify://pages/b2b-solutions-sustainability-green-procurement",
-        "text_cta_text": "Sustainability & green procurement",
-        "bg_color": "#0a1628",
-        "min_height": 55,
-        "overlay_strength": 35,
-        "counter_start": 12483129,
-        "counter_epoch": "2026-08-11T00:00:00Z",
-        "counter_rate": 0.8
-      }
-    },
-    "home_cta": {
-      "type": "b2b_hub_banner",
-      "name": "Sales team",
-      "settings": {
-        "image_bild": "shopify://shop_images/DICOTA_Team.png",
-        "text_heading": "You never work alone.",
-        "textarea_text": "Questions about products, prices or projects? Your DICOTA sales team is at your side – from the first request to the last delivery.",
-        "url_button_link": "shopify://pages/b2b-project-request-overview",
-        "text_button_text": "Start a project request",
-        "padding_top": 4,
-        "padding_bottom": 6
-      }
     }
   },
   "order": [
     "reseller_hero_97i8b",
-    "b2b_news_highlight_LhrNM",
-    "b2b_news_updates_V3jwg",
-    "home_quick",
     "reseller_category_ro_WCArV",
-    "home_new",
-    "reseller_promo_grid_ydyLg",
     "the_dicota_differenc_JXxMG",
-    "home_best",
-    "home_wecare",
-    "home_cta",
-    "reseller_hub_EwB6Y"
+    "reseller_hub_EwB6Y",
+    "reseller_promo_grid_ydyLg",
+    "b2b_news_highlight_LhrNM",
+    "b2b_news_updates_V3jwg"
   ]
 }

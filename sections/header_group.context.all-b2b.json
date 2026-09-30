@@ -22,12 +22,12 @@
         "text_suche_label": "Search",
         "text_warenkorb_label": "Cart",
         "text_404_label": "Page not found",
-        "header-c657364010c54f79105589d9022fbde2": null,
-        "paragraph-d1242126eb79b8c11046002516661248": null,
-        "header-cefd7e85b3ab285919b82528c87f7608": null,
+        "header-61451567a6707b4ac7e0493390a4d003": null,
+        "paragraph-6037608988b36582ef8597607567a195": null,
+        "header-12114b1526c34574f632ae7afa79577b": null,
         "padding_top": 0.5,
         "padding_bottom": 0.5,
-        "header-7e82c114c05356d566bb9f434d0883a4": null,
+        "header-c3643fff5216be3019ca66c13e3a3584": null,
         "bg_color": "#ffffff",
         "text_color": "#0f0f0f"
       },
@@ -57,11 +57,27 @@
         },
         "rechte-seite": {
           "blocks": {
+            "link_hfyLn": {
+              "type": "link",
+              "name": "Link",
+              "disabled": false,
+              "settings": {
+                "url_link_url": "",
+                "text_link_text": "About DICOTA",
+                "link_list": "",
+                "highlighted": false
+              }
+            },
             "link_bmpV8z": {
               "disabled": true,
               "settings": {}
             }
           },
+          "block_order": [
+            "link_hfyLn",
+            "link_bmpV8z",
+            "link_enBgib"
+          ],
           "settings": {}
         }
       }
