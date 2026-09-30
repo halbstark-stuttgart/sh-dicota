@@ -202,7 +202,7 @@
           "name": "Vorteil",
           "disabled": false,
           "settings": {
-            "image_icon": "shopify://shop_images/dicota_p-icon_3_1.png",
+            "image_icon": "shopify://shop_images/dicota-reseller-trusted.svg",
             "text_titel": "TRUSTED SINCE 1992",
             "textarea_text": "DICOTA combines decades of experience with reliable quality, innovative solutions and a deep understanding of professional IT accessory needs."
           }
@@ -212,9 +212,9 @@
           "name": "Vorteil",
           "disabled": false,
           "settings": {
-            "image_icon": "shopify://shop_images/Icon_Products_png_black.png",
+            "image_icon": "shopify://shop_images/dicota-reseller-skus.svg",
             "text_titel": "MORE THAN 1200 SKUs",
-            "textarea_text": "Across a comprehensive portfolio of laptop bags, backpacks, sleeves, trolleys, screen filters, docking, chargers, locks, webcams and many more IT accessories."
+            "textarea_text": "A comprehensive portfolio of laptop bags, backpacks, sleeves, trolleys, screen filters, docking, chargers, locks, webcams and more IT accessories."
           }
         },
         "vorteil_UGKnf": {
@@ -222,7 +222,7 @@
           "name": "Vorteil",
           "disabled": false,
           "settings": {
-            "image_icon": "shopify://shop_images/delivery_truck_speed.png",
+            "image_icon": "shopify://shop_images/dicota-reseller-salesteam.svg",
             "text_titel": "PERSONAL SALES TEAM",
             "textarea_text": "Benefit from a dedicated sales team that understands your business and supports you with expert advice, tailored solutions and fast, reliable service."
           }
@@ -232,9 +232,9 @@
           "name": "Vorteil",
           "disabled": false,
           "settings": {
-            "image_icon": "shopify://shop_images/dicota_p-icon_1_1.png",
+            "image_icon": "shopify://shop_images/dicota-reseller-top100.svg",
             "text_titel": "SUPPLIER OF THE TOP 100",
-            "textarea_text": "Trusted by the world’s top 100 companies, DICOTA is a reliable partner for premium IT accessories, delivering proven quality, innovative solutions and professional support."
+            "textarea_text": "Trusted by the world’s top 100 companies, DICOTA is a reliable partner for premium IT accessories with proven quality and professional support."
           }
         },
         "vorteil_LfWty": {
@@ -242,9 +242,9 @@
           "name": "Vorteil",
           "disabled": false,
           "settings": {
-            "image_icon": "shopify://shop_images/Icon_warranty.png",
+            "image_icon": "shopify://shop_images/dicota-reseller-lifetime.svg",
             "text_titel": "LIFETIME WARRANTY",
-            "textarea_text": "Premium quality you can sell with confidence. Our lifetime warranty gives your customers complete peace of mind and makes every DICOTA product an easy recommendation."
+            "textarea_text": "Premium quality you can sell with confidence. Our lifetime warranty gives your customers complete peace of mind with every DICOTA bag and backpack."
           }
         },
         "vorteil_SusPi": {
@@ -252,9 +252,9 @@
           "name": "Vorteil",
           "disabled": false,
           "settings": {
-            "image_icon": "shopify://shop_images/WeCare_Icon_d73af471-c810-40e8-91d3-ef20b26ddc37.svg",
-            "text_titel": "PIONEER IN SUSTAINABILITY",
-            "textarea_text": "Recycled materials, eco-friendly innovation and sustainable, space-saving packaging. Help your customers meet their sustainability requirements with more than 12 million PET bottles recycled since 1992."
+            "image_icon": "shopify://shop_images/dicota-reseller-sustain.svg",
+            "text_titel": "SUSTAINABILITY PIONEER",
+            "textarea_text": "Recycled materials and sustainable, space-saving packaging. More than 12 million PET bottles recycled since 1992 help you meet green requirements."
           }
         },
         "vorteil_MktSp": {
@@ -262,9 +262,9 @@
           "name": "Vorteil",
           "disabled": false,
           "settings": {
-            "image_icon": "shopify://shop_images/Target_icon_2dd5566b-fe37-43e3-8b57-395a3dd89ab7.png",
-            "text_titel": "SALES & MARKETING SUPPORT",
-            "textarea_text": "Joint campaigns, seasonal promotions, cyber deals and bundles designed to increase basket sizes. We work with you to maximise visibility and drive shared success."
+            "image_icon": "shopify://shop_images/dicota-reseller-marketing.svg",
+            "text_titel": "MARKETING SUPPORT",
+            "textarea_text": "Joint campaigns, seasonal promotions and product bundles that increase basket sizes. We work with you to maximise visibility and drive shared success."
           }
         },
         "vorteil_OemWl": {
@@ -272,7 +272,8 @@
           "name": "Vorteil",
           "disabled": false,
           "settings": {
-            "text_titel": "WHITE-LABEL OEM SOLUTIONS",
+            "image_icon": "shopify://shop_images/dicota-reseller-oem.svg",
+            "text_titel": "WHITE-LABEL OEM",
             "textarea_text": "Expand your portfolio under your own brand. Our OEM solutions offer customised branding options with proven DICOTA quality behind every product."
           }
         },
@@ -281,8 +282,9 @@
           "name": "Vorteil",
           "disabled": false,
           "settings": {
+            "image_icon": "shopify://shop_images/dicota-reseller-tender.svg",
             "text_titel": "PUBLIC TENDER SUPPORT",
-            "textarea_text": "Tailored assistance for public tenders to maximise your success rate, along with quick project offers, fast sample requests and logistics for large-scale rollouts."
+            "textarea_text": "Tailored assistance for public tenders to maximise your success rate, plus quick project offers, fast sample requests and logistics for large rollouts."
           }
         },
         "vorteil_TrnEn": {
@@ -290,9 +292,9 @@
           "name": "Vorteil",
           "disabled": false,
           "settings": {
-            "image_icon": "shopify://shop_images/icon_employees.png",
+            "image_icon": "shopify://shop_images/dicota-reseller-training.svg",
             "text_titel": "TRAINING & ENABLEMENT",
-            "textarea_text": "Comprehensive training and ongoing support for your sales and e-commerce teams, so you can advise your customers with product knowledge and confidence."
+            "textarea_text": "Comprehensive training and ongoing support for your sales and e-commerce teams, so you can advise your customers with expert product knowledge."
           }
         },
         "vorteil_WrtHf": {
@@ -300,9 +302,9 @@
           "name": "Vorteil",
           "disabled": false,
           "settings": {
-            "image_icon": "shopify://shop_images/Icon_return.png",
-            "text_titel": "HASSLE-FREE WARRANTY HANDLING",
-            "textarea_text": "We handle warranty cases directly with end users, which saves your team time and gives your customers a seamless experience."
+            "image_icon": "shopify://shop_images/dicota-reseller-warrantyhandling.svg",
+            "text_titel": "EASY WARRANTY CLAIMS",
+            "textarea_text": "We handle warranty cases directly with end users. That saves your team valuable time and gives your customers a fast and seamless service experience."
           }
         },
         "vorteil_BstSl": {
@@ -310,9 +312,9 @@
           "name": "Vorteil",
           "disabled": false,
           "settings": {
-            "image_icon": "shopify://shop_images/icon_customers.png",
+            "image_icon": "shopify://shop_images/dicota-reseller-bestseller.svg",
             "text_titel": "PROVEN BEST-SELLERS",
-            "textarea_text": "Products with strong customer reviews that build trust and boost conversions from day one."
+            "textarea_text": "Best-selling products backed by thousands of positive customer reviews that build trust, boost conversions and sell reliably online and in store."
           }
         },
         "vorteil_EntPr": {
@@ -320,8 +322,9 @@
           "name": "Vorteil",
           "disabled": false,
           "settings": {
+            "image_icon": "shopify://shop_images/dicota-reseller-range.svg",
             "text_titel": "ENTRY-LEVEL TO PREMIUM",
-            "textarea_text": "Solutions for every need and budget, so you can serve everyone from SMB buyers to enterprise projects with one partner."
+            "textarea_text": "Solutions for every need and budget, so you can serve everyone from small business buyers to large enterprise projects with one reliable partner."
           }
         }
       },
