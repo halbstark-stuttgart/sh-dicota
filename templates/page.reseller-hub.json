@@ -13,11 +13,16 @@
       "type": "reseller_hero",
       "settings": {
         "image_hintergrundbild": "shopify://shop_images/B2B_Main_Header_Image_Trolley.png",
+        "text_headline_eingeloggt": "Welcome back",
         "text_headline": "Welcome to DICOTA Reseller Portal",
         "textarea_subtext": "Everything DICOTA – The dedicated space for DICOTA partners to explore our products and tools to support your customer success.",
+        "show_categories": false,
         "text_kategorie_label": "Categories",
+        "text_search_button": "Search",
         "min_height": 78,
-        "text_color": "#ffffff"
+        "text_color": "#ffffff",
+        "button_bg": "#111111",
+        "button_color": "#ffffff"
       }
     },
     "reseller_category_ro": {
@@ -169,7 +174,7 @@
         "text_heading": "DICOTA Reseller Hub.",
         "url_button_1_link": "",
         "text_button_1_text": "Log in",
-        "url_button_2_link": "",
+        "url_button_2_link": "shopify://pages/b2b-signup",
         "text_button_2_text": "Register"
       }
     },
