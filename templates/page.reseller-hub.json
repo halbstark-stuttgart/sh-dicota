@@ -215,7 +215,7 @@
           "type": "reseller-vorteil",
           "settings": {
             "text_titel": "WHOLESALE PRICING & PROJECT QUOTES",
-            "textarea_text": "See your reseller prices at a glance, benefit from volume pricing from 5 units and request project quotes for tenders and rollouts in four simple steps."
+            "textarea_text": "See your reseller prices at a glance, benefit from volume pricing and request project quotes for tenders and rollouts."
           },
           "blocks": {}
         },
@@ -223,7 +223,7 @@
           "type": "reseller-vorteil",
           "settings": {
             "text_titel": "MARKETING SUPPORT & ASSETS",
-            "textarea_text": "Product images, presentations, Bento graphics, the DICOTA Magazine and campaign materials – ready to use in your webshop and on the sales floor."
+            "textarea_text": "Product images, presentations, marketing tool kits, Bento graphics, the DICOTA Magazine and campaign materials – ready to use in your webshop and on the sales floor."
           },
           "blocks": {}
         },
