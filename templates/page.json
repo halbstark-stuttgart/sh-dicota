@@ -15,6 +15,7 @@
     },
     "b2b_no_access_bfngxc": {
       "type": "b2b_no_access",
+      "disabled": true,
       "name": "B2B No Access",
       "settings": {
         "text_subline": "B2B Area",
@@ -27,12 +28,39 @@
         "padding_top": 4,
         "padding_bottom": 4
       }
+    },
+    "1790767179ecde4caa": {
+      "type": "apps",
+      "blocks": {
+        "forms_inline_Qmhgmm": {
+          "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
+          "settings": {
+            "form_id": "730311",
+            "text_color": "#202020",
+            "button_background_color": "#202020",
+            "button_label_color": "#FFFFFF",
+            "links_color": "#1878B9",
+            "errors_color": "#E02229",
+            "text_alignment": "center",
+            "form_alignment": "center",
+            "padding_top": 0,
+            "padding_bottom": 24,
+            "padding_right": 0,
+            "padding_left": 0
+          }
+        }
+      },
+      "block_order": [
+        "forms_inline_Qmhgmm"
+      ],
+      "settings": {}
     }
   },
   "layout": "theme",
   "wrapper": "main.main-wrapper",
   "order": [
     "page_content",
-    "b2b_no_access_bfngxc"
+    "b2b_no_access_bfngxc",
+    "1790767179ecde4caa"
   ]
 }
