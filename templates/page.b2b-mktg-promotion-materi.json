@@ -71,12 +71,12 @@
         "b2b_bestell_artikel_jzJNmm"
       ],
       "settings": {
-        "text_heading": "Order Marketing Material",
-        "textarea_subheading": "Order giveaways, DICOTA magazines, and marketing materials for your next cliustomer visit, event, or promotion. We looking forward to receive your order and send ship it immediately to your address.",
+        "text_heading": "Order Giveaways",
+        "textarea_subheading": "Small gestures, big impact: order DICOTA giveaways for customer meetings, trade shows and promotions. Our marketing team handles every order personally and ships directly to your preferred address. *All prices per unit, excl. VAT.",
         "text_spalte_article": "Article",
-        "text_spalte_beschreibung": "Beschreibung",
+        "text_spalte_beschreibung": "Description",
         "text_spalte_art_nr": "Art. No.",
-        "text_spalte_preis": "Price",
+        "text_spalte_preis": "Price per unit",
         "text_spalte_menge": "Amount",
         "text_name_label": "Name*",
         "text_email_label": "Email*",
@@ -88,9 +88,14 @@
         "text_country_label": "Country*",
         "textarea_datum_hinweistext": "",
         "textarea_event_hinweistext": "What do you need the promotional material for?",
-        "text_submit_button": "Jetzt absenden",
-        "field_date_label": "Delivery Date",
+        "text_submit_button": "Request giveaways",
+        "text_submitting_text": "Sending…",
+        "text_success_heading": "Thank you for your order!",
+        "textarea_success_text": "We have received your order. Our marketing team will get back to you shortly with a confirmation.",
+        "text_restart_button": "Place a new order",
+        "field_date_label": "Preferred delivery date",
         "field_event_label": "Event/activity:",
+        "text_form_endpoint": "https://usebasin.com/f/581efd46a1b2",
         "padding_top": 4,
         "padding_bottom": 4
       }
@@ -113,6 +118,7 @@
       "block_order": [
         "b2b-mkt-quicklink"
       ],
+      "disabled": true,
       "settings": {
         "text_breadcrumb": "Marketing",
         "text_heading_1": "Marketing-Übersicht",
