@@ -20,7 +20,13 @@
         "padding_bottom": 5
       },
       "custom_css": [
-        ".compare_table .compare_axis {text-transform: uppercase;}"
+        ".compare_axis{text-transform:uppercase}",
+        "thead .compare_col{padding-bottom:5.3rem}",
+        "thead .compare_atc,thead .compare_unavailable{position:absolute;left:1rem;bottom:.75rem;margin:0}",
+        "thead .compare_delivery{position:absolute;left:1rem;right:1rem;bottom:4.2rem;margin:0}",
+        "table{table-layout:fixed}",
+        "thead .compare_axis{width:10rem}",
+        "@media (max-width:991px){table{width:auto;min-width:100%}thead .compare_col{width:13rem}}"
       ]
     }
   },
