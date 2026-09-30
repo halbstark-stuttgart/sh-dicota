@@ -185,7 +185,7 @@
       "type": "the_dicota_differenc",
       "disabled": false,
       "settings": {
-        "text_heading": "The Dicota Difference. Even more reasons to become a reseller.",
+        "text_heading": "The DICOTA Difference. Even more reasons to become a reseller.",
         "url_button_1_link": "",
         "text_button_1_text": "",
         "url_button_2_link": "",
@@ -203,7 +203,7 @@
           "disabled": false,
           "settings": {
             "image_icon": "shopify://shop_images/dicota_p-icon_3_1.png",
-            "text_titel": "Trusted since 1992",
+            "text_titel": "TRUSTED SINCE 1992",
             "textarea_text": "DICOTA combines decades of experience with reliable quality, innovative solutions and a deep understanding of professional IT accessory needs."
           }
         },
@@ -213,12 +213,13 @@
           "disabled": false,
           "settings": {
             "image_icon": "shopify://shop_images/Icon_Products_png_black.png",
-            "text_titel": "More than 1200 SKUs",
-            "textarea_text": "Across a comprehensive portfolio of laptop bags, backpacks, sleeves, screen filters, screen filters, docking, chargers, locks, webcams and many more IT accessories."
+            "text_titel": "MORE THAN 1200 SKUs",
+            "textarea_text": "Across a comprehensive portfolio of laptop bags, backpacks, sleeves, trolleys, screen filters, docking, chargers, locks, webcams and many more IT accessories."
           }
         },
         "vorteil_UGKnf": {
           "type": "vorteil",
+          "name": "Vorteil",
           "disabled": false,
           "settings": {
             "image_icon": "shopify://shop_images/delivery_truck_speed.png",
@@ -235,13 +236,109 @@
             "text_titel": "SUPPLIER OF THE TOP 100",
             "textarea_text": "Trusted by the world’s top 100 companies, DICOTA is a reliable partner for premium IT accessories, delivering proven quality, innovative solutions and professional support."
           }
+        },
+        "vorteil_LfWty": {
+          "type": "vorteil",
+          "name": "Vorteil",
+          "disabled": false,
+          "settings": {
+            "image_icon": "shopify://shop_images/Icon_warranty.png",
+            "text_titel": "LIFETIME WARRANTY",
+            "textarea_text": "Premium quality you can sell with confidence. Our lifetime warranty gives your customers complete peace of mind and makes every DICOTA product an easy recommendation."
+          }
+        },
+        "vorteil_SusPi": {
+          "type": "vorteil",
+          "name": "Vorteil",
+          "disabled": false,
+          "settings": {
+            "image_icon": "shopify://shop_images/WeCare_Icon_d73af471-c810-40e8-91d3-ef20b26ddc37.svg",
+            "text_titel": "PIONEER IN SUSTAINABILITY",
+            "textarea_text": "Recycled materials, eco-friendly innovation and sustainable, space-saving packaging. Help your customers meet their sustainability requirements with more than 12 million PET bottles recycled since 1992."
+          }
+        },
+        "vorteil_MktSp": {
+          "type": "vorteil",
+          "name": "Vorteil",
+          "disabled": false,
+          "settings": {
+            "image_icon": "shopify://shop_images/Target_icon_2dd5566b-fe37-43e3-8b57-395a3dd89ab7.png",
+            "text_titel": "SALES & MARKETING SUPPORT",
+            "textarea_text": "Joint campaigns, seasonal promotions, cyber deals and bundles designed to increase basket sizes. We work with you to maximise visibility and drive shared success."
+          }
+        },
+        "vorteil_OemWl": {
+          "type": "vorteil",
+          "name": "Vorteil",
+          "disabled": false,
+          "settings": {
+            "text_titel": "WHITE-LABEL OEM SOLUTIONS",
+            "textarea_text": "Expand your portfolio under your own brand. Our OEM solutions offer customised branding options with proven DICOTA quality behind every product."
+          }
+        },
+        "vorteil_TndSp": {
+          "type": "vorteil",
+          "name": "Vorteil",
+          "disabled": false,
+          "settings": {
+            "text_titel": "PUBLIC TENDER SUPPORT",
+            "textarea_text": "Tailored assistance for public tenders to maximise your success rate, along with quick project offers, fast sample requests and logistics for large-scale rollouts."
+          }
+        },
+        "vorteil_TrnEn": {
+          "type": "vorteil",
+          "name": "Vorteil",
+          "disabled": false,
+          "settings": {
+            "image_icon": "shopify://shop_images/icon_employees.png",
+            "text_titel": "TRAINING & ENABLEMENT",
+            "textarea_text": "Comprehensive training and ongoing support for your sales and e-commerce teams, so you can advise your customers with product knowledge and confidence."
+          }
+        },
+        "vorteil_WrtHf": {
+          "type": "vorteil",
+          "name": "Vorteil",
+          "disabled": false,
+          "settings": {
+            "image_icon": "shopify://shop_images/Icon_return.png",
+            "text_titel": "HASSLE-FREE WARRANTY HANDLING",
+            "textarea_text": "We handle warranty cases directly with end users, which saves your team time and gives your customers a seamless experience."
+          }
+        },
+        "vorteil_BstSl": {
+          "type": "vorteil",
+          "name": "Vorteil",
+          "disabled": false,
+          "settings": {
+            "image_icon": "shopify://shop_images/icon_customers.png",
+            "text_titel": "PROVEN BEST-SELLERS",
+            "textarea_text": "Products with strong customer reviews that build trust and boost conversions from day one."
+          }
+        },
+        "vorteil_EntPr": {
+          "type": "vorteil",
+          "name": "Vorteil",
+          "disabled": false,
+          "settings": {
+            "text_titel": "ENTRY-LEVEL TO PREMIUM",
+            "textarea_text": "Solutions for every need and budget, so you can serve everyone from SMB buyers to enterprise projects with one partner."
+          }
         }
       },
       "block_order": [
         "vorteil_CTFWp",
         "vorteil_mV9DA",
         "vorteil_UGKnf",
-        "vorteil_rae8i"
+        "vorteil_rae8i",
+        "vorteil_LfWty",
+        "vorteil_SusPi",
+        "vorteil_MktSp",
+        "vorteil_OemWl",
+        "vorteil_TndSp",
+        "vorteil_TrnEn",
+        "vorteil_WrtHf",
+        "vorteil_BstSl",
+        "vorteil_EntPr"
       ],
       "name": "The Dicota Differenc"
     },
