@@ -18,7 +18,10 @@
         "text_weiter_shoppen_text": "Discover Products",
         "padding_top": 2.5,
         "padding_bottom": 5
-      }
+      },
+      "custom_css": [
+        ".compare_table .compare_axis {text-transform: uppercase;}"
+      ]
     }
   },
   "layout": "theme",
