@@ -1,7 +1,7 @@
 <div li-block="Vorteil" class="swiper-slide dicota-difference_card" {{ block.shopify_attributes }}>
                     {% if block.settings.image_icon != blank %}    <div li-if="block.settings.image_icon != blank" class="dicota-difference_icon">
     {% if block.settings.image_icon %}
-{{ block.settings.image_icon | image_url: width: 120 | image_tag: loading: 'lazy', class: 'dicota-difference_icon-img' }}
+{{ block.settings.image_icon | image_url: width: 120 | image_tag: loading: 'eager', class: 'dicota-difference_icon-img' }}
 {% else %}
 <img src="{{ 'platzhalter.svg' | asset_url }}" loading="lazy" alt="" class="dicota-difference_icon-img">
 {% endif %}    </div>
