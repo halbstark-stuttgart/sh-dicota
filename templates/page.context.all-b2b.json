@@ -12,5 +12,48 @@
     "market": "all-b2b"
   },
   "parent": "page.json",
-  "sections": {}
+  "sections": {
+    "b2b_no_access_bfngxc": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
+    },
+    "17907671589364f557": {
+      "type": "apps",
+      "disabled": false,
+      "settings": {},
+      "blocks": {
+        "forms_inline_EGbxF": {
+          "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
+          "disabled": false,
+          "settings": {
+            "paragraph-a222f82011bd95093f0a1c6c7c243440": null,
+            "form_id": "",
+            "header-0bff88eec17605397083bace9ff2f058": null,
+            "text_color": "#202020",
+            "button_background_color": "#202020",
+            "button_label_color": "#FFFFFF",
+            "links_color": "#1878B9",
+            "errors_color": "#E02229",
+            "header-3ac3b4e8f347b826b415218c4f7b7c89": null,
+            "text_alignment": "center",
+            "header-bdabaabb89a0ce71fe79b9d13c5dacf1": null,
+            "form_alignment": "center",
+            "padding_top": 0,
+            "padding_bottom": 24,
+            "padding_right": 0,
+            "padding_left": 0
+          }
+        }
+      },
+      "block_order": [
+        "forms_inline_EGbxF"
+      ]
+    }
+  },
+  "order": [
+    "page_content",
+    "b2b_no_access_bfngxc",
+    "17907671589364f557"
+  ]
 }
