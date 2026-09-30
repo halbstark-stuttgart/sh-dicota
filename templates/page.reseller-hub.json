@@ -214,7 +214,7 @@
         "reseller_vorteil_XVxPay": {
           "type": "reseller-vorteil",
           "settings": {
-            "text_titel": "Volume pricing & project quotes",
+            "text_titel": "WHOLESALE PRICING & PROJECT QUOTES",
             "textarea_text": "See your reseller prices at a glance, benefit from volume pricing from 5 units and request project quotes for tenders and rollouts in four simple steps."
           },
           "blocks": {}
@@ -222,7 +222,7 @@
         "reseller_vorteil_pPLGfd": {
           "type": "reseller-vorteil",
           "settings": {
-            "text_titel": "Marketing support & assets",
+            "text_titel": "MARKETING SUPPORT & ASSETS",
             "textarea_text": "Product images, presentations, Bento graphics, the DICOTA Magazine and campaign materials – ready to use in your webshop and on the sales floor."
           },
           "blocks": {}
@@ -230,7 +230,7 @@
         "reseller_vorteil_mNi8ba": {
           "type": "reseller-vorteil",
           "settings": {
-            "text_titel": "Personal partner support",
+            "text_titel": "PERSONAL PARTNER SUPPORT",
             "textarea_text": "A dedicated DICOTA sales team that knows your business – with advice, tailored solutions and fast answers to every question."
           },
           "blocks": {}
@@ -238,7 +238,7 @@
         "reseller_vorteil_WiwhaU": {
           "type": "reseller-vorteil",
           "settings": {
-            "text_titel": "Fast sample orders",
+            "text_titel": "FAST SAMPLE ORDERS",
             "textarea_text": "Order product samples for your next pitch in just a few clicks – so your customers can see and feel DICOTA quality."
           },
           "blocks": {}
@@ -246,7 +246,7 @@
         "reseller_vorteil_bdUeH8": {
           "type": "reseller-vorteil",
           "settings": {
-            "text_titel": "Exclusive partner offers",
+            "text_titel": "EXCLUSIVE PARTNER OFFERS",
             "textarea_text": "Access sale offers, new releases and promotions that are reserved for registered DICOTA partners."
           },
           "blocks": {}
