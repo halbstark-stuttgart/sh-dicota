@@ -1,0 +1,153 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "b2b_subnav": {
+      "type": "b2b_subnav",
+      "settings": {
+        "text_dummy_description": "Short description",
+        "text_punkte_label": "Current point balance:",
+        "account_menu": ""
+      }
+    },
+    "hub_header": {
+      "type": "b2b_solution_header",
+      "name": "Services – Header",
+      "settings": {
+        "text_subline": "Services",
+        "text_heading_1": "Service that keeps your business running",
+        "textarea_subheading_1": "Warranty claims, data sheets, declarations of conformity and more: everything you need after the sale – quickly available and always up to date.",
+        "url_hero_button_link": "shopify://pages/b2b-services-warranty-claims",
+        "text_hero_button_text": "Submit a warranty claim",
+        "padding_top": 4,
+        "padding_bottom": 3
+      }
+    },
+    "hub_cards": {
+      "type": "b2b_link_hub_cards",
+      "name": "Services",
+      "settings": {
+        "text_heading": "Our services at a glance",
+        "padding_top": 3,
+        "padding_bottom": 3
+      },
+      "blocks": {
+        "c_warranty": {
+          "type": "b2b-hub-card",
+          "name": "Warranty Claims",
+          "settings": {
+            "image_icon": "shopify://shop_images/Icon_Benefit_warrantyhandling.svg",
+            "text_heading": "Warranty Claims",
+            "textarea_text": "Report a warranty case online – we handle it quickly and, if required, directly with the end user.",
+            "url_button_link": "shopify://pages/b2b-services-warranty-claims",
+            "text_button_text": "Submit a claim"
+          }
+        },
+        "c_sheets": {
+          "type": "b2b-hub-card",
+          "name": "Product Data Sheets",
+          "settings": {
+            "image_icon": "shopify://shop_images/Icon_Benefit_skus.svg",
+            "text_heading": "Product Data Sheets",
+            "textarea_text": "Download technical data sheets for all current products – for your webshop, your offers and your tenders.",
+            "url_button_link": "shopify://pages/b2b-download-data-sheets",
+            "text_button_text": "Download data sheets"
+          }
+        },
+        "c_eu": {
+          "type": "b2b-hub-card",
+          "name": "EU Declarations",
+          "settings": {
+            "image_icon": "shopify://shop_images/Icon_Benefit_trusted.svg",
+            "text_heading": "EU Declarations",
+            "textarea_text": "Declarations of conformity for our products – the documentation you need for compliant sales.",
+            "url_button_link": "shopify://pages/b2b-services-eu-declarations",
+            "text_button_text": "View declarations"
+          }
+        },
+        "c_finder": {
+          "type": "b2b-hub-card",
+          "name": "Product Finder",
+          "settings": {
+            "image_icon": "shopify://shop_images/Icon_Benefit_range.svg",
+            "text_heading": "Product Finder",
+            "textarea_text": "Find the right bag, sleeve or screen filter for any device in just a few clicks.",
+            "url_button_link": "shopify://pages/product-finder",
+            "text_button_text": "Open product finder"
+          }
+        },
+        "c_disc": {
+          "type": "b2b-hub-card",
+          "name": "Discontinued Products",
+          "settings": {
+            "image_icon": "shopify://shop_images/Icon_Benefit_lifetime.svg",
+            "text_heading": "Discontinued Products",
+            "textarea_text": "Information on phased-out products and their successors – so your customers always get the right replacement.",
+            "url_button_link": "shopify://collections/discontinued-products",
+            "text_button_text": "View products"
+          }
+        },
+        "c_contact": {
+          "type": "b2b-hub-card",
+          "name": "Your Sales Team",
+          "settings": {
+            "image_icon": "shopify://shop_images/Icon_Benefit_salesteam.svg",
+            "text_heading": "Your Sales Team",
+            "textarea_text": "Questions about orders, deliveries or projects? Your DICOTA sales team is happy to help.",
+            "url_button_link": "shopify://pages/b2b-project-request",
+            "text_button_text": "Contact us"
+          }
+        }
+      },
+      "block_order": [
+        "c_warranty",
+        "c_sheets",
+        "c_eu",
+        "c_finder",
+        "c_disc",
+        "c_contact"
+      ]
+    },
+    "hub_feature": {
+      "type": "b2b_solution_feature",
+      "name": "Lifetime warranty",
+      "settings": {
+        "image_feature_bild": "shopify://shop_images/Lasting_Quality_b5fb68b8-cd4a-46ce-a788-51f7ec672cad.jpg",
+        "text_feature_subline": "Quality that lasts",
+        "text_feature_heading": "Lifetime warranty.<br>For real.",
+        "textarea_feature_text": "DICOTA bags and backpacks are built to last – and we stand behind them with our lifetime warranty. For you as a partner this means fewer returns, satisfied customers and a strong sales argument.<br><br>If a warranty case does occur, we process it quickly and can handle it directly with your end customer.",
+        "padding_top": 3,
+        "padding_bottom": 3
+      }
+    },
+    "hub_banner": {
+      "type": "b2b_hub_banner",
+      "name": "Call to action",
+      "settings": {
+        "image_bild": "shopify://shop_images/6_LPI_TravellerRollerSeven_7.jpg",
+        "text_heading": "Can't find what you need?",
+        "textarea_text": "Our team is happy to help with any question about products, orders or services.",
+        "url_button_link": "shopify://pages/b2b-project-request",
+        "text_button_text": "Contact us",
+        "padding_top": 3,
+        "padding_bottom": 6
+      }
+    }
+  },
+  "layout": "b2b",
+  "wrapper": "main.main-wrapper",
+  "order": [
+    "b2b_subnav",
+    "hub_header",
+    "hub_cards",
+    "hub_feature",
+    "hub_banner"
+  ]
+}
