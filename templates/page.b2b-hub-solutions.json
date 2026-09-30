@@ -1,0 +1,39 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "page_content": {
+      "type": "page_content",
+      "settings": {}
+    },
+    "b2b_no_access_bfngxc": {
+      "type": "b2b_no_access",
+      "disabled": true,
+      "name": "B2B No Access",
+      "settings": {
+        "text_subline": "B2B Area",
+        "text_uberschrift": "Restricted access",
+        "textarea_text": "This page is reserved for registered DICOTA B2B partners. Please log in with your partner account to continue.",
+        "url_login_link": "",
+        "text_login_text": "Log in",
+        "url_sekundar_link": "",
+        "text_sekundar_text": "Become a partner",
+        "padding_top": 4,
+        "padding_bottom": 4
+      }
+    }
+  },
+  "layout": "theme",
+  "wrapper": "main.main-wrapper",
+  "order": [
+    "page_content",
+    "b2b_no_access_bfngxc"
+  ]
+}
