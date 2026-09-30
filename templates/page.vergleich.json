@@ -1,12 +1,29 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
-    "sections": {
-        "product_compare": {
-            "type": "product_compare"
-        }
-    },
-    "layout": "theme",
-    "wrapper": "main.main-wrapper",
-    "order": [
-        "product_compare"
-    ]
+  "sections": {
+    "product_compare": {
+      "type": "product_compare",
+      "settings": {
+        "text_heading": "Product Comparison",
+        "text_subline": "Up to five products side by side.",
+        "url_weiter_shoppen_link": "",
+        "text_weiter_shoppen_text": "Discover Products",
+        "padding_top": 2.5,
+        "padding_bottom": 5
+      }
+    }
+  },
+  "layout": "theme",
+  "wrapper": "main.main-wrapper",
+  "order": [
+    "product_compare"
+  ]
 }
