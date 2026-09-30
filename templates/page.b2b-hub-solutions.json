@@ -9,31 +9,169 @@
  */
 {
   "sections": {
-    "page_content": {
-      "type": "page_content",
-      "settings": {}
-    },
-    "b2b_no_access_bfngxc": {
-      "type": "b2b_no_access",
-      "disabled": true,
-      "name": "B2B No Access",
+    "b2b_subnav": {
+      "type": "b2b_subnav",
       "settings": {
-        "text_subline": "B2B Area",
-        "text_uberschrift": "Restricted access",
-        "textarea_text": "This page is reserved for registered DICOTA B2B partners. Please log in with your partner account to continue.",
-        "url_login_link": "",
-        "text_login_text": "Log in",
-        "url_sekundar_link": "",
-        "text_sekundar_text": "Become a partner",
+        "text_dummy_description": "Short description",
+        "text_punkte_label": "Current point balance:",
+        "account_menu": ""
+      }
+    },
+    "hub_header": {
+      "type": "b2b_solution_header",
+      "name": "Solutions – Header",
+      "settings": {
+        "text_subline": "Solutions",
+        "text_heading_1": "Solutions for every business need",
+        "textarea_subheading_1": "From everyday run-rate business to large device rollouts and tenders: DICOTA solutions combine the right products with the service your customers expect. Find the solution that fits your project.",
+        "url_hero_button_link": "shopify://pages/b2b-project-request",
+        "text_hero_button_text": "Request a quote",
+        "padding_top": 4,
+        "padding_bottom": 3
+      }
+    },
+    "hub_cards": {
+      "type": "triple_cards",
+      "name": "Solution areas",
+      "settings": {
+        "text_heading": "Explore our solution areas",
+        "url_button_link": "",
+        "text_button_text": "",
         "padding_top": 4,
         "padding_bottom": 4
+      },
+      "blocks": {
+        "card_runrate": {
+          "type": "karte",
+          "name": "Run Rate Supply",
+          "settings": {
+            "url_card_link": "shopify://pages/b2b-solutions-run-rate-product-supply",
+            "text_card_heading": "Run Rate Supply",
+            "text_card_button_text": "Learn more",
+            "image_card_bg_image": "shopify://shop_images/8_GB2c_ProductPromotion_TopTravSeven_01.jpg"
+          }
+        },
+        "card_rollout": {
+          "type": "karte",
+          "name": "Device Rollout Bundle",
+          "settings": {
+            "url_card_link": "shopify://pages/b2b-solutions-device-rollout-bundle",
+            "text_card_heading": "Device Rollout Bundle",
+            "text_card_button_text": "Learn more",
+            "image_card_bg_image": "shopify://shop_images/1_CT1c_Sleeves.jpg"
+          }
+        },
+        "card_workplace": {
+          "type": "karte",
+          "name": "Workplace & Homeoffice Setup",
+          "settings": {
+            "url_card_link": "shopify://pages/b2b-solutions-workplace-homeoffice-setup",
+            "text_card_heading": "Workplace & Homeoffice Setup",
+            "text_card_button_text": "Learn more",
+            "image_card_bg_image": "shopify://shop_images/Blog_Image_Docking_Station.jpg"
+          }
+        },
+        "card_education": {
+          "type": "karte",
+          "name": "Education & Public Sector",
+          "settings": {
+            "url_card_link": "shopify://pages/b2b-solutions-education-public-sector",
+            "text_card_heading": "Education & Public Sector",
+            "text_card_button_text": "Learn more",
+            "image_card_bg_image": "shopify://shop_images/Blog_Image_SPIN_II.jpg"
+          }
+        },
+        "card_sustain": {
+          "type": "karte",
+          "name": "Sustainability & Green Procurement",
+          "settings": {
+            "url_card_link": "shopify://pages/b2b-solutions-sustainability-green-procurement",
+            "text_card_heading": "Sustainability & Green Procurement",
+            "text_card_button_text": "Learn more",
+            "image_card_bg_image": "shopify://shop_images/Sustainable_Materials.png"
+          }
+        },
+        "card_brand": {
+          "type": "karte",
+          "name": "Brand & Corporate Identity",
+          "settings": {
+            "url_card_link": "shopify://pages/b2b-solutions-brand-corporate-identity",
+            "text_card_heading": "Brand & Corporate Identity",
+            "text_card_button_text": "Learn more",
+            "image_card_bg_image": "shopify://shop_images/Header_b2b_solutions_run_rate_supply_1440x720_dc77e625-9ba5-4401-893f-7cb43aa70afe.png"
+          }
+        }
+      },
+      "block_order": [
+        "card_runrate",
+        "card_rollout",
+        "card_workplace",
+        "card_education",
+        "card_sustain",
+        "card_brand"
+      ]
+    },
+    "hub_facts": {
+      "type": "b2b_solution_facts",
+      "name": "Facts",
+      "settings": {
+        "text_facts_heading": "What every solution is built on",
+        "padding_top": 2,
+        "padding_bottom": 4
+      },
+      "blocks": {
+        "f_skus": {
+          "type": "b2b-sol-fact",
+          "name": "1,200+",
+          "settings": {
+            "text_zahl": "1,200+",
+            "text_label": "SKUs from entry-level to premium"
+          }
+        },
+        "f_warranty": {
+          "type": "b2b-sol-fact",
+          "name": "Lifetime",
+          "settings": {
+            "text_zahl": "Lifetime",
+            "text_label": "warranty on bags and backpacks"
+          }
+        },
+        "f_pet": {
+          "type": "b2b-sol-fact",
+          "name": "99%",
+          "settings": {
+            "text_zahl": "99%",
+            "text_label": "of our bags made from recycled PET"
+          }
+        }
+      },
+      "block_order": [
+        "f_skus",
+        "f_warranty",
+        "f_pet"
+      ]
+    },
+    "hub_banner": {
+      "type": "b2b_hub_banner",
+      "name": "Call to action",
+      "settings": {
+        "image_bild": "shopify://shop_images/Blog_Image_Business_travel_in_2026_essentials_for_mobile_professionals.jpg",
+        "text_heading": "Not sure which solution fits?",
+        "textarea_text": "Tell us about your customer, devices and timeline. Your DICOTA sales team will put together the right mix of products and services.",
+        "url_button_link": "shopify://pages/b2b-project-request",
+        "text_button_text": "Start a project request",
+        "padding_top": 3,
+        "padding_bottom": 6
       }
     }
   },
-  "layout": "theme",
+  "layout": "b2b",
   "wrapper": "main.main-wrapper",
   "order": [
-    "page_content",
-    "b2b_no_access_bfngxc"
+    "b2b_subnav",
+    "hub_header",
+    "hub_cards",
+    "hub_facts",
+    "hub_banner"
   ]
 }
