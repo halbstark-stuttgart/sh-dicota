@@ -9,31 +9,419 @@
  */
 {
   "sections": {
-    "page_content": {
-      "type": "page_content",
-      "settings": {}
-    },
-    "b2b_no_access_bfngxc": {
-      "type": "b2b_no_access",
-      "disabled": true,
-      "name": "B2B No Access",
+    "b2b_subnav": {
+      "type": "b2b_subnav",
       "settings": {
-        "text_subline": "B2B Area",
-        "text_uberschrift": "Restricted access",
-        "textarea_text": "This page is reserved for registered DICOTA B2B partners. Please log in with your partner account to continue.",
-        "url_login_link": "",
-        "text_login_text": "Log in",
-        "url_sekundar_link": "",
-        "text_sekundar_text": "Become a partner",
+        "text_dummy_description": "Short description",
+        "text_punkte_label": "Current point balance:",
+        "account_menu": ""
+      }
+    },
+    "why_header": {
+      "type": "b2b_solution_header",
+      "name": "Why DICOTA – Header",
+      "settings": {
+        "text_subline": "Project Request",
+        "text_heading_1": "Why DICOTA",
+        "textarea_subheading_1": "Since 1992, DICOTA has been the German pioneer in smart and sustainable professional carrying solutions – from computer bags to IT accessories. For your projects, we are more than a supplier: a partner who helps you win tenders, deliver rollouts on time and grow your margins.",
+        "url_hero_button_link": "shopify://pages/b2b-project-request",
+        "text_hero_button_text": "Request a quote",
         "padding_top": 4,
+        "padding_bottom": 2
+      }
+    },
+    "why_glance": {
+      "type": "b2b_solution_facts",
+      "name": "At a glance",
+      "settings": {
+        "text_facts_heading": "DICOTA at a glance",
+        "padding_top": 2,
+        "padding_bottom": 2
+      },
+      "blocks": {
+        "fact_founded": {
+          "type": "b2b-sol-fact",
+          "name": "1992",
+          "settings": {
+            "text_zahl": "1992",
+            "text_label": "Founded in Germany"
+          }
+        },
+        "fact_no1": {
+          "type": "b2b-sol-fact",
+          "name": "No. 1",
+          "settings": {
+            "text_zahl": "No. 1",
+            "text_label": "in professional carrying solutions in Germany, Austria and Switzerland"
+          }
+        },
+        "fact_markets": {
+          "type": "b2b-sol-fact",
+          "name": "60+",
+          "settings": {
+            "text_zahl": "60+",
+            "text_label": "markets represented globally"
+          }
+        },
+        "fact_units": {
+          "type": "b2b-sol-fact",
+          "name": "2.5M+",
+          "settings": {
+            "text_zahl": "2.5M+",
+            "text_label": "bags and accessories shipped every year"
+          }
+        },
+        "fact_customers": {
+          "type": "b2b-sol-fact",
+          "name": "60,000+",
+          "settings": {
+            "text_zahl": "60,000+",
+            "text_label": "active customers – from distributors and resellers to B2B partners"
+          }
+        },
+        "fact_skus": {
+          "type": "b2b-sol-fact",
+          "name": "1,200+",
+          "settings": {
+            "text_zahl": "1,200+",
+            "text_label": "SKUs across bags, accessories, screen filters and locks"
+          }
+        }
+      },
+      "block_order": [
+        "fact_founded",
+        "fact_no1",
+        "fact_markets",
+        "fact_units",
+        "fact_customers",
+        "fact_skus"
+      ]
+    },
+    "why_story": {
+      "type": "b2b_solution_feature",
+      "name": "Then, now, next",
+      "settings": {
+        "image_feature_bild": "shopify://shop_images/5_SCT1c_SF_People.png",
+        "text_feature_subline": "Then, now, next",
+        "text_feature_heading": "European at heart.<br>Customers in mind.",
+        "textarea_feature_text": "DICOTA was born in 1992 from a simple idea: transporting computers from A to B – safely, conveniently and efficiently. Since 2013, we have been headquartered in Switzerland, with sustainability firmly at the core of everything we do.<br><br>Today, 10 offices in Europe and Asia and 13 factories work towards one vision: to empower a safe, enjoyable and sustainable individual work life – for everyone, everywhere, whenever.",
+        "padding_top": 2,
         "padding_bottom": 4
+      }
+    },
+    "why_pillars": {
+      "type": "benefits_grid",
+      "name": "Our promise",
+      "settings": {
+        "text_subline": "What we stand for",
+        "text_heading": "Four reasons partners choose DICOTA",
+        "url_button_link": "",
+        "text_button_text": "",
+        "padding_top": 5,
+        "padding_bottom": 5
+      },
+      "blocks": {
+        "ben_sustain": {
+          "type": "benefit",
+          "name": "Commitment to sustainability",
+          "settings": {
+            "text_heading": "Commitment to sustainability",
+            "textarea_text": "Products designed to care for people and planet – 99% of our bags are made from recycled PET."
+          }
+        },
+        "ben_customer": {
+          "type": "benefit",
+          "name": "Customer-first mindset",
+          "settings": {
+            "text_heading": "Customer-first mindset",
+            "textarea_text": "More than a supplier: a partner that works from people for people – close to you and your customers."
+          }
+        },
+        "ben_quality": {
+          "type": "benefit",
+          "name": "Exceptional quality",
+          "settings": {
+            "text_heading": "Exceptional quality",
+            "textarea_text": "Built to last and backed by our lifetime warranty on bags and backpacks."
+          }
+        },
+        "ben_expertise": {
+          "type": "benefit",
+          "name": "Proven expertise",
+          "settings": {
+            "text_heading": "Proven expertise",
+            "textarea_text": "More than three decades of professional carrying solutions for mobile and hybrid work."
+          }
+        }
+      },
+      "block_order": [
+        "ben_sustain",
+        "ben_customer",
+        "ben_quality",
+        "ben_expertise"
+      ]
+    },
+    "why_partner": {
+      "type": "value_tabs",
+      "name": "Your partner for growth",
+      "settings": {
+        "text_heading": "More than a supplier – your partner for growth",
+        "padding_top": 5,
+        "padding_bottom": 5
+      },
+      "blocks": {
+        "tab_sales": {
+          "type": "tab",
+          "name": "Sales & training",
+          "settings": {
+            "text_tab_label": "Sales & training",
+            "text_tab_heading": "Support for your sales team",
+            "textarea_tab_text": "Comprehensive training and ongoing support for your sales team. DICOTA sales specialists actively engage with your B2B, e-tail and retail customers – with custom sales and marketing campaigns aligned to shared goals and strong local proximity."
+          }
+        },
+        "tab_projects": {
+          "type": "tab",
+          "name": "Projects & tenders",
+          "settings": {
+            "text_tab_label": "Projects & tenders",
+            "text_tab_heading": "Win tenders, deliver rollouts",
+            "textarea_tab_text": "Tailored assistance for public tenders to maximise your success rate. Quick and straightforward project offers and sample requests, logistics support for large-scale rollouts and efficient warranty handling directly with end users."
+          }
+        },
+        "tab_portfolio": {
+          "type": "tab",
+          "name": "Portfolio & brand",
+          "settings": {
+            "text_tab_label": "Portfolio & brand",
+            "text_tab_heading": "The right product for every budget",
+            "textarea_tab_text": "A portfolio of 1,200+ SKUs from entry-level to high-end, premium quality backed by a lifetime warranty and leading availability through top-tier distributors. White-label OEM solutions let you offer customised branding."
+          }
+        },
+        "tab_growth": {
+          "type": "tab",
+          "name": "Joint growth",
+          "settings": {
+            "text_tab_label": "Joint growth",
+            "text_tab_heading": "Growing together",
+            "textarea_tab_text": "We help you acquire new customers and strengthen existing partnerships, simplify business processes and increase sales and margins – and we celebrate joint successes along the way."
+          }
+        }
+      },
+      "block_order": [
+        "tab_sales",
+        "tab_projects",
+        "tab_portfolio",
+        "tab_growth"
+      ]
+    },
+    "why_history": {
+      "type": "history_timeline",
+      "name": "Our journey",
+      "settings": {
+        "text_subline": "Our journey",
+        "text_heading": "From 1992 to tomorrow",
+        "text_start_year": "1992",
+        "text_end_year": "2028",
+        "padding_top": 5,
+        "padding_bottom": 5
+      },
+      "blocks": {
+        "ms_1992": {
+          "type": "meilenstein",
+          "name": "1992",
+          "settings": {
+            "text_slide_year": "1992",
+            "text_slide_heading": "Founded in Germany",
+            "textarea_slide_text": "DICOTA GmbH is established – with one idea: carry computers safely, conveniently and efficiently."
+          }
+        },
+        "ms_2009": {
+          "type": "meilenstein",
+          "name": "2009",
+          "settings": {
+            "text_slide_year": "2009",
+            "text_slide_heading": "First ECO product",
+            "textarea_slide_text": "The start of our sustainable product journey."
+          }
+        },
+        "ms_2011": {
+          "type": "meilenstein",
+          "name": "2011",
+          "settings": {
+            "text_slide_year": "2011",
+            "text_slide_heading": "REACH & SVHC compliance",
+            "textarea_slide_text": "All products comply with REACH and SVHC requirements."
+          }
+        },
+        "ms_2013": {
+          "type": "meilenstein",
+          "name": "2013",
+          "settings": {
+            "text_slide_year": "2013",
+            "text_slide_heading": "New ownership",
+            "textarea_slide_text": "Management buyout – headquarters move to Switzerland."
+          }
+        },
+        "ms_2015": {
+          "type": "meilenstein",
+          "name": "2015",
+          "settings": {
+            "text_slide_year": "2015",
+            "text_slide_heading": "amfori BSCI",
+            "textarea_slide_text": "First IT brand to become a member of amfori BSCI."
+          }
+        },
+        "ms_2021": {
+          "type": "meilenstein",
+          "name": "2021",
+          "settings": {
+            "text_slide_year": "2021",
+            "text_slide_heading": "85% recycled PET",
+            "textarea_slide_text": "85% of the portfolio is produced from recycled PET."
+          }
+        },
+        "ms_2022": {
+          "type": "meilenstein",
+          "name": "2022",
+          "settings": {
+            "text_slide_year": "2022",
+            "text_slide_heading": "Safety at Work",
+            "textarea_slide_text": "Launch of the Safety at Work portfolio."
+          }
+        },
+        "ms_2026": {
+          "type": "meilenstein",
+          "name": "2026",
+          "settings": {
+            "text_slide_year": "2026",
+            "text_slide_heading": "Made in Europe",
+            "textarea_slide_text": "Launch of the first 100% sustainable computer bag, made in Europe."
+          }
+        },
+        "ms_2027": {
+          "type": "meilenstein",
+          "name": "2027",
+          "settings": {
+            "text_slide_year": "2027",
+            "text_slide_heading": "Circular economy",
+            "textarea_slide_text": "Initiation of our circular economy programme."
+          }
+        },
+        "ms_2028": {
+          "type": "meilenstein",
+          "name": "2028",
+          "settings": {
+            "text_slide_year": "2028",
+            "text_slide_heading": "Our goal",
+            "textarea_slide_text": "European market leader for sustainable computer bags."
+          }
+        }
+      },
+      "block_order": [
+        "ms_1992",
+        "ms_2009",
+        "ms_2011",
+        "ms_2013",
+        "ms_2015",
+        "ms_2021",
+        "ms_2022",
+        "ms_2026",
+        "ms_2027",
+        "ms_2028"
+      ]
+    },
+    "why_sustain": {
+      "type": "b2b_solution_facts",
+      "name": "Sustainable achievements",
+      "settings": {
+        "text_facts_heading": "Sustainable achievements",
+        "padding_top": 4,
+        "padding_bottom": 2
+      },
+      "blocks": {
+        "fact_recycled": {
+          "type": "b2b-sol-fact",
+          "name": "99%",
+          "settings": {
+            "text_zahl": "99%",
+            "text_label": "of our bag assortment made from recycled PET"
+          }
+        },
+        "fact_bottles": {
+          "type": "b2b-sol-fact",
+          "name": "9.9M+",
+          "settings": {
+            "text_zahl": "9.9M+",
+            "text_label": "PET bottles processed since 1992"
+          }
+        },
+        "fact_fleet": {
+          "type": "b2b-sol-fact",
+          "name": "70%",
+          "settings": {
+            "text_zahl": "70%",
+            "text_label": "of our company fleet electrified"
+          }
+        },
+        "fact_bsci": {
+          "type": "b2b-sol-fact",
+          "name": "2015",
+          "settings": {
+            "text_zahl": "2015",
+            "text_label": "first IT brand member of amfori BSCI"
+          }
+        },
+        "fact_ecovadis": {
+          "type": "b2b-sol-fact",
+          "name": "EcoVadis",
+          "settings": {
+            "text_zahl": "EcoVadis",
+            "text_label": "committed to certified standards"
+          }
+        },
+        "fact_warranty": {
+          "type": "b2b-sol-fact",
+          "name": "Lifetime",
+          "settings": {
+            "text_zahl": "Lifetime",
+            "text_label": "warranty – quality that lasts"
+          }
+        }
+      },
+      "block_order": [
+        "fact_recycled",
+        "fact_bottles",
+        "fact_fleet",
+        "fact_bsci",
+        "fact_ecovadis",
+        "fact_warranty"
+      ]
+    },
+    "why_cta": {
+      "type": "b2b_solution_header",
+      "name": "Call to action",
+      "settings": {
+        "text_subline": "Let's get started",
+        "text_heading_1": "You never work alone.",
+        "textarea_subheading_1": "Tell us about your project – devices, quantities, timeline and end customer. Your DICOTA sales team will get back to you with a tailored offer and samples.",
+        "url_hero_button_link": "shopify://pages/b2b-project-request",
+        "text_hero_button_text": "Request a quote",
+        "padding_top": 4,
+        "padding_bottom": 6
       }
     }
   },
-  "layout": "theme",
+  "layout": "b2b",
   "wrapper": "main.main-wrapper",
   "order": [
-    "page_content",
-    "b2b_no_access_bfngxc"
+    "b2b_subnav",
+    "why_header",
+    "why_glance",
+    "why_story",
+    "why_pillars",
+    "why_partner",
+    "why_history",
+    "why_sustain",
+    "why_cta"
   ]
 }
