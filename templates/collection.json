@@ -9,6 +9,12 @@
  */
 {
   "sections": {
+    "product_breadcrumb": {
+      "type": "product_breadcrumb",
+      "settings": {
+        "text_home_label": "Home"
+      }
+    },
     "collection_hero_8TRwPe": {
       "type": "collection_hero",
       "name": "Collection Hero",
@@ -151,6 +157,7 @@
   "layout": "theme",
   "wrapper": "main.main-wrapper",
   "order": [
+    "product_breadcrumb",
     "collection_hero_8TRwPe",
     "featured_product_qe68Cr",
     "collection_intro",
