@@ -9,6 +9,12 @@
  */
 {
   "sections": {
+    "product_breadcrumb": {
+      "type": "product_breadcrumb",
+      "settings": {
+        "text_home_label": "Home"
+      }
+    },
     "404": {
       "type": "404",
       "settings": {
@@ -21,6 +27,7 @@
   "layout": "theme",
   "wrapper": "main.main-wrapper",
   "order": [
+    "product_breadcrumb",
     "404"
   ]
 }
