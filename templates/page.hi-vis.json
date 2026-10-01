@@ -15,59 +15,404 @@
         "text_home_label": "Home"
       }
     },
-    "page_content": {
-      "type": "page_content",
-      "settings": {}
-    },
-    "b2b_no_access_bfngxc": {
-      "type": "b2b_no_access",
-      "disabled": true,
-      "name": "B2B No Access",
+    "hero": {
+      "type": "image_banner",
       "settings": {
-        "text_subline": "B2B Area",
-        "text_uberschrift": "Restricted access",
-        "textarea_text": "This page is reserved for registered DICOTA B2B partners. Please log in with your partner account to continue.",
-        "url_login_link": "",
-        "text_login_text": "Log in",
-        "url_sekundar_link": "",
-        "text_sekundar_text": "Become a partner",
-        "padding_top": 4,
-        "padding_bottom": 4
+        "image_hintergrundbild": "shopify://shop_images/Hi-Vis_main_teaser.jpg",
+        "text_headline_zeile_1": "BE SEEN.",
+        "text_headline_zeile_2": "GET HOME SAFE.",
+        "textarea_subtext": "DICOTA Hi-Vis backpacks turn the most overlooked part of your workwear into protection – certified to EN ISO 20471, visible up to 140 metres.",
+        "url_button_link": "shopify://collections/hi-vis",
+        "text_button_text": "Shop Hi-Vis",
+        "min_height": 85,
+        "full_bleed": true,
+        "content_horizontal": "flex-start",
+        "content_vertical": "flex-end",
+        "text_align": "left",
+        "text_color": "#ffffff",
+        "overlay_strength": 45
       }
     },
-    "1790767179ecde4caa": {
-      "type": "apps",
+    "usps": {
+      "type": "usp_icon_row",
       "blocks": {
-        "forms_inline_Qmhgmm": {
-          "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
+        "usp_0": {
+          "type": "usp-block",
           "settings": {
-            "form_id": "730311",
-            "text_color": "#202020",
-            "button_background_color": "#202020",
-            "button_label_color": "#FFFFFF",
-            "links_color": "#1878B9",
-            "errors_color": "#E02229",
-            "text_alignment": "center",
-            "form_alignment": "center",
-            "padding_top": 0,
-            "padding_bottom": 24,
-            "padding_right": 0,
-            "padding_left": 0
+            "image_icon": "shopify://shop_images/Icon_HiVis.png",
+            "text_uberschrift": "EN ISO 20471:2013",
+            "textarea_beschreibung": "Certified fluorescent fabric and retroreflective stripes."
+          }
+        },
+        "usp_1": {
+          "type": "usp-block",
+          "settings": {
+            "image_icon": "shopify://shop_images/Icon_Benefit_trusted.svg",
+            "text_uberschrift": "Visible up to 140 m",
+            "textarea_beschreibung": "Seen earlier by drivers and machine operators – day and night."
+          }
+        },
+        "usp_2": {
+          "type": "usp-block",
+          "settings": {
+            "image_icon": "shopify://shop_images/Icon_Benefit_sustain.svg",
+            "text_uberschrift": "Made from recycled PET",
+            "textarea_beschreibung": "GRS-certified main fabric, produced under the amfori BSCI Code of Conduct."
+          }
+        },
+        "usp_3": {
+          "type": "usp-block",
+          "settings": {
+            "image_icon": "shopify://shop_images/Icon_Benefit_salesteam.svg",
+            "text_uberschrift": "Volume pricing for teams",
+            "textarea_beschreibung": "Personal advice and project quotes for companies and public authorities."
           }
         }
       },
       "block_order": [
-        "forms_inline_Qmhgmm"
+        "usp_0",
+        "usp_1",
+        "usp_2",
+        "usp_3"
       ],
-      "settings": {}
+      "settings": {
+        "padding_top": 2.5,
+        "padding_bottom": 2.5,
+        "bg_color": "#ffffff",
+        "text_color": "#0f0f0f"
+      }
+    },
+    "problem": {
+      "type": "headline_text",
+      "settings": {
+        "text_subline": "The overlooked gap in PPE",
+        "text_heading": "Your hi-vis vest only works if nothing covers it.",
+        "richtext_text": "<p>High-visibility clothing is mandatory across Europe – on the track, on the road and on the construction site. But the moment you put on a regular black backpack, it covers a large part of the reflective surface on your back. Exactly where a driver or a machine operator needs to see you.</p><p><strong>DICOTA Hi-Vis backpacks close that gap.</strong> They carry everything you need for your shift and make you more visible, not less.</p>",
+        "padding_top": 5,
+        "padding_bottom": 2.5
+      }
+    },
+    "sizes": {
+      "type": "triple_cards",
+      "blocks": {
+        "k_y": {
+          "type": "karte",
+          "settings": {
+            "url_card_link": "shopify://products/backpack-hi-vis-25-litre-yellow",
+            "text_card_heading": "HI-VIS Yellow – 24 to 65 litres",
+            "text_card_button_text": "Discover",
+            "image_card_bg_image": "shopify://shop_images/Hi-Vis-25.jpg"
+          }
+        },
+        "k_o": {
+          "type": "karte",
+          "settings": {
+            "url_card_link": "shopify://products/backpack-hi-vis-32-38-litre-orange-1",
+            "text_card_heading": "HI-VIS Orange – made for the railway",
+            "text_card_button_text": "Discover",
+            "image_card_bg_image": "shopify://shop_images/Hi-Vis_content_image.jpg"
+          }
+        },
+        "k_b": {
+          "type": "karte",
+          "settings": {
+            "url_card_link": "shopify://products/backpack-reflective-25-litre-black",
+            "text_card_heading": "REFLECTIVE Black – for the commute",
+            "text_card_button_text": "Discover",
+            "image_card_bg_image": "shopify://shop_images/Hi-Vis-37.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "k_y",
+        "k_o",
+        "k_b"
+      ],
+      "settings": {
+        "text_heading": "Three colours. One goal: being seen.",
+        "url_button_link": "shopify://collections/hi-vis",
+        "text_button_text": "All Hi-Vis products"
+      }
+    },
+    "products": {
+      "type": "featured_products",
+      "name": "Hi-Vis Products",
+      "settings": {
+        "text_uberschrift": "The Hi-Vis range",
+        "url_button_link": "shopify://collections/hi-vis",
+        "text_button_text": "All Hi-Vis products",
+        "collection_kollektion": "hi-vis",
+        "collection_kollektion_limit": 12,
+        "show_view_all": true,
+        "padding_top": 5,
+        "padding_bottom": 5,
+        "bg_color": "#f6f6f6",
+        "text_color": "#0f0f0f"
+      }
+    },
+    "usecases": {
+      "type": "value_tabs",
+      "blocks": {
+        "tab_0": {
+          "type": "tab",
+          "settings": {
+            "text_tab_label": "Railway",
+            "image_tab_bild": "shopify://shop_images/01_Blog_SOB-Visual_2025.jpg",
+            "text_tab_heading": "On the track",
+            "textarea_tab_text": "Train drivers, shunting staff and track workers move where trains and machines operate. Together with the Swiss railway company SOB, DICOTA is making railway staff more visible – from the depot to the track."
+          }
+        },
+        "tab_1": {
+          "type": "tab",
+          "settings": {
+            "text_tab_label": "Construction & roads",
+            "image_tab_bild": "shopify://shop_images/hi-vis.jpg",
+            "text_tab_heading": "On the construction site",
+            "textarea_tab_text": "Near traffic and heavy machinery every metre of visibility counts. The yellow and orange HI-VIS backpacks carry helmet, tools and personal items without covering your safety vest."
+          }
+        },
+        "tab_2": {
+          "type": "tab",
+          "settings": {
+            "text_tab_label": "Logistics",
+            "image_tab_bild": "shopify://shop_images/Hi-Vis_content_image.jpg",
+            "text_tab_heading": "In logistics and on the yard",
+            "textarea_tab_text": "Loading zones, forklifts and early or late shifts in poor light: Hi-Vis backpacks make your people stand out wherever vehicles are moving."
+          }
+        },
+        "tab_3": {
+          "type": "tab",
+          "settings": {
+            "text_tab_label": "Commuting",
+            "image_tab_bild": "shopify://shop_images/Hi-Vis-37.jpg",
+            "text_tab_heading": "On the way to work",
+            "textarea_tab_text": "For cyclists and pedestrians in the dark season: the black REFLECTIVE line – backpack, messenger and sling bag – looks like a business bag by day and lights up in headlights at night."
+          }
+        }
+      },
+      "block_order": [
+        "tab_0",
+        "tab_1",
+        "tab_2",
+        "tab_3"
+      ],
+      "settings": {
+        "text_heading": "Made for the places where being seen matters.",
+        "padding_top": 5,
+        "padding_bottom": 5
+      }
+    },
+    "why": {
+      "type": "feature_card_grid",
+      "blocks": {
+        "feature-cards": {
+          "type": "feature-cards",
+          "static": true,
+          "settings": {},
+          "blocks": {
+            "fk_0": {
+              "type": "feature-karte",
+              "settings": {
+                "image_icon": "shopify://shop_images/Icon_HiVis.png",
+                "text_heading": "Certified visibility",
+                "textarea_text": "Fluorescent fabric and retroreflective stripes according to EN ISO 20471:2013 – the standard for high-visibility workwear.",
+                "url_button_link": "",
+                "text_button_text": ""
+              }
+            },
+            "fk_1": {
+              "type": "feature-karte",
+              "settings": {
+                "image_icon": "shopify://shop_images/Icon_Benefit_skus.svg",
+                "text_heading": "Built for the job",
+                "textarea_text": "Water-repellent materials, ample space for helmet, tools and personal items, and a carrying system for long days.",
+                "url_button_link": "",
+                "text_button_text": ""
+              }
+            },
+            "fk_2": {
+              "type": "feature-karte",
+              "settings": {
+                "image_icon": "shopify://shop_images/Icon_Benefit_sustain.svg",
+                "text_heading": "Responsibly made",
+                "textarea_text": "GRS-certified main fabric from recycled PET bottles, fair production under the amfori BSCI Code of Conduct.",
+                "url_button_link": "",
+                "text_button_text": ""
+              }
+            },
+            "fk_3": {
+              "type": "feature-karte",
+              "settings": {
+                "image_icon": "shopify://shop_images/Icon_Benefit_bestseller.svg",
+                "text_heading": "Ready for any weather",
+                "textarea_text": "Matching HI-VIS rain covers in yellow and orange keep you visible even in heavy rain.",
+                "url_button_link": "",
+                "text_button_text": ""
+              }
+            }
+          },
+          "block_order": [
+            "fk_0",
+            "fk_1",
+            "fk_2",
+            "fk_3"
+          ]
+        },
+        "stats-row": {
+          "type": "stats-row",
+          "static": true,
+          "settings": {},
+          "blocks": {
+            "st_0": {
+              "type": "stats-block",
+              "settings": {
+                "image_icon": "shopify://shop_images/Icon_HiVis.png",
+                "text_zahl": "140 m",
+                "text_label": "visibility in headlights"
+              }
+            },
+            "st_1": {
+              "type": "stats-block",
+              "settings": {
+                "image_icon": "shopify://shop_images/Icon_Benefit_range.svg",
+                "text_zahl": "24–65 L",
+                "text_label": "sizes for every job"
+              }
+            },
+            "st_2": {
+              "type": "stats-block",
+              "settings": {
+                "image_icon": "shopify://shop_images/Icon_Benefit_trusted.svg",
+                "text_zahl": "Since 1992",
+                "text_label": "DICOTA quality"
+              }
+            }
+          },
+          "block_order": [
+            "st_0",
+            "st_1",
+            "st_2"
+          ]
+        }
+      },
+      "settings": {
+        "text_subline": "Why DICOTA Hi-Vis",
+        "text_heading": "More than storage. A safety essential.",
+        "textarea_text": "Safety at work starts with being seen. DICOTA Hi-Vis backpacks meet strict European safety standards and are designed to withstand tough conditions – while keeping comfort and everyday practicality in mind.",
+        "url_button_link": "shopify://collections/hi-vis",
+        "text_button_text": "Shop Hi-Vis"
+      }
+    },
+    "emotion": {
+      "type": "image_banner",
+      "settings": {
+        "image_hintergrundbild": "shopify://shop_images/Bilder_HI_VIS.jpg",
+        "text_headline_zeile_1": "VISIBILITY IS",
+        "text_headline_zeile_2": "YOUR INSURANCE.",
+        "textarea_subtext": "Every shift ends the same way: you get home safe.",
+        "url_button_link": "shopify://collections/hi-vis",
+        "text_button_text": "Shop Hi-Vis",
+        "min_height": 70,
+        "full_bleed": true,
+        "content_horizontal": "center",
+        "content_vertical": "center",
+        "text_align": "center",
+        "text_color": "#ffffff",
+        "overlay_strength": 50
+      }
+    },
+    "stories": {
+      "type": "the_latest",
+      "blocks": {
+        "art_0": {
+          "type": "latest-slide",
+          "settings": {
+            "image_hintergrundbild": "shopify://shop_images/Bilder_HI_VIS.jpg",
+            "url_link": "shopify://blogs/news/the-overlooked-gap-in-ppe-when-the-backpack-covers-your-hi-vis-clothing",
+            "text_badge": "STORY",
+            "text_titel": "The overlooked gap in PPE",
+            "textarea_text": "Why a black backpack can cancel out your hi-vis clothing – and what the standards say."
+          }
+        },
+        "art_1": {
+          "type": "latest-slide",
+          "settings": {
+            "image_hintergrundbild": "shopify://shop_images/01_Blog_SOB-Visual_2025.jpg",
+            "url_link": "shopify://blogs/news/more-visibility-and-sustainability-in-railway-construction-the-cooperation-between-sob-and-dicota",
+            "text_badge": "STORY",
+            "text_titel": "SOB × DICOTA",
+            "textarea_text": "More visibility and sustainability in railway construction."
+          }
+        },
+        "art_2": {
+          "type": "latest-slide",
+          "settings": {
+            "image_hintergrundbild": "shopify://shop_images/hi-vis.jpg",
+            "url_link": "shopify://blogs/news/work-safely-with-high-visibility-backpacks",
+            "text_badge": "STORY",
+            "text_titel": "Work safely with Hi-Vis backpacks",
+            "textarea_text": "The perfect supplement to workwear according to EN ISO 20471:2013."
+          }
+        },
+        "art_3": {
+          "type": "latest-slide",
+          "settings": {
+            "image_hintergrundbild": "shopify://shop_images/Hi-Vis-37.jpg",
+            "url_link": "shopify://blogs/news/always-stay-visible-with-the-reflective-sling-bag",
+            "text_badge": "STORY",
+            "text_titel": "Always stay visible",
+            "textarea_text": "The REFLECTIVE Sling Bag for the darker months on the road."
+          }
+        }
+      },
+      "block_order": [
+        "art_0",
+        "art_1",
+        "art_2",
+        "art_3"
+      ],
+      "settings": {
+        "text_heading": "Stories & insights. Everything you need to know about visibility at work.",
+        "padding_top": 5,
+        "padding_bottom": 5
+      }
+    },
+    "teams": {
+      "type": "image_text",
+      "settings": {
+        "image_bild": "shopify://shop_images/HIVIS_Bento.png",
+        "text_heading": "Equip your whole team.",
+        "textarea_text": "From a single crew to an entire railway company: DICOTA supplies companies and public authorities with volume pricing, project quotes and personal advice. Download the Hi-Vis catalogue or get in touch with our sales team.",
+        "url_button_link": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/PRODUCT_CATALOG_4.0_HIVIS_EN.pdf",
+        "text_button_text": "Download Hi-Vis catalogue (PDF)",
+        "image_position": "right"
+      }
+    },
+    "cta": {
+      "type": "discover_banner",
+      "settings": {
+        "image_bg_image": "shopify://shop_images/Hi-Vis_content_image.jpg",
+        "text_heading": "Be seen. Every shift.",
+        "textarea_text": "Discover the complete DICOTA Hi-Vis range – backpacks, bags and rain covers for maximum visibility.",
+        "url_button_link": "shopify://collections/hi-vis",
+        "text_button_text": "Shop all Hi-Vis products"
+      }
     }
   },
   "layout": "theme",
   "wrapper": "main.main-wrapper",
   "order": [
     "product_breadcrumb",
-    "page_content",
-    "b2b_no_access_bfngxc",
-    "1790767179ecde4caa"
+    "hero",
+    "usps",
+    "problem",
+    "sizes",
+    "products",
+    "usecases",
+    "why",
+    "emotion",
+    "stories",
+    "teams",
+    "cta"
   ]
 }
