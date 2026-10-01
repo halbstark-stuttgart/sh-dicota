@@ -9,6 +9,12 @@
  */
 {
   "sections": {
+    "product_breadcrumb": {
+      "type": "product_breadcrumb",
+      "settings": {
+        "text_home_label": "Home"
+      }
+    },
     "two_column_hero": {
       "type": "two_column_hero",
       "settings": {
@@ -414,6 +420,7 @@
   "layout": "theme",
   "wrapper": "main.main-wrapper",
   "order": [
+    "product_breadcrumb",
     "two_column_hero",
     "boxed_image",
     "feature_card_grid",
