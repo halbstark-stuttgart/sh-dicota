@@ -9,6 +9,12 @@
  */
 {
   "sections": {
+    "product_breadcrumb": {
+      "type": "product_breadcrumb",
+      "settings": {
+        "text_home_label": "Home"
+      }
+    },
     "page_content": {
       "type": "page_content",
       "settings": {}
@@ -59,6 +65,7 @@
   "layout": "theme",
   "wrapper": "main.main-wrapper",
   "order": [
+    "product_breadcrumb",
     "page_content",
     "b2b_no_access_bfngxc",
     "1790767179ecde4caa"
