@@ -1,5 +1,20 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
+    "product_breadcrumb": {
+      "type": "product_breadcrumb",
+      "settings": {
+        "text_home_label": "Home"
+      }
+    },
     "certificates_list": {
       "type": "certificates_list",
       "settings": {
@@ -9,6 +24,7 @@
     }
   },
   "order": [
+    "product_breadcrumb",
     "certificates_list"
   ],
   "layout": "theme",
