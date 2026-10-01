@@ -9,6 +9,12 @@
  */
 {
   "sections": {
+    "product_breadcrumb": {
+      "type": "product_breadcrumb",
+      "settings": {
+        "text_home_label": "Home"
+      }
+    },
     "feature_card_grid": {
       "type": "feature_card_grid",
       "blocks": {
@@ -117,6 +123,7 @@
     }
   },
   "order": [
+    "product_breadcrumb",
     "feature_card_grid",
     "contact_form_kRcaYF"
   ],
