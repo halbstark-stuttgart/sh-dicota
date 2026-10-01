@@ -7,9 +7,22 @@
   else
     assign bc_catalog = collections['all-products']
   endif
-  assign bc_leaf = collection
+  assign bc_leaf = product.metafields.custom.breadcrumb_collection.value
+  if bc_leaf == blank and collection.metafields.custom.parent_collection.value
+    assign bc_leaf = collection
+  endif
   if bc_leaf == blank
-    for c in product.collections
+    assign bc_sorted = product.collections | sort: 'handle'
+    for c in bc_sorted
+      assign bc_p = c.metafields.custom.parent_collection.value
+      if bc_p and bc_p.handle != bc_catalog.handle
+        assign bc_leaf = c
+        break
+      endif
+    endfor
+  endif
+  if bc_leaf == blank
+    for c in bc_sorted
       if c.metafields.custom.parent_collection.value
         assign bc_leaf = c
         break
