@@ -39,7 +39,7 @@
         "usp_0": {
           "type": "usp-block",
           "settings": {
-            "image_icon": "shopify://shop_images/Icon_HiVis.png",
+            "image_icon": "shopify://shop_images/Icon_Benefit_tender.svg",
             "text_uberschrift": "EN ISO 20471:2013",
             "textarea_beschreibung": "Certified fluorescent fabric and retroreflective stripes."
           }
@@ -47,7 +47,7 @@
         "usp_1": {
           "type": "usp-block",
           "settings": {
-            "image_icon": "shopify://shop_images/Icon_Benefit_trusted.svg",
+            "image_icon": "shopify://shop_images/Icon_Benefit_bestseller.svg",
             "text_uberschrift": "Visible up to 140 m",
             "textarea_beschreibung": "Seen earlier by drivers and machine operators – day and night."
           }
@@ -63,7 +63,7 @@
         "usp_3": {
           "type": "usp-block",
           "settings": {
-            "image_icon": "shopify://shop_images/Icon_Benefit_salesteam.svg",
+            "image_icon": "shopify://shop_images/Icon_Benefit_oem.svg",
             "text_uberschrift": "Volume pricing for teams",
             "textarea_beschreibung": "Personal advice and project quotes for companies and public authorities."
           }
@@ -213,7 +213,7 @@
             "fk_0": {
               "type": "feature-karte",
               "settings": {
-                "image_icon": "shopify://shop_images/Icon_HiVis.png",
+                "image_icon": "shopify://shop_images/Icon_Benefit_tender.svg",
                 "text_heading": "Certified visibility",
                 "textarea_text": "Fluorescent fabric and retroreflective stripes according to EN ISO 20471:2013 – the standard for high-visibility workwear.",
                 "url_button_link": "",
@@ -243,7 +243,7 @@
             "fk_3": {
               "type": "feature-karte",
               "settings": {
-                "image_icon": "shopify://shop_images/Icon_Benefit_bestseller.svg",
+                "image_icon": "shopify://shop_images/Icon_Benefit_lifetime.svg",
                 "text_heading": "Ready for any weather",
                 "textarea_text": "Matching HI-VIS rain covers in yellow and orange keep you visible even in heavy rain.",
                 "url_button_link": "",
@@ -266,7 +266,7 @@
             "st_0": {
               "type": "stats-block",
               "settings": {
-                "image_icon": "shopify://shop_images/Icon_HiVis.png",
+                "image_icon": "shopify://shop_images/Icon_Benefit_bestseller.svg",
                 "text_zahl": "140 m",
                 "text_label": "visibility in headlights"
               }
