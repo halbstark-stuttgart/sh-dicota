@@ -421,7 +421,8 @@
           "type": "imagelink-list-link",
           "name": "Image+Link List Link",
           "settings": {
-            "url_link_ziel": "",
+            "url_link_ziel": "shopify://pages/hi-vis",
+            "image_hover_bild": "shopify://shop_images/hi-vis.jpg",
             "text_label": "Safety at Work"
           },
           "blocks": {}
