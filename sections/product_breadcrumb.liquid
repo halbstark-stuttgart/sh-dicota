@@ -1,9 +1,23 @@
 <div class="padding-global" style="padding-top:{{ section.settings.padding_top }}rem;padding-bottom:{{ section.settings.padding_bottom }}rem;background-color:{{ section.settings.bg_color }};color:{{ section.settings.text_color }};"><div class="container-large"><nav class="product-breadcrumb_nav" aria-label="Breadcrumb"><a href="{{ routes.root_url }}" li-object:href="routes.root_url" class="product-breadcrumb_link"><span>
 {{ section.settings.text_home_label }}
 </span></a>{% if template.name == 'product' %}    <span li-if="template.name == 'product'">
-    <span class="product-breadcrumb_sep">›</span>{% if collection.url != blank %}    <span li-if="collection.url != blank">
-    <a li-object:href="collection.url" href="{{ collection.url }}" class="product-breadcrumb_link"><span li-object="collection.metafields.custom.collection_name | default: collection.title">{{ collection.metafields.custom.collection_name | default: collection.title }}</span></a><span class="product-breadcrumb_sep">›</span>    </span>
-{% endif %}<span class="product-breadcrumb_current" li-object="product.title">{{ product.title }}</span>    </span>
+    <span class="product-breadcrumb_sep">›</span>{%- liquid
+  if customer.b2b? or collection.handle contains 'b2b'
+    assign bc_catalog = collections['b2b-products-all']
+  else
+    assign bc_catalog = collections['all-products']
+  endif
+  assign bc_leaf = collection
+  if bc_leaf == blank
+    for c in product.collections
+      if c.metafields.custom.parent_collection.value
+        assign bc_leaf = c
+        break
+      endif
+    endfor
+  endif
+  assign bc_parent = bc_leaf.metafields.custom.parent_collection.value
+-%}{% if bc_catalog %}<a href="{{ bc_catalog.url }}" class="product-breadcrumb_link"><span>{{ bc_catalog.metafields.custom.collection_name | default: bc_catalog.title }}</span></a><span class="product-breadcrumb_sep">›</span>{% endif %}{% if bc_parent and bc_parent.handle != bc_catalog.handle %}<a href="{{ bc_parent.url }}" class="product-breadcrumb_link"><span>{{ bc_parent.metafields.custom.collection_name | default: bc_parent.title }}</span></a><span class="product-breadcrumb_sep">›</span>{% endif %}{% if bc_leaf and bc_leaf.handle != bc_catalog.handle %}<a href="{{ bc_leaf.url }}" class="product-breadcrumb_link"><span>{{ bc_leaf.metafields.custom.collection_name | default: bc_leaf.title }}</span></a><span class="product-breadcrumb_sep">›</span>{% endif %}<span class="product-breadcrumb_current" li-object="product.title">{{ product.title }}</span>    </span>
 {% endif %}{% if template.name == 'collection' %}    <span li-if="template.name == 'collection'">
     <span class="product-breadcrumb_sep">›</span>{%- liquid
   if customer.b2b? or collection.handle contains 'b2b'
