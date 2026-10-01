@@ -12,7 +12,8 @@
     "product_breadcrumb": {
       "type": "product_breadcrumb",
       "settings": {
-        "text_home_label": "Home"
+        "text_home_label": "Home",
+        "text_suche_label": "Search"
       }
     },
     "search": {
