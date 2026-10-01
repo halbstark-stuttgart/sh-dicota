@@ -9,6 +9,12 @@
  */
 {
   "sections": {
+    "product_breadcrumb": {
+      "type": "product_breadcrumb",
+      "settings": {
+        "text_home_label": "Home"
+      }
+    },
     "contact_form": {
       "type": "contact_form",
       "blocks": {
@@ -68,6 +74,7 @@
   "layout": "theme",
   "wrapper": "main.main-wrapper",
   "order": [
+    "product_breadcrumb",
     "contact_form"
   ]
 }
