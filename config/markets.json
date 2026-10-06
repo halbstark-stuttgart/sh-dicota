@@ -15,10 +15,22 @@
     "b2b-euro": {
       "parent": "all-b2b"
     },
+    "b2b-switzerland": {
+      "parent": "all-b2b"
+    },
+    "b2b-usd": {
+      "parent": "all-b2b"
+    },
+    "b2b-uk": {
+      "parent": "all-b2b"
+    },
     "baloise": {
       "parent": "all-b2b"
     },
     "dicota-partnershop": {
+      "parent": "all-b2b"
+    },
+    "dicota-staff-portfolio": {
       "parent": "all-b2b"
     }
   }
