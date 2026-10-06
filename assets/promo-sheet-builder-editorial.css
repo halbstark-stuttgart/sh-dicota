@@ -1,0 +1,102 @@
+/* ===================== 7) Editorial (DICOTA flyer layout) ===================== */
+.psb-hero__brand, .psb-foot__site { display: none; }
+.psb-tpl__thumb--editorial { grid-template-columns: repeat(4, 1fr); grid-template-rows: 20px 5px repeat(3, 1fr); }
+.psb-tpl__thumb--editorial i { grid-column: span 4; margin: -3px -3px 0; background: linear-gradient(#9aa1aa, #fff); }
+.psb-tpl__thumb--editorial b:nth-of-type(1) { grid-column: span 3; background: #2b3138; }
+.psb-tpl__thumb--editorial b:nth-of-type(2) { grid-column: 3 / span 2; grid-row: 3 / span 2; }
+
+.psb-t-editorial { --psb-pad: 14mm; }
+.psb-t-editorial .psb-hero__media { height: 74mm; background: #fff; }
+.psb-t-editorial .psb-hero__media::after { content: ''; position: absolute; inset: 0;
+  background: linear-gradient(to bottom, rgba(255,255,255,0) 45%, rgba(255,255,255,.75) 80%, #fff 100%); }
+.psb-t-editorial.psb-noimg .psb-hero__media { height: 30mm; }
+.psb-t-editorial .psb-hero__text { padding: 1mm var(--psb-pad) 0; }
+.psb-t-editorial .psb-kicker { display: none; }
+.psb-t-editorial .psb-headline { font-size: 31pt; color: var(--psb-ink); text-shadow: none; }
+.psb-t-editorial .psb-hero__logo { top: 9mm; left: var(--psb-pad); right: auto; }
+.psb-t-editorial .psb-hero__logo.is-boxed { padding: 1.8mm 2.4mm; border: .25mm solid #c8c8c8; }
+.psb-t-editorial .psb-hero__logo img { max-height: 13mm; max-width: 40mm; }
+.psb-t-editorial .psb-hero__brand { display: block; position: absolute; z-index: 2; top: 11mm; right: var(--psb-pad); }
+.psb-t-editorial .psb-hero__brand img { height: 6.5mm; width: auto; max-width: 45mm; }
+[dir=rtl] .psb-t-editorial .psb-hero__logo { left: auto; right: var(--psb-pad); }
+[dir=rtl] .psb-t-editorial .psb-hero__brand { right: auto; left: var(--psb-pad); }
+.psb-t-editorial .psb-intro { padding-top: 1.5mm; }
+.psb-t-editorial .psb-intro__text { font-size: 13pt; font-weight: 400; line-height: 1.3; color: var(--psb-ink); max-height: calc(2 * 1.3em); }
+.psb-t-editorial .psb-validity { margin-top: 2.5mm; }
+
+.psb-t-editorial .psb-products { grid-template-columns: repeat(4, 1fr); gap: 7mm 6mm; padding: 9mm var(--psb-pad) 5mm; }
+.psb-t-editorial .psb-card { border: 0; background: transparent; grid-template-rows: minmax(0, 1fr) auto auto; }
+.psb-t-editorial .psb-card--empty { border: .3mm dashed #d0d0d0; }
+.psb-t-editorial .psb-card__media { background: transparent; padding: 0 0 1.5mm; }
+.psb-t-editorial .psb-badge { top: 0; left: 0; font-size: 7.5pt; padding: .6mm 1.4mm; }
+.psb-t-editorial .psb-card__body { padding: 1.5mm 0 0; overflow: hidden; }
+.psb-t-editorial .psb-card__sku { order: 2; font-size: 7.5pt; letter-spacing: .02em; text-transform: none; color: var(--psb-ink); font-weight: 400; margin-top: .4mm; }
+.psb-t-editorial .psb-card__body { display: flex; flex-direction: column; }
+.psb-t-editorial .psb-card__title { order: 1; margin-top: 0; font-size: 9.2pt; line-height: 1.22; }
+.psb-t-editorial .psb-card__tagline, .psb-t-editorial .psb-card__args { display: none; }
+.psb-t-editorial .psb-card__price { justify-content: flex-start; align-items: baseline; gap: 2.5mm; padding: 1.6mm 0 0; }
+.psb-t-editorial .psb-price__lbl { display: none; }
+.psb-t-editorial .psb-price__rrp { font-size: 8pt; }
+.psb-t-editorial .psb-price__promo { text-align: start; }
+.psb-t-editorial .psb-price__promo b { font-size: 12pt; }
+/* hero product: 2 × 2 cells, right-hand side like the flyer */
+.psb-t-editorial .psb-card--feat { grid-column: 3 / span 2; grid-row: 1 / span 2; grid-template-rows: 52% minmax(0, 1fr) auto; }
+.psb-t-editorial .psb-card--feat .psb-card__title { font-size: 10.5pt; }
+.psb-t-editorial .psb-card--feat .psb-card__tagline { display: -webkit-box; order: 3; -webkit-line-clamp: 4; font-size: 8.2pt; line-height: 1.5; color: var(--psb-ink); margin-top: 1.6mm; }
+.psb-t-editorial .psb-card--feat .psb-card__args { display: block; order: 4; font-size: 7.8pt; margin-top: 1.4mm; }
+.psb-t-editorial .psb-card--feat .psb-price__promo b { font-size: 14pt; }
+.psb-t-editorial.psb-n-12 .psb-products { gap: 6mm 6mm; }
+.psb-t-editorial.psb-dense-1 .psb-card--feat .psb-card__args { display: none; }
+/* footer like the flyer: contact left, website right, no logo (logo sits in the header) */
+.psb-t-editorial .psb-foot { border-top: 0; grid-template-columns: 70mm 1fr 34mm; }
+.psb-t-editorial .psb-foot__brand { display: none; }
+.psb-t-editorial .psb-foot__contact { order: -1; text-align: start; }
+.psb-t-editorial .psb-foot__contact .psb-foot__web { display: none; }
+.psb-t-editorial .psb-foot__contact strong { font-weight: 500; }
+.psb-t-editorial .psb-foot__site { display: block; text-align: end; font-size: 7.5pt; font-weight: 600; color: var(--psb-ink); }
+
+/* Futura PT needs a slightly taller line box for uppercase headlines */
+.psb-sheet .psb-headline { line-height: 1.08; max-height: calc(2 * 1.08em + 2px); }
+
+/* Upload controls (real file inputs, visually hidden) + drop zones */
+.psb-vh { position: absolute !important; width: 1px !important; height: 1px !important; padding: 0 !important; margin: -1px !important;
+  overflow: hidden !important; clip: rect(0 0 0 0) !important; white-space: nowrap !important; border: 0 !important; opacity: 0; }
+.psb-btn { position: relative; }
+.psb-upload { padding: 6px; border: 1px dashed transparent; transition: border-color .15s, background .15s; }
+.psb-upload.is-over { border-color: #111; background: #f6f6f6; }
+.psb-upload.is-busy { opacity: .5; pointer-events: none; }
+.psb-upload__hint { flex-basis: 100%; font-size: 11.5px; color: #6b6b6b; }
+.psb-btn:focus-within { outline: 2px solid #111; outline-offset: 2px; }
+
+/* ===================== 8) Logo slots – identical on every template ===================== */
+/* DICOTA logo: always top right, always the same size. Campaign logo: always top left. */
+.psb-hero__logo, .psb-hero__brand { display: none !important; }
+.psb-brandlogo { position: absolute; z-index: 6; top: 10mm; right: 14mm; line-height: 0; }
+.psb-brandlogo img { display: block; height: 6.5mm; width: auto; max-width: 48mm; }
+.psb-brandlogo--light img { filter: brightness(0) invert(1); }
+.psb-brandlogo__word { display: block; font-size: 17pt; line-height: 1; font-weight: 700; letter-spacing: .06em; color: #111; }
+.psb-brandlogo--light .psb-brandlogo__word { color: #fff; }
+.psb-camplogo { position: absolute; z-index: 6; top: 10mm; left: 14mm; line-height: 0; }
+.psb-camplogo img { display: block; width: auto; height: auto; max-height: 17mm; max-width: 52mm; }
+.psb-camplogo.is-boxed { background: #fff; border: .25mm solid #c8c8c8; padding: 1.8mm 2.4mm; }
+.psb-camplogo.is-boxed img { max-height: 13.5mm; max-width: 46mm; }
+[dir=rtl] .psb-brandlogo { right: auto; left: 14mm; }
+[dir=rtl] .psb-camplogo { left: auto; right: 14mm; }
+.psb-foot { grid-template-columns: 40mm 1fr 56mm; }
+.psb-foot__claim { margin-top: 0; }
+
+/* headers that carry text at the top: make room below the logo row */
+.psb-t-facts .psb-hero__text, .psb-t-pricelist .psb-hero__text { align-self: end; padding-bottom: 7mm; }
+.psb-t-facts.psb-has-logo .psb-hero { height: 62mm; }
+.psb-t-pricelist.psb-has-logo .psb-hero { height: 58mm; }
+.psb-t-facts .psb-hero__text { padding-top: 22mm; }
+.psb-t-pricelist .psb-hero__text { padding-top: 20mm; }
+.psb-t-facts.psb-has-logo .psb-hero__text { padding-top: 30mm; }
+.psb-t-pricelist.psb-has-logo .psb-hero__text { padding-top: 28mm; }
+.psb-t-facts .psb-hero { height: 54mm; }
+.psb-t-pricelist .psb-hero { height: 50mm; }
+.psb-t-editorial .psb-hero__media { height: 76mm; }
+
+/* rows: overflow must be measurable so the auto-density kicks in */
+.psb-t-pricelist .psb-card__body { justify-content: safe center; }
+.psb-t-pricelist .psb-card__body > *, .psb-t-editorial .psb-card__body > * { flex-shrink: 0; }
