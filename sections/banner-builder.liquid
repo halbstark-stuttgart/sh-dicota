@@ -30,6 +30,41 @@
 
 {{ 'banner-builder.css' | asset_url | stylesheet_tag }}
 
+{%- comment -%} Breadcrumb: parent item is looked up in the B2B menu, e.g. "Marketing Support › Banner Builder" {%- endcomment -%}
+{%- liquid
+  assign bc_menu = section.settings.breadcrumb_menu | default: 'main-menu-reseller'
+  assign bc_parent = blank
+  for l in linklists[bc_menu].links
+    for c in l.links
+      if c.type == 'page_link' and c.object.id == page.id
+        assign bc_parent = l
+        break
+      endif
+    endfor
+    if bc_parent != blank
+      break
+    endif
+  endfor
+  if bc_parent == blank
+    for l in linklists[bc_menu].links
+      if l.handle == 'marketing-support'
+        assign bc_parent = l
+        break
+      endif
+    endfor
+  endif
+-%}
+{%- if section.settings.show_breadcrumb -%}
+<div class="padding-global" style="padding-top:.5rem;padding-bottom:.5rem;"><div class="container-large">
+  <nav class="product-breadcrumb_nav" aria-label="Breadcrumb">
+    {%- if bc_parent != blank -%}
+      <a href="{{ bc_parent.url }}" class="product-breadcrumb_link"><span>{{ bc_parent.title }}</span></a><span class="product-breadcrumb_sep">›</span>
+    {%- endif -%}
+    <span class="product-breadcrumb_current">{{ page.title }}</span>
+  </nav>
+</div></div>
+{%- endif -%}
+
 <div class="padding-global padding-section-small"><div class="container-large"><div class="bb-page">
   {%- if allowed -%}
     <script type="application/json" id="bb-config-{{ section.id }}">
@@ -108,7 +143,10 @@
     { "type": "text", "id": "subline", "label": "Subline", "default": "Marketing Support" },
     { "type": "text", "id": "heading", "label": "Heading", "default": "Banner Builder" },
     { "type": "textarea", "id": "intro", "label": "Intro", "info": "Empty = automatic text in the page language (DE/EN)." },
-    { "type": "image_picker", "id": "brand_logo", "label": "DICOTA logo (black, transparent PNG)" }
+    { "type": "image_picker", "id": "brand_logo", "label": "DICOTA logo (black, transparent PNG)" },
+    { "type": "header", "content": "Breadcrumb" },
+    { "type": "checkbox", "id": "show_breadcrumb", "label": "Show breadcrumb", "default": true },
+    { "type": "link_list", "id": "breadcrumb_menu", "label": "Menu for the parent item", "info": "Empty = Main menu (B2B). The menu item that contains this page becomes the first breadcrumb level, e.g. Marketing Support." }
   ],
   "presets": [{ "name": "Banner Builder" }]
 }
