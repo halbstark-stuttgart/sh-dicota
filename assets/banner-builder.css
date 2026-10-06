@@ -5,6 +5,7 @@
 .bb-gate { max-width: 520px; margin: 48px auto; text-align: center; }
 .bb-loading, .bb-hint { color: #6b6b6b; font-size: 12.5px; }
 .bb-app { font-size: 15px; line-height: 1.4; }
+.bb-app [hidden] { display: none !important; }
 .bb-app *, .bb-app *::before, .bb-app *::after { box-sizing: border-box; }
 .bb-app input, .bb-app select, .bb-app button, .bb-app textarea { font-family: inherit; }
 
@@ -68,6 +69,7 @@
 .bb-upload { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding: 6px; border: 1px dashed transparent; }
 .bb-upload.is-over { border-color: #111; background: #f6f6f6; }
 .bb-upload small { color: #6b6b6b; font-size: 11.5px; }
+.bb-pmode { flex-basis: 100%; margin: 4px 0 0; }
 .bb-upload img, .bb-upload__empty { width: 84px; height: 44px; object-fit: contain; border: 1px solid #e2e2e2;
   background: repeating-conic-gradient(#f1f1f1 0 25%, #fff 0 50%) 0 0 / 12px 12px; display: block; }
 

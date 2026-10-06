@@ -50,8 +50,8 @@
       custom: 'Eigene Größe', width: 'Breite (px)', height: 'Höhe (px)', image: 'Bild', ownImage: 'Eigenes Bild',
       focusHint: 'Klick ins Vorschaubild setzt den Bildfokus.', layout: 'Layout', lOverlay: 'Text auf Bild', lSplit: 'Bild + weiße Fläche',
       imgSource: 'Bildquelle', srcPhoto: 'Stimmungsbild', srcProduct: 'Produktbild', overlay: 'Abdunklung', pSize: 'Produktgröße', pHint: 'Produkt im Vorschaubild mit der Maus (oder dem Finger) verschieben.', pReset: 'Größe & Position zurücksetzen', ownShot: 'Eigenes Produktbild', noShots: 'Für dieses Thema sind noch keine Product Shots hinterlegt.',
-      texts: 'Texte', eyebrow: 'Dachzeile', headline: 'Headline', claim: 'Claim', ownClaim: 'Eigener Claim …', claimText: 'Eigener Claim',
-      cta: 'Button anzeigen', ctaText: 'Button-Text', partner: 'Ihr Logo (optional)', partnerHint: 'Erscheint oben links, DICOTA-Logo immer oben rechts.',
+      texts: 'Texte', eyebrow: 'Dachzeile', headline: 'Headline', claim: 'Claim', ownClaim: 'Eigener Claim …', claimText: 'Eigener Claim', claimOwnPh: 'Eigenen Claim eintippen – ersetzt die Auswahl oben',
+      cta: 'Button anzeigen', ctaText: 'Button-Text', partner: 'Ihr Logo (optional)', partnerHint: 'Erscheint oben links, DICOTA-Logo immer oben rechts.', pmOriginal: 'Original', pmBox: 'Weißes Feld', pmWhite: 'Weiß einfärben',
       upload: 'Datei wählen', remove: 'Entfernen', dropHint: 'oder hierher ziehen', language: 'Sprache der Texte',
       export: 'Download & Versand', fileType: 'Dateiformat', retina: 'Doppelte Auflösung (2×, Retina)', maxKb: 'Max. Dateigröße JPG (KB, optional)',
       download: 'Herunterladen', email: 'Per E-Mail senden', zip: 'Mehrere Größen als ZIP', zipHint: 'Wählen Sie die Größen für das ZIP-Paket:',
@@ -66,8 +66,8 @@
       custom: 'Custom size', width: 'Width (px)', height: 'Height (px)', image: 'Image', ownImage: 'Own image',
       focusHint: 'Click into the preview image to set the focal point.', layout: 'Layout', lOverlay: 'Text on image', lSplit: 'Image + white panel',
       imgSource: 'Image source', srcPhoto: 'Mood image', srcProduct: 'Product image', overlay: 'Darkening', pSize: 'Product size', pHint: 'Drag the product in the preview to move it.', pReset: 'Reset size & position', ownShot: 'Own product image', noShots: 'No product shots for this theme yet.',
-      texts: 'Texts', eyebrow: 'Eyebrow', headline: 'Headline', claim: 'Claim', ownClaim: 'Own claim …', claimText: 'Own claim',
-      cta: 'Show button', ctaText: 'Button text', partner: 'Your logo (optional)', partnerHint: 'Shown top left, DICOTA logo always top right.',
+      texts: 'Texts', eyebrow: 'Eyebrow', headline: 'Headline', claim: 'Claim', ownClaim: 'Own claim …', claimText: 'Own claim', claimOwnPh: 'Type your own claim – replaces the selection above',
+      cta: 'Show button', ctaText: 'Button text', partner: 'Your logo (optional)', partnerHint: 'Shown top left, DICOTA logo always top right.', pmOriginal: 'Original', pmBox: 'White field', pmWhite: 'Make white',
       upload: 'Choose file', remove: 'Remove', dropHint: 'or drop it here', language: 'Text language',
       export: 'Download & share', fileType: 'File format', retina: 'Double resolution (2×, retina)', maxKb: 'Max. JPG file size (KB, optional)',
       download: 'Download', email: 'Send by e-mail', zip: 'Several sizes as ZIP', zipHint: 'Choose the sizes for the ZIP package:',
@@ -263,10 +263,14 @@
     var leftX = pad, topY = pad;
     if (spec.partner && spec.partner.img) {
       var P = layer('Partner-Logo'), pim = spec.partner.img;
-      var boxed = (!split || (panel && panel.x > 0 && !strip && ar >= 1.25) || (panel && panel.y > 0)) ? true : false;
+      // partner logo: 'original' = exactly as uploaded (transparency kept), 'box' = on a white field, 'white' = recoloured white
+      var pmode = spec.partnerMode || 'original';
+      var boxed = pmode === 'box';
+      if (pmode === 'white' && spec.partner.alpha) pim = whiteVersion(pim);
       var maxPh = lh * (boxed ? 1.15 : 1.3), maxPw = Math.min(W * (strip ? 0.22 : 0.32), (lx - pad * 2));
-      var psc = Math.min(maxPh / pim.naturalHeight, maxPw / pim.naturalWidth);
-      var ppw = pim.naturalWidth * psc, pph = pim.naturalHeight * psc;
+      var pnw = pim.naturalWidth || pim.width, pnh = pim.naturalHeight || pim.height;
+      var psc = Math.min(maxPh / pnh, maxPw / pnw);
+      var ppw = pnw * psc, pph = pnh * psc;
       var bpad = boxed ? Math.round(lh * 0.28) : 0;
       var px = pad, py = strip ? Math.round((H - pph) / 2) : Math.round(ly + lh / 2 - pph / 2);
       if (narrow) { px = Math.round((W - ppw) / 2); py = ly + lh + pad; }
@@ -405,7 +409,7 @@
       theme: th ? th.handle : null, ori: saved.ori || 'h', w: saved.w || 1920, h: saved.h || 600,
       bgIndex: saved.theme === (th && th.handle) ? (saved.bgIndex || 0) : 0, focus: saved.focus || { x: 0.5, y: 0.5 },
       layout: saved.layout || 'overlay', source: saved.source || 'photo', overlay: saved.overlay == null ? 0.55 : saved.overlay,
-      pScale: saved.pScale || 1, pPos: saved.pPos || { x: 0.5, y: 0.5 }, pIndex: saved.theme === (th && th.handle) ? (saved.pIndex || 0) : 0,
+      pScale: saved.pScale || 1, pPos: saved.pPos || { x: 0.5, y: 0.5 }, pIndex: saved.theme === (th && th.handle) ? (saved.pIndex || 0) : 0, partnerMode: saved.partnerMode || 'original',
       showEyebrow: saved.showEyebrow !== false, headline: null, claimIdx: 0, claimOwn: '', cta: saved.cta !== false, ctaText: null,
       type: saved.type || 'jpg', retina: !!saved.retina, maxKb: saved.maxKb || '', zipSizes: saved.zipSizes || [], zipTypes: saved.zipTypes || ['jpg']
     };
@@ -455,7 +459,7 @@
           '<label class="bb-check"><input type="checkbox" data-k="showEyebrow"> ' + t.eyebrow + ' <em data-ref="ebtext"></em></label>' +
           '<label class="bb-field"><span class="bb-label">' + t.headline + '</span><input type="text" maxlength="80" data-k="headline"></label>' +
           '<label class="bb-field"><span class="bb-label">' + t.claim + '</span><select data-ref="claimSel"></select></label>' +
-          '<label class="bb-field" data-ref="claimOwnWrap" hidden><span class="bb-label">' + t.claimText + '</span><input type="text" maxlength="120" data-k="claimOwn"></label>' +
+          '<label class="bb-field" data-ref="claimOwnWrap"><span class="bb-label">' + t.claimText + '</span><input type="text" maxlength="120" data-k="claimOwn" placeholder="' + esc(t.claimOwnPh) + '"></label>' +
           '<div class="bb-row bb-row--cta"><label class="bb-check"><input type="checkbox" data-k="cta"> ' + t.cta + '</label>' +
           '<label class="bb-field"><input type="text" maxlength="30" data-k="ctaText" placeholder="' + esc(t.ctaText) + '"></label></div>' +
           '<div class="bb-field"><span class="bb-label">' + t.partner + '</span><div class="bb-upload" data-drop="partner" data-ref="partnerBox"></div><small class="bb-hint">' + t.partnerHint + '</small></div>' +
@@ -501,25 +505,29 @@
       var v = e.target.type === 'checkbox' ? e.target.checked : e.target.value;
       if (k === 'w' || k === 'h') { v = clamp(parseInt(v, 10) || 0, 0, 6000); if (v < 50) return; }
       if (k === 'overlay' || k === 'pScale') v = parseFloat(v);
-      s[k] = v; self.syncLight(); self.persist(); self.redraw();
+      s[k] = v;
+      // typing an own claim switches the claim to "own"; emptying it falls back to the first suggestion
+      if (k === 'claimOwn') { var was = s.claimIdx; s.claimIdx = String(v).trim() ? -1 : (was === -1 ? 0 : was); if (was !== s.claimIdx) self.refs.claimSel.value = String(s.claimIdx); }
+      self.syncLight(); self.persist(); self.redraw();
     });
     root.addEventListener('change', function (e) {
       var el = e.target;
       if (el.getAttribute('data-act') === 'lang') { self.persist(); location.href = el.value; return; }
-      if (el === self.refs.claimSel) { s.claimIdx = parseInt(el.value, 10); self.sync(); self.persist(); self.redraw(); return; }
+      if (el === self.refs.claimSel) { s.claimIdx = parseInt(el.value, 10); if (s.claimIdx !== -1) s.claimOwn = ''; self.sync(); if (s.claimIdx === -1) { var ci = root.querySelector('[data-k="claimOwn"]'); if (ci) ci.focus(); } self.persist(); self.redraw(); return; }
       var up = el.getAttribute('data-upload');
       if (up) { self.handleUpload(up, el.files && el.files[0]); el.value = ''; }
       var z = el.getAttribute('data-zip');
       if (z) { var list = s.zipSizes.filter(function (x) { return x !== z; }); if (el.checked) list.push(z); s.zipSizes = list; self.persist(); }
     });
     root.addEventListener('click', function (e) {
-      var b = e.target.closest('[data-theme],[data-ori],[data-size],[data-bg],[data-shot],[data-layout],[data-source],[data-type],[data-ziptype],[data-act]');
+      var b = e.target.closest('[data-theme],[data-ori],[data-size],[data-bg],[data-shot],[data-pmode],[data-layout],[data-source],[data-type],[data-ziptype],[data-act]');
       if (!b || !root.contains(b)) return;
       if (b.hasAttribute('data-theme')) { s.theme = b.getAttribute('data-theme'); self.applyTheme(true); }
       else if (b.hasAttribute('data-ori')) { s.ori = b.getAttribute('data-ori'); var first = SIZES.filter(function (x) { return x.o === s.ori; })[0]; s.w = first.w; s.h = first.h; }
       else if (b.hasAttribute('data-size')) { var p = b.getAttribute('data-size').split('x'); s.w = +p[0]; s.h = +p[1]; }
       else if (b.hasAttribute('data-bg')) { s.bgIndex = +b.getAttribute('data-bg'); s.focus = { x: 0.5, y: 0.5 }; if (s.bgIndex >= 0) self.ownBg = self.ownBg; }
       else if (b.hasAttribute('data-shot')) s.pIndex = +b.getAttribute('data-shot');
+      else if (b.hasAttribute('data-pmode')) s.partnerMode = b.getAttribute('data-pmode');
       else if (b.hasAttribute('data-layout')) s.layout = b.getAttribute('data-layout');
       else if (b.hasAttribute('data-source')) s.source = b.getAttribute('data-source');
       else if (b.hasAttribute('data-type')) s.type = b.getAttribute('data-type');
@@ -588,7 +596,7 @@
     var self = this; if (!file) return;
     readFile(file).then(function (url) { return loadImage(url).then(function (im) { if (!im) throw new Error('img'); return { url: url, img: im }; }); })
       .then(function (r) {
-        if (key === 'partner') self.partner = { url: r.url, img: r.img, alpha: hasAlpha(r.img) };
+        if (key === 'partner') { self.partner = { url: r.url, img: r.img, alpha: hasAlpha(r.img) }; if (!self.partner.alpha && self.s.partnerMode === 'white') self.s.partnerMode = 'original'; }
         else if (self.s.source === 'product') { self.ownShot = r; self.s.pIndex = -1; self.s.pScale = 1; self.s.pPos = { x: 0.5, y: 0.5 }; }
         else { self.ownBg = r; self.s.bgIndex = -1; self.s.source = 'photo'; self.s.focus = { x: 0.5, y: 0.5 }; }
         self.sync(); self.redraw();
@@ -613,7 +621,6 @@
     var pr = this.root.querySelector('[data-k="pScale"]'); if (pr && String(pr.value) !== String(s.pScale)) pr.value = s.pScale;
     this.refs.imgHint.textContent = prod ? this.t.pHint : this.t.focusHint;
     this.refs.canvas.classList.toggle('is-product', prod);
-    this.refs.claimOwnWrap.hidden = s.claimIdx !== -1;
     this.refs.kbwrap.hidden = s.type !== 'jpg';
   };
 
@@ -652,7 +659,11 @@
       '<option value="-1"' + (s.claimIdx === -1 ? ' selected' : '') + '>' + esc(t.ownClaim) + '</option><option value="-2"' + (s.claimIdx === -2 ? ' selected' : '') + '>–</option>';
     this.refs.partnerBox.innerHTML = (this.partner ? '<img src="' + this.partner.url + '" alt="">' : '<span class="bb-upload__empty"></span>') +
       '<label class="bb-btn bb-btn--small">' + t.upload + '<input type="file" class="bb-vh" accept="image/*" data-upload="partner"></label>' +
-      (this.partner ? '<button type="button" class="bb-btn bb-btn--small bb-btn--ghost" data-act="rm-partner">' + t.remove + '</button>' : '<small>' + t.dropHint + '</small>');
+      (this.partner ? '<button type="button" class="bb-btn bb-btn--small bb-btn--ghost" data-act="rm-partner">' + t.remove + '</button>' : '<small>' + t.dropHint + '</small>') +
+      (this.partner ? '<div class="bb-seg bb-seg--small bb-pmode">' + [['original', t.pmOriginal], ['box', t.pmBox], ['white', t.pmWhite]].map(function (m) {
+        var dis = m[0] === 'white' && !self.partner.alpha;
+        return '<button type="button" data-pmode="' + m[0] + '"' + (s.partnerMode === m[0] ? ' class="is-active"' : '') + (dis ? ' disabled' : '') + '>' + esc(m[1]) + '</button>';
+      }).join('') + '</div>' : '');
     Array.prototype.forEach.call(this.refs.type.children, function (b) { b.classList.toggle('is-active', b.getAttribute('data-type') === s.type); });
     Array.prototype.forEach.call(this.refs.ziptypes.children, function (b) { b.classList.toggle('is-active', s.zipTypes.indexOf(b.getAttribute('data-ziptype')) > -1); });
     this.refs.zipsizes.innerHTML = ['h', 'v', 'r'].map(function (o) {
@@ -677,7 +688,7 @@
     return Promise.all([loadImage(bgUrl), loadImage(shot && shot.url), Promise.resolve(this.logo)]).then(function (r) {
       return {
         w: Math.round(w * scale), h: Math.round(h * scale), theme: th, bg: r[0], product: r[1], logo: r[2],
-        partner: self.partner, layout: s.layout, source: s.source, focus: s.focus, overlay: s.overlay, pScale: s.pScale, pPos: s.pPos,
+        partner: self.partner, layout: s.layout, source: s.source, focus: s.focus, overlay: s.overlay, pScale: s.pScale, pPos: s.pPos, partnerMode: s.partnerMode,
         eyebrow: s.showEyebrow && th ? th.eyebrow : '', headline: s.headline, claim: self.claimText(),
         cta: s.cta, ctaText: s.ctaText, tone: (th && th.tone) || 'light'
       };
