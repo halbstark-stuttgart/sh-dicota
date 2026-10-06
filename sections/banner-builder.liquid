@@ -1,0 +1,115 @@
+{%- comment -%}
+  DICOTA · myDICOTA Banner Builder
+  Themes come from metaobjects of type "dicota_banner_theme" (Shopify admin → Content → Metaobjects → Banner-Thema).
+  Files: assets/banner-builder.js, assets/banner-builder.css
+{%- endcomment -%}
+{%- liquid
+  assign access_tag = section.settings.access_tag | strip | downcase
+  assign allowed = false
+  if request.design_mode
+    assign allowed = true
+  elsif customer
+    if access_tag == blank
+      assign allowed = true
+    else
+      for t in customer.tags
+        assign tt = t | strip | downcase
+        if tt == access_tag
+          assign allowed = true
+          break
+        endif
+      endfor
+    endif
+  endif
+  if request.locale.iso_code == 'de'
+    assign ui_de = true
+  else
+    assign ui_de = false
+  endif
+-%}
+
+{{ 'banner-builder.css' | asset_url | stylesheet_tag }}
+
+<div class="padding-global padding-section-small"><div class="container-large"><div class="bb-page">
+  {%- if allowed -%}
+    <script type="application/json" id="bb-config-{{ section.id }}">
+      {
+        "sectionId": {{ section.id | json }},
+        "uiLang": {% if ui_de %}"de"{% else %}"en"{% endif %},
+        "lang": {{ request.locale.iso_code | json }},
+        "languages": [
+          {%- for l in localization.available_languages -%}
+            {%- assign base = l.root_url | remove_last: '/' -%}
+            { "iso": {{ l.iso_code | json }}, "name": {{ l.endonym_name | json }}, "url": {{ base | append: '/pages/' | append: page.handle | json }} }{% unless forloop.last %},{% endunless %}
+          {%- endfor -%}
+        ],
+        "user": { "name": {% if customer %}{{ customer.name | json }}{% else %}""{% endif %}, "company": {% if customer.current_company %}{{ customer.current_company.name | json }}{% else %}null{% endif %} },
+        "brand": {
+          "logo": {% if section.settings.brand_logo %}{{ section.settings.brand_logo | image_url: width: 1200 | json }}{% else %}null{% endif %}
+        },
+        "themes": [
+          {%- for th in shop.metaobjects.dicota_banner_theme.values -%}
+          {
+            "handle": {{ th.system.handle | json }},
+            "title": {{ th.title.value | json }},
+            "eyebrow": {{ th.eyebrow.value | default: '' | json }},
+            "headline": {{ th.headline.value | default: '' | json }},
+            "claims": {% if th.claims.value %}{{ th.claims.value | json }}{% else %}[]{% endif %},
+            "cta": {{ th.cta_label.value | default: '' | json }},
+            "link": {{ th.link.value | default: '' | json }},
+            "tone": {{ th.text_tone.value | default: 'light' | json }},
+            "sort": {{ th.sort_order.value | default: 99 }},
+            "product": {% if th.product_image.value %}{{ th.product_image.value | image_url: width: 2000 | json }}{% else %}null{% endif %},
+            "backgrounds": [
+              {%- if th.backgrounds.value -%}
+                {%- for f in th.backgrounds.value -%}
+                  { "url": {{ f | image_url: width: 3200 | json }}, "thumb": {{ f | image_url: width: 360 | json }} }{% unless forloop.last %},{% endunless %}
+                {%- endfor -%}
+              {%- endif -%}
+            ]
+          }{% unless forloop.last %},{% endunless %}
+          {%- endfor -%}
+        ]
+      }
+    </script>
+    <div class="bb-page__head">
+      <div class="text-style-subline">{{ section.settings.subline }}</div>
+      <h1 class="heading-style-h2">{{ section.settings.heading }}</h1>
+      {%- liquid
+        assign intro = section.settings.intro
+        if intro == blank
+          if ui_de
+            assign intro = 'Erstellen Sie in wenigen Sekunden DICOTA Banner für Website, Newsletter und Social Media: Thema, Format und Texte wählen, eigenes Logo ergänzen und als JPG, PNG oder Photoshop-Datei herunterladen.'
+          else
+            assign intro = 'Create DICOTA banners for your website, newsletter and social media in seconds: choose a theme, a format and your texts, add your logo and download JPG, PNG or Photoshop files.'
+          endif
+        endif
+      -%}
+      <div class="text-size-medium max-width-large">{{ intro }}</div>
+    </div>
+    <div class="bb-app" id="bb-app-{{ section.id }}">
+      <p class="bb-loading">{% if ui_de %}Banner Builder wird geladen …{% else %}Loading Banner Builder …{% endif %}</p>
+    </div>
+    <script src="{{ 'banner-builder.js' | asset_url }}" defer></script>
+  {%- elsif customer -%}
+    <div class="bb-gate"><h1>{% if ui_de %}Kein Zugriff{% else %}No access{% endif %}</h1></div>
+  {%- else -%}
+    <div class="bb-gate"><h1>myDICOTA</h1><p><a href="{{ routes.account_login_url }}">{% if ui_de %}Bitte einloggen{% else %}Please log in{% endif %}</a></p></div>
+  {%- endif -%}
+</div></div></div>
+
+{% schema %}
+{
+  "name": "Banner Builder",
+  "tag": "section",
+  "class": "section-banner-builder",
+  "settings": [
+    { "type": "text", "id": "access_tag", "label": "Customer tag with access", "info": "Empty = every logged-in customer (resellers)." },
+    { "type": "text", "id": "subline", "label": "Subline", "default": "Marketing Support" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Banner Builder" },
+    { "type": "textarea", "id": "intro", "label": "Intro", "info": "Empty = automatic text in the page language (DE/EN)." },
+    { "type": "image_picker", "id": "brand_logo", "label": "DICOTA logo (black, transparent PNG)" }
+  ],
+  "presets": [{ "name": "Banner Builder" }]
+}
+{% endschema %}
