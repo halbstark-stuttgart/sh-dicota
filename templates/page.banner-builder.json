@@ -9,8 +9,13 @@
  */
 {
   "sections": {
+    "b2b_subnav": {
+      "type": "b2b_subnav",
+      "settings": {}
+    },
     "product_breadcrumb": {
       "type": "product_breadcrumb",
+      "disabled": true,
       "settings": {
         "text_home_label": "Home"
       }
@@ -18,6 +23,17 @@
     "page_content": {
       "type": "page_content",
       "settings": {}
+    },
+    "main": {
+      "type": "banner-builder",
+      "settings": {
+        "access_tag": "",
+        "subline": "Marketing Support",
+        "heading": "Banner Builder",
+        "intro": "",
+        "brand_logo": "shopify://shop_images/DICOTA_Logo_Black.png",
+        "show_breadcrumb": true
+      }
     },
     "b2b_no_access_bfngxc": {
       "type": "b2b_no_access",
@@ -62,10 +78,12 @@
       "settings": {}
     }
   },
-  "layout": "theme",
+  "layout": "b2b",
   "wrapper": "main.main-wrapper",
   "order": [
+    "b2b_subnav",
     "product_breadcrumb",
+    "main",
     "page_content",
     "b2b_no_access_bfngxc",
     "1790767179ecde4caa"
