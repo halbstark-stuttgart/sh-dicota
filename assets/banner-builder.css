@@ -75,6 +75,10 @@
 .bb-preview { display: flex; justify-content: center; align-items: center; min-height: 160px; padding: 24px; margin-bottom: 14px;
   background: repeating-conic-gradient(#eee 0 25%, #f7f7f7 0 50%) 0 0 / 16px 16px; }
 .bb-preview canvas { display: block; max-width: 100%; box-shadow: 0 8px 30px rgba(0,0,0,.15); cursor: crosshair; }
+.bb-preview canvas.is-product { cursor: grab; touch-action: none; }
+.bb-preview canvas.is-dragging { cursor: grabbing; }
+[data-ref="pwrap"] { margin-top: 10px; }
+[data-ref="pwrap"] .bb-btn--ghost { padding-left: 0; }
 .bb-actions { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 12px; }
 .bb-status { font-size: 12.5px; color: #6b6b6b; }
 .bb-details { margin-top: 14px; border-top: 1px solid #eee; padding-top: 10px; }

@@ -49,7 +49,7 @@
       theme: 'Thema', format: 'Format & Größe', ori: { h: 'Horizontal', v: 'Vertikal', r: 'Quadrat / Rechteck' },
       custom: 'Eigene Größe', width: 'Breite (px)', height: 'Höhe (px)', image: 'Bild', ownImage: 'Eigenes Bild',
       focusHint: 'Klick ins Vorschaubild setzt den Bildfokus.', layout: 'Layout', lOverlay: 'Text auf Bild', lSplit: 'Bild + weiße Fläche',
-      imgSource: 'Bildquelle', srcPhoto: 'Stimmungsbild', srcProduct: 'Produktbild', overlay: 'Abdunklung',
+      imgSource: 'Bildquelle', srcPhoto: 'Stimmungsbild', srcProduct: 'Produktbild', overlay: 'Abdunklung', pSize: 'Produktgröße', pHint: 'Produkt im Vorschaubild mit der Maus (oder dem Finger) verschieben.', pReset: 'Größe & Position zurücksetzen',
       texts: 'Texte', eyebrow: 'Dachzeile', headline: 'Headline', claim: 'Claim', ownClaim: 'Eigener Claim …', claimText: 'Eigener Claim',
       cta: 'Button anzeigen', ctaText: 'Button-Text', partner: 'Ihr Logo (optional)', partnerHint: 'Erscheint oben links, DICOTA-Logo immer oben rechts.',
       upload: 'Datei wählen', remove: 'Entfernen', dropHint: 'oder hierher ziehen', language: 'Sprache der Texte',
@@ -65,7 +65,7 @@
       theme: 'Theme', format: 'Format & size', ori: { h: 'Horizontal', v: 'Vertical', r: 'Square / rectangle' },
       custom: 'Custom size', width: 'Width (px)', height: 'Height (px)', image: 'Image', ownImage: 'Own image',
       focusHint: 'Click into the preview image to set the focal point.', layout: 'Layout', lOverlay: 'Text on image', lSplit: 'Image + white panel',
-      imgSource: 'Image source', srcPhoto: 'Mood image', srcProduct: 'Product image', overlay: 'Darkening',
+      imgSource: 'Image source', srcPhoto: 'Mood image', srcProduct: 'Product image', overlay: 'Darkening', pSize: 'Product size', pHint: 'Drag the product in the preview to move it.', pReset: 'Reset size & position',
       texts: 'Texts', eyebrow: 'Eyebrow', headline: 'Headline', claim: 'Claim', ownClaim: 'Own claim …', claimText: 'Own claim',
       cta: 'Show button', ctaText: 'Button text', partner: 'Your logo (optional)', partnerHint: 'Shown top left, DICOTA logo always top right.',
       upload: 'Choose file', remove: 'Remove', dropHint: 'or drop it here', language: 'Text language',
@@ -163,9 +163,29 @@
   /* ---------------- renderer ----------------
    * spec: { w, h, scale, theme, bg (Image), product (Image), partner {img, alpha}, logo (Image),
    *         layout 'overlay'|'split', source 'photo'|'product', focus {x,y}, overlay 0..1,
+   *         pScale (product size factor), pPos {x,y} (product centre within the image area),
    *         eyebrow, headline, claim, cta, ctaText, tone 'light'|'dark' }
    * layer(name) → 2D context to draw that layer into (same ctx for flat export)
    */
+  // image area and white panel for a given size/layout (shared by renderer and editor)
+  function regions(W, H, layout) {
+    var ar = W / H, strip = H <= 130 || ar >= 4.2, narrow = ar <= 0.35;
+    var img = { x: 0, y: 0, w: W, h: H }, panel = null;
+    if (layout === 'split') {
+      if (strip) { img = { x: 0, y: 0, w: Math.round(W * 0.26), h: H }; panel = { x: img.w, y: 0, w: W - img.w, h: H }; }
+      else if (ar >= 1.25) { img = { x: 0, y: 0, w: Math.round(W * 0.52), h: H }; panel = { x: img.w, y: 0, w: W - img.w, h: H }; }
+      else { img = { x: 0, y: 0, w: W, h: Math.round(H * (narrow ? 0.45 : 0.55)) }; panel = { x: 0, y: img.h, w: W, h: H - img.h }; }
+    }
+    return { img: img, panel: panel };
+  }
+  // product rectangle inside the image area: pScale 1 = fits 86 % of the area, pPos = centre (0..1)
+  function productRect(im, area, pScale, pPos) {
+    var ps = Math.min(area.w * 0.86 / im.naturalWidth, area.h * 0.86 / im.naturalHeight) * (pScale || 1);
+    var pw = im.naturalWidth * ps, ph = im.naturalHeight * ps;
+    var cx = area.x + (pPos ? pPos.x : 0.5) * area.w, cy = area.y + (pPos ? pPos.y : 0.5) * area.h;
+    return { x: cx - pw / 2, y: cy - ph / 2, w: pw, h: ph };
+  }
+
   function render(spec, layer) {
     var W = spec.w, H = spec.h, ar = W / H, s = Math.min(W, H);
     var strip = H <= 130 || ar >= 4.2;
@@ -176,12 +196,7 @@
     var isProduct = imgSrc === spec.product;
 
     // ----- regions -----
-    var img = { x: 0, y: 0, w: W, h: H }, panel = null;
-    if (split) {
-      if (strip) { img = { x: 0, y: 0, w: Math.round(W * 0.26), h: H }; panel = { x: img.w, y: 0, w: W - img.w, h: H }; }
-      else if (ar >= 1.25) { img = { x: 0, y: 0, w: Math.round(W * 0.52), h: H }; panel = { x: img.w, y: 0, w: W - img.w, h: H }; }
-      else { img = { x: 0, y: 0, w: W, h: Math.round(H * (narrow ? 0.45 : 0.55)) }; panel = { x: 0, y: img.h, w: W, h: H - img.h }; }
-    }
+    var rg = regions(W, H, spec.layout), img = rg.img, panel = rg.panel;
     var textOnPhoto = !split;
     var tone = split ? 'dark' : (spec.tone || 'light');
     var ink = tone === 'light' ? '#ffffff' : '#111111';
@@ -193,10 +208,9 @@
       bg.save(); bg.beginPath(); bg.rect(img.x, img.y, img.w, img.h); bg.clip();
       if (isProduct) {
         bg.fillStyle = '#f4f4f4'; bg.fillRect(img.x, img.y, img.w, img.h);
-        var ps = Math.min(img.w * 0.86 / imgSrc.naturalWidth, img.h * 0.86 / imgSrc.naturalHeight);
-        var pw = imgSrc.naturalWidth * ps, ph = imgSrc.naturalHeight * ps;
+        var pr = productRect(imgSrc, img, spec.pScale, spec.pPos);
         bg.globalCompositeOperation = 'multiply';
-        bg.drawImage(imgSrc, img.x + (img.w - pw) / 2, img.y + (img.h - ph) / 2, pw, ph);
+        bg.drawImage(imgSrc, pr.x, pr.y, pr.w, pr.h);
         bg.globalCompositeOperation = 'source-over';
       } else {
         var sc = Math.max(img.w / imgSrc.naturalWidth, img.h / imgSrc.naturalHeight);
@@ -391,6 +405,7 @@
       theme: th ? th.handle : null, ori: saved.ori || 'h', w: saved.w || 1920, h: saved.h || 600,
       bgIndex: saved.theme === (th && th.handle) ? (saved.bgIndex || 0) : 0, focus: saved.focus || { x: 0.5, y: 0.5 },
       layout: saved.layout || 'overlay', source: saved.source || 'photo', overlay: saved.overlay == null ? 0.55 : saved.overlay,
+      pScale: saved.pScale || 1, pPos: saved.pPos || { x: 0.5, y: 0.5 },
       showEyebrow: saved.showEyebrow !== false, headline: null, claimIdx: 0, claimOwn: '', cta: saved.cta !== false, ctaText: null,
       type: saved.type || 'jpg', retina: !!saved.retina, maxKb: saved.maxKb || '', zipSizes: saved.zipSizes || [], zipTypes: saved.zipTypes || ['jpg']
     };
@@ -398,7 +413,7 @@
       ['headline', 'claimIdx', 'claimOwn', 'ctaText', 'showEyebrow'].forEach(function (k) { if (saved[k] != null) this.s[k] = saved[k]; }, this);
     }
     this.ownBg = null; this.partner = null;
-    this.redraw = debounce(this.draw.bind(this), 40);
+    var self0 = this, rf = 0; this.redraw = function () { if (rf) return; rf = requestAnimationFrame(function () { rf = 0; self0.draw(); }); };
     this.build();
   }
 
@@ -430,7 +445,9 @@
           '<div class="bb-bgs" data-ref="bgs"></div>' +
           '<div class="bb-upload" data-drop="bg"><label class="bb-btn bb-btn--small">' + t.ownImage + '<input type="file" class="bb-vh" accept="image/*" data-upload="bg"></label><small>' + t.dropHint + '</small></div>' +
           '<label class="bb-field" data-ref="ovwrap"><span class="bb-label">' + t.overlay + ' <em data-ref="ovval"></em></span><input type="range" min="0" max="0.85" step="0.05" data-k="overlay"></label>' +
-          '<small class="bb-hint">' + t.focusHint + '</small>' +
+          '<div class="bb-field" data-ref="pwrap" hidden><label class="bb-field"><span class="bb-label">' + t.pSize + ' <em data-ref="pval"></em></span><input type="range" min="0.3" max="2.5" step="0.05" data-k="pScale"></label>' +
+            '<button type="button" class="bb-btn bb-btn--small bb-btn--ghost" data-act="p-reset">' + t.pReset + '</button></div>' +
+          '<small class="bb-hint" data-ref="imgHint">' + t.focusHint + '</small>' +
         '</fieldset>' +
         '<fieldset class="bb-fs"><legend>4 · ' + t.texts + '</legend>' +
           '<label class="bb-check"><input type="checkbox" data-k="showEyebrow"> ' + t.eyebrow + ' <em data-ref="ebtext"></em></label>' +
@@ -468,7 +485,7 @@
 
   App.prototype.applyTheme = function (reset) {
     var th = this.theme(); if (!th) return;
-    if (reset) { this.s.headline = null; this.s.claimIdx = 0; this.s.claimOwn = ''; this.s.ctaText = null; this.s.bgIndex = 0; this.s.focus = { x: 0.5, y: 0.5 }; this.ownBg = null; }
+    if (reset) { this.s.headline = null; this.s.claimIdx = 0; this.s.claimOwn = ''; this.s.ctaText = null; this.s.bgIndex = 0; this.s.focus = { x: 0.5, y: 0.5 }; this.s.pScale = 1; this.s.pPos = { x: 0.5, y: 0.5 }; this.ownBg = null; }
     if (this.s.headline == null) this.s.headline = th.headline || th.title;
     if (this.s.ctaText == null) this.s.ctaText = th.cta || '';
     if (!th.product && this.s.source === 'product') this.s.source = 'photo';
@@ -480,7 +497,7 @@
       var k = e.target.getAttribute('data-k'); if (!k) return;
       var v = e.target.type === 'checkbox' ? e.target.checked : e.target.value;
       if (k === 'w' || k === 'h') { v = clamp(parseInt(v, 10) || 0, 0, 6000); if (v < 50) return; }
-      if (k === 'overlay') v = parseFloat(v);
+      if (k === 'overlay' || k === 'pScale') v = parseFloat(v);
       s[k] = v; self.syncLight(); self.persist(); self.redraw();
     });
     root.addEventListener('change', function (e) {
@@ -511,11 +528,41 @@
         if (a === 'zipall' || a === 'zipnone') { e.preventDefault(); s.zipSizes = a === 'zipall' ? SIZES.map(function (x) { return x.w + 'x' + x.h; }) : []; }
         if (a === 'rm-partner') { self.partner = null; }
         if (a === 'rm-bg') { self.ownBg = null; s.bgIndex = 0; }
+        if (a === 'p-reset') { s.pScale = 1; s.pPos = { x: 0.5, y: 0.5 }; }
       }
       self.sync(); self.persist(); self.redraw();
     });
-    // focal point: click into the preview
+    // product mode: drag the product inside the preview (mouse, pen, touch)
+    var cv = this.refs.canvas, drag = null, frame = 0;
+    function liveDraw() { if (frame) return; frame = requestAnimationFrame(function () { frame = 0; self.draw(); }); }
+    cv.addEventListener('pointerdown', function (e) {
+      if (s.source !== 'product' || !self.productBox) return;
+      var r = cv.getBoundingClientRect(), px = (e.clientX - r.left) / r.width * s.w, py = (e.clientY - r.top) / r.height * s.h;
+      var b = self.productBox, area = b.area;
+      // grab anywhere in the image area; the product jumps nowhere, it moves by the drag delta
+      if (px < area.x || px > area.x + area.w || py < area.y || py > area.y + area.h) return;
+      drag = { id: e.pointerId, x0: e.clientX, y0: e.clientY, pos: { x: s.pPos.x, y: s.pPos.y }, kx: s.w / r.width / area.w, ky: s.h / r.height / area.h };
+      try { cv.setPointerCapture(e.pointerId); } catch (err) { /* ignore */ }
+      cv.classList.add('is-dragging'); e.preventDefault();
+    });
+    cv.addEventListener('pointermove', function (e) {
+      if (!drag || e.pointerId !== drag.id) return;
+      s.pPos = { x: clamp(drag.pos.x + (e.clientX - drag.x0) * drag.kx, -0.3, 1.3), y: clamp(drag.pos.y + (e.clientY - drag.y0) * drag.ky, -0.3, 1.3) };
+      liveDraw();
+    });
+    function endDrag(e) { if (!drag || (e && e.pointerId !== drag.id)) return; drag = null; cv.classList.remove('is-dragging'); self.persist(); self.draw(); }
+    cv.addEventListener('pointerup', endDrag); cv.addEventListener('pointercancel', endDrag);
+    // mouse wheel over the product changes its size
+    cv.addEventListener('wheel', function (e) {
+      if (s.source !== 'product') return;
+      e.preventDefault();
+      s.pScale = clamp(Math.round((s.pScale * (e.deltaY < 0 ? 1.06 : 1 / 1.06)) * 100) / 100, 0.3, 2.5);
+      self.syncLight(); liveDraw(); self.persistSoon();
+    }, { passive: false });
+    this.persistSoon = debounce(function () { self.persist(); }, 300);
+    // focal point: click into the preview (mood images)
     this.refs.canvas.addEventListener('click', function (e) {
+      if (s.source === 'product') return;
       var r = e.target.getBoundingClientRect(), fx = (e.clientX - r.left) / r.width, fy = (e.clientY - r.top) / r.height;
       // map from canvas coords to image coords approximately (cover crop) using last draw info
       var info = self.lastCrop; if (!info) return;
@@ -554,6 +601,12 @@
     var s = this.s;
     this.refs.dim.textContent = s.w + ' × ' + s.h + ' px' + (s.retina && s.type !== 'psd' ? ' (' + s.w * 2 + ' × ' + s.h * 2 + ' px)' : '');
     this.refs.ovval.textContent = Math.round(s.overlay * 100) + ' %';
+    var prod = s.source === 'product';
+    this.refs.pwrap.hidden = !prod;
+    this.refs.pval.textContent = Math.round(s.pScale * 100) + ' %';
+    var pr = this.root.querySelector('[data-k="pScale"]'); if (pr && String(pr.value) !== String(s.pScale)) pr.value = s.pScale;
+    this.refs.imgHint.textContent = prod ? this.t.pHint : this.t.focusHint;
+    this.refs.canvas.classList.toggle('is-product', prod);
     this.refs.claimOwnWrap.hidden = s.claimIdx !== -1;
     this.refs.kbwrap.hidden = s.type !== 'jpg';
   };
@@ -608,7 +661,7 @@
     return Promise.all([loadImage(bgUrl), loadImage(th && th.product), Promise.resolve(this.logo)]).then(function (r) {
       return {
         w: Math.round(w * scale), h: Math.round(h * scale), theme: th, bg: r[0], product: r[1], logo: r[2],
-        partner: self.partner, layout: s.layout, source: s.source, focus: s.focus, overlay: s.overlay,
+        partner: self.partner, layout: s.layout, source: s.source, focus: s.focus, overlay: s.overlay, pScale: s.pScale, pPos: s.pPos,
         eyebrow: s.showEyebrow && th ? th.eyebrow : '', headline: s.headline, claim: self.claimText(),
         cta: s.cta, ctaText: s.ctaText, tone: (th && th.tone) || 'light'
       };
@@ -637,6 +690,7 @@
         self.lastCrop.dx = clamp(sp.w / 2 - s.focus.x * self.lastCrop.dw, sp.w - self.lastCrop.dw, 0);
         self.lastCrop.dy = clamp(sp.h / 2 - s.focus.y * self.lastCrop.dh, sp.h - self.lastCrop.dh, 0);
       } else self.lastCrop = null;
+      self.productBox = sp.source === 'product' && sp.product ? { area: regions(sp.w, sp.h, sp.layout).img } : null;
     });
   };
 
