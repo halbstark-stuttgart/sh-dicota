@@ -95,6 +95,27 @@
             "tone": {{ th.text_tone.value | default: 'light' | json }},
             "sort": {{ th.sort_order.value | default: 99 }},
             "product": {% if th.product_image.value %}{{ th.product_image.value | image_url: width: 2000 | json }}{% else %}null{% endif %},
+            "shots": [
+              {%- assign bb_first = true -%}
+              {%- if th.product_image.value -%}
+                { "url": {{ th.product_image.value | image_url: width: 2000 | json }}, "thumb": {{ th.product_image.value | image_url: width: 240 | json }}, "title": {{ th.title.value | json }} }
+                {%- assign bb_first = false -%}
+              {%- endif -%}
+              {%- for p in th.products.value -%}
+                {%- assign bb_ms = p.metafields.custom.images_marketing_product_shots.value -%}
+                {%- if bb_ms != blank -%}
+                  {%- for f in bb_ms -%}
+                    {%- unless bb_first -%},{%- endunless -%}
+                    { "url": {{ f | image_url: width: 2000 | json }}, "thumb": {{ f | image_url: width: 240 | json }}, "title": {{ p.title | json }} }
+                    {%- assign bb_first = false -%}
+                  {%- endfor -%}
+                {%- elsif p.featured_image -%}
+                  {%- unless bb_first -%},{%- endunless -%}
+                  { "url": {{ p.featured_image | image_url: width: 2000 | json }}, "thumb": {{ p.featured_image | image_url: width: 240 | json }}, "title": {{ p.title | json }} }
+                  {%- assign bb_first = false -%}
+                {%- endif -%}
+              {%- endfor -%}
+            ],
             "backgrounds": [
               {%- if th.backgrounds.value -%}
                 {%- for f in th.backgrounds.value -%}
