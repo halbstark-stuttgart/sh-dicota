@@ -22,6 +22,7 @@
     },
     "page_content": {
       "type": "page_content",
+      "disabled": true,
       "settings": {}
     },
     "main": {
@@ -53,6 +54,7 @@
     },
     "1790767179ecde4caa": {
       "type": "apps",
+      "disabled": true,
       "blocks": {
         "forms_inline_Qmhgmm": {
           "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
