@@ -49,7 +49,7 @@
       theme: 'Thema', format: 'Format & Größe', ori: { h: 'Horizontal', v: 'Vertikal', r: 'Quadrat / Rechteck' },
       custom: 'Eigene Größe', width: 'Breite (px)', height: 'Höhe (px)', image: 'Bild', ownImage: 'Eigenes Bild',
       focusHint: 'Klick ins Vorschaubild setzt den Bildfokus.', layout: 'Layout', lOverlay: 'Text auf Bild', lSplit: 'Bild + weiße Fläche',
-      imgSource: 'Bildquelle', srcPhoto: 'Stimmungsbild', srcProduct: 'Produktbild', overlay: 'Abdunklung', pSize: 'Produktgröße', pHint: 'Produkt im Vorschaubild mit der Maus (oder dem Finger) verschieben.', pReset: 'Größe & Position zurücksetzen',
+      imgSource: 'Bildquelle', srcPhoto: 'Stimmungsbild', srcProduct: 'Produktbild', overlay: 'Abdunklung', pSize: 'Produktgröße', pHint: 'Produkt im Vorschaubild mit der Maus (oder dem Finger) verschieben.', pReset: 'Größe & Position zurücksetzen', ownShot: 'Eigenes Produktbild', noShots: 'Für dieses Thema sind noch keine Product Shots hinterlegt.',
       texts: 'Texte', eyebrow: 'Dachzeile', headline: 'Headline', claim: 'Claim', ownClaim: 'Eigener Claim …', claimText: 'Eigener Claim',
       cta: 'Button anzeigen', ctaText: 'Button-Text', partner: 'Ihr Logo (optional)', partnerHint: 'Erscheint oben links, DICOTA-Logo immer oben rechts.',
       upload: 'Datei wählen', remove: 'Entfernen', dropHint: 'oder hierher ziehen', language: 'Sprache der Texte',
@@ -65,7 +65,7 @@
       theme: 'Theme', format: 'Format & size', ori: { h: 'Horizontal', v: 'Vertical', r: 'Square / rectangle' },
       custom: 'Custom size', width: 'Width (px)', height: 'Height (px)', image: 'Image', ownImage: 'Own image',
       focusHint: 'Click into the preview image to set the focal point.', layout: 'Layout', lOverlay: 'Text on image', lSplit: 'Image + white panel',
-      imgSource: 'Image source', srcPhoto: 'Mood image', srcProduct: 'Product image', overlay: 'Darkening', pSize: 'Product size', pHint: 'Drag the product in the preview to move it.', pReset: 'Reset size & position',
+      imgSource: 'Image source', srcPhoto: 'Mood image', srcProduct: 'Product image', overlay: 'Darkening', pSize: 'Product size', pHint: 'Drag the product in the preview to move it.', pReset: 'Reset size & position', ownShot: 'Own product image', noShots: 'No product shots for this theme yet.',
       texts: 'Texts', eyebrow: 'Eyebrow', headline: 'Headline', claim: 'Claim', ownClaim: 'Own claim …', claimText: 'Own claim',
       cta: 'Show button', ctaText: 'Button text', partner: 'Your logo (optional)', partnerHint: 'Shown top left, DICOTA logo always top right.',
       upload: 'Choose file', remove: 'Remove', dropHint: 'or drop it here', language: 'Text language',
@@ -405,14 +405,16 @@
       theme: th ? th.handle : null, ori: saved.ori || 'h', w: saved.w || 1920, h: saved.h || 600,
       bgIndex: saved.theme === (th && th.handle) ? (saved.bgIndex || 0) : 0, focus: saved.focus || { x: 0.5, y: 0.5 },
       layout: saved.layout || 'overlay', source: saved.source || 'photo', overlay: saved.overlay == null ? 0.55 : saved.overlay,
-      pScale: saved.pScale || 1, pPos: saved.pPos || { x: 0.5, y: 0.5 },
+      pScale: saved.pScale || 1, pPos: saved.pPos || { x: 0.5, y: 0.5 }, pIndex: saved.theme === (th && th.handle) ? (saved.pIndex || 0) : 0,
       showEyebrow: saved.showEyebrow !== false, headline: null, claimIdx: 0, claimOwn: '', cta: saved.cta !== false, ctaText: null,
       type: saved.type || 'jpg', retina: !!saved.retina, maxKb: saved.maxKb || '', zipSizes: saved.zipSizes || [], zipTypes: saved.zipTypes || ['jpg']
     };
     if (saved.theme === this.s.theme && saved.lang === cfg.lang) {
       ['headline', 'claimIdx', 'claimOwn', 'ctaText', 'showEyebrow'].forEach(function (k) { if (saved[k] != null) this.s[k] = saved[k]; }, this);
     }
-    this.ownBg = null; this.partner = null;
+    this.ownBg = null; this.ownShot = null; this.partner = null;
+    // product shots per theme: theme family shot first, then the products' marketing shots
+    this.themes.forEach(function (x) { if (!x.shots || !x.shots.length) x.shots = x.product ? [{ url: x.product, thumb: x.product, title: x.title }] : []; });
     var self0 = this, rf = 0; this.redraw = function () { if (rf) return; rf = requestAnimationFrame(function () { rf = 0; self0.draw(); }); };
     this.build();
   }
@@ -443,7 +445,7 @@
           '<div class="bb-seg bb-seg--small" data-ref="layout"><button type="button" data-layout="overlay">' + t.lOverlay + '</button><button type="button" data-layout="split">' + t.lSplit + '</button></div>' +
           '<div class="bb-seg bb-seg--small" data-ref="source"><button type="button" data-source="photo">' + t.srcPhoto + '</button><button type="button" data-source="product">' + t.srcProduct + '</button></div>' +
           '<div class="bb-bgs" data-ref="bgs"></div>' +
-          '<div class="bb-upload" data-drop="bg"><label class="bb-btn bb-btn--small">' + t.ownImage + '<input type="file" class="bb-vh" accept="image/*" data-upload="bg"></label><small>' + t.dropHint + '</small></div>' +
+          '<div class="bb-upload" data-drop="bg"><label class="bb-btn bb-btn--small" data-ref="ownImgBtn">' + t.ownImage + '<input type="file" class="bb-vh" accept="image/*" data-upload="bg"></label><small>' + t.dropHint + '</small></div>' +
           '<label class="bb-field" data-ref="ovwrap"><span class="bb-label">' + t.overlay + ' <em data-ref="ovval"></em></span><input type="range" min="0" max="0.85" step="0.05" data-k="overlay"></label>' +
           '<div class="bb-field" data-ref="pwrap" hidden><label class="bb-field"><span class="bb-label">' + t.pSize + ' <em data-ref="pval"></em></span><input type="range" min="0.3" max="2.5" step="0.05" data-k="pScale"></label>' +
             '<button type="button" class="bb-btn bb-btn--small bb-btn--ghost" data-act="p-reset">' + t.pReset + '</button></div>' +
@@ -485,10 +487,11 @@
 
   App.prototype.applyTheme = function (reset) {
     var th = this.theme(); if (!th) return;
-    if (reset) { this.s.headline = null; this.s.claimIdx = 0; this.s.claimOwn = ''; this.s.ctaText = null; this.s.bgIndex = 0; this.s.focus = { x: 0.5, y: 0.5 }; this.s.pScale = 1; this.s.pPos = { x: 0.5, y: 0.5 }; this.ownBg = null; }
+    if (reset) { this.s.headline = null; this.s.claimIdx = 0; this.s.claimOwn = ''; this.s.ctaText = null; this.s.bgIndex = 0; this.s.focus = { x: 0.5, y: 0.5 }; this.s.pScale = 1; this.s.pPos = { x: 0.5, y: 0.5 }; this.s.pIndex = 0; this.ownBg = null; this.ownShot = null; }
     if (this.s.headline == null) this.s.headline = th.headline || th.title;
     if (this.s.ctaText == null) this.s.ctaText = th.cta || '';
-    if (!th.product && this.s.source === 'product') this.s.source = 'photo';
+    if (this.s.pIndex >= th.shots.length) this.s.pIndex = 0;
+    if (!th.shots.length && !this.ownShot && this.s.source === 'product') this.s.source = 'photo';
   };
 
   App.prototype.bind = function () {
@@ -510,12 +513,13 @@
       if (z) { var list = s.zipSizes.filter(function (x) { return x !== z; }); if (el.checked) list.push(z); s.zipSizes = list; self.persist(); }
     });
     root.addEventListener('click', function (e) {
-      var b = e.target.closest('[data-theme],[data-ori],[data-size],[data-bg],[data-layout],[data-source],[data-type],[data-ziptype],[data-act]');
+      var b = e.target.closest('[data-theme],[data-ori],[data-size],[data-bg],[data-shot],[data-layout],[data-source],[data-type],[data-ziptype],[data-act]');
       if (!b || !root.contains(b)) return;
       if (b.hasAttribute('data-theme')) { s.theme = b.getAttribute('data-theme'); self.applyTheme(true); }
       else if (b.hasAttribute('data-ori')) { s.ori = b.getAttribute('data-ori'); var first = SIZES.filter(function (x) { return x.o === s.ori; })[0]; s.w = first.w; s.h = first.h; }
       else if (b.hasAttribute('data-size')) { var p = b.getAttribute('data-size').split('x'); s.w = +p[0]; s.h = +p[1]; }
       else if (b.hasAttribute('data-bg')) { s.bgIndex = +b.getAttribute('data-bg'); s.focus = { x: 0.5, y: 0.5 }; if (s.bgIndex >= 0) self.ownBg = self.ownBg; }
+      else if (b.hasAttribute('data-shot')) s.pIndex = +b.getAttribute('data-shot');
       else if (b.hasAttribute('data-layout')) s.layout = b.getAttribute('data-layout');
       else if (b.hasAttribute('data-source')) s.source = b.getAttribute('data-source');
       else if (b.hasAttribute('data-type')) s.type = b.getAttribute('data-type');
@@ -528,6 +532,7 @@
         if (a === 'zipall' || a === 'zipnone') { e.preventDefault(); s.zipSizes = a === 'zipall' ? SIZES.map(function (x) { return x.w + 'x' + x.h; }) : []; }
         if (a === 'rm-partner') { self.partner = null; }
         if (a === 'rm-bg') { self.ownBg = null; s.bgIndex = 0; }
+        if (a === 'rm-shot') { self.ownShot = null; s.pIndex = 0; }
         if (a === 'p-reset') { s.pScale = 1; s.pPos = { x: 0.5, y: 0.5 }; }
       }
       self.sync(); self.persist(); self.redraw();
@@ -584,6 +589,7 @@
     readFile(file).then(function (url) { return loadImage(url).then(function (im) { if (!im) throw new Error('img'); return { url: url, img: im }; }); })
       .then(function (r) {
         if (key === 'partner') self.partner = { url: r.url, img: r.img, alpha: hasAlpha(r.img) };
+        else if (self.s.source === 'product') { self.ownShot = r; self.s.pIndex = -1; self.s.pScale = 1; self.s.pPos = { x: 0.5, y: 0.5 }; }
         else { self.ownBg = r; self.s.bgIndex = -1; self.s.source = 'photo'; self.s.focus = { x: 0.5, y: 0.5 }; }
         self.sync(); self.redraw();
       }).catch(function () { window.alert(self.t.imgError); });
@@ -625,12 +631,21 @@
     }).join('');
     Array.prototype.forEach.call(this.refs.layout.children, function (b) { b.classList.toggle('is-active', b.getAttribute('data-layout') === s.layout); });
     Array.prototype.forEach.call(this.refs.source.children, function (b) {
-      var src = b.getAttribute('data-source'); b.classList.toggle('is-active', src === s.source); b.disabled = src === 'product' && !(th && th.product);
+      var src = b.getAttribute('data-source'); b.classList.toggle('is-active', src === s.source); b.disabled = src === 'product' && !(th && th.shots.length) && !self.ownShot;
     });
     var bgs = (th && th.backgrounds) || [];
+    if (s.source === 'product') {
+      var shots = (th && th.shots) || [];
+      this.refs.bgs.innerHTML = (shots.length ? '' : '<small class="bb-hint">' + esc(t.noShots) + '</small>') + shots.map(function (b, i) {
+        return '<button type="button" class="bb-bg bb-bg--shot' + (s.pIndex === i ? ' is-active' : '') + '" data-shot="' + i + '" title="' + esc(b.title || '') + '" style="background-image:url(\'' + esc(b.thumb || b.url) + '\')"></button>';
+      }).join('') + (this.ownShot ? '<button type="button" class="bb-bg bb-bg--shot' + (s.pIndex === -1 ? ' is-active' : '') + '" data-shot="-1" style="background-image:url(\'' + this.ownShot.url + '\')"></button><button type="button" class="bb-btn bb-btn--small bb-btn--ghost" data-act="rm-shot">' + t.remove + '</button>' : '');
+      this.refs.ownImgBtn.firstChild.nodeValue = t.ownShot;
+    } else {
+    this.refs.ownImgBtn.firstChild.nodeValue = t.ownImage;
     this.refs.bgs.innerHTML = bgs.map(function (b, i) {
       return '<button type="button" class="bb-bg' + (s.bgIndex === i && s.source === 'photo' ? ' is-active' : '') + '" data-bg="' + i + '" style="background-image:url(\'' + esc(b.thumb) + '\')"></button>';
     }).join('') + (this.ownBg ? '<button type="button" class="bb-bg' + (s.bgIndex === -1 ? ' is-active' : '') + '" data-bg="-1" style="background-image:url(\'' + this.ownBg.url + '\')"></button><button type="button" class="bb-btn bb-btn--small bb-btn--ghost" data-act="rm-bg">' + t.remove + '</button>' : '');
+    }
     var eb = root.querySelector('[data-ref="ebtext"]'); eb.textContent = th && th.eyebrow ? '„' + th.eyebrow + '“' : '';
     var claims = (th && th.claims) || [];
     this.refs.claimSel.innerHTML = claims.map(function (c, i) { return '<option value="' + i + '"' + (s.claimIdx === i ? ' selected' : '') + '>' + esc(c) + '</option>'; }).join('') +
@@ -658,7 +673,8 @@
     var s = this.s, th = this.theme(), self = this;
     scale = scale || 1;
     var bgUrl = s.bgIndex === -1 && this.ownBg ? this.ownBg.url : (th && th.backgrounds && th.backgrounds[s.bgIndex] ? th.backgrounds[s.bgIndex].url : null);
-    return Promise.all([loadImage(bgUrl), loadImage(th && th.product), Promise.resolve(this.logo)]).then(function (r) {
+    var shot = s.pIndex === -1 && this.ownShot ? this.ownShot : (th && th.shots[s.pIndex]) || (th && th.shots[0]);
+    return Promise.all([loadImage(bgUrl), loadImage(shot && shot.url), Promise.resolve(this.logo)]).then(function (r) {
       return {
         w: Math.round(w * scale), h: Math.round(h * scale), theme: th, bg: r[0], product: r[1], logo: r[2],
         partner: self.partner, layout: s.layout, source: s.source, focus: s.focus, overlay: s.overlay, pScale: s.pScale, pPos: s.pPos,

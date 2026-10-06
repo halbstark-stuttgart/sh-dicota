@@ -64,6 +64,7 @@
 .bb-bgs { display: flex; flex-wrap: wrap; gap: 6px; margin: 4px 0 8px; align-items: center; }
 .bb-bg { width: 76px; height: 50px; padding: 0; border: 1px solid #e2e2e2; background: #ddd center / cover no-repeat; cursor: pointer; }
 .bb-bg.is-active { outline: 2px solid #111; outline-offset: 1px; }
+.bb-bg--shot { background-color: #fff; background-size: contain; background-origin: content-box; padding: 3px; }
 .bb-upload { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding: 6px; border: 1px dashed transparent; }
 .bb-upload.is-over { border-color: #111; background: #f6f6f6; }
 .bb-upload small { color: #6b6b6b; font-size: 11.5px; }
