@@ -1,0 +1,165 @@
+{%- comment -%}
+  DICOTA · myDICOTA Promo Sheet Builder
+  Lets tagged sales users compose A4 promotion sheets from Shopify products.
+  Files: assets/promo-sheet-builder.js, assets/promo-sheet-builder.css,
+         templates/product.promo-data.liquid, templates/search.promo-search.liquid
+{%- endcomment -%}
+{%- liquid
+  assign access_tag = section.settings.access_tag | strip | downcase
+  assign allowed = false
+  if request.design_mode
+    assign allowed = true
+  elsif customer
+    if access_tag == blank
+      assign allowed = true
+    else
+      for t in customer.tags
+        assign tt = t | strip | downcase
+        if tt == access_tag
+          assign allowed = true
+          break
+        endif
+      endfor
+    endif
+  endif
+  if request.locale.iso_code == 'de'
+    assign ui_de = true
+  else
+    assign ui_de = false
+  endif
+-%}
+
+{{ 'promo-sheet-builder.css' | asset_url | stylesheet_tag }}
+{{ 'promo-sheet-builder-editorial.css' | asset_url | stylesheet_tag }}
+
+{%- comment -%} Breadcrumb: parent item is looked up in the B2B menu, e.g. "Marketing Support › Banner Builder" {%- endcomment -%}
+{%- liquid
+  assign bc_menu = section.settings.breadcrumb_menu | default: 'main-menu-reseller'
+  assign bc_parent = blank
+  for l in linklists[bc_menu].links
+    for c in l.links
+      if c.type == 'page_link' and c.object.id == page.id
+        assign bc_parent = l
+        break
+      endif
+    endfor
+    if bc_parent != blank
+      break
+    endif
+  endfor
+  if bc_parent == blank
+    for l in linklists[bc_menu].links
+      if l.handle == 'marketing-support'
+        assign bc_parent = l
+        break
+      endif
+    endfor
+  endif
+-%}
+{%- if section.settings.show_breadcrumb -%}
+<div class="padding-global" style="padding-top:.5rem;padding-bottom:.5rem;"><div class="container-large">
+  <nav class="product-breadcrumb_nav" aria-label="Breadcrumb">
+    {%- if bc_parent != blank -%}
+      <a href="{{ bc_parent.url }}" class="product-breadcrumb_link"><span>{{ bc_parent.title }}</span></a><span class="product-breadcrumb_sep">›</span>
+    {%- endif -%}
+    <span class="product-breadcrumb_current">{{ page.title }}</span>
+  </nav>
+</div></div>
+{%- endif -%}
+
+<div class="padding-global padding-section-small"><div class="container-large"><div class="psb-page" data-section-id="{{ section.id }}">
+  {%- if allowed -%}
+    <script type="application/json" id="psb-config-{{ section.id }}">
+      {
+        "sectionId": {{ section.id | json }},
+        "uiLang": {% if ui_de %}"de"{% else %}"en"{% endif %},
+        "currentLang": {{ request.locale.iso_code | json }},
+        "languages": [
+          {%- for l in localization.available_languages -%}
+          { "iso": {{ l.iso_code | json }}, "name": {{ l.endonym_name | json }}, "root": {{ l.root_url | json }} }{% unless forloop.last %},{% endunless %}
+          {%- endfor -%}
+        ],
+        "currency": {{ cart.currency.iso_code | json }},
+        "isB2B": {% if customer.b2b? %}true{% else %}false{% endif %},
+        "company": {% if customer.current_company %}{{ customer.current_company.name | json }}{% else %}null{% endif %},
+        "user": {
+          "name": {% if customer %}{{ customer.name | json }}{% else %}""{% endif %},
+          "email": {% if customer %}{{ customer.email | json }}{% else %}""{% endif %},
+          "phone": {% if customer.phone %}{{ customer.phone | json }}{% else %}""{% endif %}
+        },
+        "brand": {
+          "accent": {{ section.settings.accent_color | json }},
+          "ink": {{ section.settings.ink_color | json }},
+          "logo": {% if section.settings.brand_logo %}{{ section.settings.brand_logo | image_url: width: 800 | json }}{% else %}null{% endif %},
+          "logoOnDark": {% if section.settings.brand_logo_light %}{{ section.settings.brand_logo_light | image_url: width: 800 | json }}{% else %}null{% endif %},
+          "font": {{ section.settings.font_family | json }},
+          "claim": {{ section.settings.claim | json }},
+          "website": {{ section.settings.website | json }}
+        },
+        "defaultHeader": {% if section.settings.default_header %}{{ section.settings.default_header | image_url: width: 2400 | json }}{% else %}null{% endif %}
+      }
+    </script>
+    {%- if section.settings.heading != blank -%}
+      <div class="psb-page__head">
+        <div class="text-style-subline">{{ section.settings.subline }}</div>
+        <h1 class="heading-style-h2 psb-page__title">{{ section.settings.heading }}</h1>
+        {%- if section.settings.intro != blank -%}<div class="text-size-medium max-width-large">{{ section.settings.intro }}</div>{%- endif -%}
+      </div>
+    {%- endif -%}
+    <div class="psb-app" id="psb-app-{{ section.id }}">
+      <p class="psb-loading">{% if ui_de %}Promo Sheet Builder wird geladen …{% else %}Loading Promo Sheet Builder …{% endif %}</p>
+    </div>
+    <noscript>JavaScript is required.</noscript>
+    <script src="{{ 'promo-sheet-builder.js' | asset_url }}" defer></script>
+  {%- elsif customer -%}
+    <div class="psb-gate">
+      <h1>{% if ui_de %}Kein Zugriff{% else %}No access{% endif %}</h1>
+      <p>{% if ui_de %}Dieses Tool ist dem DICOTA Sales-Team vorbehalten.{% else %}This tool is reserved for the DICOTA sales team.{% endif %}</p>
+    </div>
+  {%- else -%}
+    <div class="psb-gate">
+      <h1>myDICOTA</h1>
+      <p><a href="{{ routes.account_login_url }}">{% if ui_de %}Bitte einloggen{% else %}Please log in{% endif %}</a></p>
+    </div>
+  {%- endif -%}
+</div></div></div>
+
+{% schema %}
+{
+  "name": "Promo Sheet Builder",
+  "tag": "section",
+  "class": "section-promo-sheet-builder",
+  "settings": [
+    { "type": "header", "content": "Access" },
+    {
+      "type": "text",
+      "id": "access_tag",
+      "label": "Customer tag with access",
+      "default": "promo-builder",
+      "info": "Only logged-in customers with this tag see the tool. Leave empty to allow every logged-in customer."
+    },
+    { "type": "text", "id": "subline", "label": "Subline", "default": "Sales Tools" },
+    { "type": "text", "id": "heading", "label": "Page heading", "default": "Promo Sheet Builder" },
+    { "type": "textarea", "id": "intro", "label": "Intro", "default": "Build individual A4 promotion sheets for your resellers in minutes: choose a template, add products, set promo prices, export PDF." },
+    { "type": "header", "content": "Brand" },
+    { "type": "color", "id": "accent_color", "label": "Default accent colour", "default": "#111111" },
+    { "type": "color", "id": "ink_color", "label": "Text / dark colour", "default": "#111418" },
+    { "type": "image_picker", "id": "brand_logo", "label": "DICOTA logo (dark, for white backgrounds)" },
+    { "type": "image_picker", "id": "brand_logo_light", "label": "DICOTA logo (white, for dark backgrounds)" },
+    {
+      "type": "text",
+      "id": "font_family",
+      "label": "Sheet font (CSS font-family)",
+      "info": "Leave empty to use the theme font.",
+      "default": "\"Futura PT\", \"Futura\", sans-serif"
+    },
+    { "type": "text", "id": "claim", "label": "Footer claim", "default": "YOU NEVER WORK ALONE" },
+    { "type": "text", "id": "website", "label": "Footer website", "default": "my.dicota.com" },
+    { "type": "image_picker", "id": "default_header", "label": "Fallback header image", "info": "Used when the sales user has not uploaded a header image." },
+    { "type": "header", "content": "Breadcrumb" },
+    { "type": "checkbox", "id": "show_breadcrumb", "label": "Show breadcrumb", "default": true },
+    { "type": "link_list", "id": "breadcrumb_menu", "label": "Menu for the parent item", "info": "Empty = Main menu (B2B). The menu item that contains this page becomes the first breadcrumb level, e.g. Marketing Support." }
+  ],
+  "presets": [{ "name": "Promo Sheet Builder" }]
+}
+{% endschema %}
