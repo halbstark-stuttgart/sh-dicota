@@ -1,0 +1,54 @@
+{%- layout none -%}
+{%- comment -%}
+  Promo Sheet Builder – JSON data endpoint for one product.
+  Called as /{locale}/products/{handle}?view=promo-data
+  Prices are the contextual prices of the logged-in customer
+  (B2B company location → assigned catalog, e.g. "EUR Recommended Reseller Price").
+{%- endcomment -%}
+{%- liquid
+  assign tagline = product.metafields.custom.product_tagline.value | default: ''
+  assign args = product.metafields.custom.sales_arguments.value
+  assign lifestyle = product.metafields.custom.images_lifestyle_shooting.value
+-%}
+{
+  "handle": {{ product.handle | json }},
+  "title": {{ product.title | json }},
+  "vendor": {{ product.vendor | json }},
+  "type": {{ product.type | json }},
+  "url": {{ product.url | json }},
+  "locale": {{ request.locale.iso_code | json }},
+  "currency": {{ cart.currency.iso_code | json }},
+  "b2b": {% if customer.b2b? %}true{% else %}false{% endif %},
+  "tagline": {{ tagline | strip | json }},
+  "arguments": {% if args %}{{ args | json }}{% else %}[]{% endif %},
+  "variants": [
+    {%- for v in product.variants -%}
+    {
+      "id": {{ v.id }},
+      "sku": {{ v.sku | json }},
+      "title": {{ v.title | json }},
+      "price": {{ v.price | json }},
+      "available": {% if v.available %}true{% else %}false{% endif %},
+      "image": {% if v.featured_image %}{{ v.featured_image | image_url: width: 1000 | json }}{% else %}null{% endif %}
+    }{% unless forloop.last %},{% endunless %}
+    {%- endfor -%}
+  ],
+  "images": [
+    {%- assign first = true -%}
+    {%- for m in product.media limit: 8 -%}
+      {%- if m.media_type == 'image' -%}
+        {%- unless first -%},{%- endunless -%}{{ m | image_url: width: 1000 | json }}{%- assign first = false -%}
+      {%- endif -%}
+    {%- endfor -%}
+  ],
+  "lifestyle": [
+    {%- assign first = true -%}
+    {%- if lifestyle -%}
+      {%- for f in lifestyle limit: 6 -%}
+        {%- if f.media_type == 'image' -%}
+          {%- unless first -%},{%- endunless -%}{{ f | image_url: width: 1400 | json }}{%- assign first = false -%}
+        {%- endif -%}
+      {%- endfor -%}
+    {%- endif -%}
+  ]
+}

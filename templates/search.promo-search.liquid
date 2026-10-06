@@ -1,0 +1,31 @@
+{%- layout none -%}
+{%- comment -%}
+  Promo Sheet Builder – JSON search endpoint (name + SKU).
+  Called as /{locale}/search?q=...&type=product&options[prefix]=last
+                &options[fields]=title,variants.sku,product_type,vendor,tag&view=promo-search
+{%- endcomment -%}
+{%- paginate search.results by 24 -%}
+{
+  "terms": {{ search.terms | json }},
+  "count": {{ search.results_count | default: 0 }},
+  "results": [
+    {%- assign first = true -%}
+    {%- for item in search.results -%}
+      {%- if item.object_type == 'product' -%}
+        {%- unless first -%},{%- endunless -%}
+        {%- assign first = false -%}
+        {
+          "handle": {{ item.handle | json }},
+          "title": {{ item.title | json }},
+          "type": {{ item.type | json }},
+          "image": {% if item.featured_image %}{{ item.featured_image | image_url: width: 160 | json }}{% else %}null{% endif %},
+          "price": {{ item.price | json }},
+          "skus": [
+            {%- for v in item.variants -%}{{ v.sku | json }}{% unless forloop.last %},{% endunless %}{%- endfor -%}
+          ]
+        }
+      {%- endif -%}
+    {%- endfor -%}
+  ]
+}
+{%- endpaginate -%}

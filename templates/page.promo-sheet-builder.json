@@ -1,0 +1,99 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "b2b_subnav": {
+      "type": "b2b_subnav",
+      "settings": {}
+    },
+    "product_breadcrumb": {
+      "type": "product_breadcrumb",
+      "disabled": true,
+      "settings": {
+        "text_home_label": "Home"
+      }
+    },
+    "page_content": {
+      "type": "page_content",
+      "disabled": true,
+      "settings": {}
+    },
+    "main": {
+      "type": "promo-sheet-builder",
+      "settings": {
+        "access_tag": "promo-builder",
+        "subline": "Sales Tools",
+        "heading": "Promo Sheet Builder",
+        "intro": "Build individual A4 promotion sheets for your resellers in minutes: choose a template, add products, set promo prices, export PDF.",
+        "accent_color": "#111111",
+        "ink_color": "#111111",
+        "brand_logo": "shopify://shop_images/DICOTA_Logo_Black.png",
+        "font_family": "\"Futura PT\", \"Futura\", sans-serif",
+        "claim": "YOU NEVER WORK ALONE",
+        "website": "my.dicota.com",
+        "default_header": "shopify://shop_images/Lifestyle-picture-with-green-bg.jpg",
+        "show_breadcrumb": true
+      }
+    },
+    "b2b_no_access_bfngxc": {
+      "type": "b2b_no_access",
+      "disabled": true,
+      "name": "B2B No Access",
+      "settings": {
+        "text_subline": "B2B Area",
+        "text_uberschrift": "Restricted access",
+        "textarea_text": "This page is reserved for registered DICOTA B2B partners. Please log in with your partner account to continue.",
+        "url_login_link": "",
+        "text_login_text": "Log in",
+        "url_sekundar_link": "",
+        "text_sekundar_text": "Become a partner",
+        "padding_top": 4,
+        "padding_bottom": 4
+      }
+    },
+    "1790767179ecde4caa": {
+      "type": "apps",
+      "disabled": true,
+      "blocks": {
+        "forms_inline_Qmhgmm": {
+          "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
+          "settings": {
+            "form_id": "730311",
+            "text_color": "#202020",
+            "button_background_color": "#202020",
+            "button_label_color": "#FFFFFF",
+            "links_color": "#1878B9",
+            "errors_color": "#E02229",
+            "text_alignment": "center",
+            "form_alignment": "center",
+            "padding_top": 0,
+            "padding_bottom": 24,
+            "padding_right": 0,
+            "padding_left": 0
+          }
+        }
+      },
+      "block_order": [
+        "forms_inline_Qmhgmm"
+      ],
+      "settings": {}
+    }
+  },
+  "layout": "b2b",
+  "wrapper": "main.main-wrapper",
+  "order": [
+    "b2b_subnav",
+    "product_breadcrumb",
+    "main",
+    "page_content",
+    "b2b_no_access_bfngxc",
+    "1790767179ecde4caa"
+  ]
+}
