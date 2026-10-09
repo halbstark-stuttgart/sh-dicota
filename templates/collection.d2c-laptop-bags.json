@@ -73,7 +73,7 @@
           "settings": {
             "url_link": "shopify://collections/laptop-bags-simple-good",
             "image_bild": "shopify://shop_images/5_SCT1c_LB_EntryLevel_099203e0-ef97-454a-8d2b-a6a551421443.jpg",
-            "text_titel": "VALUE FOR PRICE & EVERYDAY",
+            "text_titel": "SIMPLE & GOOD",
             "textarea_text": "Everything you need at an exceptional price – reliable protection, practical organization and everyday comfort."
           },
           "blocks": {}
@@ -107,6 +107,8 @@
         "kategorie-bild"
       ],
       "settings": {
+        "text_headline": "",
+        "textarea_beschreibung": "",
         "padding_top": 2.5,
         "padding_bottom": 2.5,
         "bg_color": "#ffffff",
@@ -116,7 +118,6 @@
     "collection_products": {
       "type": "collection_products",
       "settings": {
-        "image_promo_1_bild": "shopify://shop_images/5_SCT1c_BP_BusinessProfessional.jpg",
         "text_promo_1_headline": "SEVEN Backpack",
         "textarea_promo_1_text": "Raffiniertes Design. Recycelte Materialien.",
         "url_promo_1_link": "",
@@ -125,10 +126,13 @@
         "textarea_promo_2_text": "Raffiniertes Design. Recycelte Materialien.",
         "url_promo_2_link": "",
         "text_promo_2_button": "Explore Now",
+        "show_promo1": false,
         "promo1_position": 0,
         "promo1_large": true,
+        "image_promo_1_bild": "shopify://shop_images/5_SCT1c_BP_BusinessProfessional.jpg",
         "promo1_bg": "#162040",
         "promo1_bg_opacity": 1,
+        "show_promo2": false,
         "promo2_position": 0,
         "promo2_large": true,
         "promo2_bg": "#162040",
@@ -163,12 +167,13 @@
       "disabled": true,
       "settings": {
         "text_uberschrift": "Was unsere Kund:innen sagen",
-        "text_bewertung_zahl": "4,83",
         "text_bewertung_label": "Hervorragend",
-        "text_anzahl_bewertungen": "17 982 Bewertungen",
         "padding_top": 4,
         "padding_bottom": 4,
-        "show_rating": true
+        "select_quelle": "judgeme",
+        "show_rating": true,
+        "text_bewertung_zahl": "4,83",
+        "text_anzahl_bewertungen": "17 982 Bewertungen"
       }
     }
   },
