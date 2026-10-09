@@ -71,7 +71,7 @@
           "type": "kategorie-bild",
           "name": "Kategorie-Bild",
           "settings": {
-            "url_link": "",
+            "url_link": "shopify://collections/d2c-backpacks-student-urban",
             "image_bild": "shopify://shop_images/5_SCT1c_BP_EntryLevel.jpg",
             "text_titel": "ENTRY LEVEL OR EVERYDAY",
             "textarea_text": "Everything you need at an exceptional price – reliable protection, practical organization and everyday comfort."
@@ -118,7 +118,6 @@
     "collection_products": {
       "type": "collection_products",
       "settings": {
-        "image_promo_1_bild": "shopify://shop_images/5_SCT1c_BP_BusinessProfessional.jpg",
         "text_promo_1_headline": "SEVEN Backpack",
         "textarea_promo_1_text": "Raffiniertes Design. Recycelte Materialien.",
         "url_promo_1_link": "",
@@ -130,6 +129,7 @@
         "show_promo1": true,
         "promo1_position": 6,
         "promo1_large": true,
+        "image_promo_1_bild": "shopify://shop_images/5_SCT1c_BP_BusinessProfessional.jpg",
         "promo1_bg": "#162040",
         "promo1_bg_opacity": 0.4,
         "show_promo2": false,
