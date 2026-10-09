@@ -82,7 +82,7 @@
           "type": "kategorie-bild",
           "name": "Kategorie-Bild",
           "settings": {
-            "url_link": "",
+            "url_link": "shopify://collections/d2c-backpacks-student-urban",
             "image_bild": "shopify://shop_images/compressed-Backpack_Commuter_All.png",
             "text_titel": "Students & Urban",
             "textarea_text": "Fresh designs, practical features and reliable protection for study, work and everyday adventures."
