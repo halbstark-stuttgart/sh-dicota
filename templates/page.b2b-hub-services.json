@@ -32,12 +32,6 @@
     },
     "hub_cards": {
       "type": "b2b_link_hub_cards",
-      "name": "Services",
-      "settings": {
-        "text_heading": "Our services at a glance",
-        "padding_top": 3,
-        "padding_bottom": 3
-      },
       "blocks": {
         "c_warranty": {
           "type": "b2b-hub-card",
@@ -48,7 +42,8 @@
             "textarea_text": "Report a warranty case online – we handle it quickly and, if required, directly with the end user.",
             "url_button_link": "shopify://pages/b2b-services-warranty-claims",
             "text_button_text": "Submit a claim"
-          }
+          },
+          "blocks": {}
         },
         "c_sheets": {
           "type": "b2b-hub-card",
@@ -59,7 +54,8 @@
             "textarea_text": "Download technical data sheets for all current products – for your webshop, your offers and your tenders.",
             "url_button_link": "shopify://pages/b2b-download-data-sheets",
             "text_button_text": "Download data sheets"
-          }
+          },
+          "blocks": {}
         },
         "c_eu": {
           "type": "b2b-hub-card",
@@ -70,7 +66,8 @@
             "textarea_text": "Declarations of conformity for our products – the documentation you need for compliant sales.",
             "url_button_link": "shopify://pages/b2b-services-eu-declarations",
             "text_button_text": "View declarations"
-          }
+          },
+          "blocks": {}
         },
         "c_finder": {
           "type": "b2b-hub-card",
@@ -81,7 +78,8 @@
             "textarea_text": "Find the right bag, sleeve or screen filter for any device in just a few clicks.",
             "url_button_link": "shopify://pages/product-finder",
             "text_button_text": "Open product finder"
-          }
+          },
+          "blocks": {}
         },
         "c_disc": {
           "type": "b2b-hub-card",
@@ -92,7 +90,8 @@
             "textarea_text": "Information on phased-out products and their successors – so your customers always get the right replacement.",
             "url_button_link": "shopify://collections/discontinued-products",
             "text_button_text": "View products"
-          }
+          },
+          "blocks": {}
         },
         "c_contact": {
           "type": "b2b-hub-card",
@@ -103,7 +102,8 @@
             "textarea_text": "Questions about orders, deliveries or projects? Your DICOTA sales team is happy to help.",
             "url_button_link": "shopify://pages/b2b-project-request",
             "text_button_text": "Contact us"
-          }
+          },
+          "blocks": {}
         }
       },
       "block_order": [
@@ -113,7 +113,13 @@
         "c_finder",
         "c_disc",
         "c_contact"
-      ]
+      ],
+      "name": "Services",
+      "settings": {
+        "text_heading": "Our services at a glance",
+        "padding_top": 3,
+        "padding_bottom": 3
+      }
     },
     "hub_feature": {
       "type": "b2b_solution_feature",
@@ -121,8 +127,8 @@
       "settings": {
         "image_feature_bild": "shopify://shop_images/Lasting_Quality_b5fb68b8-cd4a-46ce-a788-51f7ec672cad.jpg",
         "text_feature_subline": "Quality that lasts",
-        "text_feature_heading": "Lifetime warranty.<br>For real.",
-        "textarea_feature_text": "DICOTA bags and backpacks are built to last – and we stand behind them with our lifetime warranty. For you as a partner this means fewer returns, satisfied customers and a strong sales argument.<br><br>If a warranty case does occur, we process it quickly and can handle it directly with your end customer.",
+        "text_feature_heading": "30-year warranty.For real.",
+        "textarea_feature_text": "DICOTA bags and backpacks are built to last – and we stand behind them with our 30-year warranty. For you as a partner this means fewer returns, satisfied customers and a strong sales argument.<br><br>If a warranty case does occur, we process it quickly and can handle it directly with your end customer.",
         "padding_top": 3,
         "padding_bottom": 3
       }
