@@ -32,13 +32,6 @@
     },
     "why_glance": {
       "type": "b2b_solution_facts",
-      "name": "At a glance",
-      "disabled": true,
-      "settings": {
-        "text_facts_heading": "DICOTA at a glance",
-        "padding_top": 2,
-        "padding_bottom": 2
-      },
       "blocks": {
         "fact_founded": {
           "type": "b2b-sol-fact",
@@ -46,7 +39,8 @@
           "settings": {
             "text_zahl": "1992",
             "text_label": "Founded in Germany"
-          }
+          },
+          "blocks": {}
         },
         "fact_no1": {
           "type": "b2b-sol-fact",
@@ -54,7 +48,8 @@
           "settings": {
             "text_zahl": "No. 1",
             "text_label": "in professional carrying solutions in Germany, Austria and Switzerland"
-          }
+          },
+          "blocks": {}
         },
         "fact_markets": {
           "type": "b2b-sol-fact",
@@ -62,7 +57,8 @@
           "settings": {
             "text_zahl": "60+",
             "text_label": "markets represented globally"
-          }
+          },
+          "blocks": {}
         },
         "fact_units": {
           "type": "b2b-sol-fact",
@@ -70,7 +66,8 @@
           "settings": {
             "text_zahl": "2.5M+",
             "text_label": "bags and accessories shipped every year"
-          }
+          },
+          "blocks": {}
         },
         "fact_customers": {
           "type": "b2b-sol-fact",
@@ -78,7 +75,8 @@
           "settings": {
             "text_zahl": "60,000+",
             "text_label": "active customers – from distributors and resellers to B2B partners"
-          }
+          },
+          "blocks": {}
         },
         "fact_skus": {
           "type": "b2b-sol-fact",
@@ -86,7 +84,8 @@
           "settings": {
             "text_zahl": "1,200+",
             "text_label": "SKUs across bags, accessories, screen filters and locks"
-          }
+          },
+          "blocks": {}
         }
       },
       "block_order": [
@@ -96,7 +95,14 @@
         "fact_units",
         "fact_customers",
         "fact_skus"
-      ]
+      ],
+      "disabled": true,
+      "name": "At a glance",
+      "settings": {
+        "text_facts_heading": "DICOTA at a glance",
+        "padding_top": 2,
+        "padding_bottom": 2
+      }
     },
     "why_glance_img": {
       "type": "boxed_image",
@@ -119,6 +125,50 @@
     },
     "why_pillars": {
       "type": "benefits_grid",
+      "blocks": {
+        "ben_sustain": {
+          "type": "benefit",
+          "name": "Commitment to sustainability",
+          "settings": {
+            "text_heading": "Commitment to sustainability",
+            "textarea_text": "Products designed to care for people and planet – 99% of our bags are made from recycled PET."
+          },
+          "blocks": {}
+        },
+        "ben_customer": {
+          "type": "benefit",
+          "name": "Customer-first mindset",
+          "settings": {
+            "text_heading": "Customer-first mindset",
+            "textarea_text": "More than a supplier: a partner that works from people for people – close to you and your customers."
+          },
+          "blocks": {}
+        },
+        "ben_quality": {
+          "type": "benefit",
+          "name": "Exceptional quality",
+          "settings": {
+            "text_heading": "Exceptional quality",
+            "textarea_text": "Built to last and backed by our 30-year warranty on bags and backpacks."
+          },
+          "blocks": {}
+        },
+        "ben_expertise": {
+          "type": "benefit",
+          "name": "Proven expertise",
+          "settings": {
+            "text_heading": "Proven expertise",
+            "textarea_text": "More than three decades of professional carrying solutions for mobile and hybrid work."
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ben_sustain",
+        "ben_customer",
+        "ben_quality",
+        "ben_expertise"
+      ],
       "name": "Our promise",
       "settings": {
         "text_subline": "What we stand for",
@@ -127,56 +177,10 @@
         "text_button_text": "",
         "padding_top": 5,
         "padding_bottom": 5
-      },
-      "blocks": {
-        "ben_sustain": {
-          "type": "benefit",
-          "name": "Commitment to sustainability",
-          "settings": {
-            "text_heading": "Commitment to sustainability",
-            "textarea_text": "Products designed to care for people and planet – 99% of our bags are made from recycled PET."
-          }
-        },
-        "ben_customer": {
-          "type": "benefit",
-          "name": "Customer-first mindset",
-          "settings": {
-            "text_heading": "Customer-first mindset",
-            "textarea_text": "More than a supplier: a partner that works from people for people – close to you and your customers."
-          }
-        },
-        "ben_quality": {
-          "type": "benefit",
-          "name": "Exceptional quality",
-          "settings": {
-            "text_heading": "Exceptional quality",
-            "textarea_text": "Built to last and backed by our lifetime warranty on bags and backpacks."
-          }
-        },
-        "ben_expertise": {
-          "type": "benefit",
-          "name": "Proven expertise",
-          "settings": {
-            "text_heading": "Proven expertise",
-            "textarea_text": "More than three decades of professional carrying solutions for mobile and hybrid work."
-          }
-        }
-      },
-      "block_order": [
-        "ben_sustain",
-        "ben_customer",
-        "ben_quality",
-        "ben_expertise"
-      ]
+      }
     },
     "why_partner": {
       "type": "value_tabs",
-      "name": "Your partner for growth",
-      "settings": {
-        "text_heading": "More than a supplier – your partner for growth",
-        "padding_top": 5,
-        "padding_bottom": 5
-      },
       "blocks": {
         "tab_sales": {
           "type": "tab",
@@ -185,7 +189,8 @@
             "text_tab_label": "Sales & training",
             "text_tab_heading": "Support for your sales team",
             "textarea_tab_text": "Comprehensive training and ongoing support for your sales team. DICOTA sales specialists actively engage with your B2B, e-tail and retail customers – with custom sales and marketing campaigns aligned to shared goals and strong local proximity."
-          }
+          },
+          "blocks": {}
         },
         "tab_projects": {
           "type": "tab",
@@ -194,7 +199,8 @@
             "text_tab_label": "Projects & tenders",
             "text_tab_heading": "Win tenders, deliver rollouts",
             "textarea_tab_text": "Tailored assistance for public tenders to maximise your success rate. Quick and straightforward project offers and sample requests, logistics support for large-scale rollouts and efficient warranty handling directly with end users."
-          }
+          },
+          "blocks": {}
         },
         "tab_portfolio": {
           "type": "tab",
@@ -202,8 +208,9 @@
           "settings": {
             "text_tab_label": "Portfolio & brand",
             "text_tab_heading": "The right product for every budget",
-            "textarea_tab_text": "A portfolio of 1,200+ SKUs from entry-level to high-end, premium quality backed by a lifetime warranty and leading availability through top-tier distributors. White-label OEM solutions let you offer customised branding."
-          }
+            "textarea_tab_text": "A portfolio of 1,200+ SKUs from entry-level to high-end, premium quality backed by a 30-year warranty and leading availability through top-tier distributors. White-label OEM solutions let you offer customised branding."
+          },
+          "blocks": {}
         },
         "tab_growth": {
           "type": "tab",
@@ -212,7 +219,8 @@
             "text_tab_label": "Joint growth",
             "text_tab_heading": "Growing together",
             "textarea_tab_text": "We help you acquire new customers and strengthen existing partnerships, simplify business processes and increase sales and margins – and we celebrate joint successes along the way."
-          }
+          },
+          "blocks": {}
         }
       },
       "block_order": [
@@ -220,109 +228,116 @@
         "tab_projects",
         "tab_portfolio",
         "tab_growth"
-      ]
+      ],
+      "name": "Your partner for growth",
+      "settings": {
+        "text_heading": "More than a supplier – your partner for growth",
+        "padding_top": 5,
+        "padding_bottom": 5
+      }
     },
     "why_history": {
       "type": "history_timeline",
-      "name": "Our journey",
-      "settings": {
-        "text_subline": "Our journey",
-        "text_heading": "From 1992 to tomorrow",
-        "text_start_year": "1992",
-        "text_end_year": "2028",
-        "padding_top": 5,
-        "padding_bottom": 5
-      },
       "blocks": {
         "ms_1992": {
           "type": "meilenstein",
           "name": "1992",
           "settings": {
-            "text_slide_year": "1992",
             "text_slide_heading": "Founded in Germany",
-            "textarea_slide_text": "DICOTA GmbH is established – with one idea: carry computers safely, conveniently and efficiently."
-          }
+            "textarea_slide_text": "DICOTA GmbH is established – with one idea: carry computers safely, conveniently and efficiently.",
+            "text_slide_year": "1992"
+          },
+          "blocks": {}
         },
         "ms_2009": {
           "type": "meilenstein",
           "name": "2009",
           "settings": {
-            "text_slide_year": "2009",
             "text_slide_heading": "First ECO product",
-            "textarea_slide_text": "The start of our sustainable product journey."
-          }
+            "textarea_slide_text": "The start of our sustainable product journey.",
+            "text_slide_year": "2009"
+          },
+          "blocks": {}
         },
         "ms_2011": {
           "type": "meilenstein",
           "name": "2011",
           "settings": {
-            "text_slide_year": "2011",
             "text_slide_heading": "REACH & SVHC compliance",
-            "textarea_slide_text": "All products comply with REACH and SVHC requirements."
-          }
+            "textarea_slide_text": "All products comply with REACH and SVHC requirements.",
+            "text_slide_year": "2011"
+          },
+          "blocks": {}
         },
         "ms_2013": {
           "type": "meilenstein",
           "name": "2013",
           "settings": {
-            "text_slide_year": "2013",
             "text_slide_heading": "New ownership",
-            "textarea_slide_text": "Management buyout – headquarters move to Switzerland."
-          }
+            "textarea_slide_text": "Management buyout – headquarters move to Switzerland.",
+            "text_slide_year": "2013"
+          },
+          "blocks": {}
         },
         "ms_2015": {
           "type": "meilenstein",
           "name": "2015",
           "settings": {
-            "text_slide_year": "2015",
             "text_slide_heading": "amfori BSCI",
-            "textarea_slide_text": "First IT brand to become a member of amfori BSCI."
-          }
+            "textarea_slide_text": "First IT brand to become a member of amfori BSCI.",
+            "text_slide_year": "2015"
+          },
+          "blocks": {}
         },
         "ms_2021": {
           "type": "meilenstein",
           "name": "2021",
           "settings": {
-            "text_slide_year": "2021",
             "text_slide_heading": "85% recycled PET",
-            "textarea_slide_text": "85% of the portfolio is produced from recycled PET."
-          }
+            "textarea_slide_text": "85% of the portfolio is produced from recycled PET.",
+            "text_slide_year": "2021"
+          },
+          "blocks": {}
         },
         "ms_2022": {
           "type": "meilenstein",
           "name": "2022",
           "settings": {
-            "text_slide_year": "2022",
             "text_slide_heading": "Safety at Work",
-            "textarea_slide_text": "Launch of the Safety at Work portfolio."
-          }
+            "textarea_slide_text": "Launch of the Safety at Work portfolio.",
+            "text_slide_year": "2022"
+          },
+          "blocks": {}
         },
         "ms_2026": {
           "type": "meilenstein",
           "name": "2026",
           "settings": {
-            "text_slide_year": "2026",
             "text_slide_heading": "Made in Europe",
-            "textarea_slide_text": "Launch of the first 100% sustainable computer bag, made in Europe."
-          }
+            "textarea_slide_text": "Launch of the first 100% sustainable computer bag, made in Europe.",
+            "text_slide_year": "2026"
+          },
+          "blocks": {}
         },
         "ms_2027": {
           "type": "meilenstein",
           "name": "2027",
           "settings": {
-            "text_slide_year": "2027",
             "text_slide_heading": "Circular economy",
-            "textarea_slide_text": "Initiation of our circular economy programme."
-          }
+            "textarea_slide_text": "Initiation of our circular economy programme.",
+            "text_slide_year": "2027"
+          },
+          "blocks": {}
         },
         "ms_2028": {
           "type": "meilenstein",
           "name": "2028",
           "settings": {
-            "text_slide_year": "2028",
             "text_slide_heading": "Our goal",
-            "textarea_slide_text": "European market leader for sustainable computer bags."
-          }
+            "textarea_slide_text": "European market leader for sustainable computer bags.",
+            "text_slide_year": "2028"
+          },
+          "blocks": {}
         }
       },
       "block_order": [
@@ -336,17 +351,19 @@
         "ms_2026",
         "ms_2027",
         "ms_2028"
-      ]
+      ],
+      "name": "Our journey",
+      "settings": {
+        "text_subline": "Our journey",
+        "text_heading": "From 1992 to tomorrow",
+        "text_start_year": "1992",
+        "text_end_year": "2028",
+        "padding_top": 5,
+        "padding_bottom": 5
+      }
     },
     "why_sustain": {
       "type": "b2b_solution_facts",
-      "name": "Sustainable achievements",
-      "disabled": true,
-      "settings": {
-        "text_facts_heading": "Sustainable achievements",
-        "padding_top": 4,
-        "padding_bottom": 2
-      },
       "blocks": {
         "fact_recycled": {
           "type": "b2b-sol-fact",
@@ -354,7 +371,8 @@
           "settings": {
             "text_zahl": "99%",
             "text_label": "of our bag assortment made from recycled PET"
-          }
+          },
+          "blocks": {}
         },
         "fact_bottles": {
           "type": "b2b-sol-fact",
@@ -362,7 +380,8 @@
           "settings": {
             "text_zahl": "9.9M+",
             "text_label": "PET bottles processed since 1992"
-          }
+          },
+          "blocks": {}
         },
         "fact_fleet": {
           "type": "b2b-sol-fact",
@@ -370,7 +389,8 @@
           "settings": {
             "text_zahl": "70%",
             "text_label": "of our company fleet electrified"
-          }
+          },
+          "blocks": {}
         },
         "fact_bsci": {
           "type": "b2b-sol-fact",
@@ -378,7 +398,8 @@
           "settings": {
             "text_zahl": "2015",
             "text_label": "first IT brand member of amfori BSCI"
-          }
+          },
+          "blocks": {}
         },
         "fact_ecovadis": {
           "type": "b2b-sol-fact",
@@ -386,15 +407,17 @@
           "settings": {
             "text_zahl": "EcoVadis",
             "text_label": "committed to certified standards"
-          }
+          },
+          "blocks": {}
         },
         "fact_warranty": {
           "type": "b2b-sol-fact",
           "name": "Lifetime",
           "settings": {
-            "text_zahl": "Lifetime",
+            "text_zahl": "30 years",
             "text_label": "warranty – quality that lasts"
-          }
+          },
+          "blocks": {}
         }
       },
       "block_order": [
@@ -404,7 +427,14 @@
         "fact_bsci",
         "fact_ecovadis",
         "fact_warranty"
-      ]
+      ],
+      "disabled": true,
+      "name": "Sustainable achievements",
+      "settings": {
+        "text_facts_heading": "Sustainable achievements",
+        "padding_top": 4,
+        "padding_bottom": 2
+      }
     },
     "why_sustain_img": {
       "type": "boxed_image",
