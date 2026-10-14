@@ -85,7 +85,7 @@
           "type": "b2b-hub-card",
           "name": "Discontinued Products",
           "settings": {
-            "image_icon": "shopify://shop_images/Icon_Benefit_lifetime.svg",
+            "image_icon": "shopify://shop_images/Icon_Benefit_successor.svg",
             "text_heading": "Discontinued Products",
             "textarea_text": "Information on phased-out products and their successors – so your customers always get the right replacement.",
             "url_button_link": "shopify://collections/discontinued-products",
