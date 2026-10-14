@@ -12,7 +12,15 @@
     "product_breadcrumb": {
       "type": "product_breadcrumb",
       "settings": {
-        "text_home_label": "Home"
+        "text_home_label": "Home",
+        "text_kollektionen_label": "Collections",
+        "text_suche_label": "Search",
+        "text_warenkorb_label": "Cart",
+        "text_404_label": "Page not found",
+        "padding_top": 0.5,
+        "padding_bottom": 0.5,
+        "bg_color": "#ffffff",
+        "text_color": "#0f0f0f"
       }
     },
     "two_column_hero": {
@@ -57,7 +65,7 @@
             "c3": {
               "type": "feature-karte",
               "settings": {
-                "text_heading": "Lifetime Warranty",
+                "text_heading": "30-Year Warranty",
                 "textarea_text": "For material and processing defects on laptop bags.",
                 "url_button_link": "",
                 "text_button_text": "Learn more"
