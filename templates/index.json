@@ -164,8 +164,8 @@
           "name": "USP Block",
           "settings": {
             "image_icon": "shopify://shop_images/dicota_p-icon_3_1.png",
-            "text_uberschrift": "Lifetime Warranty",
-            "textarea_beschreibung": "Lifetime / 30 years’ warranty on all bags and backpacks."
+            "text_uberschrift": "30-Year Warranty",
+            "textarea_beschreibung": "30-year warranty on all bags and backpacks."
           },
           "blocks": {}
         }
@@ -422,8 +422,8 @@
           "name": "Image+Link List Link",
           "settings": {
             "url_link_ziel": "shopify://pages/hi-vis",
-            "image_hover_bild": "shopify://shop_images/hi-vis.jpg",
-            "text_label": "Safety at Work"
+            "text_label": "Safety at Work",
+            "image_hover_bild": "shopify://shop_images/hi-vis.jpg"
           },
           "blocks": {}
         }
