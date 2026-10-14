@@ -32,14 +32,6 @@
     },
     "hub_cards": {
       "type": "triple_cards",
-      "name": "Solution areas",
-      "settings": {
-        "text_heading": "Explore our solution areas",
-        "url_button_link": "",
-        "text_button_text": "",
-        "padding_top": 4,
-        "padding_bottom": 4
-      },
       "blocks": {
         "card_runrate": {
           "type": "karte",
@@ -49,7 +41,8 @@
             "text_card_heading": "Run Rate Supply",
             "text_card_button_text": "Learn more",
             "image_card_bg_image": "shopify://shop_images/8_GB2c_ProductPromotion_TopTravSeven_01.jpg"
-          }
+          },
+          "blocks": {}
         },
         "card_rollout": {
           "type": "karte",
@@ -59,7 +52,8 @@
             "text_card_heading": "Device Rollout Bundle",
             "text_card_button_text": "Learn more",
             "image_card_bg_image": "shopify://shop_images/1_CT1c_Sleeves.jpg"
-          }
+          },
+          "blocks": {}
         },
         "card_workplace": {
           "type": "karte",
@@ -69,7 +63,8 @@
             "text_card_heading": "Workplace & Homeoffice Setup",
             "text_card_button_text": "Learn more",
             "image_card_bg_image": "shopify://shop_images/Blog_Image_Docking_Station.jpg"
-          }
+          },
+          "blocks": {}
         },
         "card_education": {
           "type": "karte",
@@ -79,7 +74,8 @@
             "text_card_heading": "Education & Public Sector",
             "text_card_button_text": "Learn more",
             "image_card_bg_image": "shopify://shop_images/Blog_Image_SPIN_II.jpg"
-          }
+          },
+          "blocks": {}
         },
         "card_sustain": {
           "type": "karte",
@@ -89,7 +85,8 @@
             "text_card_heading": "Sustainability & Green Procurement",
             "text_card_button_text": "Learn more",
             "image_card_bg_image": "shopify://shop_images/Sustainable_Materials.png"
-          }
+          },
+          "blocks": {}
         },
         "card_brand": {
           "type": "karte",
@@ -99,7 +96,8 @@
             "text_card_heading": "Brand & Corporate Identity",
             "text_card_button_text": "Learn more",
             "image_card_bg_image": "shopify://shop_images/Header_b2b_solutions_run_rate_supply_1440x720_dc77e625-9ba5-4401-893f-7cb43aa70afe.png"
-          }
+          },
+          "blocks": {}
         }
       },
       "block_order": [
@@ -109,16 +107,18 @@
         "card_education",
         "card_sustain",
         "card_brand"
-      ]
+      ],
+      "name": "Solution areas",
+      "settings": {
+        "text_heading": "Explore our solution areas",
+        "url_button_link": "",
+        "text_button_text": "",
+        "padding_top": 4,
+        "padding_bottom": 4
+      }
     },
     "hub_facts": {
       "type": "b2b_solution_facts",
-      "name": "Facts",
-      "settings": {
-        "text_facts_heading": "What every solution is built on",
-        "padding_top": 2,
-        "padding_bottom": 4
-      },
       "blocks": {
         "f_skus": {
           "type": "b2b-sol-fact",
@@ -126,15 +126,17 @@
           "settings": {
             "text_zahl": "1,200+",
             "text_label": "SKUs from entry-level to premium"
-          }
+          },
+          "blocks": {}
         },
         "f_warranty": {
           "type": "b2b-sol-fact",
           "name": "Lifetime",
           "settings": {
-            "text_zahl": "Lifetime",
+            "text_zahl": "30 years",
             "text_label": "warranty on bags and backpacks"
-          }
+          },
+          "blocks": {}
         },
         "f_pet": {
           "type": "b2b-sol-fact",
@@ -142,14 +144,21 @@
           "settings": {
             "text_zahl": "99%",
             "text_label": "of our bags made from recycled PET"
-          }
+          },
+          "blocks": {}
         }
       },
       "block_order": [
         "f_skus",
         "f_warranty",
         "f_pet"
-      ]
+      ],
+      "name": "Facts",
+      "settings": {
+        "text_facts_heading": "What every solution is built on",
+        "padding_top": 2,
+        "padding_bottom": 4
+      }
     },
     "hub_banner": {
       "type": "b2b_hub_banner",
