@@ -12,7 +12,15 @@
     "product_breadcrumb": {
       "type": "product_breadcrumb",
       "settings": {
-        "text_home_label": "Home"
+        "text_home_label": "Home",
+        "text_kollektionen_label": "Collections",
+        "text_suche_label": "Search",
+        "text_warenkorb_label": "Cart",
+        "text_404_label": "Page not found",
+        "padding_top": 0.5,
+        "padding_bottom": 0.5,
+        "bg_color": "#ffffff",
+        "text_color": "#0f0f0f"
       }
     },
     "feature_card_grid": {
@@ -27,7 +35,7 @@
               "type": "feature-karte",
               "settings": {
                 "text_heading": "What's covered?",
-                "textarea_text": "We cover what matters.<br>Your warranty includes protection against:<br><br>• Material defects<br>• Faulty zippers<br>• Stitching issues<br>• Structural faults<br><br>And it applies to a wide range of DICOTA products. The Lifetime Warranty covers the following product families:<br><br>ACTIVE, BASE, CODE, CORE, ECO, ECO BASE, ECO GO, ECO MOTION, ECO MOVE, ECO PRO, ECO SCALE, ECO SELECT, EDGE, E-SPORTS, FIVE, FLOW, GO, MOS, MOVE, PERFECT SKIN, PRO, SCALE, SELECT, SMART SKIN, SPIN, STYLE, TABLET, UNIVERSAL, URBAN",
+                "textarea_text": "We cover what matters.<br>Your warranty includes protection against:<br><br>• Material defects<br>• Faulty zippers<br>• Stitching issues<br>• Structural faults<br><br>And it applies to a wide range of DICOTA products. The 30-Year Warranty covers the following product families:<br><br>ACTIVE, BASE, CODE, CORE, ECO, ECO BASE, ECO GO, ECO MOTION, ECO MOVE, ECO PRO, ECO SCALE, ECO SELECT, EDGE, E-SPORTS, FIVE, FLOW, GO, MOS, MOVE, PERFECT SKIN, PRO, SCALE, SELECT, SMART SKIN, SPIN, STYLE, TABLET, UNIVERSAL, URBAN",
                 "url_button_link": "",
                 "text_button_text": "Learn more"
               },
