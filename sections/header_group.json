@@ -37,7 +37,7 @@
           "name": "USP: Warranty",
           "settings": {
             "image_icon": "shopify://shop_images/Icon_warranty.png",
-            "text_text": "Lifetime warranty on bags & packs"
+            "text_text": "30-year warranty on bags & packs"
           },
           "blocks": {}
         },
@@ -187,7 +187,6 @@
         "text_such_tipp": "Tip: Search by products, categories or use case",
         "text_search_recent": "",
         "search_recent_limit": 6,
-        "url_wishlist_link": "",
         "text_social_proof_leicht": "Great choice!",
         "text_social_proof_fett": "Over 350,180 people use DICOTA products.",
         "text_trust_links": "30-day money-back guarantee",
@@ -196,10 +195,7 @@
         "transparent_over_first": true,
         "free_shipping_threshold": 50,
         "shipping_cost": 5,
-        "delivery_days": 4,
         "show_socialproof": true,
-        "upsell_collection": "",
-        "upsell_limit": 4,
         "text_sucheingabe_placeholder": "What are you looking for?"
       }
     }
